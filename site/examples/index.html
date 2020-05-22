@@ -125,7 +125,7 @@ extra_javascript:
 <span class="title">example.add</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">def add(x: int, y: int) -&gt; int:
     &#34;&#34;&#34;Returns $x + y$.
 
@@ -142,13 +142,13 @@ extra_javascript:
 
     !!! note
         You can use the [admonition extension of
-        MkDocs](https://squidfunk.github.io/mkdocs-material/extensions/admonition/)
+        MkDocs](https://squidfunk.github.io/mkdocs-material/extensions/admonition/).
 
     Note:
         But you should use `Note` section instead for consistency.
     &#34;&#34;&#34;
     return x + y
-</code></pre></div></div></div></div>
+</code></pre></div></div></div>
 
 </div></div></div>
 
@@ -209,7 +209,7 @@ extra_javascript:
       <div class="mkapi-docstring-section-body"><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can use the <a href="https://squidfunk.github.io/mkdocs-material/extensions/admonition/">admonition extension of
-MkDocs</a></p>
+MkDocs</a>.</p>
 </div></div>
     </div>
   
@@ -240,7 +240,7 @@ MkDocs</a></p>
 <span class="title">example.gen</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">def gen(n) -&gt; Iterator[str]:
     &#34;&#34;&#34;Yields a numbered string.
 
@@ -248,11 +248,11 @@ MkDocs</a></p>
         n (int): The length of iteration.
 
     Yields:
-       A numbered string
+       A numbered string.
     &#34;&#34;&#34;
     for x in range(n):
         yield f&#34;a{x}&#34;
-</code></pre></div></div></div></div>
+</code></pre></div></div></div>
 
 </div></div></div>
 
@@ -292,7 +292,7 @@ MkDocs</a></p>
     <div class="mkapi-docstring-section mkapi-docstring-section-named mkapi-docstring-section-yields">
       <div class="mkapi-docstring-section-name mkapi-docstring-section-name-yields">
       Yields <span class="mkapi-args-type">(str)</span></div>
-      <div class="mkapi-docstring-section-body mkapi-docstring-section-body-yields"><p>A numbered string</p></div>
+      <div class="mkapi-docstring-section-body mkapi-docstring-section-body-yields"><p>A numbered string.</p></div>
     </div>
   
 </div>
@@ -306,7 +306,7 @@ MkDocs</a></p>
 <span class="title">example.ExampleClass</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">class ExampleClass:
     def __init__(self, x: List[int], y: Tuple[str, int]):
         &#34;&#34;&#34;A normal class.
@@ -329,10 +329,10 @@ MkDocs</a></p>
         &#34;&#34;&#34;A bound method.
 
         Args:
-            n: Repeatation
+            n: Repeatation.
 
         Returns:
-            A message
+            A message.
         &#34;&#34;&#34;
         return self.z * n
 
@@ -349,7 +349,7 @@ MkDocs</a></p>
     @readwrite_property.setter
     def readwrite_property(self, value):
         pass
-</code></pre></div></div></div></div>
+</code></pre></div></div></div>
 
 </div></div></div>
 
@@ -446,7 +446,7 @@ MkDocs</a></p>
   <li><code class="mkapi-args-name">n</code>
          <span class="mkapi-args-type">(int)</span>
          <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">Repeatation</spin></li>
+         <span class="mkapi-args-desc">Repeatation.</spin></li>
 
 </ul></div>
     </div>
@@ -454,7 +454,7 @@ MkDocs</a></p>
     <div class="mkapi-docstring-section mkapi-docstring-section-named mkapi-docstring-section-returns">
       <div class="mkapi-docstring-section-name mkapi-docstring-section-name-returns">
       Returns <span class="mkapi-args-type">(str)</span></div>
-      <div class="mkapi-docstring-section-body mkapi-docstring-section-body-returns"><p>A message</p></div>
+      <div class="mkapi-docstring-section-body mkapi-docstring-section-body-returns"><p>A message.</p></div>
     </div>
   
 </div>
@@ -523,20 +523,20 @@ MkDocs</a></p>
 <span class="title">example.ExampleDataClass</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">@dataclass
 class ExampleDataClass:
     &#34;&#34;&#34;A dataclass.
 
     Args:
-        x: The first parameter
+        x: The first parameter.
 
     Attributes:
-        x: The first attribute
+        x: The first attribute.
     &#34;&#34;&#34;
 
     x: int = 0
-</code></pre></div></div></div></div>
+</code></pre></div></div></div>
 
 </div></div></div>
 
@@ -567,7 +567,7 @@ class ExampleDataClass:
   <li><code class="mkapi-args-name">x</code>
          <span class="mkapi-args-type">(int)</span>
          <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The first parameter</spin></li>
+         <span class="mkapi-args-desc">The first parameter.</spin></li>
 
 </ul></div>
     </div>
@@ -580,7 +580,7 @@ class ExampleDataClass:
   <li><code class="mkapi-args-name">x</code>
          
          <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The first attribute</spin></li>
+         <span class="mkapi-args-desc">The first attribute.</spin></li>
 
 </ul></div>
     </div>
@@ -705,7 +705,7 @@ class ExampleDataClass:
   <li><code class="mkapi-args-name">n</code>
          <span class="mkapi-args-type">(int)</span>
          <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">Repeatation</spin></li>
+         <span class="mkapi-args-desc">Repeatation.</spin></li>
 
 </ul></div>
     </div>
@@ -713,7 +713,7 @@ class ExampleDataClass:
     <div class="mkapi-docstring-section mkapi-docstring-section-named mkapi-docstring-section-returns">
       <div class="mkapi-docstring-section-name mkapi-docstring-section-name-returns">
       Returns <span class="mkapi-args-type">(str)</span></div>
-      <div class="mkapi-docstring-section-body mkapi-docstring-section-body-returns"><p>A message</p></div>
+      <div class="mkapi-docstring-section-body mkapi-docstring-section-body-returns"><p>A message.</p></div>
     </div>
   
 </div>
@@ -795,7 +795,7 @@ class ExampleDataClass:
   <li><code class="mkapi-args-name">x</code>
          <span class="mkapi-args-type">(int)</span>
          <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The first parameter</spin></li>
+         <span class="mkapi-args-desc">The first parameter.</spin></li>
 
 </ul></div>
     </div>
@@ -808,7 +808,7 @@ class ExampleDataClass:
   <li><code class="mkapi-args-name">x</code>
          
          <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The first attribute</spin></li>
+         <span class="mkapi-args-desc">The first attribute.</spin></li>
 
 </ul></div>
     </div>
@@ -872,7 +872,7 @@ class ExampleDataClass:
       <div class="mkapi-docstring-section-body"><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can use the <a href="https://squidfunk.github.io/mkdocs-material/extensions/admonition/">admonition extension of
-MkDocs</a></p>
+MkDocs</a>.</p>
 </div></div>
     </div>
   
@@ -920,7 +920,7 @@ MkDocs</a></p>
     <div class="mkapi-docstring-section mkapi-docstring-section-named mkapi-docstring-section-yields">
       <div class="mkapi-docstring-section-name mkapi-docstring-section-name-yields">
       Yields <span class="mkapi-args-type">(str)</span></div>
-      <div class="mkapi-docstring-section-body mkapi-docstring-section-body-yields"><p>A numbered string</p></div>
+      <div class="mkapi-docstring-section-body mkapi-docstring-section-body-yields"><p>A numbered string.</p></div>
     </div>
   
 </div>
