@@ -125,16 +125,16 @@ MkApi supports the <a href="http://google.github.io/styleguide/pyguide.html#38-c
 <p>If you have no <code>plugins</code> entry in your config file yet, you'll likely also want to add the <code>search</code> plugin. MkDocs enables it by default if there is no <code>plugins</code> entry set.</p>
 </div>
 <h2 id="mkapi-usage"><span class="pheasant-header"><span class="header"><span class="title">MkApi usage</span></span></span></h2>
-<p>In your markdown file, write a link to an package, module, or other object, just like normal Markdown's image embedding:</p>
+<p>In your Markdown file, write a embedding of an package, module, function, or other object, just like normal Markdown's image embedding:</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](&lt;object.qualname&gt;)</code></pre></div></div></div>
 
-<p>MkApi imports the module, function, or any object that you specify. If they aren't in <code>sys.path</code>, configure <code>mkdocs.yml</code> like below:</p>
+<p>MkApi imports objects that you specify. If they aren't in <code>sys.path</code>, configure <code>mkdocs.yml</code> like below:</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yml">plugins:
   - search
   - mkapi:
       src_dirs: [&lt;path_1&gt;, &lt;path_2&gt;, ...]</code></pre></div></div></div>
 
-<p>Here, <code>path_X</code>s are inserted to <code>sys.path</code>. <code>path_X</code>s are relative to <code>mkdocs.yml</code>.</p>
+<p>Here, <code>path_X</code>s are inserted to <code>sys.path</code>. <code>path_X</code>s are relative paths from the directory in which <code>mkdocs.yml</code> exists.</p>
               
             </div>
           </div>
@@ -193,5 +193,5 @@ MkApi supports the <a href="http://google.github.io/styleguide/pyguide.html#38-c
 
 <!--
 MkDocs version : 1.1.1
-Build Date UTC : 2020-05-22 22:32:36.096145+00:00
+Build Date UTC : 2020-05-22 22:40:32.217758+00:00
 -->
