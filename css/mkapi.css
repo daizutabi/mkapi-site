@@ -1,0 +1,203 @@
+/**************************************************
+ Main
+**************************************************/
+.mkapi-node p {
+  margin-top: 2px;
+  margin-bottom: 12px;
+}
+
+.mkapi-node p:last-child {
+  margin-bottom: 2px;
+}
+
+.mkapi-node pre {
+  background: none;
+  border: none;
+  padding: 0px;
+  margin: 5px;
+}
+
+.mkapi-node code {
+  background: none;
+  border: none;
+  padding: 0px;
+  color: #0044EE;
+  font-size: 95%;
+}
+
+.mkapi-node pre code {
+  background: none;
+  font-size: 95%;
+  padding: 0px;
+  margin-left: 20px;
+}
+
+/**************************************************
+ Node
+**************************************************/
+.mkapi-node {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.mkapi-node-depth-0 {
+  margin-left: 0px;
+}
+
+.mkapi-node-header {
+  background: #F0F0F0;
+  border-left: solid 4px #7777FF;
+  display: flex;
+  align-items: baseline;
+  padding: 5px;
+}
+
+.mkapi-node-header-package, .mkapi-node-header-module {
+  background: none;
+  border-left: none;
+  font-size: 150%;
+}
+
+.mkapi-node-kind {
+  margin-left: 0.5em;
+  font-weight: bold;
+  color: #888888;
+  font-size: 70%;
+}
+
+.mkapi-node-kind-package, .mkapi-node-kind-module {
+  margin-left: 3px;
+}
+
+.mkapi-node-name {
+  margin-left: 0.3em;
+  font-weight: bold;
+}
+
+code.mkapi-node-prefix {
+  color: #333333;
+}
+
+code.mkapi-node-basename {
+  color: #333333;
+}
+
+code.mkapi-node-signature {
+  font-weight: bold;
+  color: #333333;
+}
+
+/**************************************************
+ Docstring
+**************************************************/
+.mkapi-docstring {
+}
+
+.mkapi-docstring-section {
+  margin-left: 15px;
+  margin-top: 2px;
+  margin-bottom: 15px;
+  padding: 0px;
+}
+
+.mkapi-docstring-section-name {
+  padding: 4px 8px;
+  font-size: 90%;
+  font-weight: bold;
+  color: #333333;
+  letter-spacing: 0.05em;
+}
+
+.mkapi-docstring-section-name-parameters,
+.mkapi-docstring-section-name-attributes,
+.mkapi-docstring-section-name-returns,
+.mkapi-docstring-section-name-yields,
+.mkapi-docstring-section-name-raises {
+  background: #F0F0F0;
+  border-bottom: solid 2px #7777FF;
+}
+
+
+.mkapi-docstring-section-name-note, .mkapi-docstring-section-name-notes {
+  color: white;
+  background: #33AA33;
+}
+
+.mkapi-docstring-section-name-note:before,
+.mkapi-docstring-section-name-notes:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f303";
+  font-weight: 900;
+  padding-right: 3px;
+  color: white;
+}
+
+.mkapi-docstring-section-name-warning, .mkapi-docstring-section-name-warnings {
+  color: white;
+  background: #FF6666;
+}
+
+.mkapi-docstring-section-name-warning:before,
+.mkapi-docstring-section-name-warnings:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f071";
+  font-weight: 900;
+  padding-right: 3px;
+  color: white;
+}
+
+.mkapi-docstring-section-body {
+  padding: 4px 8px;
+}
+
+.mkapi-docstring-section-body-note, .mkapi-docstring-section-body-notes {
+  background: #EEFFEE;
+  padding: 8px 12px;
+}
+
+.mkapi-docstring-section-body-warning, .mkapi-docstring-section-body-warnings {
+  background: #FFEEEE;
+  padding: 8px 12px;
+}
+
+.mkapi-docstring-section-body-example, .mkapi-docstring-section-body-examples {
+  background: #EEEEEE;
+  padding: 8px 12px;
+}
+
+
+/**************************************************
+ Args
+**************************************************/
+.mkapi-node ul.mkapi-args-list {
+  margin: 0px;
+}
+
+.mkapi-node ul.mkapi-args-list li {
+  margin-left: 40px;
+  text-indent: -20px;
+}
+
+code.mkapi-args-name {
+  font-weight: bold;
+  color: #000000;
+}
+
+.mkapi-args-type {
+  color: #8888EE;
+  font-weight: normal;
+  font-size: 90%;
+}
+
+.mkapi-args-dash {
+  color: #AABBAA;
+}
+
+/**************************************************
+ Members
+**************************************************/
+.mkapi-members {
+}
+
+.mkapi-member {
+}

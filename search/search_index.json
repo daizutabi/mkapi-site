@@ -1,0 +1,1 @@
+{"config":{"lang":["en"],"min_search_length":3,"prebuild_index":false,"separator":"[\\s\\-]+"},"docs":[{"location":"","text":"PACKAGE package Package level docstring. PACKAGE package.subpackage Subpackage level docstring. MODULE package.module_a Module A docstring. MODULE package.subpackage.module_b Module B docstring.","title":"MkApi Demo"}]}
