@@ -125,7 +125,7 @@ extra_javascript:
 <span class="title">example.add</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">def add(x: int, y: int) -&gt; int:
     &#34;&#34;&#34;Returns $x + y$.
 
@@ -148,7 +148,7 @@ extra_javascript:
         But you should use `Note` section instead for consistency.
     &#34;&#34;&#34;
     return x + y
-</code></pre></div></div></div>
+</code></pre></div></div></div></div>
 
 </div></div></div>
 
@@ -240,7 +240,7 @@ MkDocs</a>.</p>
 <span class="title">example.gen</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">def gen(n) -&gt; Iterator[str]:
     &#34;&#34;&#34;Yields a numbered string.
 
@@ -252,7 +252,7 @@ MkDocs</a>.</p>
     &#34;&#34;&#34;
     for x in range(n):
         yield f&#34;a{x}&#34;
-</code></pre></div></div></div>
+</code></pre></div></div></div></div>
 
 </div></div></div>
 
@@ -306,7 +306,7 @@ MkDocs</a>.</p>
 <span class="title">example.ExampleClass</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">class ExampleClass:
     def __init__(self, x: List[int], y: Tuple[str, int]):
         &#34;&#34;&#34;A normal class.
@@ -349,7 +349,7 @@ MkDocs</a>.</p>
     @readwrite_property.setter
     def readwrite_property(self, value):
         pass
-</code></pre></div></div></div>
+</code></pre></div></div></div></div>
 
 </div></div></div>
 
@@ -523,7 +523,7 @@ MkDocs</a>.</p>
 <span class="title">example.ExampleDataClass</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">@dataclass
 class ExampleDataClass:
     &#34;&#34;&#34;A dataclass.
@@ -533,10 +533,12 @@ class ExampleDataClass:
 
     Attributes:
         x: The first attribute.
+        y: The second attribute.
     &#34;&#34;&#34;
 
     x: int = 0
-</code></pre></div></div></div>
+    y: int = field(default=1, init=False)
+</code></pre></div></div></div></div>
 
 </div></div></div>
 
@@ -581,6 +583,11 @@ class ExampleDataClass:
          
          <span class="mkapi-args-dash">&mdash;</span>
          <span class="mkapi-args-desc">The first attribute.</spin></li>
+
+  <li><code class="mkapi-args-name">y</code>
+         
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">The second attribute.</spin></li>
 
 </ul></div>
     </div>
@@ -809,6 +816,11 @@ class ExampleDataClass:
          
          <span class="mkapi-args-dash">&mdash;</span>
          <span class="mkapi-args-desc">The first attribute.</spin></li>
+
+  <li><code class="mkapi-args-name">y</code>
+         
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">The second attribute.</spin></li>
 
 </ul></div>
     </div>
