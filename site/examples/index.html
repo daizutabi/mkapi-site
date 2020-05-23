@@ -293,7 +293,7 @@ MkDocs</a>.</p>
   
     <div class="mkapi-section mkapi-section-named mkapi-section-yields">
       <div class="mkapi-section-name mkapi-section-name-yields">
-      <span class="mkapi-section-name-body">Yields</span></div>
+      <span class="mkapi-section-name-body">Yields</span> <span class="mkapi-args-type">(str)</span></div>
       <div class="mkapi-section-body mkapi-section-body-yields"><p>A numbered string.</p></div>
     </div>
   
@@ -327,16 +327,16 @@ MkDocs</a>.</p>
             raise ValueError()
         self.z = &#34;abc&#34;
 
-    def message(self, n: int) -&gt; str:
+    def message(self, n: int) -&gt; List[str]:
         &#34;&#34;&#34;A bound method.
 
         Args:
             n: Repeatation.
 
         Returns:
-            A message.
+            A message list.
         &#34;&#34;&#34;
-        return self.z * n
+        return [self.z] * n
 
     @property
     def readonly_property(self):
@@ -456,7 +456,7 @@ MkDocs</a>.</p>
     <div class="mkapi-section mkapi-section-named mkapi-section-returns">
       <div class="mkapi-section-name mkapi-section-name-returns">
       <span class="mkapi-section-name-body">Returns</span> <span class="mkapi-args-type">(list of str)</span></div>
-      <div class="mkapi-section-body mkapi-section-body-returns"><p>A message.</p></div>
+      <div class="mkapi-section-body mkapi-section-body-returns"><p>A message list.</p></div>
     </div>
   
 </div>
@@ -721,7 +721,7 @@ class ExampleDataClass:
     <div class="mkapi-section mkapi-section-named mkapi-section-returns">
       <div class="mkapi-section-name mkapi-section-name-returns">
       <span class="mkapi-section-name-body">Returns</span> <span class="mkapi-args-type">(list of str)</span></div>
-      <div class="mkapi-section-body mkapi-section-body-returns"><p>A message.</p></div>
+      <div class="mkapi-section-body mkapi-section-body-returns"><p>A message list.</p></div>
     </div>
   
 </div>
@@ -932,7 +932,7 @@ MkDocs</a>.</p>
   
     <div class="mkapi-section mkapi-section-named mkapi-section-yields">
       <div class="mkapi-section-name mkapi-section-name-yields">
-      <span class="mkapi-section-name-body">Yields</span></div>
+      <span class="mkapi-section-name-body">Yields</span> <span class="mkapi-args-type">(str)</span></div>
       <div class="mkapi-section-body mkapi-section-body-yields"><p>A numbered string.</p></div>
     </div>
   
