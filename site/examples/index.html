@@ -125,7 +125,7 @@ extra_javascript:
 <span class="title">example.add</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">def add(x: int, y: int = 1) -&gt; int:
     &#34;&#34;&#34;Returns $x + y$.
 
@@ -148,7 +148,7 @@ extra_javascript:
         But you should use `Note` section instead for consistency.
     &#34;&#34;&#34;
     return x + y
-</code></pre></div></div></div></div>
+</code></pre></div></div></div>
 
 </div></div></div>
 
@@ -160,8 +160,9 @@ extra_javascript:
   <div class="mkapi-node-header mkapi-node-header-function">
     <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
     <div class="mkapi-node-name">
-      <code class="mkapi-node-basename">example.add</code><code class="mkapi-node-signature">(x, y=1)</code>
       
+        <code class="mkapi-node-basename">example.add</code><code class="mkapi-node-signature">(x, y=1)</code>
+        
       
     </div>
   </div>
@@ -242,7 +243,7 @@ MkDocs</a>.</p>
 <span class="title">example.gen</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">def gen(n) -&gt; Iterator[str]:
     &#34;&#34;&#34;Yields a numbered string.
 
@@ -254,7 +255,7 @@ MkDocs</a>.</p>
     &#34;&#34;&#34;
     for x in range(n):
         yield f&#34;a{x}&#34;
-</code></pre></div></div></div></div>
+</code></pre></div></div></div>
 
 </div></div></div>
 
@@ -266,8 +267,9 @@ MkDocs</a>.</p>
   <div class="mkapi-node-header mkapi-node-header-generator">
     <div class="mkapi-node-kind mkapi-node-kind-generator">GENERATOR</div>
     <div class="mkapi-node-name">
-      <code class="mkapi-node-basename">example.gen</code><code class="mkapi-node-signature">(n)</code>
       
+        <code class="mkapi-node-basename">example.gen</code><code class="mkapi-node-signature">(n)</code>
+        
       
     </div>
   </div>
@@ -308,7 +310,7 @@ MkDocs</a>.</p>
 <span class="title">example.ExampleClass</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">class ExampleClass:
     def __init__(self, x: List[int], y: Tuple[str, int]):
         &#34;&#34;&#34;A normal class.
@@ -328,30 +330,27 @@ MkDocs</a>.</p>
         self.z = &#34;abc&#34;
 
     def message(self, n: int) -&gt; List[str]:
-        &#34;&#34;&#34;A bound method.
+        &#34;&#34;&#34;Returns a message list.
 
         Args:
             n: Repeatation.
-
-        Returns:
-            A message list.
         &#34;&#34;&#34;
         return [self.z] * n
 
     @property
-    def readonly_property(self):
+    def readonly_property(self) -&gt; str:
         &#34;&#34;&#34;str: Read-only property documentation.&#34;&#34;&#34;
         return &#34;readonly_property&#34;
 
     @property
-    def readwrite_property(self):
-        &#34;&#34;&#34;list of int: Read-write property documentation.&#34;&#34;&#34;
+    def readwrite_property(self) -&gt; List[int]:
+        &#34;&#34;&#34;Read-write property documentation.&#34;&#34;&#34;
         return [1, 2, 3]
 
     @readwrite_property.setter
     def readwrite_property(self, value):
-        pass
-</code></pre></div></div></div></div>
+        &#34;&#34;&#34;Docstring in setter is ignored.&#34;&#34;&#34;
+</code></pre></div></div></div>
 
 </div></div></div>
 
@@ -363,8 +362,9 @@ MkDocs</a>.</p>
   <div class="mkapi-node-header mkapi-node-header-class">
     <div class="mkapi-node-kind mkapi-node-kind-class">CLASS</div>
     <div class="mkapi-node-name">
-      <code class="mkapi-node-basename">example.ExampleClass</code><code class="mkapi-node-signature">(x, y)</code>
       
+        <code class="mkapi-node-basename">example.ExampleClass</code><code class="mkapi-node-signature">(x, y)</code>
+        
       
     </div>
   </div>
@@ -428,8 +428,9 @@ MkDocs</a>.</p>
   <div class="mkapi-node-header mkapi-node-header-method">
     <div class="mkapi-node-kind mkapi-node-kind-method">METHOD</div>
     <div class="mkapi-node-name">
-      <code class="mkapi-node-basename">message</code><code class="mkapi-node-signature">(n)</code>
       
+        <code class="mkapi-node-prefix">example.ExampleClass.</code><code class="mkapi-node-basename">message</code><code class="mkapi-node-signature">(n)</code>
+        <span class="mkapi-args-type">&#x2192; list of str</span>
       
     </div>
   </div>
@@ -437,7 +438,7 @@ MkDocs</a>.</p>
   
     <div class="mkapi-section">
       
-      <div class="mkapi-section-body"><p>A bound method.</p></div>
+      <div class="mkapi-section-body"><p>Returns a message list.</p></div>
     </div>
   
     <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
@@ -453,12 +454,6 @@ MkDocs</a>.</p>
 </ul></div>
     </div>
   
-    <div class="mkapi-section mkapi-section-named mkapi-section-returns">
-      <div class="mkapi-section-name mkapi-section-name-returns">
-      <span class="mkapi-section-name-body">Returns</span> <span class="mkapi-args-type">(list of str)</span></div>
-      <div class="mkapi-section-body mkapi-section-body-returns"><p>A message list.</p></div>
-    </div>
-  
 </div>
   
 </div>
@@ -469,8 +464,9 @@ MkDocs</a>.</p>
   <div class="mkapi-node-header mkapi-node-header-readonly_property">
     <div class="mkapi-node-kind mkapi-node-kind-readonly_property">READONLY_PROPERTY</div>
     <div class="mkapi-node-name">
-      <code class="mkapi-node-basename">readonly_property</code>
-      <span class="mkapi-args-type">(str)</span>
+      
+        <code class="mkapi-node-prefix">example.ExampleClass.</code><code class="mkapi-node-basename">readonly_property</code>
+        <span class="mkapi-args-type">&#x2192; str</span>
       
     </div>
   </div>
@@ -491,9 +487,10 @@ MkDocs</a>.</p>
   <div class="mkapi-node-header mkapi-node-header-readwrite_property">
     <div class="mkapi-node-kind mkapi-node-kind-readwrite_property">READWRITE_PROPERTY</div>
     <div class="mkapi-node-name">
-      <code class="mkapi-node-basename">readwrite_property</code>
       
-      <span class="mkapi-args-type">(list of int)</span>
+        <code class="mkapi-node-prefix">example.ExampleClass.</code><code class="mkapi-node-basename">readwrite_property</code>
+        <span class="mkapi-args-type">&#x2192; list of int</span>
+      
     </div>
   </div>
   <div class="mkapi-docstring">
@@ -516,8 +513,9 @@ MkDocs</a>.</p>
 <ul>
 <li>Docstring of <code>__init__</code> function is treated as a class-level docstring.</li>
 <li>Type annotation using <code>typing</code> package (<code>List</code> and <code>Tuple</code> in this case) is converted into readable style. So far, only <code>List</code> and <code>Tuple</code> are supported.</li>
-<li>Bound method (<code>message</code> in this case) has a <code>METHOD</code> prefix instead of a <code>FUNCTION</code> prefix.</li>
-<li>Type detection from type annotation for property has not been supported.</li>
+<li>Bound methods (<code>message</code> in this case) have a <code>METHOD</code> prefix instead of a <code>FUNCTION</code> prefix.</li>
+<li>If callable objects have neither <code>Returns</code> nor <code>Yields</code>, the type appears on the object definition line like type annotation.</li>
+<li>For properties, the type can be written at the beginning of the docstring or type annotation as well as functions.</li>
 <li>Read-only property and read-write property are automatically determined.</li>
 </ul>
 <h2 id="data-class"><span class="pheasant-header"><span class="header"><span class="title">Data Class</span></span></span></h2>
@@ -525,7 +523,7 @@ MkDocs</a>.</p>
 <span class="title">example.ExampleDataClass</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">@dataclass
 class ExampleDataClass:
     &#34;&#34;&#34;A dataclass.
@@ -540,7 +538,7 @@ class ExampleDataClass:
 
     x: int = 0
     y: int = field(default=1, init=False)
-</code></pre></div></div></div></div>
+</code></pre></div></div></div>
 
 </div></div></div>
 
@@ -551,8 +549,9 @@ class ExampleDataClass:
   <div class="mkapi-node-header mkapi-node-header-dataclass">
     <div class="mkapi-node-kind mkapi-node-kind-dataclass">DATACLASS</div>
     <div class="mkapi-node-name">
-      <code class="mkapi-node-basename">example.ExampleDataClass</code><code class="mkapi-node-signature">(x=0)</code>
       
+        <code class="mkapi-node-basename">example.ExampleDataClass</code><code class="mkapi-node-signature">(x=0)</code>
+        
       
     </div>
   </div>
@@ -604,20 +603,42 @@ class ExampleDataClass:
 <li>Automatic attributes type detection as well as parameters.</li>
 </ul>
 <h2 id="module"><span class="pheasant-header"><span class="header"><span class="title">Module</span></span></span></h2>
-<p>You can also get a whole module API documentation.</p>
+<p>Finally, let's generate the API documentation for <code>example</code> module. The module has a module level docstring like below:</p>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">1</span>
+<span class="title">example.py (line 1~10)</span></p>
+<div class="content">
+
+<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">&#34;&#34;&#34;Module level docstring.&#34;&#34;&#34;
+from dataclasses import dataclass, field
+from typing import Iterator, List, Tuple
+
+
+def add(x: int, y: int = 1) -&gt; int:
+    &#34;&#34;&#34;Returns $x + y$.
+
+    Args:
+        x: The first parameter.</code></pre></div></div></div>
+
+</div></div></div>
+
+<p>So,</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][example]</code></pre></div></div></div>
 
-<p>creates the API document for the entire <code>example</code> module.</p>
+<p>creates the API documentation for the entire <code>example</code> module.</p>
 <div class="mkapi-node mkapi-node-depth-0">
   <div class="mkapi-node-header mkapi-node-header-module">
     <div class="mkapi-node-kind mkapi-node-kind-module">MODULE</div>
     <div class="mkapi-node-name">
-      <code class="mkapi-node-basename">example</code>
-      
+      <span class="mkapi-node-basename">example</span>
       
     </div>
   </div>
   <div class="mkapi-docstring">
+  
+    <div class="mkapi-section">
+      
+      <div class="mkapi-section-body"><p>Module level docstring.</p></div>
+    </div>
   
 </div>
   
@@ -628,8 +649,9 @@ class ExampleDataClass:
   <div class="mkapi-node-header mkapi-node-header-class">
     <div class="mkapi-node-kind mkapi-node-kind-class">CLASS</div>
     <div class="mkapi-node-name">
-      <code class="mkapi-node-basename">ExampleClass</code><code class="mkapi-node-signature">(x, y)</code>
       
+        <code class="mkapi-node-prefix">example.</code><code class="mkapi-node-basename">ExampleClass</code><code class="mkapi-node-signature">(x, y)</code>
+        
       
     </div>
   </div>
@@ -693,8 +715,9 @@ class ExampleDataClass:
   <div class="mkapi-node-header mkapi-node-header-method">
     <div class="mkapi-node-kind mkapi-node-kind-method">METHOD</div>
     <div class="mkapi-node-name">
-      <code class="mkapi-node-basename">message</code><code class="mkapi-node-signature">(n)</code>
       
+        <code class="mkapi-node-basename">message</code><code class="mkapi-node-signature">(n)</code>
+        <span class="mkapi-args-type">&#x2192; list of str</span>
       
     </div>
   </div>
@@ -702,7 +725,7 @@ class ExampleDataClass:
   
     <div class="mkapi-section">
       
-      <div class="mkapi-section-body"><p>A bound method.</p></div>
+      <div class="mkapi-section-body"><p>Returns a message list.</p></div>
     </div>
   
     <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
@@ -718,12 +741,6 @@ class ExampleDataClass:
 </ul></div>
     </div>
   
-    <div class="mkapi-section mkapi-section-named mkapi-section-returns">
-      <div class="mkapi-section-name mkapi-section-name-returns">
-      <span class="mkapi-section-name-body">Returns</span> <span class="mkapi-args-type">(list of str)</span></div>
-      <div class="mkapi-section-body mkapi-section-body-returns"><p>A message list.</p></div>
-    </div>
-  
 </div>
   
 </div>
@@ -734,8 +751,9 @@ class ExampleDataClass:
   <div class="mkapi-node-header mkapi-node-header-readonly_property">
     <div class="mkapi-node-kind mkapi-node-kind-readonly_property">READONLY_PROPERTY</div>
     <div class="mkapi-node-name">
-      <code class="mkapi-node-basename">readonly_property</code>
-      <span class="mkapi-args-type">(str)</span>
+      
+        <code class="mkapi-node-basename">readonly_property</code>
+        <span class="mkapi-args-type">&#x2192; str</span>
       
     </div>
   </div>
@@ -756,9 +774,10 @@ class ExampleDataClass:
   <div class="mkapi-node-header mkapi-node-header-readwrite_property">
     <div class="mkapi-node-kind mkapi-node-kind-readwrite_property">READWRITE_PROPERTY</div>
     <div class="mkapi-node-name">
-      <code class="mkapi-node-basename">readwrite_property</code>
       
-      <span class="mkapi-args-type">(list of int)</span>
+        <code class="mkapi-node-basename">readwrite_property</code>
+        <span class="mkapi-args-type">&#x2192; list of int</span>
+      
     </div>
   </div>
   <div class="mkapi-docstring">
@@ -783,8 +802,9 @@ class ExampleDataClass:
   <div class="mkapi-node-header mkapi-node-header-dataclass">
     <div class="mkapi-node-kind mkapi-node-kind-dataclass">DATACLASS</div>
     <div class="mkapi-node-name">
-      <code class="mkapi-node-basename">ExampleDataClass</code><code class="mkapi-node-signature">(x=0)</code>
       
+        <code class="mkapi-node-prefix">example.</code><code class="mkapi-node-basename">ExampleDataClass</code><code class="mkapi-node-signature">(x=0)</code>
+        
       
     </div>
   </div>
@@ -836,8 +856,9 @@ class ExampleDataClass:
   <div class="mkapi-node-header mkapi-node-header-function">
     <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
     <div class="mkapi-node-name">
-      <code class="mkapi-node-basename">add</code><code class="mkapi-node-signature">(x, y=1)</code>
       
+        <code class="mkapi-node-prefix">example.</code><code class="mkapi-node-basename">add</code><code class="mkapi-node-signature">(x, y=1)</code>
+        
       
     </div>
   </div>
@@ -905,8 +926,9 @@ MkDocs</a>.</p>
   <div class="mkapi-node-header mkapi-node-header-generator">
     <div class="mkapi-node-kind mkapi-node-kind-generator">GENERATOR</div>
     <div class="mkapi-node-name">
-      <code class="mkapi-node-basename">gen</code><code class="mkapi-node-signature">(n)</code>
       
+        <code class="mkapi-node-prefix">example.</code><code class="mkapi-node-basename">gen</code><code class="mkapi-node-signature">(n)</code>
+        
       
     </div>
   </div>
