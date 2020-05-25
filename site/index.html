@@ -57,9 +57,9 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mkdocs-setting">MkDocs setting</a>
+    <li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mkapi-usage">MkApi usage</a>
+    <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a>
     </li>
     </ul>
                     </li>
@@ -102,39 +102,34 @@
               
                 
 <h1 id="mkapi-documentation"><span class="pheasant-header"><span class="header"><span class="title">MkApi Documentation</span></span></span></h1>
-<p>MkApi is a <a href="https://www.mkdocs.org/">MkDocs</a> plugin for auto API documentation.
-MkApi supports the <a href="http://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">Google Python Style Guide</a> partially.</p>
-<p>Features of MkApi are:</p>
+<p>The MkApi plugin for <a href="https://www.mkdocs.org/">MkDocs</a> generates API documentation for Python code. The MkApi plugin supports the <a href="http://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">Google Python Style Guide</a> only and partially.</p>
+<p>Features of the MkApi plugin are:</p>
 <ul>
-<li>Supported sections: <code>Args</code>, <code>Arguments</code>, <code>Attributes</code>, <code>Example(s)</code>, <code>Note(s)</code>, <code>Raises</code>, <code>Returns</code>, <code>References</code>, <code>Todo</code>, <code>Warning(s)</code>, <code>Warns</code>, <code>Yields</code>.</li>
-<li>Type annotation. If you write your function such as <code>def func(x: int) -&gt; str:</code>, you don't need write type(s) in <code>Args</code>, <code>Returns</code>, or <code>Yields</code> section. You can overwrite them in your docstring.</li>
-<li>Automatic type detection. MkApi can create <code>CLASS</code>, <code>DATACLASS</code>, <code>FUNCTION</code>, <code>GENERATOR</code>, <code>METHOD</code>, or <code>PROPERTY</code> prefix for each object.</li>
+<li>Section syntax of the Goole style guide. Supported sections are <code>Args</code>, <code>Arguments</code>, <code>Attributes</code>, <code>Example[s]</code>, <code>Note[s]</code>, <code>Raises</code>, <code>Returns</code>, <code>References</code>, <code>Todo</code>, <code>Warning[s]</code>, <code>Warns</code>, and <code>Yields</code>.</li>
+<li>Type annotation. If you write your function such as <code>def func(x: int) -&gt; str:</code>, you don't need write type(s) in <code>Args</code>, <code>Returns</code>, or <code>Yields</code> section again. You can overwrite the type annotation in the corresponding docstring.</li>
+<li>Automatic object type inspection. The MkApi plugin creates <code>CLASS</code>, <code>DATACLASS</code>, <code>FUNCTION</code>, <code>GENERATOR</code>, <code>METHOD</code>, or <code>PROPERTY</code> prefix for each object.</li>
 </ul>
 <h2 id="installation"><span class="pheasant-header"><span class="header"><span class="title">Installation</span></span></span></h2>
 <p>Install the plugin using pip:</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="bash">pip install mkapi</code></pre></div></div></div>
 
-<h2 id="mkdocs-setting"><span class="pheasant-header"><span class="header"><span class="title">MkDocs setting</span></span></span></h2>
-<p>Add the following lines to your <code>mkdocs.yml</code>:</p>
+<h2 id="configuration"><span class="pheasant-header"><span class="header"><span class="title">Configuration</span></span></span></h2>
+<p>Add the following lines to <code>mkdocs.yml</code>:</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yml">plugins:
-  - search
+  - search # necessary for search to work
   - mkapi</code></pre></div></div></div>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you have no <code>plugins</code> entry in your config file yet, you'll likely also want to add the <code>search</code> plugin. MkDocs enables it by default if there is no <code>plugins</code> entry set.</p>
-</div>
-<h2 id="mkapi-usage"><span class="pheasant-header"><span class="header"><span class="title">MkApi usage</span></span></span></h2>
-<p>In your Markdown file, write a embedding of an package, module, function, or other object, just like normal Markdown's image embedding:</p>
+<h2 id="usage"><span class="pheasant-header"><span class="header"><span class="title">Usage</span></span></span></h2>
+<p>To generate the API documentation, add an exclamation mark (!), followed by <code>mkapi</code> in brackets, and the object qualname in parentheses. Yes, this is like adding an image. The object can be a package, module, function, class, <em>etc</em>.</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](&lt;object.qualname&gt;)</code></pre></div></div></div>
 
-<p>MkApi imports objects that you specify. If they aren't in <code>sys.path</code>, configure <code>mkdocs.yml</code> like below:</p>
+<p>The MkApi plugin imports objects that you specify. If they aren't in the <code>sys.path</code>, configure <code>mkdocs.yml</code> like below:</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yml">plugins:
   - search
   - mkapi:
       src_dirs: [&lt;path_1&gt;, &lt;path_2&gt;, ...]</code></pre></div></div></div>
 
-<p>Here, <code>path_X</code>s are inserted to <code>sys.path</code>. <code>path_X</code>s are relative paths from the directory in which <code>mkdocs.yml</code> exists.</p>
+<p>Here, <code>path_X</code>s are inserted to <code>sys.path</code>. These <code>path_X</code>s are relative paths to the directory in which <code>mkdocs.yml</code> exists.</p>
               
             </div>
           </div>
@@ -193,5 +188,5 @@ MkApi supports the <a href="http://google.github.io/styleguide/pyguide.html#38-c
 
 <!--
 MkDocs version : 1.1.1
-Build Date UTC : 2020-05-25 02:54:18.160045+00:00
+Build Date UTC : 2020-05-25 05:28:19.580807+00:00
 -->
