@@ -125,7 +125,7 @@ extra_javascript:
 <span class="title">example.add</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">def add(x: int, y: int = 1) -&gt; int:
     &#34;&#34;&#34;Returns $x + y$.
 
@@ -148,7 +148,7 @@ extra_javascript:
         But you should use `Note` section instead for consistency.
     &#34;&#34;&#34;
     return x + y
-</code></pre></div></div></div>
+</code></pre></div></div></div></div>
 
 </div></div></div>
 
@@ -243,7 +243,7 @@ MkDocs</a>.</p>
 <span class="title">example.gen</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">def gen(n) -&gt; Iterator[str]:
     &#34;&#34;&#34;Yields a numbered string.
 
@@ -255,7 +255,7 @@ MkDocs</a>.</p>
     &#34;&#34;&#34;
     for x in range(n):
         yield f&#34;a{x}&#34;
-</code></pre></div></div></div>
+</code></pre></div></div></div></div>
 
 </div></div></div>
 
@@ -305,12 +305,12 @@ MkDocs</a>.</p>
 
 <p>Here, the parameter <code>n</code> has no type annotation but you can specify it in the <code>Args</code> section directly.</p>
 <h2 id="class"><span class="pheasant-header"><span class="header"><span class="title">Class</span></span></span></h2>
-<p><code>example.py</code> alse defines a simple class <code>ExampleClass</code>.</p>
+<p><code>example.py</code> also defines a simple class <code>ExampleClass</code>.</p>
 <div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">Code</span> <span class="number">3</span>
 <span class="title">example.ExampleClass</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">class ExampleClass:
     def __init__(self, x: List[int], y: Tuple[str, int]):
         &#34;&#34;&#34;A normal class.
@@ -350,7 +350,7 @@ MkDocs</a>.</p>
     @readwrite_property.setter
     def readwrite_property(self, value):
         &#34;&#34;&#34;Docstring in setter is ignored.&#34;&#34;&#34;
-</code></pre></div></div></div>
+</code></pre></div></div></div></div>
 
 </div></div></div>
 
@@ -523,7 +523,7 @@ MkDocs</a>.</p>
 <span class="title">example.ExampleDataClass</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">@dataclass
 class ExampleDataClass:
     &#34;&#34;&#34;A dataclass.
@@ -538,7 +538,7 @@ class ExampleDataClass:
 
     x: int = 0
     y: int = field(default=1, init=False)
-</code></pre></div></div></div>
+</code></pre></div></div></div></div>
 
 </div></div></div>
 
