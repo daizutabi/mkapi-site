@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="daizutabi">
     <link rel="shortcut icon" href="../img/favicon.ico">
-    <title>Examples &mdash; MkApi</title>
+    <title>NumPy Style &mdash; MkApi</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -34,7 +34,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href=".." class="site-name"> MkApi</a>
-                </div><div class="version">0.3.6</div>
+                </div><div class="version">0.4.0</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -46,13 +46,17 @@
             <nav class="nav">
                 <ul class="root">
                     <li class="toctree-l1"><a class="nav-item" href="..">MkApi Documentation</a></li>
-                    <li class="toctree-l1 current"><a class="nav-item current" href="./">Examples</a>
+                    <li class="toctree-l1"><button class="section nav-item">Examples</button>
 <ul class="subnav">
-<li class="toctree-l2"><a class="nav-item toc" href="#function">Function</a></li>
-<li class="toctree-l2"><a class="nav-item toc" href="#generator">Generator</a></li>
-<li class="toctree-l2"><a class="nav-item toc" href="#class">Class</a></li>
-<li class="toctree-l2"><a class="nav-item toc" href="#data-class">Data Class</a></li>
-<li class="toctree-l2"><a class="nav-item toc" href="#module">Module</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../google_style/">Google Style</a></li>
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">NumPy Style</a>
+<ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#function">Function</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#generator">Generator</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#class">Class</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#data-class">Data Class</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#module">Module</a></li>
+</ul></li>
 </ul></li>
                 </ul>
             </nav>
@@ -60,7 +64,7 @@
     <div class="link">
         <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
     </div>
-    <div class="previous"><a href="..">&laquo; Previous</a></div>
+    <div class="previous"><a href="../google_style/">&laquo; Previous</a></div>
 </div>
         </aside>
         <div id="spacer"><button class="arrow"></button></div>
@@ -72,12 +76,12 @@
             <div id="main">
                 <nav class="breadcrumbs">
 <ul>
-    
+    <li>Examples</li>
 </ul>
 </nav>
                 <div id="content">
-<h1 id="examples"><span class="pheasant-header"><span class="header"><span class="title">Examples</span></span></span></h1>
-<p>Let's start realistic examples. Here, a sample Python file <code>example.py</code> is stored under the <code>examples</code> directory relative to the <code>mkdocs.yml</code> directory, so you should configure <code>mkdocs.yml</code> like below. In addition, we add two extensions and an extra javascript for demonstration.</p>
+<h1 id="numpy-style"><span class="pheasant-header"><span class="header"><span class="title">NumPy Style</span></span></span></h1>
+<p>Let's start realistic examples. Here, a sample Python file <code>numpy_style.py</code> is stored under the <code>examples</code> directory relative to the <code>mkdocs.yml</code> directory, so you should configure <code>mkdocs.yml</code> like below. In addition, we add two extensions and an extra javascript for demonstration.</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yml">plugins:
   - search
   - mkapi:
@@ -91,48 +95,58 @@ extra_javascript:  # for pymdownx.arithmatex
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML</code></pre></div></div></div>
 
 <h2 id="function"><span class="pheasant-header"><span class="header"><span class="title">Function</span></span></span></h2>
-<p>The <code>example</code> module defines a simple function <code>add()</code>.</p>
-<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">Code</span> <span class="number">1</span>
-<span class="title">example.add()</span></p>
+<p>The <code>numpy_style</code> module defines a simple function <code>add()</code>.</p>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">Code</span> <span class="number">5</span>
+<span class="title">numpy_style.add()</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">def add(x: int, y: int = 1) -&gt; int:
     &#34;&#34;&#34;Returns $x + y$.
 
-    Args:
-        x: The first parameter.
-        y: The second parameter. Default={default}.
+    Parameters
+    ----------
+    x
+        The first parameter.
+    y
+        The second parameter. Default={default}.
 
-    Returns:
+    Returns
+    -------
+    int
         Added value.
 
-    Examples:
-        &gt;&gt;&gt; add(1, 2)
-        3
+        !!! note
+            The return type must be duplicated in the docstring to comply with the NumPy
+            docstring style.
 
-    !!! note
-        You can use the [admonition extension of
-        MkDocs](https://squidfunk.github.io/mkdocs-material/extensions/admonition/).
+    Examples
+    --------
+    Examples should be written in doctest format
 
-    Note:
-        But you should use `Note` section instead for consistency.
+    &gt;&gt;&gt; add(1, 2)
+    3
+
+    Note
+    ----
+        MkApi doen&#39;t check an underline that follows a section header.
+        Just skip the line.
     &#34;&#34;&#34;
     return x + y
-</code></pre></div></div></div></div>
+</code></pre></div></div></div>
 
 </div></div></div>
 
 <p>Then, you can write an entry to generate API for the function anywhere in your Markdown source:</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][example.add]</code></pre></div></div></div>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][numpy_style.add]</code></pre></div></div></div>
 
 <p>MkApi generates the API documentation for the <code>add()</code> function.</p>
-<div class="mkapi-node mkapi-node-depth-0" id="example.add">
+<div class="mkapi-node mkapi-node-depth-0" id="numpy_style.add">
   <div class="mkapi-node-header mkapi-node-header-function">
     <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">example.add</code><code class="mkapi-node-signature">(x, y=1)</code>
+        <code class="mkapi-node-basename">numpy_style.add</code><code class="mkapi-node-signature">(x, y=1)</code>
         
       
     </div>
@@ -165,30 +179,28 @@ extra_javascript:  # for pymdownx.arithmatex
     <div class="mkapi-section mkapi-section-named mkapi-section-returns">
       <div class="mkapi-section-name mkapi-section-name-returns">
       <span class="mkapi-section-name-body">Returns</span> <span class="mkapi-args-type">(int)</span></div>
-      <div class="mkapi-section-body mkapi-section-body-returns"><p>Added value.</p></div>
+      <div class="mkapi-section-body mkapi-section-body-returns"><p>Added value.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The return type must be duplicated in the docstring to comply with the NumPy
+docstring style.</p>
+</div></div>
     </div>
   
     <div class="mkapi-section mkapi-section-named mkapi-section-examples">
       <div class="mkapi-section-name mkapi-section-name-examples">
       <span class="mkapi-section-name-body">Examples</span></div>
-      <div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; add(1, 2)
+      <div class="mkapi-section-body mkapi-section-body-examples"><p>Examples should be written in doctest format</p>
+<pre><code class="python">&gt;&gt;&gt; add(1, 2)
 3
 </code></pre></div>
-    </div>
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can use the <a href="https://squidfunk.github.io/mkdocs-material/extensions/admonition/">admonition extension of
-MkDocs</a>.</p>
-</div></div>
     </div>
   
     <div class="mkapi-section mkapi-section-named mkapi-section-note">
       <div class="mkapi-section-name mkapi-section-name-note">
       <span class="mkapi-section-name-body">Note</span></div>
-      <div class="mkapi-section-body mkapi-section-body-note"><p>But you should use <code>Note</code> section instead for consistency.</p></div>
+      <div class="mkapi-section-body mkapi-section-body-note"><p>MkApi doen't check an underline that follows a section header.
+Just skip the line.</p></div>
     </div>
   
 </div>
@@ -201,7 +213,7 @@ MkDocs</a>.</p>
 </div>
 <p>In this simple example, you can see some features of MkApi.</p>
 <ul>
-<li>Type inspection of <code>add</code> (FUNCTION prefix is added before <code>example.add</code>).</li>
+<li>Type inspection of <code>add</code> (FUNCTION prefix is added before <code>numpy_style.add</code>).</li>
 <li>Use of type annotation for both Parameters and Returns sections.</li>
 <li>Add <em>optional</em> if parameters have default values.</li>
 <li>Default value replacement by the <code>{default}</code> keyword in the <code>Args</code> section.</li>
@@ -209,37 +221,41 @@ MkDocs</a>.</p>
 <li>Use of MkDocs extensions: MathJax rendering and admonition.</li>
 </ul>
 <h2 id="generator"><span class="pheasant-header"><span class="header"><span class="title">Generator</span></span></span></h2>
-<p>The <code>example</code> module also defines a simple generator <code>gen()</code>.</p>
-<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">Code</span> <span class="number">2</span>
-<span class="title">example.gen()</span></p>
+<p>The <code>numpy_style</code> module also defines a simple generator <code>gen()</code>.</p>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">Code</span> <span class="number">6</span>
+<span class="title">numpy_style.gen()</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">def gen(n) -&gt; Iterator[str]:
     &#34;&#34;&#34;Yields a numbered string.
 
-    Args:
-        n (int): The length of iteration.
+    Parameters
+    ----------
+        n : int
+            The length of iteration.
 
-    Yields:
-       A numbered string.
+    Yields
+    ------
+    str
+        A numbered string.
     &#34;&#34;&#34;
     for x in range(n):
         yield f&#34;a{x}&#34;
-</code></pre></div></div></div></div>
+</code></pre></div></div></div>
 
 </div></div></div>
 
 <p>Then,</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][example.gen]</code></pre></div></div></div>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][numpy_style.gen]</code></pre></div></div></div>
 
 <p>creates the API documentation for the <code>gen()</code> generator.</p>
-<div class="mkapi-node mkapi-node-depth-0" id="example.gen">
+<div class="mkapi-node mkapi-node-depth-0" id="numpy_style.gen">
   <div class="mkapi-node-header mkapi-node-header-generator">
     <div class="mkapi-node-kind mkapi-node-kind-generator">GENERATOR</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">example.gen</code><code class="mkapi-node-signature">(n)</code>
+        <code class="mkapi-node-basename">numpy_style.gen</code><code class="mkapi-node-signature">(n)</code>
         
       
     </div>
@@ -281,25 +297,32 @@ MkDocs</a>.</p>
 <li>Yields type is not <em>iterator of str</em> but <em>str</em>, because <code>gen()</code> is a generator.</li>
 </ul>
 <h2 id="class"><span class="pheasant-header"><span class="header"><span class="title">Class</span></span></span></h2>
-<p>The <code>example</code> module also defines a simple class <code>ExampleClass</code>.</p>
-<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">Code</span> <span class="number">3</span>
-<span class="title">example.ExampleClass</span></p>
+<p>The <code>numpy_style</code> module also defines a simple class <code>ExampleClass</code>.</p>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">Code</span> <span class="number">7</span>
+<span class="title">numpy_style.ExampleClass</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">class ExampleClass:
     def __init__(self, x: List[int], y: Tuple[str, int]):
         &#34;&#34;&#34;A normal class.
 
-        Args:
-            x: The first parameter.
-            y: The second parameter.
+        Parameters
+        ----------
+            x
+                The first parameter.
+            y
+                The second parameter.
 
-        Attributes:
-            z (str): The first attribute.
+        Attributes
+        ----------
+            z : str
+                The first attribute.
 
-        Raises:
-            ValueError: If the length of `x` is equal to 0.
+        Raises
+        ------
+        ValueError
+            If the length of `x` is equal to 0.
         &#34;&#34;&#34;
         if len(x) == 0:
             raise ValueError()
@@ -308,8 +331,10 @@ MkDocs</a>.</p>
     def message(self, n: int) -&gt; List[str]:
         &#34;&#34;&#34;Returns a message list.
 
-        Args:
-            n: Repeatation.
+        Parameters
+        ----------
+            n
+                Repeatation.
         &#34;&#34;&#34;
         return [self.z] * n
 
@@ -326,20 +351,20 @@ MkDocs</a>.</p>
     @readwrite_property.setter
     def readwrite_property(self, value):
         &#34;&#34;&#34;Docstring in setter is ignored.&#34;&#34;&#34;
-</code></pre></div></div></div></div>
+</code></pre></div></div></div>
 
 </div></div></div>
 
 <p>As usual,</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][example.ExampleClass]</code></pre></div></div></div>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][numpy_style.ExampleClass]</code></pre></div></div></div>
 
 <p>creates the API documentation for the <code>ExampleClass</code> class.</p>
-<div class="mkapi-node mkapi-node-depth-0" id="example.ExampleClass">
+<div class="mkapi-node mkapi-node-depth-0" id="numpy_style.ExampleClass">
   <div class="mkapi-node-header mkapi-node-header-class">
     <div class="mkapi-node-kind mkapi-node-kind-class">CLASS</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">example.ExampleClass</code><code class="mkapi-node-signature">(x, y)</code>
+        <code class="mkapi-node-basename">numpy_style.ExampleClass</code><code class="mkapi-node-signature">(x, y)</code>
         
       
     </div>
@@ -400,7 +425,7 @@ MkDocs</a>.</p>
     <div class="mkapi-members">
       
         <div class="mkapi-member">
-          <div class="mkapi-node mkapi-node-depth-1" id="example.ExampleClass.message">
+          <div class="mkapi-node mkapi-node-depth-1" id="numpy_style.ExampleClass.message">
   <div class="mkapi-node-header mkapi-node-header-method">
     <div class="mkapi-node-kind mkapi-node-kind-method">METHOD</div>
     <div class="mkapi-node-name">
@@ -436,7 +461,7 @@ MkDocs</a>.</p>
         </div>
       
         <div class="mkapi-member">
-          <div class="mkapi-node mkapi-node-depth-1" id="example.ExampleClass.readonly_property">
+          <div class="mkapi-node mkapi-node-depth-1" id="numpy_style.ExampleClass.readonly_property">
   <div class="mkapi-node-header mkapi-node-header-readonly_property">
     <div class="mkapi-node-kind mkapi-node-kind-readonly_property">READONLY_PROPERTY</div>
     <div class="mkapi-node-name">
@@ -459,7 +484,7 @@ MkDocs</a>.</p>
         </div>
       
         <div class="mkapi-member">
-          <div class="mkapi-node mkapi-node-depth-1" id="example.ExampleClass.readwrite_property">
+          <div class="mkapi-node mkapi-node-depth-1" id="numpy_style.ExampleClass.readwrite_property">
   <div class="mkapi-node-header mkapi-node-header-readwrite_property">
     <div class="mkapi-node-kind mkapi-node-kind-readwrite_property">READWRITE_PROPERTY</div>
     <div class="mkapi-node-name">
@@ -491,44 +516,49 @@ MkDocs</a>.</p>
 <li>Type annotation using <code>typing</code> package (<code>List</code> and <code>Tuple</code> in this case) is converted into readable style. So far, only <code>List</code> and <code>Tuple</code> are supported.</li>
 <li>Bound methods (<code>message</code> in this case) have a <code>METHOD</code> prefix instead of a <code>FUNCTION</code> prefix.</li>
 <li>If callable objects have neither <code>Returns</code> nor <code>Yields</code>, the type appears on the object definition line like type annotation.</li>
-<li>For properties, the type can be written at the beginning of the docstring or type annotation as well as functions.</li>
+<li>For properties, the type can be written at the beginning of the docstring or as type annotation.</li>
 <li>Whether a property is read-only or read-write is inspected.</li>
 </ul>
 <h2 id="data-class"><span class="pheasant-header"><span class="header"><span class="title">Data Class</span></span></span></h2>
-<p>The <code>example</code> module also defines a simple <a href="https://docs.python.org/3/library/dataclasses.html">data class</a> <code>ExampleDataClass</code>.</p>
-<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">Code</span> <span class="number">4</span>
-<span class="title">example.ExampleDataClass</span></p>
+<p>The <code>numpy_style</code> module also defines a simple <a href="https://docs.python.org/3/library/dataclasses.html">data class</a> <code>ExampleDataClass</code>.</p>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">Code</span> <span class="number">8</span>
+<span class="title">numpy_style.ExampleDataClass</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">@dataclass
 class ExampleDataClass:
     &#34;&#34;&#34;A dataclass.
 
-    Args:
-        x: The first parameter.
+    Parameters
+    ----------
+        x
+            The first parameter.
 
-    Attributes:
-        x: The first attribute.
-        y: The second attribute.
+    Attributes
+    ----------
+        x
+            The first attribute.
+        y
+            The second attribute.
     &#34;&#34;&#34;
 
     x: int = 0
     y: int = field(default=1, init=False)
-</code></pre></div></div></div></div>
+</code></pre></div></div></div>
 
 </div></div></div>
 
 <p>Then,</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][example.ExampleDataClass]</code></pre></div></div></div>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][numpy_style.ExampleDataClass]</code></pre></div></div></div>
 
 <p>creates the API documentation for the <code>ExampleDataClass</code> class.</p>
-<div class="mkapi-node mkapi-node-depth-0" id="example.ExampleDataClass">
+<div class="mkapi-node mkapi-node-depth-0" id="numpy_style.ExampleDataClass">
   <div class="mkapi-node-header mkapi-node-header-dataclass">
     <div class="mkapi-node-kind mkapi-node-kind-dataclass">DATACLASS</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">example.ExampleDataClass</code><code class="mkapi-node-signature">(x=0)</code>
+        <code class="mkapi-node-basename">numpy_style.ExampleDataClass</code><code class="mkapi-node-signature">(x=0)</code>
         
       
     </div>
@@ -581,9 +611,9 @@ class ExampleDataClass:
 <li>Attributes type inspection as well as parameters if they are data class fields.</li>
 </ul>
 <h2 id="module"><span class="pheasant-header"><span class="header"><span class="title">Module</span></span></span></h2>
-<p>Finally, let's generate the API documentation for the <code>example</code> module. The module has a module level docstring like below:</p>
-<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">1</span>
-<span class="title">example.py (line 1~10)</span></p>
+<p>Finally, let's generate the API documentation for the <code>numpy_style</code> module. The module has a module level docstring like below:</p>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">2</span>
+<span class="title">numpy_style.py (line 1~10)</span></p>
 <div class="content">
 
 <div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">&#34;&#34;&#34;Module level docstring.&#34;&#34;&#34;
@@ -594,20 +624,20 @@ from typing import Iterator, List, Tuple
 def add(x: int, y: int = 1) -&gt; int:
     &#34;&#34;&#34;Returns $x + y$.
 
-    Args:
-        x: The first parameter.</code></pre></div></div></div>
+    Parameters
+    ----------</code></pre></div></div></div>
 
 </div></div></div>
 
 <p>Then,</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][example]</code></pre></div></div></div>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][numpy_style]</code></pre></div></div></div>
 
-<p>creates the API documentation for the entire <code>example</code> module.</p>
-<div class="mkapi-node mkapi-node-depth-0" id="example">
+<p>creates the API documentation for the entire <code>numpy_style</code> module.</p>
+<div class="mkapi-node mkapi-node-depth-0" id="numpy_style">
   <div class="mkapi-node-header mkapi-node-header-module">
     <div class="mkapi-node-kind mkapi-node-kind-module">MODULE</div>
     <div class="mkapi-node-name">
-      <span class="mkapi-node-basename">example</span>
+      <span class="mkapi-node-basename">numpy_style</span>
       
     </div>
   </div>
@@ -623,12 +653,12 @@ def add(x: int, y: int = 1) -&gt; int:
     <div class="mkapi-members">
       
         <div class="mkapi-member">
-          <div class="mkapi-node mkapi-node-depth-1" id="example.add">
+          <div class="mkapi-node mkapi-node-depth-1" id="numpy_style.add">
   <div class="mkapi-node-header mkapi-node-header-function">
     <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-prefix">example.</code><code class="mkapi-node-basename">add</code><code class="mkapi-node-signature">(x, y=1)</code>
+        <code class="mkapi-node-prefix">numpy_style.</code><code class="mkapi-node-basename">add</code><code class="mkapi-node-signature">(x, y=1)</code>
         
       
     </div>
@@ -661,30 +691,28 @@ def add(x: int, y: int = 1) -&gt; int:
     <div class="mkapi-section mkapi-section-named mkapi-section-returns">
       <div class="mkapi-section-name mkapi-section-name-returns">
       <span class="mkapi-section-name-body">Returns</span> <span class="mkapi-args-type">(int)</span></div>
-      <div class="mkapi-section-body mkapi-section-body-returns"><p>Added value.</p></div>
+      <div class="mkapi-section-body mkapi-section-body-returns"><p>Added value.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The return type must be duplicated in the docstring to comply with the NumPy
+docstring style.</p>
+</div></div>
     </div>
   
     <div class="mkapi-section mkapi-section-named mkapi-section-examples">
       <div class="mkapi-section-name mkapi-section-name-examples">
       <span class="mkapi-section-name-body">Examples</span></div>
-      <div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; add(1, 2)
+      <div class="mkapi-section-body mkapi-section-body-examples"><p>Examples should be written in doctest format</p>
+<pre><code class="python">&gt;&gt;&gt; add(1, 2)
 3
 </code></pre></div>
-    </div>
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can use the <a href="https://squidfunk.github.io/mkdocs-material/extensions/admonition/">admonition extension of
-MkDocs</a>.</p>
-</div></div>
     </div>
   
     <div class="mkapi-section mkapi-section-named mkapi-section-note">
       <div class="mkapi-section-name mkapi-section-name-note">
       <span class="mkapi-section-name-body">Note</span></div>
-      <div class="mkapi-section-body mkapi-section-body-note"><p>But you should use <code>Note</code> section instead for consistency.</p></div>
+      <div class="mkapi-section-body mkapi-section-body-note"><p>MkApi doen't check an underline that follows a section header.
+Just skip the line.</p></div>
     </div>
   
 </div>
@@ -693,12 +721,12 @@ MkDocs</a>.</p>
         </div>
       
         <div class="mkapi-member">
-          <div class="mkapi-node mkapi-node-depth-1" id="example.gen">
+          <div class="mkapi-node mkapi-node-depth-1" id="numpy_style.gen">
   <div class="mkapi-node-header mkapi-node-header-generator">
     <div class="mkapi-node-kind mkapi-node-kind-generator">GENERATOR</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-prefix">example.</code><code class="mkapi-node-basename">gen</code><code class="mkapi-node-signature">(n)</code>
+        <code class="mkapi-node-prefix">numpy_style.</code><code class="mkapi-node-basename">gen</code><code class="mkapi-node-signature">(n)</code>
         
       
     </div>
@@ -735,12 +763,12 @@ MkDocs</a>.</p>
         </div>
       
         <div class="mkapi-member">
-          <div class="mkapi-node mkapi-node-depth-1" id="example.ExampleClass">
+          <div class="mkapi-node mkapi-node-depth-1" id="numpy_style.ExampleClass">
   <div class="mkapi-node-header mkapi-node-header-class">
     <div class="mkapi-node-kind mkapi-node-kind-class">CLASS</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-prefix">example.</code><code class="mkapi-node-basename">ExampleClass</code><code class="mkapi-node-signature">(x, y)</code>
+        <code class="mkapi-node-prefix">numpy_style.</code><code class="mkapi-node-basename">ExampleClass</code><code class="mkapi-node-signature">(x, y)</code>
         
       
     </div>
@@ -801,7 +829,7 @@ MkDocs</a>.</p>
     <div class="mkapi-members">
       
         <div class="mkapi-member">
-          <div class="mkapi-node mkapi-node-depth-2" id="example.ExampleClass.message">
+          <div class="mkapi-node mkapi-node-depth-2" id="numpy_style.ExampleClass.message">
   <div class="mkapi-node-header mkapi-node-header-method">
     <div class="mkapi-node-kind mkapi-node-kind-method">METHOD</div>
     <div class="mkapi-node-name">
@@ -837,7 +865,7 @@ MkDocs</a>.</p>
         </div>
       
         <div class="mkapi-member">
-          <div class="mkapi-node mkapi-node-depth-2" id="example.ExampleClass.readonly_property">
+          <div class="mkapi-node mkapi-node-depth-2" id="numpy_style.ExampleClass.readonly_property">
   <div class="mkapi-node-header mkapi-node-header-readonly_property">
     <div class="mkapi-node-kind mkapi-node-kind-readonly_property">READONLY_PROPERTY</div>
     <div class="mkapi-node-name">
@@ -860,7 +888,7 @@ MkDocs</a>.</p>
         </div>
       
         <div class="mkapi-member">
-          <div class="mkapi-node mkapi-node-depth-2" id="example.ExampleClass.readwrite_property">
+          <div class="mkapi-node mkapi-node-depth-2" id="numpy_style.ExampleClass.readwrite_property">
   <div class="mkapi-node-header mkapi-node-header-readwrite_property">
     <div class="mkapi-node-kind mkapi-node-kind-readwrite_property">READWRITE_PROPERTY</div>
     <div class="mkapi-node-name">
@@ -888,12 +916,12 @@ MkDocs</a>.</p>
         </div>
       
         <div class="mkapi-member">
-          <div class="mkapi-node mkapi-node-depth-1" id="example.ExampleDataClass">
+          <div class="mkapi-node mkapi-node-depth-1" id="numpy_style.ExampleDataClass">
   <div class="mkapi-node-header mkapi-node-header-dataclass">
     <div class="mkapi-node-kind mkapi-node-kind-dataclass">DATACLASS</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-prefix">example.</code><code class="mkapi-node-basename">ExampleDataClass</code><code class="mkapi-node-signature">(x=0)</code>
+        <code class="mkapi-node-prefix">numpy_style.</code><code class="mkapi-node-basename">ExampleDataClass</code><code class="mkapi-node-signature">(x=0)</code>
         
       
     </div>
@@ -946,7 +974,7 @@ MkDocs</a>.</p>
 </div></div>
                 <footer>
     <div class="footer-buttons">
-        <div class="previous"><a href=".." title="MkApi"><span>Previous</span></a></div>
+        <div class="previous"><a href="../google_style/" title="Google Style"><span>Previous</span></a></div>
     </div>
     <div class="footer-note">
         <p>
