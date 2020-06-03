@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
     <link rel="stylesheet" href="css/pheasant.css">
-    <link rel="stylesheet" href="extra.css">
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
@@ -35,7 +34,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="." class="site-name"> MkApi</a>
-                </div><div class="version">0.4.2</div>
+                </div><div class="version">0.5.0</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="./search.html" method="get">
@@ -54,8 +53,21 @@
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">Examples</button>
 <ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="google_style/">Google Style</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="numpy_style/">NumPy Style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="google_style/">Google style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="numpy_style/">Numpy style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="options/">Options</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">API</button>
+<ul class="subnav">
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="api/mkapi.core.base/">base</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="api/mkapi.core.docstring/">docstring</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="api/mkapi.plugins.mkdocs/">mkdocs</a></li>
+</ul></li>
 </ul></li>
                 </ul>
             </nav>
@@ -102,7 +114,9 @@
   - mkapi</code></pre></div></div></div>
 
 <h2 id="usage"><span class="pheasant-header"><span class="header"><span class="title">Usage</span></span></span></h2>
-<p>To generate the API documentation, add an exclamation mark (!), followed by <code>mkapi</code> in brackets, and the object qualname in parentheses. Yes, this is like adding an image. The object can be a package, module, function, class, <em>etc</em>.</p>
+<p>MkApi provides two modes to generate API documentation: Embedding mode and Page mode.</p>
+<h3 id="embedding-mode"><span class="pheasant-header"><span class="header"><span class="title">Embedding Mode</span></span></span></h3>
+<p>To generate the API documentation in a Markdown source, add an exclamation mark (!), followed by <code>mkapi</code> in brackets, and the object qualname in parentheses. Yes, this is like adding an image. The object can be a package, module, function, class, <em>etc</em>.</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](&lt;object.qualname&gt;)</code></pre></div></div></div>
 
 <p>The MkApi plugin imports objects that you specify. If they aren't in the <code>sys.path</code>, configure <code>mkdocs.yml</code> like below:</p>
@@ -111,10 +125,26 @@
   - mkapi:
       src_dirs: [&lt;path_1&gt;, &lt;path_2&gt;, ...]</code></pre></div></div></div>
 
-<p>Here, <code>path_X</code>s are inserted to <code>sys.path</code>. These <code>path_X</code>s are relative paths to the directory in which <code>mkdocs.yml</code> exists.</p></div>
+<p>Here, <code>path_X</code>s are inserted to <code>sys.path</code>. These <code>path_X</code>s are relative paths to the directory in which <code>mkdocs.yml</code> exists.</p>
+<p>The embedding mode is useful to embed object interface in a arbitrary position of a Markdown source.</p>
+<h3 id="page-mode"><span class="pheasant-header"><span class="header"><span class="title">Page Mode</span></span></span></h3>
+<p>Using the page mode, you can construct a comprehensive API documentation for a package. The following YAML is <code>nav</code> part of MkApi's own <code>mkdocs.yml</code>:</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yaml">nav:
+  - index.md
+  - Examples:
+    - google_style.md
+    - numpy_style.md
+  - API: mkapi/api/mkapi</code></pre></div></div></div>
+
+<p>MkApi scans the <code>nav</code> to find an entry that starts with <code>'mkapi/'</code>. This entry must includes two or more slashs (<code>'/'</code>). Second string (<code>'api'</code>) splitted by slash is a directory name. MkApi automatically creates this directory in the <code>docs</code> directory at the beginning of the process and deletes after the process.
+The rest string(<code>'mkapi'</code>) is a directory path to a package that exists in the config directory. MkApi searches all packages and modules and create a Markdown source for one package or module, which is saved in the <code>api</code> directory. The rest work is done by MkDocs. You can see the API documentation of MkApi in nav area.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a package or module has no package- or module-level docstring, MkApi doesn't process it.</p>
+</div></div>
                 <footer>
     <div class="footer-buttons">
-        <div class="next"><a href="google_style/" title="Google Style"><span>Next</span></a></div>
+        <div class="next"><a href="google_style/" title="Google style"><span>Next</span></a></div>
     </div>
     <div class="footer-note">
         <p>

@@ -26,6 +26,11 @@ p {
   line-height: 1.65;
 }
 
+li p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 pre {
   line-height: 1.6;
 }
@@ -49,9 +54,11 @@ img {
   height: auto;
 }
 
-ul {
+/* ul {
   line-height: 24px;
-}
+  margin-top: 4px;
+  margin-bottom: 8px;
+} */
 
 .nav ul,
 .breadcrumbs ul {
@@ -598,6 +605,25 @@ tbody tr:nth-child(2n+1) td {
 .note p.admonition-title:before {
   font-family: "Font Awesome 5 Free";
   content: "\f303";
+  font-weight: 900;
+  padding-right: 5px;
+  color: white;
+}
+
+.admonition.warning {
+  background: #FFEEEE;
+}
+
+.warning p.admonition-title {
+  color: white;
+  background: #FF6666;
+  margin: 0px;
+  padding: 4px 8px;
+}
+
+.warning p.admonition-title:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f071";
   font-weight: 900;
   padding-right: 5px;
   color: white;
