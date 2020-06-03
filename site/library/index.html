@@ -97,15 +97,15 @@
 </nav>
                 <div id="content">
 <h1 id="using-mkapi-within-python"><span class="pheasant-header"><span class="header"><span class="title">Using MkApi within Python</span></span></span></h1>
-<p>MkApi is a normal library as well as a MkDocs plugin.</p>
-<p>First, import the library.</p>
+<p>MkApi is a standalone library as well as a MkDocs plugin, so that you can use it within Python.</p>
+<p>First, import MkApi:</p>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">import mkapi</code></pre></div>
 <div class="report"><p><span class="count">[1]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">22.0ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">100ms</span>)</span></p></div></div></div>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">24.0ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">104ms</span>)</span></p></div></div></div>
 
 <h2 id="node-object"><span class="pheasant-header"><span class="header"><span class="title">Node object</span></span></span></h2>
-<p><code>mkapi.get_node()</code> generates a object tree structure.</p>
+<p>Define a simple class to show how MkApi works.</p>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">class A:
     &#34;&#34;&#34;Class docstring.
 
@@ -125,86 +125,90 @@
         &#34;&#34;&#34;
         return str(x)</code></pre></div>
 <div class="report"><p><span class="count">[2]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">103ms</span>)</span></p></div></div></div>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">107ms</span>)</span></p></div></div></div>
 
+<p><code>mkapi.get_node()</code> generates a <code>Node</code> object that has tree structure.</p>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">node = mkapi.get_node(A)
 type(node)</code></pre></div>
 <div class="report"><p><span class="count">[3]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">5.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">108ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">mkapi.core.base.Node</code></pre></div></div></div>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">5.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">112ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">mkapi.core.base.Node</code></pre></div></div></div>
 
+<p>Some attributes:</p>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">node.kind, node.name</code></pre></div>
 <div class="report"><p><span class="count">[4]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">111ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;class&#39;, &#39;A&#39;)</code></pre></div></div></div>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">115ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;class&#39;, &#39;A&#39;)</code></pre></div></div></div>
 
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">docstring = node.docstring
 len(docstring.sections)</code></pre></div>
 <div class="report"><p><span class="count">[5]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">114ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">2</code></pre></div></div></div>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">119ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">2</code></pre></div></div></div>
 
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section = docstring.sections[0]
 section.name, section.markdown</code></pre></div>
 <div class="report"><p><span class="count">[6]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">117ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;&#39;, &#39;Class docstring.&#39;)</code></pre></div></div></div>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">122ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;&#39;, &#39;Class docstring.&#39;)</code></pre></div></div></div>
 
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section = docstring.sections[1]
 section.name, section.markdown</code></pre></div>
 <div class="report"><p><span class="count">[7]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">4.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">121ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;Note&#39;,
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">125ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;Note&#39;,
  &#39;Docstring of `__init__()` is deleted, if there is\na class-level docstring.&#39;)</code></pre></div></div></div>
 
-<p>The <code>members</code> attribute gives children.</p>
+<p>The <code>members</code> attribute gives children, for example, bound methods of a class.</p>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">len(node.members)</code></pre></div>
 <div class="report"><p><span class="count">[8]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">124ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">1</code></pre></div></div></div>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">128ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">1</code></pre></div></div></div>
 
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">child = node.members[0]
 type(child)</code></pre></div>
 <div class="report"><p><span class="count">[9]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">4.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">128ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">mkapi.core.base.Node</code></pre></div></div></div>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">132ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">mkapi.core.base.Node</code></pre></div></div></div>
 
 <p>Elements of <code>Node.members</code> are also <code>Node</code> objects, so this is a tree structure.</p>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">child.kind, child.name</code></pre></div>
 <div class="report"><p><span class="count">[10]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">131ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;method&#39;, &#39;to_str&#39;)</code></pre></div></div></div>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">135ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;method&#39;, &#39;to_str&#39;)</code></pre></div></div></div>
 
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">docstring = child.docstring
 len(docstring.sections)</code></pre></div>
 <div class="report"><p><span class="count">[11]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">134ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">2</code></pre></div></div></div>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">139ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">2</code></pre></div></div></div>
 
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section = docstring.sections[0]
 section.name, section.markdown</code></pre></div>
 <div class="report"><p><span class="count">[12]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">137ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;&#39;, &#39;Converts `int` to `str`.&#39;)</code></pre></div></div></div>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">5.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">144ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;&#39;, &#39;Converts `int` to `str`.&#39;)</code></pre></div></div></div>
 
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section = docstring.sections[1]
 section.name, section.markdown</code></pre></div>
 <div class="report"><p><span class="count">[13]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">140ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;Parameters&#39;, &#39;&#39;)</code></pre></div></div></div>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">147ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;Parameters&#39;, &#39;&#39;)</code></pre></div></div></div>
 
+<p>Parameters section has no <code>markdown</code> but <code>items</code> that represent argument list:</p>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section.items</code></pre></div>
 <div class="report"><p><span class="count">[14]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">143ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">[Item(name=&#39;x&#39;, type=&#39;int&#39;, markdown=&#39;Input value.&#39;, html=&#39;&#39;)]</code></pre></div></div></div>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">5.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">152ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">[Item(name=&#39;x&#39;, type=&#39;int&#39;, markdown=&#39;Input value.&#39;, html=&#39;&#39;)]</code></pre></div></div></div>
 
-<p><code>Node.get_markdown()</code> creates a joint Markdown for this node.</p>
+<p>You can see that the type of argument <code>x</code> is inspected. Note that the <code>markdown</code> attribute is set from docstring, while the <code>html</code> attribute is empty.</p>
+<p><code>Node.get_markdown()</code> creates a <em>joint</em> Markdown of this node.</p>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">markdown = node.get_markdown()
 print(markdown)</code></pre></div>
 <div class="report"><p><span class="count">[15]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">4.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">147ms</span>)</span></p></div></div><div class="cell jupyter stdout"><div class="code">
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">156ms</span>)</span></p></div></div><div class="cell jupyter stdout"><div class="code">
       <pre><code class="nohighlight">Class docstring.
 
 &lt;!-- mkapi:sep --&gt;
@@ -222,7 +226,7 @@ Converts `int` to `str`.
 
 Input value.</code></pre></div></div></div>
 
-<p>Where is Note or Parameters section header, <em>etc.</em>? No problem. The <code>Node.get_markdown()</code> divides docstring into two parts. One is a plain Markdown that will be converted into HTML by any Markdown converter, for example, MkDocs. The other is the outline of a docstring structure such as sections or arguments that is processed by MkApi itself.</p>
+<p>Where is Note or Parameters section header, <em>etc.</em>? No problem. The <code>Node.get_markdown()</code> divides docstring into two parts. One is a plain Markdown that will be converted into HTML by any Markdown converter, for example, MkDocs. The other is the outline structure of a docstring such as sections or arguments that will be processed by MkApi itself.</p>
 <h2 id="converting-markdown"><span class="pheasant-header"><span class="header"><span class="title">Converting Markdown</span></span></span></h2>
 <p>For simplicity, we use <a href="https://python-markdown.github.io/">Python-Markdown</a> library instead of <code>MkDocs</code>.</p>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">from markdown import Markdown
@@ -231,8 +235,8 @@ converter = Markdown()
 html = converter.convert(markdown)
 print(html)</code></pre></div>
 <div class="report"><p><span class="count">[16]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">68.0ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">215ms</span>)</span></p></div></div><div class="cell jupyter stdout"><div class="code">
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">70.0ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">226ms</span>)</span></p></div></div><div class="cell jupyter stdout"><div class="code">
       <pre><code class="nohighlight">&lt;p&gt;Class docstring.&lt;/p&gt;
 &lt;!-- mkapi:sep --&gt;
 
@@ -249,61 +253,44 @@ a class-level docstring.&lt;/p&gt;
 <p><code>Node.set_html()</code> distributes HTML into docstring and members.</p>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">node.set_html(html)</code></pre></div>
 <div class="report"><p><span class="count">[17]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">218ms</span>)</span></p></div></div></div>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">229ms</span>)</span></p></div></div></div>
 
 <p>Take a look at what happened.</p>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section = node.docstring.sections[0]
-section.markdown</code></pre></div>
+section.markdown, section.html</code></pre></div>
 <div class="report"><p><span class="count">[18]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">221ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;Class docstring.&#39;</code></pre></div></div></div>
-
-<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section.html</code></pre></div>
-<div class="report"><p><span class="count">[19]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">224ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;&lt;p&gt;Class docstring.&lt;/p&gt;&#39;</code></pre></div></div></div>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">233ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;Class docstring.&#39;, &#39;&lt;p&gt;Class docstring.&lt;/p&gt;&#39;)</code></pre></div></div></div>
 
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section = node.docstring.sections[1]
-section.markdown</code></pre></div>
-<div class="report"><p><span class="count">[20]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">227ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;Docstring of `__init__()` is deleted, if there is\na class-level docstring.&#39;</code></pre></div></div></div>
-
-<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section.html</code></pre></div>
-<div class="report"><p><span class="count">[21]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">230ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;&lt;p&gt;Docstring of &lt;code&gt;__init__()&lt;/code&gt; is deleted, if there is\na class-level docstring.&lt;/p&gt;&#39;</code></pre></div></div></div>
+section.markdown, section.html</code></pre></div>
+<div class="report"><p><span class="count">[19]</span>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">237ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;Docstring of `__init__()` is deleted, if there is\na class-level docstring.&#39;,
+ &#39;&lt;p&gt;Docstring of &lt;code&gt;__init__()&lt;/code&gt; is deleted, if there is\na class-level docstring.&lt;/p&gt;&#39;)</code></pre></div></div></div>
 
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">child = node.members[0]
 section = child.docstring.sections[0]
-section.markdown</code></pre></div>
-<div class="report"><p><span class="count">[22]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">5.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">235ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;Converts `int` to `str`.&#39;</code></pre></div></div></div>
-
-<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section.html</code></pre></div>
-<div class="report"><p><span class="count">[23]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">238ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;&lt;p&gt;Converts &lt;code&gt;int&lt;/code&gt; to &lt;code&gt;str&lt;/code&gt;.&lt;/p&gt;&#39;</code></pre></div></div></div>
+section.markdown, section.html</code></pre></div>
+<div class="report"><p><span class="count">[20]</span>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">241ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;Converts `int` to `str`.&#39;,
+ &#39;&lt;p&gt;Converts &lt;code&gt;int&lt;/code&gt; to &lt;code&gt;str&lt;/code&gt;.&lt;/p&gt;&#39;)</code></pre></div></div></div>
 
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section = child.docstring.sections[1]
-section.items[0].markdown</code></pre></div>
-<div class="report"><p><span class="count">[24]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">4.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">242ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;Input value.&#39;</code></pre></div></div></div>
-
-<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section.items[0].html  # A &lt;p&gt; tag is deleted.</code></pre></div>
-<div class="report"><p><span class="count">[25]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">4.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">246ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;Input value.&#39;</code></pre></div></div></div>
+item = section.items[0]
+item.markdown, item.html  # A &lt;p&gt; tag is deleted.</code></pre></div>
+<div class="report"><p><span class="count">[21]</span>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">245ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;Input value.&#39;, &#39;Input value.&#39;)</code></pre></div></div></div>
 
 <h2 id="constructing-html"><span class="pheasant-header"><span class="header"><span class="title">Constructing HTML</span></span></span></h2>
-<p>Finally, construct one HTML using <a href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja2</a> library.</p>
+<p>Finally, construct one HTML calling <code>Node.render()</code> that internally uses <a href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja</a> library.</p>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">html = node.render()
 print(html[:300].strip())</code></pre></div>
-<div class="report"><p><span class="count">[26]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">4.00ms</span>)
+<div class="report"><p><span class="count">[22]</span>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">5.00ms</span>)
 <span class="right"><span class="kernel">python3</span> (<span class="total">250ms</span>)</span></p></div></div><div class="cell jupyter stdout"><div class="code">
       <pre><code class="nohighlight">&lt;div class=&#34;mkapi-node mkapi-node-depth-0&#34; id=&#34;A&#34;&gt;
   &lt;div class=&#34;mkapi-node-header mkapi-node-header-class&#34;&gt;
@@ -312,12 +299,13 @@ print(html[:300].strip())</code></pre></div>
 
         &lt;code class=&#34;mkapi-node-basename&#34;&gt;A&lt;/code&gt;&lt;code class=&#34;mkapi-node-signatur</code></pre></div></div></div>
 
-<p>Using <a href="https://jupyter.org/">Jupyter</a>, we can display the rendered HTML.</p>
+<p><a href="https://jupyter.org/">Jupyter</a> allows us to see the rendered HTML.</p>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">from IPython.display import HTML
+
 HTML(html)</code></pre></div>
-<div class="report"><p><span class="count">[27]</span>
-<span class="start">2020-06-03 17:59:41</span> (<span class="time">4.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">254ms</span>)</span></p></div></div>
+<div class="report"><p><span class="count">[23]</span>
+<span class="start">2020-06-03 20:05:20</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">253ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="A">
