@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="daizutabi">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <title>Using MkApi within Python &mdash; MkApi</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../css/mkapi.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../css/pheasant.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href=".." class="site-name"> MkApi</a>
+                </div><div class="version">0.5.0</div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="..">MkApi Documentation</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Examples</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../google_style/">Google style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../numpy_style/">Numpy style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../options/">Options</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Library Usage</button>
+<ul class="subnav">
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Using MkApi within Python</a>
+<ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#node-object">Node object</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#converting-markdown">Converting Markdown</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#distributing-html">Distributing HTML</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#constructing-html">Constructing HTML</a></li>
+</ul></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">API</button>
+<ul class="subnav">
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../api/mkapi.core.base/">base</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../api/mkapi.core.docstring/">docstring</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../api/mkapi.plugins.mkdocs/">mkdocs</a></li>
+</ul></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
+    </div>
+    <div class="previous"><a href="../options/">&laquo; Previous</a></div>
+    <div class="next"><a href="../api/mkapi.core.base/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href=".." class="site-name"> MkApi</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Library Usage</li>
+</ul>
+</nav>
+                <div id="content">
+<h1 id="using-mkapi-within-python"><span class="pheasant-header"><span class="header"><span class="title">Using MkApi within Python</span></span></span></h1>
+<p>MkApi is a normal library as well as a MkDocs plugin.</p>
+<p>First, import the library.</p>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">import mkapi</code></pre></div>
+<div class="report"><p><span class="count">[1]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">23.0ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">99.0ms</span>)</span></p></div></div></div>
+
+<h2 id="node-object"><span class="pheasant-header"><span class="header"><span class="title">Node object</span></span></span></h2>
+<p><code>mkapi.get_node()</code> generates a object tree structure.</p>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">class A:
+    &#34;&#34;&#34;Class docstring.
+
+    Note:
+        Docstring of `__init__()` is deleted, if there is
+        a class-level docstring.
+    &#34;&#34;&#34;
+
+    def __init__(self):
+        &#34;&#34;&#34;Init docstring.&#34;&#34;&#34;
+
+    def to_str(self, x: int) -&gt; str:
+        &#34;&#34;&#34;Converts `int` to `str`.
+
+        Args:
+            x: Input value.
+        &#34;&#34;&#34;
+        return str(x)</code></pre></div>
+<div class="report"><p><span class="count">[2]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">103ms</span>)</span></p></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">node = mkapi.get_node(A)
+type(node)</code></pre></div>
+<div class="report"><p><span class="count">[3]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">7.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">110ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">mkapi.core.base.Node</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">node.kind, node.name</code></pre></div>
+<div class="report"><p><span class="count">[4]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">114ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;class&#39;, &#39;A&#39;)</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">docstring = node.docstring
+len(docstring.sections)</code></pre></div>
+<div class="report"><p><span class="count">[5]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">117ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">2</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section = docstring.sections[0]
+section.name, section.markdown</code></pre></div>
+<div class="report"><p><span class="count">[6]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">121ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;&#39;, &#39;Class docstring.&#39;)</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section = docstring.sections[1]
+section.name, section.markdown</code></pre></div>
+<div class="report"><p><span class="count">[7]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">125ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;Note&#39;,
+ &#39;Docstring of `__init__()` is deleted, if there is\na class-level docstring.&#39;)</code></pre></div></div></div>
+
+<p>The <code>members</code> attribute gives children.</p>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">len(node.members)</code></pre></div>
+<div class="report"><p><span class="count">[8]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">128ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">1</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">child = node.members[0]
+type(child)</code></pre></div>
+<div class="report"><p><span class="count">[9]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">5.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">133ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">mkapi.core.base.Node</code></pre></div></div></div>
+
+<p>Elements of <code>Node.members</code> are also <code>Node</code> objects, so this is a tree structure.</p>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">child.kind, child.name</code></pre></div>
+<div class="report"><p><span class="count">[10]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">136ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;method&#39;, &#39;to_str&#39;)</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">docstring = child.docstring
+len(docstring.sections)</code></pre></div>
+<div class="report"><p><span class="count">[11]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">139ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">2</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section = docstring.sections[0]
+section.name, section.markdown</code></pre></div>
+<div class="report"><p><span class="count">[12]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">5.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">144ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;&#39;, &#39;Converts `int` to `str`.&#39;)</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section = docstring.sections[1]
+section.name, section.markdown</code></pre></div>
+<div class="report"><p><span class="count">[13]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">147ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;Parameters&#39;, &#39;&#39;)</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section.items</code></pre></div>
+<div class="report"><p><span class="count">[14]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">150ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">[Item(name=&#39;x&#39;, type=&#39;int&#39;, markdown=&#39;Input value.&#39;, html=&#39;&#39;)]</code></pre></div></div></div>
+
+<p><code>Node.get_markdown()</code> creates a joint Markdown for this node.</p>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">markdown = node.get_markdown()
+print(markdown)</code></pre></div>
+<div class="report"><p><span class="count">[15]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">5.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">155ms</span>)</span></p></div></div><div class="cell jupyter stdout"><div class="code">
+      <pre><code class="nohighlight">Class docstring.
+
+&lt;!-- mkapi:sep --&gt;
+
+Docstring of `__init__()` is deleted, if there is
+a class-level docstring.
+
+
+&lt;!-- mkapi:sep --&gt;
+
+Converts `int` to `str`.
+
+
+&lt;!-- mkapi:sep --&gt;
+
+Input value.</code></pre></div></div></div>
+
+<p>Where is Note or Parameters section header, <em>etc.</em>? No problem. The <code>Node.get_markdown()</code> divides docstring into two parts. One is a plain Markdown that will be converted into HTML by any Markdown converter, for example, MkDocs. The other is the outline of a docstring structure such as sections or arguments that is processed by MkApi itself.</p>
+<h2 id="converting-markdown"><span class="pheasant-header"><span class="header"><span class="title">Converting Markdown</span></span></span></h2>
+<p>For simplicity, we uses (Python-Markdown)[https://python-markdown.github.io/] library instead of <code>MkDocs</code>.</p>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">from markdown import Markdown
+
+converter = Markdown()
+html = converter.convert(markdown)
+print(html)</code></pre></div>
+<div class="report"><p><span class="count">[16]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">69.0ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">224ms</span>)</span></p></div></div><div class="cell jupyter stdout"><div class="code">
+      <pre><code class="nohighlight">&lt;p&gt;Class docstring.&lt;/p&gt;
+&lt;!-- mkapi:sep --&gt;
+
+&lt;p&gt;Docstring of &lt;code&gt;__init__()&lt;/code&gt; is deleted, if there is
+a class-level docstring.&lt;/p&gt;
+&lt;!-- mkapi:sep --&gt;
+
+&lt;p&gt;Converts &lt;code&gt;int&lt;/code&gt; to &lt;code&gt;str&lt;/code&gt;.&lt;/p&gt;
+&lt;!-- mkapi:sep --&gt;
+
+&lt;p&gt;Input value.&lt;/p&gt;</code></pre></div></div></div>
+
+<h2 id="distributing-html"><span class="pheasant-header"><span class="header"><span class="title">Distributing HTML</span></span></span></h2>
+<p><code>Node.set_html()</code> distributs HTML into docstring and members.</p>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">node.set_html(html)</code></pre></div>
+<div class="report"><p><span class="count">[17]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">2.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">226ms</span>)</span></p></div></div></div>
+
+<p>Take a look at what happend.</p>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section = node.docstring.sections[0]
+section.markdown</code></pre></div>
+<div class="report"><p><span class="count">[18]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">5.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">231ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;Class docstring.&#39;</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section.html</code></pre></div>
+<div class="report"><p><span class="count">[19]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">235ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;&lt;p&gt;Class docstring.&lt;/p&gt;&#39;</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section = node.docstring.sections[1]
+section.markdown</code></pre></div>
+<div class="report"><p><span class="count">[20]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">239ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;Docstring of `__init__()` is deleted, if there is\na class-level docstring.&#39;</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section.html</code></pre></div>
+<div class="report"><p><span class="count">[21]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">2.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">241ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;&lt;p&gt;Docstring of &lt;code&gt;__init__()&lt;/code&gt; is deleted, if there is\na class-level docstring.&lt;/p&gt;&#39;</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">child = node.members[0]
+section = child.docstring.sections[0]
+section.markdown</code></pre></div>
+<div class="report"><p><span class="count">[22]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">244ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;Converts `int` to `str`.&#39;</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section.html</code></pre></div>
+<div class="report"><p><span class="count">[23]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">247ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;&lt;p&gt;Converts &lt;code&gt;int&lt;/code&gt; to &lt;code&gt;str&lt;/code&gt;.&lt;/p&gt;&#39;</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section = child.docstring.sections[1]
+section.items[0].markdown</code></pre></div>
+<div class="report"><p><span class="count">[24]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">251ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;Input value.&#39;</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">section.items[0].html  # A &lt;p&gt; tag is deleted.</code></pre></div>
+<div class="report"><p><span class="count">[25]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">255ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">&#39;Input value.&#39;</code></pre></div></div></div>
+
+<h2 id="constructing-html"><span class="pheasant-header"><span class="header"><span class="title">Constructing HTML</span></span></span></h2>
+<p>Finally, construct one HTML using <a href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja2</a> library.</p>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">html = node.render()
+print(html[:300].strip())</code></pre></div>
+<div class="report"><p><span class="count">[26]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">258ms</span>)</span></p></div></div><div class="cell jupyter stdout"><div class="code">
+      <pre><code class="nohighlight">&lt;div class=&#34;mkapi-node mkapi-node-depth-0&#34; id=&#34;A&#34;&gt;
+  &lt;div class=&#34;mkapi-node-header mkapi-node-header-class&#34;&gt;
+    &lt;div class=&#34;mkapi-node-kind mkapi-node-kind-class&#34;&gt;CLASS&lt;/div&gt;
+    &lt;div class=&#34;mkapi-node-name&#34;&gt;
+
+        &lt;code class=&#34;mkapi-node-basename&#34;&gt;A&lt;/code&gt;&lt;code class=&#34;mkapi-node-signatur</code></pre></div></div></div>
+
+<p>Using <a href="https://jupyter.org/">Jupyter</a>, we can display the rendered HTML.</p>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">from IPython.display import HTML
+HTML(html)</code></pre></div>
+<div class="report"><p><span class="count">[27]</span>
+<span class="start">2020-06-03 17:49:23</span> (<span class="time">5.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">263ms</span>)</span></p></div></div>
+
+<div class="cell jupyter display"><div class="content">
+<div class="mkapi-node mkapi-node-depth-0" id="A">
+  <div class="mkapi-node-header mkapi-node-header-class">
+    <div class="mkapi-node-kind mkapi-node-kind-class">CLASS</div>
+    <div class="mkapi-node-name">
+
+        <code class="mkapi-node-basename">A</code><code class="mkapi-node-signature">()</code>
+
+
+    </div>
+  </div>
+  <div class="mkapi-docstring">
+
+    <div class="mkapi-section">
+
+      <div class="mkapi-section-body"><p>Class docstring.</p></div>
+    </div>
+
+    <div class="mkapi-section mkapi-section-named mkapi-section-note">
+      <div class="mkapi-section-name mkapi-section-name-note">
+      <span class="mkapi-section-name-body">Note</span></div>
+      <div class="mkapi-section-body mkapi-section-body-note"><p>Docstring of <code>__init__()</code> is deleted, if there is
+a class-level docstring.</p></div>
+    </div>
+
+</div>
+
+    <div class="mkapi-members">
+
+        <div class="mkapi-member">
+
+<div class="mkapi-node mkapi-node-depth-1" id="A.to_str">
+  <div class="mkapi-node-header mkapi-node-header-method">
+    <div class="mkapi-node-kind mkapi-node-kind-method">METHOD</div>
+    <div class="mkapi-node-name">
+
+        <code class="mkapi-node-basename">to_str</code><code class="mkapi-node-signature">(x)</code>
+        <span class="mkapi-args-type">&#x2192; str</span>
+
+    </div>
+  </div>
+  <div class="mkapi-docstring">
+
+    <div class="mkapi-section">
+
+      <div class="mkapi-section-body"><p>Converts <code>int</code> to <code>str</code>.</p></div>
+    </div>
+
+    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
+      <div class="mkapi-section-name mkapi-section-name-parameters">
+      <span class="mkapi-section-name-body">Parameters</span></div>
+      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
+
+  <li><code class="mkapi-args-name">x</code>
+         <span class="mkapi-args-type">(int)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">Input value.</span></li>
+
+</ul></div>
+    </div>
+
+</div>
+
+</div>
+
+        </div>
+
+    </div>
+
+</div>
+</div></div></div></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../options/" title="Options"><span>Previous</span></a></div>
+        <div class="next"><a href="../api/mkapi.core.base/" title="base"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/mkapi.js"></script>
+    <script src="../js/pheasant.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="../search/main.js"></script>
+</body>
+
+</html>
