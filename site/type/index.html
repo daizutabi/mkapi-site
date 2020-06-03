@@ -52,7 +52,7 @@
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
 <ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="../options/">Options</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../depth/">Depth</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../library/">Using MkApi within Python</a></li>
     <li class="toctree-l2 current"><a class="nav-item current" href="./">Type Annotation Examples</a>
 <ul class="subnav">
@@ -108,8 +108,8 @@ import mkapi
 
 converter = Markdown()</code></pre></div>
 <div class="report"><p><span class="count">[1]</span>
-<span class="start">2020-06-03 21:45:17</span> (<span class="time">4.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">266ms</span>)</span></p></div></div></div>
+<span class="start">2020-06-03 21:47:29</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">271ms</span>)</span></p></div></div></div>
 
 <h2 id="helper-function"><span class="pheasant-header"><span class="header"><span class="title">Helper Function</span></span></span></h2>
 <p>Define a helper function that performs everything at one step.</p>
@@ -121,8 +121,8 @@ converter = Markdown()</code></pre></div>
     html = node.render()
     return HTML(html)</code></pre></div>
 <div class="report"><p><span class="count">[2]</span>
-<span class="start">2020-06-03 21:45:17</span> (<span class="time">4.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">270ms</span>)</span></p></div></div></div>
+<span class="start">2020-06-03 21:47:29</span> (<span class="time">6.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">277ms</span>)</span></p></div></div></div>
 
 <h2 id="builtin-types"><span class="pheasant-header"><span class="header"><span class="title">Builtin Types</span></span></span></h2>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">def builtin(i: int, f: float, s: str, l: list, d: dict, t: tuple, e: set) -&gt; bool:
@@ -141,8 +141,8 @@ converter = Markdown()</code></pre></div>
 
 render(builtin)</code></pre></div>
 <div class="report"><p><span class="count">[3]</span>
-<span class="start">2020-06-03 21:45:17</span> (<span class="time">7.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">277ms</span>)</span></p></div></div>
+<span class="start">2020-06-03 21:47:29</span> (<span class="time">7.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">284ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="builtin">
@@ -224,8 +224,8 @@ render(builtin)</code></pre></div>
 
 render(builtin_default)</code></pre></div>
 <div class="report"><p><span class="count">[4]</span>
-<span class="start">2020-06-03 21:45:17</span> (<span class="time">7.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">284ms</span>)</span></p></div></div>
+<span class="start">2020-06-03 21:47:29</span> (<span class="time">8.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">292ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="builtin_default">
@@ -292,8 +292,8 @@ render(builtin_default)</code></pre></div>
 
 render(basic)</code></pre></div>
 <div class="report"><p><span class="count">[5]</span>
-<span class="start">2020-06-03 21:45:17</span> (<span class="time">8.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">292ms</span>)</span></p></div></div>
+<span class="start">2020-06-03 21:47:29</span> (<span class="time">8.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">300ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="basic">
