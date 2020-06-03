@@ -47,12 +47,12 @@
                     <li class="toctree-l1"><a class="nav-item" href="..">MkApi Documentation</a></li>
                     <li class="toctree-l1"><button class="section nav-item">Examples</button>
 <ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="../google_style/">Google style</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../numpy_style/">Numpy style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../google_style/">Google Style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../numpy_style/">NumPy Style</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
 <ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="../depth/">Depth</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../depth/">Depth Limitation</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../library/">Using MkApi within Python</a></li>
     <li class="toctree-l2 current"><a class="nav-item current" href="./">Type Annotation Examples</a>
 <ul class="subnav">
@@ -108,8 +108,8 @@ import mkapi
 
 converter = Markdown()</code></pre></div>
 <div class="report"><p><span class="count">[1]</span>
-<span class="start">2020-06-03 21:49:51</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">269ms</span>)</span></p></div></div></div>
+<span class="start">2020-06-03 21:55:29</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">257ms</span>)</span></p></div></div></div>
 
 <h2 id="helper-function"><span class="pheasant-header"><span class="header"><span class="title">Helper Function</span></span></span></h2>
 <p>Define a helper function that performs everything at one step.</p>
@@ -121,8 +121,8 @@ converter = Markdown()</code></pre></div>
     html = node.render()
     return HTML(html)</code></pre></div>
 <div class="report"><p><span class="count">[2]</span>
-<span class="start">2020-06-03 21:49:51</span> (<span class="time">4.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">273ms</span>)</span></p></div></div></div>
+<span class="start">2020-06-03 21:55:29</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">260ms</span>)</span></p></div></div></div>
 
 <h2 id="builtin-types"><span class="pheasant-header"><span class="header"><span class="title">Builtin Types</span></span></span></h2>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">def builtin(i: int, f: float, s: str, l: list, d: dict, t: tuple, e: set) -&gt; bool:
@@ -141,8 +141,8 @@ converter = Markdown()</code></pre></div>
 
 render(builtin)</code></pre></div>
 <div class="report"><p><span class="count">[3]</span>
-<span class="start">2020-06-03 21:49:51</span> (<span class="time">8.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">281ms</span>)</span></p></div></div>
+<span class="start">2020-06-03 21:55:29</span> (<span class="time">7.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">267ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="builtin">
@@ -218,14 +218,13 @@ render(builtin)</code></pre></div>
         i: Integer.
         f: Float.
         s: String.
-        t: String.
+        t: Tuple.
     &#34;&#34;&#34;
-    return True
 
 render(builtin_default)</code></pre></div>
 <div class="report"><p><span class="count">[4]</span>
-<span class="start">2020-06-03 21:49:51</span> (<span class="time">7.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">288ms</span>)</span></p></div></div>
+<span class="start">2020-06-03 21:55:29</span> (<span class="time">6.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">273ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="builtin_default">
@@ -268,7 +267,7 @@ render(builtin_default)</code></pre></div>
   <li><code class="mkapi-args-name">t</code>
          <span class="mkapi-args-type">(tuple, optional)</span>
          <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">String.</span></li>
+         <span class="mkapi-args-desc">Tuple.</span></li>
 
 </ul></div>
     </div>
@@ -280,7 +279,7 @@ render(builtin_default)</code></pre></div>
 
 <h2 id="basic-collection-types"><span class="pheasant-header"><span class="header"><span class="title">Basic Collection Types</span></span></span></h2>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">def basic(l: List[int], t: Tuple[str, int, float], d: Dict[str, int], s: Set[int]):
-    &#34;&#34;&#34;Function with basic generic type annotation.
+    &#34;&#34;&#34;Function with basic collection type annotation.
 
     Args:
         l: List of int.
@@ -288,12 +287,11 @@ render(builtin_default)</code></pre></div>
         d: Dictionary from str to int.
         s: Set of int.
     &#34;&#34;&#34;
-    return set([1, 2, 3])
 
 render(basic)</code></pre></div>
 <div class="report"><p><span class="count">[5]</span>
-<span class="start">2020-06-03 21:49:51</span> (<span class="time">8.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">296ms</span>)</span></p></div></div>
+<span class="start">2020-06-03 21:55:29</span> (<span class="time">8.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">281ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="basic">
@@ -310,7 +308,7 @@ render(basic)</code></pre></div>
 
     <div class="mkapi-section">
 
-      <div class="mkapi-section-body"><p>Function with basic generic type annotation.</p></div>
+      <div class="mkapi-section-body"><p>Function with basic collection type annotation.</p></div>
     </div>
 
     <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
