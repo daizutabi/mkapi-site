@@ -49,11 +49,12 @@
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../google_style/">Google style</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../numpy_style/">Numpy style</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../options/">Options</a></li>
 </ul></li>
-                    <li class="toctree-l1"><button class="section nav-item">Library Usage</button>
+                    <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
 <ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../options/">Options</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../library/">Using MkApi within Python</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../type/">Type Annotation Examples</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -75,7 +76,7 @@
     <div class="link">
         <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
     </div>
-    <div class="previous"><a href="../../library/">&laquo; Previous</a></div>
+    <div class="previous"><a href="../../type/">&laquo; Previous</a></div>
     <div class="next"><a href="../mkapi.core.docstring/">Next &raquo;</a></div>
 </div>
         </aside>
@@ -353,6 +354,11 @@ the attribute if necessary.</p></div>
          <span class="mkapi-args-dash">&mdash;</span>
          <span class="mkapi-args-desc">Markdown source.</span></li>
 
+  <li><code class="mkapi-args-name">items</code>
+         <span class="mkapi-args-type">(list of Item, optional)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">List for arguments, attributes, or exceptions.</span></li>
+
 </ul></div>
     </div>
   
@@ -375,6 +381,11 @@ the attribute if necessary.</p></div>
          <span class="mkapi-args-type">(str)</span>
          <span class="mkapi-args-dash">&mdash;</span>
          <span class="mkapi-args-desc">Markdown source.</span></li>
+
+  <li><code class="mkapi-args-name">items</code>
+         <span class="mkapi-args-type">(list of Item)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">List for arguments, attributes, or exceptions.</span></li>
 
   <li><code class="mkapi-args-name">html</code>
          <span class="mkapi-args-type">(str)</span>
@@ -419,6 +430,24 @@ the attribute if necessary.</p></div>
 
   <li><code class="mkapi-args-name">type</code>
          <span class="mkapi-args-type">(str, optional)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">Type for Returns and Yields sections.</span></li>
+
+</ul></div>
+    </div>
+  
+    <div class="mkapi-section mkapi-section-named mkapi-section-attributes">
+      <div class="mkapi-section-name mkapi-section-name-attributes">
+      <span class="mkapi-section-name-body">Attributes</span></div>
+      <div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
+
+  <li><code class="mkapi-args-name">sections</code>
+         <span class="mkapi-args-type">(list of Section)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">List of Section instance</span></li>
+
+  <li><code class="mkapi-args-name">type</code>
+         <span class="mkapi-args-type">(str)</span>
          <span class="mkapi-args-dash">&mdash;</span>
          <span class="mkapi-args-desc">Type for Returns and Yields sections.</span></li>
 
@@ -503,6 +532,11 @@ the attribute if necessary.</p></div>
          <span class="mkapi-args-dash">&mdash;</span>
          <span class="mkapi-args-desc">Used in page mode.</span></li>
 
+  <li><code class="mkapi-args-name">html</code>
+         <span class="mkapi-args-type">(str)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">HTML after rendering.</span></li>
+
 </ul></div>
     </div>
   
@@ -566,7 +600,7 @@ the attribute if necessary.</p></div>
 </div>
                 <footer>
     <div class="footer-buttons">
-        <div class="previous"><a href="../../library/" title="Using MkApi within Python"><span>Previous</span></a></div>
+        <div class="previous"><a href="../../type/" title="Type Annotation Examples"><span>Previous</span></a></div>
         <div class="next"><a href="../mkapi.core.docstring/" title="docstring"><span>Next</span></a></div>
     </div>
     <div class="footer-note">

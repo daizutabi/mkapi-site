@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="daizutabi">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <title>Type Annotation Examples &mdash; MkApi</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../css/mkapi.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../css/pheasant.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href=".." class="site-name"> MkApi</a>
+                </div><div class="version">0.5.1</div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="..">MkApi Documentation</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Examples</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../google_style/">Google style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../numpy_style/">Numpy style</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../options/">Options</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../library/">Using MkApi within Python</a></li>
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Type Annotation Examples</a>
+<ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#helper-function">Helper Function</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#builtin-types">Builtin Types</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#builtin-types-with-default">Builtin Types with Default</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#basic-collection-types">Basic Collection Types</a></li>
+</ul></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">API</button>
+<ul class="subnav">
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../api/mkapi.core.base/">base</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../api/mkapi.core.docstring/">docstring</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../api/mkapi.plugins.mkdocs/">mkdocs</a></li>
+</ul></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
+    </div>
+    <div class="previous"><a href="../library/">&laquo; Previous</a></div>
+    <div class="next"><a href="../api/mkapi.core.base/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href=".." class="site-name"> MkApi</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Advanced Usage</li>
+</ul>
+</nav>
+                <div id="content">
+<h1 id="type-annotation-examples"><span class="pheasant-header"><span class="header"><span class="title">Type Annotation Examples</span></span></span></h1>
+<p>Import libraries and create a Markdown conveter.</p>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">from typing import Any, Dict, List, Set, Tuple
+
+from IPython.display import HTML
+from markdown import Markdown
+
+import mkapi
+
+converter = Markdown()</code></pre></div>
+<div class="report"><p><span class="count">[1]</span>
+<span class="start">2020-06-03 21:45:17</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">266ms</span>)</span></p></div></div></div>
+
+<h2 id="helper-function"><span class="pheasant-header"><span class="header"><span class="title">Helper Function</span></span></span></h2>
+<p>Define a helper function that performs everything at one step.</p>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">def render(obj: Any):
+    node = mkapi.get_node(obj)
+    markdown = node.get_markdown()
+    html = converter.convert(markdown)
+    node.set_html(html)
+    html = node.render()
+    return HTML(html)</code></pre></div>
+<div class="report"><p><span class="count">[2]</span>
+<span class="start">2020-06-03 21:45:17</span> (<span class="time">4.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">270ms</span>)</span></p></div></div></div>
+
+<h2 id="builtin-types"><span class="pheasant-header"><span class="header"><span class="title">Builtin Types</span></span></span></h2>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">def builtin(i: int, f: float, s: str, l: list, d: dict, t: tuple, e: set) -&gt; bool:
+    &#34;&#34;&#34;Function with buitin type annotation.
+
+    Args:
+        i: Integer.
+        f: Float.
+        s: String.
+        l: List.
+        d: Dictionary.
+        t: Tuple.
+        e: Set.
+    &#34;&#34;&#34;
+    return True
+
+render(builtin)</code></pre></div>
+<div class="report"><p><span class="count">[3]</span>
+<span class="start">2020-06-03 21:45:17</span> (<span class="time">7.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">277ms</span>)</span></p></div></div>
+
+<div class="cell jupyter display"><div class="content">
+<div class="mkapi-node mkapi-node-depth-0" id="builtin">
+  <div class="mkapi-node-header mkapi-node-header-function">
+    <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
+    <div class="mkapi-node-name">
+
+        <code class="mkapi-node-basename">builtin</code><code class="mkapi-node-signature">(i, f, s, l, d, t, e)</code>
+        <span class="mkapi-args-type">&#x2192; bool</span>
+
+    </div>
+  </div>
+  <div class="mkapi-docstring">
+
+    <div class="mkapi-section">
+
+      <div class="mkapi-section-body"><p>Function with buitin type annotation.</p></div>
+    </div>
+
+    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
+      <div class="mkapi-section-name mkapi-section-name-parameters">
+      <span class="mkapi-section-name-body">Parameters</span></div>
+      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
+
+  <li><code class="mkapi-args-name">i</code>
+         <span class="mkapi-args-type">(int)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">Integer.</span></li>
+
+  <li><code class="mkapi-args-name">f</code>
+         <span class="mkapi-args-type">(float)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">Float.</span></li>
+
+  <li><code class="mkapi-args-name">s</code>
+         <span class="mkapi-args-type">(str)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">String.</span></li>
+
+  <li><code class="mkapi-args-name">l</code>
+         <span class="mkapi-args-type">(list)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">List.</span></li>
+
+  <li><code class="mkapi-args-name">d</code>
+         <span class="mkapi-args-type">(dict)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">Dictionary.</span></li>
+
+  <li><code class="mkapi-args-name">t</code>
+         <span class="mkapi-args-type">(tuple)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">Tuple.</span></li>
+
+  <li><code class="mkapi-args-name">e</code>
+         <span class="mkapi-args-type">(set)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">Set.</span></li>
+
+</ul></div>
+    </div>
+
+</div>
+
+</div>
+</div></div></div>
+
+<h2 id="builtin-types-with-default"><span class="pheasant-header"><span class="header"><span class="title">Builtin Types with Default</span></span></span></h2>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">def builtin_default(i: int = 1, f: float = 1.0, s: str = &#34;abc&#34;, t: tuple = (1, 2)):
+    &#34;&#34;&#34;Function with buitin type annotation.
+
+    Args:
+        i: Integer.
+        f: Float.
+        s: String.
+        t: String.
+    &#34;&#34;&#34;
+    return True
+
+render(builtin_default)</code></pre></div>
+<div class="report"><p><span class="count">[4]</span>
+<span class="start">2020-06-03 21:45:17</span> (<span class="time">7.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">284ms</span>)</span></p></div></div>
+
+<div class="cell jupyter display"><div class="content">
+<div class="mkapi-node mkapi-node-depth-0" id="builtin_default">
+  <div class="mkapi-node-header mkapi-node-header-function">
+    <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
+    <div class="mkapi-node-name">
+
+        <code class="mkapi-node-basename">builtin_default</code><code class="mkapi-node-signature">(i=1, f=1.0, s=&#39;abc&#39;, t=(1, 2))</code>
+
+
+    </div>
+  </div>
+  <div class="mkapi-docstring">
+
+    <div class="mkapi-section">
+
+      <div class="mkapi-section-body"><p>Function with buitin type annotation.</p></div>
+    </div>
+
+    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
+      <div class="mkapi-section-name mkapi-section-name-parameters">
+      <span class="mkapi-section-name-body">Parameters</span></div>
+      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
+
+  <li><code class="mkapi-args-name">i</code>
+         <span class="mkapi-args-type">(int, optional)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">Integer.</span></li>
+
+  <li><code class="mkapi-args-name">f</code>
+         <span class="mkapi-args-type">(float, optional)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">Float.</span></li>
+
+  <li><code class="mkapi-args-name">s</code>
+         <span class="mkapi-args-type">(str, optional)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">String.</span></li>
+
+  <li><code class="mkapi-args-name">t</code>
+         <span class="mkapi-args-type">(tuple, optional)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">String.</span></li>
+
+</ul></div>
+    </div>
+
+</div>
+
+</div>
+</div></div></div>
+
+<h2 id="basic-collection-types"><span class="pheasant-header"><span class="header"><span class="title">Basic Collection Types</span></span></span></h2>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">def basic(l: List[int], t: Tuple[str, int, float], d: Dict[str, int], s: Set[int]):
+    &#34;&#34;&#34;Function with basic generic type annotation.
+
+    Args:
+        l: List of int.
+        t: Tuple of (str, str).
+        d: Dictionary from str to int.
+        s: Set of int.
+    &#34;&#34;&#34;
+    return set([1, 2, 3])
+
+render(basic)</code></pre></div>
+<div class="report"><p><span class="count">[5]</span>
+<span class="start">2020-06-03 21:45:17</span> (<span class="time">8.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">292ms</span>)</span></p></div></div>
+
+<div class="cell jupyter display"><div class="content">
+<div class="mkapi-node mkapi-node-depth-0" id="basic">
+  <div class="mkapi-node-header mkapi-node-header-function">
+    <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
+    <div class="mkapi-node-name">
+
+        <code class="mkapi-node-basename">basic</code><code class="mkapi-node-signature">(l, t, d, s)</code>
+
+
+    </div>
+  </div>
+  <div class="mkapi-docstring">
+
+    <div class="mkapi-section">
+
+      <div class="mkapi-section-body"><p>Function with basic generic type annotation.</p></div>
+    </div>
+
+    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
+      <div class="mkapi-section-name mkapi-section-name-parameters">
+      <span class="mkapi-section-name-body">Parameters</span></div>
+      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
+
+  <li><code class="mkapi-args-name">l</code>
+         <span class="mkapi-args-type">(list of int)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">List of int.</span></li>
+
+  <li><code class="mkapi-args-name">t</code>
+         <span class="mkapi-args-type">(str, int, float)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">Tuple of (str, str).</span></li>
+
+  <li><code class="mkapi-args-name">d</code>
+         <span class="mkapi-args-type">(dict(str: int))</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">Dictionary from str to int.</span></li>
+
+  <li><code class="mkapi-args-name">s</code>
+         <span class="mkapi-args-type">(set of int)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">Set of int.</span></li>
+
+</ul></div>
+    </div>
+
+</div>
+
+</div>
+</div></div></div></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../library/" title="Using MkApi within Python"><span>Previous</span></a></div>
+        <div class="next"><a href="../api/mkapi.core.base/" title="base"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/mkapi.js"></script>
+    <script src="../js/pheasant.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="../search/main.js"></script>
+</body>
+
+</html>
