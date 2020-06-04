@@ -108,8 +108,8 @@ import mkapi
 
 converter = Markdown()</code></pre></div>
 <div class="report"><p><span class="count">[1]</span>
-<span class="start">2020-06-04 12:18:11</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">255ms</span>)</span></p></div></div></div>
+<span class="start">2020-06-04 12:36:56</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">246ms</span>)</span></p></div></div></div>
 
 <h2 id="helper-function"><span class="pheasant-header"><span class="header"><span class="title">Helper Function</span></span></span></h2>
 <p>Define a helper function that performs everything at one step.</p>
@@ -121,8 +121,8 @@ converter = Markdown()</code></pre></div>
     html = node.render()
     return HTML(html)</code></pre></div>
 <div class="report"><p><span class="count">[2]</span>
-<span class="start">2020-06-04 12:18:11</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">258ms</span>)</span></p></div></div></div>
+<span class="start">2020-06-04 12:36:56</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">249ms</span>)</span></p></div></div></div>
 
 <h2 id="builtin-types"><span class="pheasant-header"><span class="header"><span class="title">Builtin Types</span></span></span></h2>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">def builtin(i: int, f: float, s: str, l: list, d: dict, t: tuple, e: set) -&gt; bool:
@@ -141,8 +141,8 @@ converter = Markdown()</code></pre></div>
 
 render(builtin)</code></pre></div>
 <div class="report"><p><span class="count">[3]</span>
-<span class="start">2020-06-04 12:18:11</span> (<span class="time">6.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">264ms</span>)</span></p></div></div>
+<span class="start">2020-06-04 12:36:56</span> (<span class="time">6.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">255ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="__main__.builtin">
@@ -223,8 +223,8 @@ render(builtin)</code></pre></div>
 
 render(builtin_default)</code></pre></div>
 <div class="report"><p><span class="count">[4]</span>
-<span class="start">2020-06-04 12:18:11</span> (<span class="time">7.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">271ms</span>)</span></p></div></div>
+<span class="start">2020-06-04 12:36:56</span> (<span class="time">7.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">262ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="__main__.builtin_default">
@@ -292,8 +292,8 @@ def basic(l: List[int], t: Tuple[str, int, float], d: Dict[str, int], s: Set[int
 
 render(basic)</code></pre></div>
 <div class="report"><p><span class="count">[5]</span>
-<span class="start">2020-06-04 12:18:11</span> (<span class="time">7.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">278ms</span>)</span></p></div></div>
+<span class="start">2020-06-04 12:36:56</span> (<span class="time">8.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">270ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="__main__.basic">
@@ -359,8 +359,8 @@ def function(x: Iterable[str]) -&gt; Iterator[str]:
 
 render(function)</code></pre></div>
 <div class="report"><p><span class="count">[6]</span>
-<span class="start">2020-06-04 12:18:11</span> (<span class="time">6.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">284ms</span>)</span></p></div></div>
+<span class="start">2020-06-04 12:36:56</span> (<span class="time">8.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">278ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="__main__.function">
@@ -404,8 +404,8 @@ render(function)</code></pre></div>
 
 render(generator)</code></pre></div>
 <div class="report"><p><span class="count">[7]</span>
-<span class="start">2020-06-04 12:18:11</span> (<span class="time">4.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">288ms</span>)</span></p></div></div>
+<span class="start">2020-06-04 12:36:56</span> (<span class="time">5.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">283ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="__main__.generator">
@@ -442,8 +442,8 @@ def optional(x: Optional[List[int]]):
 
 render(optional)</code></pre></div>
 <div class="report"><p><span class="count">[8]</span>
-<span class="start">2020-06-04 12:18:11</span> (<span class="time">8.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">296ms</span>)</span></p></div></div>
+<span class="start">2020-06-04 12:36:56</span> (<span class="time">8.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">291ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="__main__.optional">
@@ -490,8 +490,8 @@ render(optional)</code></pre></div>
 
 render(optional_default)</code></pre></div>
 <div class="report"><p><span class="count">[9]</span>
-<span class="start">2020-06-04 12:18:11</span> (<span class="time">7.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">303ms</span>)</span></p></div></div>
+<span class="start">2020-06-04 12:36:56</span> (<span class="time">6.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">297ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="__main__.optional_default">
@@ -539,8 +539,8 @@ render(optional_default)</code></pre></div>
 
 render(union)</code></pre></div>
 <div class="report"><p><span class="count">[10]</span>
-<span class="start">2020-06-04 12:18:11</span> (<span class="time">6.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">309ms</span>)</span></p></div></div>
+<span class="start">2020-06-04 12:36:56</span> (<span class="time">6.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">303ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="__main__.union">
@@ -592,8 +592,8 @@ render(union)</code></pre></div>
 
 render(union_collection)</code></pre></div>
 <div class="report"><p><span class="count">[11]</span>
-<span class="start">2020-06-04 12:18:11</span> (<span class="time">6.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">315ms</span>)</span></p></div></div>
+<span class="start">2020-06-04 12:36:56</span> (<span class="time">6.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">309ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content">
 <div class="mkapi-node mkapi-node-depth-0" id="__main__.union_collection">
