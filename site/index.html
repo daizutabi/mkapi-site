@@ -34,7 +34,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="." class="site-name"> MkApi</a>
-                </div><div class="version">0.5.2</div>
+                </div><div class="version">0.6.0</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="./search.html" method="get">
@@ -53,15 +53,15 @@
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">Examples</button>
 <ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="google_style/">Google Style</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="numpy_style/">NumPy Style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="examples/google_style/">Google Style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="examples/numpy_style/">NumPy Style</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
 <ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="library/">Using MkApi within Python</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="type/">Type Annotation Examples</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="link/">Link</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="depth/">Depth Limitation</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="usage/library/">Using MkApi within Python</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="usage/page/">Page Mode and Internal Links</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="usage/type/">Type Annotation Examples</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="usage/depth/">Depth Limitation</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -81,7 +81,7 @@
     <div class="link">
         <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
     </div>
-    <div class="next"><a href="google_style/">Next &raquo;</a></div>
+    <div class="next"><a href="examples/google_style/">Next &raquo;</a></div>
 </div>
         </aside>
         <div id="spacer"><button class="arrow"></button></div>
@@ -108,6 +108,7 @@
 <li>Section syntax. Supported sections are <code>Args</code>, <code>Arguments</code>, <code>Attributes</code>, <code>Example[s]</code>, <code>Note[s]</code>, <code>Parameters</code>, <code>Raises</code>, <code>Returns</code>, <code>References</code>, <code>Todo</code>, <code>Warning[s]</code>, <code>Warns</code>, and <code>Yields</code>.</li>
 <li>Type annotation. If you write your function such as <code>def func(x: int) -&gt; str:</code>, you don't need write type(s) in <code>Args</code>, <code>Parameters</code>, <code>Returns</code>, or <code>Yields</code> section again. You can overwrite the type annotation in the corresponding docstring.</li>
 <li>Object type inspection. MkApi plugin creates <code>CLASS</code>, <code>DATACLASS</code>, <code>FUNCTION</code>, <code>GENERATOR</code>, <code>METHOD</code>, or <code>PROPERTY</code> prefix for each object.</li>
+<li>Comprehensive API generation for a package and automatic link generation among objects in both docstring and Markdown source.</li>
 </ul>
 <h2 id="installation"><span class="pheasant-header"><span class="header"><span class="title">Installation</span></span></span></h2>
 <p>Install the plugin using pip:</p>
@@ -125,32 +126,28 @@
 <p>To generate the API documentation in a Markdown source, add an exclamation mark (!), followed by <code>mkapi</code> in brackets, and the object qualname in parentheses. Yes, this is like adding an image. The object can be a package, module, function, class, <em>etc</em>.</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](&lt;object.qualname&gt;)</code></pre></div></div></div>
 
-<p>The MkApi plugin imports objects that you specify. If they aren't in the <code>sys.path</code>, configure <code>mkdocs.yml</code> like below:</p>
+<p>MkApi imports objects that you specify. If they aren't in the <code>sys.path</code>, configure <code>mkdocs.yml</code> like below:</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yml">plugins:
   - search
   - mkapi:
       src_dirs: [&lt;path_1&gt;, &lt;path_2&gt;, ...]</code></pre></div></div></div>
 
-<p>Here, <code>path_X</code>s are inserted to <code>sys.path</code>. These <code>path_X</code>s are relative paths to the directory in which <code>mkdocs.yml</code> exists.</p>
-<p>The embedding mode is useful to embed object interface in a arbitrary position of a Markdown source.</p>
+<p>Here, <code>path_X</code>s are inserted to <code>sys.path</code>. These <code>path_X</code>s must be relative to the <code>mkdocs.yml</code> directory.</p>
+<p>The embedding mode is useful to embed an object interface in an arbitrary position of a Markdown source. For more details, see:</p>
+<ul>
+<li><a href="examples/google_style/">Google style examples</a></li>
+<li><a href="examples/numpy_style/">NumPy style examples</a></li>
+</ul>
 <h3 id="page-mode"><span class="pheasant-header"><span class="header"><span class="title">Page Mode</span></span></span></h3>
-<p>Using the page mode, you can construct a comprehensive API documentation for a package. The following YAML is <code>nav</code> part of MkApi's own <code>mkdocs.yml</code>:</p>
+<p>Using the page mode, you can construct a comprehensive API documentation for a package. You can get this feature by just one line:</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yaml">nav:
   - index.md
-  - Examples:
-    - google_style.md
-    - numpy_style.md
   - API: mkapi/api/mkapi</code></pre></div></div></div>
 
-<p>MkApi scans the <code>nav</code> to find an entry that starts with <code>'mkapi/'</code>. This entry must includes two or more slashs (<code>'/'</code>). Second string (<code>'api'</code>) splitted by slash is a directory name. MkApi automatically creates this directory in the <code>docs</code> directory at the beginning of the process and deletes after the process.
-The rest string(<code>'mkapi'</code>) is a directory path to a package that exists in the config directory. MkApi searches all packages and modules and create a Markdown source for one package or module, which is saved in the <code>api</code> directory. The rest work is done by MkDocs. You can see the API documentation of MkApi in nav area.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If a package or module has no package- or module-level docstring, MkApi doesn't process it.</p>
-</div></div>
+<p>For more details, see <a href="usage/page/">Page Mode and Internal Links</a></p></div>
                 <footer>
     <div class="footer-buttons">
-        <div class="next"><a href="google_style/" title="Google Style"><span>Next</span></a></div>
+        <div class="next"><a href="examples/google_style/" title="Google Style"><span>Next</span></a></div>
     </div>
     <div class="footer-note">
         <p>

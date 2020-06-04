@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="daizutabi">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Page Mode and Internal Links &mdash; MkApi</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../../css/mkapi.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/pheasant.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> MkApi</a>
+                </div><div class="version">0.6.0</div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">MkApi Documentation</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Examples</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../examples/google_style/">Google Style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../examples/numpy_style/">NumPy Style</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../library/">Using MkApi within Python</a></li>
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Page Mode and Internal Links</a>
+<ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#page-mode">Page Mode</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#internal-links">Internal Links</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#link-from-embedding-mode">Link from Embedding Mode</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#link-from-type">Link from Type</a></li>
+</ul></li>
+    <li class="toctree-l2"><a class="nav-item" href="../type/">Type Annotation Examples</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../depth/">Depth Limitation</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">API</button>
+<ul class="subnav">
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.base/">base</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.docstring/">docstring</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.plugins.mkdocs/">mkdocs</a></li>
+</ul></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
+    </div>
+    <div class="previous"><a href="../library/">&laquo; Previous</a></div>
+    <div class="next"><a href="../type/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> MkApi</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Advanced Usage</li>
+</ul>
+</nav>
+                <div id="content">
+<h1 id="page-mode-and-internal-links"><span class="pheasant-header"><span class="header"><span class="title">Page Mode and Internal Links</span></span></span></h1>
+<style type="text/css">
+<!--
+.mkapi-node-depth-0 {
+  border: 2px dashed #88AA88;
+}
+-->
+</style>
+
+<h2 id="page-mode"><span class="pheasant-header"><span class="header"><span class="title">Page Mode</span></span></span></h2>
+<p>Page mode is a powerful feature that constructs a comprehensive API documentation for a package. To use the page mode, just write one line in <code>mkdocs.yml</code>:</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yaml">nav:
+  - index.md
+  - API: mkapi/api/mkapi</code></pre></div></div></div>
+
+<p>MkApi scans the <code>nav</code> to find an entry that starts with <code>'mkapi/'</code>. This entry must includes two or more slashes (<code>'/'</code>). Second string (<code>'api'</code>) splitted by slash is a directory name. MkApi automatically creates this directory in the <code>docs</code> directory at the beginning of the process and deletes it and its contents after the process. The rest string (<code>'mkapi'</code>) is a directory path to a package relative to the <code>mkdocs.yml</code> directory. MkApi searches all packages and modules and create a Markdown source for one package or module, which is saved in the <code>api</code> directory. The rest work is done by MkDocs. You can see the API documentation of MkApi in the navigation menu.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a package or module has no package- or module-level docstring, MkApi doesn't process it.</p>
+</div>
+<h2 id="internal-links"><span class="pheasant-header"><span class="header"><span class="title">Internal Links</span></span></span></h2>
+<p>Once a package API documentation is generated, you can use hyperlink to it using normal Markdown syntax.</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">Click [Section](mkapi.core.base.Section).</code></pre></div></div></div>
+
+<p>The above line create a link to <code>mkapi.core.base.Section</code> object:</p>
+<p>Click <a href="../../api/mkapi.core.base/#mkapi.core.base.Section">Section</a>.</p>
+<p>You can use this link even in your docstring. For example, assume that <code>func()</code> is defined in a <code>link</code> module:</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="python">def func():
+    &#34;&#34;&#34;Internal link example.
+
+    See Also:
+        [Item](mkapi.core.base.Item)
+    &#34;&#34;&#34;</code></pre></div></div></div>
+
+<p>The <code>func()</code> is rendered as:</p>
+
+<div class="mkapi-node mkapi-node-depth-0" id="link.func">
+<div class="mkapi-node-header mkapi-node-header-function">
+<div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
+<div class="mkapi-node-name">
+
+
+<code class="mkapi-node-prefix">link.</code><code class="mkapi-node-basename">func</code><code class="mkapi-node-signature">()</code>
+
+
+</div>
+</div>
+  <div class="mkapi-docstring">
+  
+    <div class="mkapi-section">
+      
+      <div class="mkapi-section-body"><p>Internal link example.</p></div>
+    </div>
+  
+    <div class="mkapi-section mkapi-section-named mkapi-section-see also">
+      <div class="mkapi-section-name mkapi-section-name-see-also">
+      <span class="mkapi-section-name-body">See Also</span></div>
+      <div class="mkapi-section-body mkapi-section-body-see also"><p><a href="../../api/mkapi.core.base/#mkapi.core.base.Item">Item</a></p></div>
+    </div>
+  
+</div>
+  
+</div>
+
+
+<p>You can click the above "Item" to visit its API.</p>
+<h2 id="link-from-embedding-mode"><span class="pheasant-header"><span class="header"><span class="title">Link from Embedding Mode</span></span></span></h2>
+<p>API documentation created by the embedding mode has link to its package-level documentation.</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](mkapi.core.docstring.section_header)</code></pre></div></div></div>
+
+<p>creates API of the <code>section_header()</code>:</p>
+
+<div class="mkapi-node mkapi-node-depth-0" id="mkapi.core.docstring.section_header">
+<div class="mkapi-node-header mkapi-node-header-function">
+<div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
+<div class="mkapi-node-name">
+
+
+<code class="mkapi-node-prefix"><a href="../../api/mkapi.core.docstring#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-node-basename"><a href="../../api/mkapi.core.docstring#mkapi.core.docstring.section_header">section_header</a></code><code class="mkapi-node-signature">(line)</code>
+<span class="mkapi-args-type">&#x2192; (str, str)</span>
+
+</div>
+</div>
+  <div class="mkapi-docstring">
+  
+    <div class="mkapi-section">
+      
+      <div class="mkapi-section-body"><p>Returns a tuple of (section name, style name).</p></div>
+    </div>
+  
+    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
+      <div class="mkapi-section-name mkapi-section-name-parameters">
+      <span class="mkapi-section-name-body">Parameters</span></div>
+      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
+
+  <li><code class="mkapi-args-name">line</code>
+         <span class="mkapi-args-type">(str)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">Docstring line.</span></li>
+
+</ul></div>
+    </div>
+  
+    <div class="mkapi-section mkapi-section-named mkapi-section-examples">
+      <div class="mkapi-section-name mkapi-section-name-examples">
+      <span class="mkapi-section-name-body">Examples</span></div>
+      <div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; section_header(&quot;Args:&quot;)
+('Args', 'google')
+&gt;&gt;&gt; section_header(&quot;Raises&quot;)
+('Raises', 'numpy')
+&gt;&gt;&gt; section_header(&quot;other&quot;)
+('', '')
+</code></pre></div>
+    </div>
+  
+</div>
+  
+</div>
+
+
+<p>Then, you can click the prefix (<code>mkapi.core.docstring</code>) or the function name (<code>section_header</code>) to go to the package-level documentation.</p>
+<h2 id="link-from-type"><span class="pheasant-header"><span class="header"><span class="title">Link from Type</span></span></span></h2>
+<p>The <code>Docstring</code> class of MkApi has an attribute <code>sections</code> that is a list of <code>Section</code> class instance like below:</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="python">from dataclasses import dataclass
+from typing import List
+
+from mkapi.core.base import Section
+
+@dataclass
+class Docstring:
+    &#34;&#34;&#34;Docstring ....&#34;&#34;&#34;
+    sections: List[Section]
+    type: str = &#34;&#34;</code></pre></div></div></div>
+
+<p>Then,</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](mkapi.core.base.Docstring)</code></pre></div></div></div>
+
+<p>creates API of the <code>Docstring</code> class:</p>
+
+<div class="mkapi-node mkapi-node-depth-0" id="mkapi.core.base.Docstring">
+<div class="mkapi-node-header mkapi-node-header-dataclass">
+<div class="mkapi-node-kind mkapi-node-kind-dataclass">DATACLASS</div>
+<div class="mkapi-node-name">
+
+
+<code class="mkapi-node-prefix"><a href="../../api/mkapi.core.base#mkapi.core.base">mkapi.core.base</a>.</code><code class="mkapi-node-basename"><a href="../../api/mkapi.core.base#mkapi.core.base.Docstring">Docstring</a></code><code class="mkapi-node-signature">(sections, type=&#39;&#39;)</code>
+
+
+</div>
+</div>
+  <div class="mkapi-docstring">
+  
+    <div class="mkapi-section">
+      
+      <div class="mkapi-section-body"><p>Docstring class represents a docstring of an object.</p></div>
+    </div>
+  
+    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
+      <div class="mkapi-section-name mkapi-section-name-parameters">
+      <span class="mkapi-section-name-body">Parameters</span></div>
+      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
+
+  <li><code class="mkapi-args-name">sections</code>
+         <span class="mkapi-args-type">(list of <a href="../../api/mkapi.core.base#mkapi.core.base.Section" title="mkapi.core.base.Section">Section</a>)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">List of Section instance.</span></li>
+
+  <li><code class="mkapi-args-name">type</code>
+         <span class="mkapi-args-type">(str, optional)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">Type for Returns and Yields sections.</span></li>
+
+</ul></div>
+    </div>
+  
+    <div class="mkapi-section mkapi-section-named mkapi-section-attributes">
+      <div class="mkapi-section-name mkapi-section-name-attributes">
+      <span class="mkapi-section-name-body">Attributes</span></div>
+      <div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
+
+  <li><code class="mkapi-args-name">sections</code>
+         <span class="mkapi-args-type">(list of <a href="../../api/mkapi.core.base#mkapi.core.base.Section" title="mkapi.core.base.Section">Section</a>)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">List of Section instance.</span></li>
+
+  <li><code class="mkapi-args-name">type</code>
+         <span class="mkapi-args-type">(str)</span>
+         <span class="mkapi-args-dash">&mdash;</span>
+         <span class="mkapi-args-desc">Type for Returns and Yields sections.</span></li>
+
+</ul></div>
+    </div>
+  
+</div>
+  
+</div>
+
+
+<p>Note that <code>Section</code> is bold, which indicates that you can click. Let's click. (Or, you can check the fullname from a tooltip by hovering.)</p>
+<p>As you can see, type annotation is useful to create automatic link to other objects.</p></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../library/" title="Using MkApi within Python"><span>Previous</span></a></div>
+        <div class="next"><a href="../type/" title="Type Annotation Examples"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/mkapi.js"></script>
+    <script src="../../js/pheasant.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>
