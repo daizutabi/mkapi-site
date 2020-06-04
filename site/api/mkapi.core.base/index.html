@@ -33,7 +33,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.5.1</div>
+                </div><div class="version">0.5.2</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -52,9 +52,9 @@
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
 <ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="../../depth/">Depth Limitation</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../library/">Using MkApi within Python</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../type/">Type Annotation Examples</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../depth/">Depth Limitation</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -76,7 +76,7 @@
     <div class="link">
         <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
     </div>
-    <div class="previous"><a href="../../type/">&laquo; Previous</a></div>
+    <div class="previous"><a href="../../depth/">&laquo; Previous</a></div>
     <div class="next"><a href="../mkapi.core.docstring/">Next &raquo;</a></div>
 </div>
         </aside>
@@ -113,7 +113,7 @@
     <div class="mkapi-node-kind mkapi-node-kind-dataclass">DATACLASS</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.base.Base</code><code class="mkapi-node-signature">(name, type=&#39;&#39;, markdown=&#39;&#39;)</code>
+        <code class="mkapi-node-prefix">mkapi.core.base.</code><code class="mkapi-node-basename">Base</code><code class="mkapi-node-signature">(name, type=&#39;&#39;, markdown=&#39;&#39;)</code>
         
       
     </div>
@@ -218,7 +218,7 @@ the attribute if necessary.</p></div>
     <div class="mkapi-node-kind mkapi-node-kind-dataclass">DATACLASS</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.base.Item</code><code class="mkapi-node-signature">(name, type=&#39;&#39;, markdown=&#39;&#39;)</code>
+        <code class="mkapi-node-prefix">mkapi.core.base.</code><code class="mkapi-node-basename">Item</code><code class="mkapi-node-signature">(name, type=&#39;&#39;, markdown=&#39;&#39;)</code>
         
       
     </div>
@@ -322,7 +322,7 @@ the attribute if necessary.</p></div>
     <div class="mkapi-node-kind mkapi-node-kind-dataclass">DATACLASS</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.base.Section</code><code class="mkapi-node-signature">(name, type=&#39;&#39;, markdown=&#39;&#39;, items=&lt;factory&gt;)</code>
+        <code class="mkapi-node-prefix">mkapi.core.base.</code><code class="mkapi-node-basename">Section</code><code class="mkapi-node-signature">(name, type=&#39;&#39;, markdown=&#39;&#39;, items=&lt;factory&gt;)</code>
         
       
     </div>
@@ -355,7 +355,7 @@ the attribute if necessary.</p></div>
          <span class="mkapi-args-desc">Markdown source.</span></li>
 
   <li><code class="mkapi-args-name">items</code>
-         <span class="mkapi-args-type">(list of Item, optional)</span>
+         <span class="mkapi-args-type">(list of [Item](mkapi.core.base.Item), optional)</span>
          <span class="mkapi-args-dash">&mdash;</span>
          <span class="mkapi-args-desc">List for arguments, attributes, or exceptions.</span></li>
 
@@ -383,7 +383,7 @@ the attribute if necessary.</p></div>
          <span class="mkapi-args-desc">Markdown source.</span></li>
 
   <li><code class="mkapi-args-name">items</code>
-         <span class="mkapi-args-type">(list of Item)</span>
+         <span class="mkapi-args-type">(list of [Item](mkapi.core.base.Item))</span>
          <span class="mkapi-args-dash">&mdash;</span>
          <span class="mkapi-args-desc">List for arguments, attributes, or exceptions.</span></li>
 
@@ -406,7 +406,7 @@ the attribute if necessary.</p></div>
     <div class="mkapi-node-kind mkapi-node-kind-dataclass">DATACLASS</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.base.Docstring</code><code class="mkapi-node-signature">(sections, type=&#39;&#39;)</code>
+        <code class="mkapi-node-prefix">mkapi.core.base.</code><code class="mkapi-node-basename">Docstring</code><code class="mkapi-node-signature">(sections, type=&#39;&#39;)</code>
         
       
     </div>
@@ -424,7 +424,7 @@ the attribute if necessary.</p></div>
       <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
 
   <li><code class="mkapi-args-name">sections</code>
-         <span class="mkapi-args-type">(list of Section)</span>
+         <span class="mkapi-args-type">(list of [Section](mkapi.core.base.Section))</span>
          <span class="mkapi-args-dash">&mdash;</span>
          <span class="mkapi-args-desc">List of Section instance</span></li>
 
@@ -442,7 +442,7 @@ the attribute if necessary.</p></div>
       <div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
 
   <li><code class="mkapi-args-name">sections</code>
-         <span class="mkapi-args-type">(list of Section)</span>
+         <span class="mkapi-args-type">(list of [Section](mkapi.core.base.Section))</span>
          <span class="mkapi-args-dash">&mdash;</span>
          <span class="mkapi-args-desc">List of Section instance</span></li>
 
@@ -465,7 +465,7 @@ the attribute if necessary.</p></div>
     <div class="mkapi-node-kind mkapi-node-kind-dataclass">DATACLASS</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.base.Node</code><code class="mkapi-node-signature">(name, type=&#39;&#39;, markdown=&#39;&#39;, obj=None, depth=0, prefix=&#39;&#39;, kind=&#39;&#39;, sourcefile=&#39;&#39;, lineno=0, signature=None, docstring=None, members=&lt;factory&gt;, headless=False)</code>
+        <code class="mkapi-node-prefix">mkapi.core.base.</code><code class="mkapi-node-basename">Node</code><code class="mkapi-node-signature">(name, type=&#39;&#39;, markdown=&#39;&#39;, obj=None, depth=0, prefix=&#39;&#39;, kind=&#39;&#39;, sourcefile=&#39;&#39;, lineno=0, signature=None, docstring=None, members=&lt;factory&gt;, headless=False)</code>
         
       
     </div>
@@ -513,17 +513,17 @@ the attribute if necessary.</p></div>
          <span class="mkapi-args-desc">Line number.</span></li>
 
   <li><code class="mkapi-args-name">signature</code>
-         <span class="mkapi-args-type">(Union[mkapi.core.inspect.Signature, NoneType])</span>
+         <span class="mkapi-args-type">([Signature](mkapi.core.inspect.Signature), optional)</span>
          <span class="mkapi-args-dash">&mdash;</span>
          <span class="mkapi-args-desc">Signature instance.</span></li>
 
   <li><code class="mkapi-args-name">docstring</code>
-         <span class="mkapi-args-type">(Union[mkapi.core.base.Docstring, NoneType])</span>
+         <span class="mkapi-args-type">([Docstring](mkapi.core.base.Docstring), optional)</span>
          <span class="mkapi-args-dash">&mdash;</span>
          <span class="mkapi-args-desc">Docstring instance.</span></li>
 
   <li><code class="mkapi-args-name">members</code>
-         <span class="mkapi-args-type">(list of ForwardRef(&#39;Node&#39;))</span>
+         <span class="mkapi-args-type">(list of Node)</span>
          <span class="mkapi-args-dash">&mdash;</span>
          <span class="mkapi-args-desc">Member objects. For example, methods of class.</span></li>
 
@@ -600,7 +600,7 @@ the attribute if necessary.</p></div>
 </div>
                 <footer>
     <div class="footer-buttons">
-        <div class="previous"><a href="../../type/" title="Type Annotation Examples"><span>Previous</span></a></div>
+        <div class="previous"><a href="../../depth/" title="Depth Limitation"><span>Previous</span></a></div>
         <div class="next"><a href="../mkapi.core.docstring/" title="docstring"><span>Next</span></a></div>
     </div>
     <div class="footer-note">

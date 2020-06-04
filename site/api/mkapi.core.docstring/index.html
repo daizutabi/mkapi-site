@@ -33,7 +33,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.5.1</div>
+                </div><div class="version">0.5.2</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -52,9 +52,9 @@
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
 <ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="../../depth/">Depth Limitation</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../library/">Using MkApi within Python</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../type/">Type Annotation Examples</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../depth/">Depth Limitation</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -113,7 +113,7 @@
     <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.docstring.section_header</code><code class="mkapi-node-signature">(line)</code>
+        <code class="mkapi-node-prefix">mkapi.core.docstring.</code><code class="mkapi-node-basename">section_header</code><code class="mkapi-node-signature">(line)</code>
         <span class="mkapi-args-type">&#x2192; (str, str)</span>
       
     </div>
@@ -161,8 +161,8 @@
     <div class="mkapi-node-kind mkapi-node-kind-generator">GENERATOR</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.docstring.split_section</code><code class="mkapi-node-signature">(doc)</code>
-        <span class="mkapi-args-type">&#x2192; Iterator[Tuple[str, str, str]]</span>
+        <code class="mkapi-node-prefix">mkapi.core.docstring.</code><code class="mkapi-node-basename">split_section</code><code class="mkapi-node-signature">(doc)</code>
+        <span class="mkapi-args-type">&#x2192; (str, str, str)</span>
       
     </div>
   </div>
@@ -209,8 +209,8 @@
     <div class="mkapi-node-kind mkapi-node-kind-generator">GENERATOR</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.docstring.split_parameter</code><code class="mkapi-node-signature">(doc)</code>
-        <span class="mkapi-args-type">&#x2192; Iterator[List[str]]</span>
+        <code class="mkapi-node-prefix">mkapi.core.docstring.</code><code class="mkapi-node-basename">split_parameter</code><code class="mkapi-node-signature">(doc)</code>
+        <span class="mkapi-args-type">&#x2192; list of str</span>
       
     </div>
   </div>
@@ -245,7 +245,7 @@
     <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.docstring.parse_parameter</code><code class="mkapi-node-signature">(lines, style)</code>
+        <code class="mkapi-node-prefix">mkapi.core.docstring.</code><code class="mkapi-node-basename">parse_parameter</code><code class="mkapi-node-signature">(lines, style)</code>
         <span class="mkapi-args-type">&#x2192; (str, str, str)</span>
       
     </div>
@@ -286,7 +286,7 @@
     <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.docstring.parse_parameters</code><code class="mkapi-node-signature">(doc, style)</code>
+        <code class="mkapi-node-prefix">mkapi.core.docstring.</code><code class="mkapi-node-basename">parse_parameters</code><code class="mkapi-node-signature">(doc, style)</code>
         <span class="mkapi-args-type">&#x2192; list of (str, str, str)</span>
       
     </div>
@@ -309,7 +309,7 @@
     <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.docstring.parse_raise</code><code class="mkapi-node-signature">(lines, style)</code>
+        <code class="mkapi-node-prefix">mkapi.core.docstring.</code><code class="mkapi-node-basename">parse_raise</code><code class="mkapi-node-signature">(lines, style)</code>
         <span class="mkapi-args-type">&#x2192; (str, str)</span>
       
     </div>
@@ -332,7 +332,7 @@
     <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.docstring.parse_raises</code><code class="mkapi-node-signature">(doc, style)</code>
+        <code class="mkapi-node-prefix">mkapi.core.docstring.</code><code class="mkapi-node-basename">parse_raises</code><code class="mkapi-node-signature">(doc, style)</code>
         <span class="mkapi-args-type">&#x2192; list of (str, str)</span>
       
     </div>
@@ -355,7 +355,7 @@
     <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.docstring.parse_returns</code><code class="mkapi-node-signature">(doc, style)</code>
+        <code class="mkapi-node-prefix">mkapi.core.docstring.</code><code class="mkapi-node-basename">parse_returns</code><code class="mkapi-node-signature">(doc, style)</code>
         <span class="mkapi-args-type">&#x2192; (str, str)</span>
       
     </div>
@@ -378,8 +378,8 @@
     <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.docstring.create_section</code><code class="mkapi-node-signature">(name, doc, style)</code>
-        <span class="mkapi-args-type">&#x2192; Section</span>
+        <code class="mkapi-node-prefix">mkapi.core.docstring.</code><code class="mkapi-node-basename">create_section</code><code class="mkapi-node-signature">(name, doc, style)</code>
+        <span class="mkapi-args-type">&#x2192; [Section](mkapi.core.base.Section)</span>
       
     </div>
   </div>
@@ -401,7 +401,7 @@
     <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.docstring.parse_property</code><code class="mkapi-node-signature">(doc, obj)</code>
+        <code class="mkapi-node-prefix">mkapi.core.docstring.</code><code class="mkapi-node-basename">parse_property</code><code class="mkapi-node-signature">(doc, obj)</code>
         
       
     </div>
@@ -424,8 +424,8 @@
     <div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
     <div class="mkapi-node-name">
       
-        <code class="mkapi-node-basename">mkapi.core.docstring.parse_docstring</code><code class="mkapi-node-signature">(obj)</code>
-        <span class="mkapi-args-type">&#x2192; Union[mkapi.core.base.Docstring, NoneType]</span>
+        <code class="mkapi-node-prefix">mkapi.core.docstring.</code><code class="mkapi-node-basename">parse_docstring</code><code class="mkapi-node-signature">(obj)</code>
+        <span class="mkapi-args-type">&#x2192; [Docstring](mkapi.core.base.Docstring), optional</span>
       
     </div>
   </div>
