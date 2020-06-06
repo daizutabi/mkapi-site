@@ -229,7 +229,7 @@ from mkapi.core.base import Section
 @dataclass
 class Docstring:
     &#34;&#34;&#34;Docstring ....&#34;&#34;&#34;
-    sections: List[Section]
+    sections: List[Section] = field(default_factory=list)
     type: str = &#34;&#34;</code></pre></div></div></div>
 
 <p>Corresponding API documentation is like below:</p>
