@@ -33,7 +33,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.6.2</div>
+                </div><div class="version">0.7.0</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -54,21 +54,22 @@
 <li class="toctree-l3"><a class="nav-item toc" href="#class">Class</a></li>
 <li class="toctree-l3"><a class="nav-item toc" href="#method">Method</a></li>
 <li class="toctree-l3"><a class="nav-item toc" href="#data-class">Data Class</a></li>
-<li class="toctree-l3"><a class="nav-item toc" href="#module">Module</a></li>
 </ul></li>
     <li class="toctree-l2"><a class="nav-item" href="../numpy_style/">NumPy Style</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
 <ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="../../usage/library/">Using MkApi within Python</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/module/">Module and Package</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/inherit/">Docstring Inheritance</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../usage/page/">Page Mode and Internal Links</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/library/">Using MkApi within Python</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../usage/type/">Type Annotation Examples</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../usage/depth/">Depth Limitation</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
 <ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core/">mkapi.core</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.base/">base</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.docstring/">docstring</a></li>
 </ul></li>
@@ -100,10 +101,10 @@
 </ul>
 </nav>
                 <div id="content">
-<h1 id="google-style"><span class="pheasant-header"><span class="header"><span class="title">Google Style</span></span></span></h1>
+<h1 id="google-style">Google Style</h1>
 <style type="text/css">
 <!--
-.mkapi-node-depth-0 {
+.mkapi-node {
   border: 2px dashed #88AA88;
 }
 -->
@@ -122,7 +123,7 @@ markdown_extensions:
 extra_javascript:  # for pymdownx.arithmatex
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML</code></pre></div></div></div>
 
-<h2 id="function"><span class="pheasant-header"><span class="header"><span class="title">Function</span></span></span></h2>
+<h2 id="function">Function</h2>
 <p>The <code>google_style</code> module defines a simple function <code>add()</code>.</p>
 <div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">Code</span> <span class="number">1</span>
 <span class="title">google_style.add()</span></p>
@@ -158,80 +159,95 @@ extra_javascript:  # for pymdownx.arithmatex
 </div></div></div>
 
 <p>Then, you can write an entry to generate API for the function anywhere in your Markdown source:</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][google_style.add]</code></pre></div></div></div>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](google_style.add)</code></pre></div></div></div>
 
 <p>MkApi generates the API documentation for the <code>add()</code> function.</p>
-
-<div class="mkapi-node mkapi-node-depth-0" id="google_style.add">
-<div class="mkapi-node-header mkapi-node-header-function">
-<div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
-<div class="mkapi-node-name">
+<div class="mkapi-node" id="google_style.add">
 
 
-<code class="mkapi-node-prefix">google_style.</code><code class="mkapi-node-basename">add</code><code class="mkapi-node-signature">(x, y=1)</code>
+<div class="mkapi-object mkapi-object-function">
+<div class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</div>
+<code class="mkapi-object-prefix">google_style.</code>
+  <code class="mkapi-object-name">add</code>
+  <code class="mkapi-object-signature">(x, y=1)</code>
+    
+</div>
 
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Returns <span><span class="MathJax_Preview">x + y</span><script type="math/tex">x + y</script></span>.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-</div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>Returns <span><span class="MathJax_Preview">x + y</span><script type="math/tex">x + y</script></span>.</p></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
-      <div class="mkapi-section-name mkapi-section-name-parameters">
-      <span class="mkapi-section-name-body">Parameters</span></div>
-      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
 
-  <li><code class="mkapi-args-name">x</code>
-         <span class="mkapi-args-type">(int)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The first parameter.</span></li>
+<div class="mkapi-section-body mkapi-section-body-parameters">
 
-  <li><code class="mkapi-args-name">y</code>
-         <span class="mkapi-args-type">(int, optional)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The second parameter. Default=1.</span></li>
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">x</code>
+<span class="mkapi-args-type">(int)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The first parameter.</span></li>
+
+<li><code class="mkapi-args-name">y</code>
+<span class="mkapi-args-type">(int, optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The second parameter. Default=1.</span></li>
 
 </ul></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-returns">
-      <div class="mkapi-section-name mkapi-section-name-returns">
-      <span class="mkapi-section-name-body">Returns</span> <span class="mkapi-args-type">(int)</span></div>
-      <div class="mkapi-section-body mkapi-section-body-returns"><p>Added value.</p></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-examples">
-      <div class="mkapi-section-name mkapi-section-name-examples">
-      <span class="mkapi-section-name-body">Examples</span></div>
-      <div class="mkapi-section-body mkapi-section-body-examples"><p>Examples should be written in doctest format</p>
+</div>
+
+<div class="mkapi-section mkapi-section-returns">
+
+<div class="mkapi-section-name mkapi-section-name-returns">
+<span class="mkapi-section-name-body">Returns</span>
+<span class="mkapi-args-type">(int)</span>
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-returns"><p>Added value.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-examples">
+
+<div class="mkapi-section-name mkapi-section-name-examples">
+<span class="mkapi-section-name-body">Examples</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-examples"><p>Examples should be written in doctest format</p>
 <pre><code class="python">&gt;&gt;&gt; add(1, 2)
 3
 </code></pre></div>
-    </div>
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><div class="admonition note">
+</div>
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can use the <a href="https://squidfunk.github.io/mkdocs-material/extensions/admonition/">admonition extension of
 MkDocs</a>.</p>
 </div></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-note">
-      <div class="mkapi-section-name mkapi-section-name-note">
-      <span class="mkapi-section-name-body">Note</span></div>
-      <div class="mkapi-section-body mkapi-section-body-note"><p>But you should use <code>Note</code> section instead for consistency.</p></div>
-    </div>
-  
-</div>
-  
 </div>
 
+<div class="mkapi-section mkapi-section-note">
+
+<div class="mkapi-section-name mkapi-section-name-note">
+<span class="mkapi-section-name-body">Note</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-note"><p>But you should use <code>Note</code> section instead for consistency.</p></div>
+</div>
+
+</div>
+
+</div>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -242,11 +258,11 @@ MkDocs</a>.</p>
 <li>Type inspection of <code>add</code> (FUNCTION prefix is added before <code>google_style.add</code>).</li>
 <li>Use of type annotation for both Parameters and Returns sections.</li>
 <li>Add <em>optional</em> if parameters have default values.</li>
-<li>Default value replacement by the <code>{default}</code> keyword in the <code>Args</code> section.</li>
+<li>Default value replacement by the <code>{default}</code> keyword in the Parameters section.</li>
 <li>External hyperlink.</li>
 <li>Use of MkDocs extensions: MathJax rendering and admonition.</li>
 </ul>
-<h2 id="generator"><span class="pheasant-header"><span class="header"><span class="title">Generator</span></span></span></h2>
+<h2 id="generator">Generator</h2>
 <p>The <code>google_style</code> module also defines a simple generator <code>gen()</code>.</p>
 <div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">Code</span> <span class="number">2</span>
 <span class="title">google_style.gen()</span></p>
@@ -269,59 +285,67 @@ MkDocs</a>.</p>
 </div></div></div>
 
 <p>Then,</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][google_style.gen]</code></pre></div></div></div>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](google_style.gen)</code></pre></div></div></div>
 
 <p>creates the API documentation for the <code>gen()</code> generator.</p>
-
-<div class="mkapi-node mkapi-node-depth-0" id="google_style.gen">
-<div class="mkapi-node-header mkapi-node-header-generator">
-<div class="mkapi-node-kind mkapi-node-kind-generator">GENERATOR</div>
-<div class="mkapi-node-name">
+<div class="mkapi-node" id="google_style.gen">
 
 
-<code class="mkapi-node-prefix">google_style.</code><code class="mkapi-node-basename">gen</code><code class="mkapi-node-signature">(n)</code>
+<div class="mkapi-object mkapi-object-generator">
+<div class="mkapi-object-kind mkapi-object-kind-generator">GENERATOR</div>
+<code class="mkapi-object-prefix">google_style.</code>
+  <code class="mkapi-object-name">gen</code>
+  <code class="mkapi-object-signature">(n)</code>
+    
+</div>
 
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Yields a numbered string.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-</div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>Yields a numbered string.</p></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
-      <div class="mkapi-section-name mkapi-section-name-parameters">
-      <span class="mkapi-section-name-body">Parameters</span></div>
-      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
 
-  <li><code class="mkapi-args-name">n</code>
-         <span class="mkapi-args-type">(int)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The length of iteration.</span></li>
+<div class="mkapi-section-body mkapi-section-body-parameters">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">n</code>
+<span class="mkapi-args-type">(int)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The length of iteration.</span></li>
 
 </ul></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-yields">
-      <div class="mkapi-section-name mkapi-section-name-yields">
-      <span class="mkapi-section-name-body">Yields</span> <span class="mkapi-args-type">(str)</span></div>
-      <div class="mkapi-section-body mkapi-section-body-yields"><p>A numbered string.</p></div>
-    </div>
-  
-</div>
-  
 </div>
 
+<div class="mkapi-section mkapi-section-yields">
+
+<div class="mkapi-section-name mkapi-section-name-yields">
+<span class="mkapi-section-name-body">Yields</span>
+<span class="mkapi-args-type">(str)</span>
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-yields"><p>A numbered string.</p></div>
+</div>
+
+</div>
+
+</div>
 
 <p>In this simple example, note that:</p>
 <ul>
 <li>A GENERATOR prefix instead of a FUNCTION prefix.</li>
-<li>The parameter <code>n</code> has no type annotation but you can specify it in the <code>Args</code> section directly.</li>
+<li>The parameter <code>n</code> has no type annotation but you can specify it in the Parameters section directly.</li>
 <li>Yields type is not <em>iterator of str</em> but <em>str</em>, because <code>gen()</code> is a generator.</li>
 </ul>
-<h2 id="class"><span class="pheasant-header"><span class="header"><span class="title">Class</span></span></span></h2>
+<h2 id="class">Class</h2>
 <p>The <code>google_style</code> module also defines a simple class <code>ExampleClass</code>.</p>
 <div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">Code</span> <span class="number">3</span>
 <span class="title">google_style.ExampleClass</span></p>
@@ -372,220 +396,239 @@ MkDocs</a>.</p>
 </div></div></div>
 
 <p>As usual,</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][google_style.ExampleClass]</code></pre></div></div></div>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](google_style.ExampleClass)</code></pre></div></div></div>
 
 <p>creates the API documentation for the <code>ExampleClass</code> class.</p>
-
-<div class="mkapi-node mkapi-node-depth-0" id="google_style.ExampleClass">
-<div class="mkapi-node-header mkapi-node-header-class">
-<div class="mkapi-node-kind mkapi-node-kind-class">CLASS</div>
-<div class="mkapi-node-name">
+<div class="mkapi-node" id="google_style.ExampleClass">
 
 
-<code class="mkapi-node-prefix">google_style.</code><code class="mkapi-node-basename">ExampleClass</code><code class="mkapi-node-signature">(x, y)</code>
+<div class="mkapi-object mkapi-object-class">
+<div class="mkapi-object-kind mkapi-object-kind-class">CLASS</div>
+<code class="mkapi-object-prefix">google_style.</code>
+  <code class="mkapi-object-name">ExampleClass</code>
+  <code class="mkapi-object-signature">(x, y)</code>
+    
+</div>
 
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>A normal class.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-</div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>A normal class.</p></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
-      <div class="mkapi-section-name mkapi-section-name-parameters">
-      <span class="mkapi-section-name-body">Parameters</span></div>
-      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
 
-  <li><code class="mkapi-args-name">x</code>
-         <span class="mkapi-args-type">(list of int)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The first parameter.</span></li>
+<div class="mkapi-section-body mkapi-section-body-parameters">
 
-  <li><code class="mkapi-args-name">y</code>
-         <span class="mkapi-args-type">(str, int)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The second parameter.</span></li>
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">x</code>
+<span class="mkapi-args-type">(list of int)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The first parameter.</span></li>
+
+<li><code class="mkapi-args-name">y</code>
+<span class="mkapi-args-type">(str, int)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The second parameter.</span></li>
 
 </ul></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-attributes">
-      <div class="mkapi-section-name mkapi-section-name-attributes">
-      <span class="mkapi-section-name-body">Attributes</span></div>
-      <div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
+</div>
 
-  <li><code class="mkapi-args-name">z</code>
-         <span class="mkapi-args-type">(str)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The first attribute.</span></li>
+<div class="mkapi-section mkapi-section-attributes">
+
+<div class="mkapi-section-name mkapi-section-name-attributes">
+<span class="mkapi-section-name-body">Attributes</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-attributes">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">z</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The first attribute.</span></li>
 
 </ul></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-raises">
-      <div class="mkapi-section-name mkapi-section-name-raises">
-      <span class="mkapi-section-name-body">Raises</span></div>
-      <div class="mkapi-section-body mkapi-section-body-raises"><ul class="mkapi-args-list">
-
-  <li><code class="mkapi-args-name">ValueError</code>
-         
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">If the length of <code>x</code> is equal to 0.</span></li>
-
-</ul></div>
-    </div>
-  
 </div>
-  
-    <div class="mkapi-members">
-      
-        <div class="mkapi-member">
-          
-<div class="mkapi-node mkapi-node-depth-1" id="google_style.ExampleClass.message">
-<div class="mkapi-node-header mkapi-node-header-method">
-<div class="mkapi-node-kind mkapi-node-kind-method">METHOD</div>
-<div class="mkapi-node-name">
 
-<code class="mkapi-node-basename">message</code><code class="mkapi-node-signature">(n)</code>
-<span class="mkapi-args-type">&#x2192; list of str</span>
+<div class="mkapi-section mkapi-section-raises">
+
+<div class="mkapi-section-name mkapi-section-name-raises">
+<span class="mkapi-section-name-body">Raises</span>
 
 </div>
-</div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>Returns a message list.</p></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
-      <div class="mkapi-section-name mkapi-section-name-parameters">
-      <span class="mkapi-section-name-body">Parameters</span></div>
-      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
 
-  <li><code class="mkapi-args-name">n</code>
-         <span class="mkapi-args-type">(int)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">Repeatation.</span></li>
+<div class="mkapi-section-body mkapi-section-body-raises">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">ValueError</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">If the length of <code>x</code> is equal to 0.</span></li>
 
 </ul></div>
+</div>
+
+</div>
+
+  <div class="mkapi-members">
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="google_style.ExampleClass.message">
+
+
+<div class="mkapi-object mkapi-object-method">
+<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
+<code class="mkapi-object-name">message</code>
+  <code class="mkapi-object-signature">(n)</code>
+    <span class="mkapi-args-type"> &#x2192; list of str</span>
+</div>
+
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Returns a message list.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-parameters">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">n</code>
+<span class="mkapi-args-type">(int)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Repeatation.</span></li>
+
+</ul></div>
+</div>
+
+</div>
+
+</div>
     </div>
   
-</div>
-  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="google_style.ExampleClass.readonly_property">
+
+
+<div class="mkapi-object mkapi-object-readonly_property">
+<div class="mkapi-object-kind mkapi-object-kind-readonly_property">READONLY_PROPERTY</div>
+<code class="mkapi-object-name">readonly_property</code>
+  <code class="mkapi-object-signature"></code>
+    <span class="mkapi-args-type"> &#x2192; str</span>
 </div>
 
-        </div>
-      
-        <div class="mkapi-member">
-          
-<div class="mkapi-node mkapi-node-depth-1" id="google_style.ExampleClass.readonly_property">
-<div class="mkapi-node-header mkapi-node-header-readonly_property">
-<div class="mkapi-node-kind mkapi-node-kind-readonly_property">READONLY_PROPERTY</div>
-<div class="mkapi-node-name">
 
-<code class="mkapi-node-basename">readonly_property</code><code class="mkapi-node-signature">()</code>
-<span class="mkapi-args-type">&#x2192; str</span>
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Read-only property documentation.</p></div>
+</div>
 
 </div>
+
 </div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>Read-only property documentation.</p></div>
     </div>
   
-</div>
-  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="google_style.ExampleClass.readwrite_property">
+
+
+<div class="mkapi-object mkapi-object-readwrite_property">
+<div class="mkapi-object-kind mkapi-object-kind-readwrite_property">READWRITE_PROPERTY</div>
+<code class="mkapi-object-name">readwrite_property</code>
+  <code class="mkapi-object-signature"></code>
+    <span class="mkapi-args-type"> &#x2192; list of int</span>
 </div>
 
-        </div>
-      
-        <div class="mkapi-member">
-          
-<div class="mkapi-node mkapi-node-depth-1" id="google_style.ExampleClass.readwrite_property">
-<div class="mkapi-node-header mkapi-node-header-readwrite_property">
-<div class="mkapi-node-kind mkapi-node-kind-readwrite_property">READWRITE_PROPERTY</div>
-<div class="mkapi-node-name">
 
-<code class="mkapi-node-basename">readwrite_property</code><code class="mkapi-node-signature">()</code>
-<span class="mkapi-args-type">&#x2192; list of int</span>
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Read-write property documentation.</p></div>
+</div>
 
 </div>
+
 </div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>Read-write property documentation.</p></div>
     </div>
   
-</div>
-  
-</div>
+  </div>
 
-        </div>
-      
-    </div>
-  
 </div>
-
 
 <p>In this example, note that:</p>
 <ul>
 <li>Docstring of <code>__init__</code> function is treated as a class-level docstring.</li>
 <li>Type annotation using <code>typing</code> package (<code>List</code> and <code>Tuple</code> in this case) is converted into readable style.</li>
-<li>Bound methods (<code>message</code> in this case) have a <code>METHOD</code> prefix instead of a <code>FUNCTION</code> prefix.</li>
-<li>If callable objects have neither <code>Returns</code> nor <code>Yields</code>, the type appears on the object definition line like type annotation.</li>
+<li>Bound methods (<code>message</code> in this case) have a METHOD prefix instead of a FUNCTION prefix.</li>
+<li>If callable objects have neither Returns nor Yields, the type appears on the object definition line like type annotation.</li>
 <li>For properties, the type can be written at the beginning of the docstring or as type annotation.</li>
 <li>Whether a property is read-only or read-write is inspected.</li>
 </ul>
-<h2 id="method"><span class="pheasant-header"><span class="header"><span class="title">Method</span></span></span></h2>
+<h2 id="method">Method</h2>
 <p>You can select a method of class (or any other attribute that can have docstring) to generate API.</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][google_style.ExampleClass.message]</code></pre></div></div></div>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](google_style.ExampleClass.message)</code></pre></div></div></div>
 
 <p>creates the API documentation for the <code>message()</code> of <code>ExampleClass</code> class.</p>
+<div class="mkapi-node" id="google_style.ExampleClass.message">
 
-<div class="mkapi-node mkapi-node-depth-0" id="google_style.ExampleClass.message">
-<div class="mkapi-node-header mkapi-node-header-method">
-<div class="mkapi-node-kind mkapi-node-kind-method">METHOD</div>
-<div class="mkapi-node-name">
 
-<code class="mkapi-node-basename">message</code><code class="mkapi-node-signature">(n)</code>
-<span class="mkapi-args-type">&#x2192; list of str</span>
+<div class="mkapi-object mkapi-object-method">
+<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
+<code class="mkapi-object-name">message</code>
+  <code class="mkapi-object-signature">(n)</code>
+    <span class="mkapi-args-type"> &#x2192; list of str</span>
+</div>
+
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Returns a message list.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-</div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>Returns a message list.</p></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
-      <div class="mkapi-section-name mkapi-section-name-parameters">
-      <span class="mkapi-section-name-body">Parameters</span></div>
-      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
 
-  <li><code class="mkapi-args-name">n</code>
-         <span class="mkapi-args-type">(int)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">Repeatation.</span></li>
+<div class="mkapi-section-body mkapi-section-body-parameters">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">n</code>
+<span class="mkapi-args-type">(int)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Repeatation.</span></li>
 
 </ul></div>
-    </div>
-  
-</div>
-  
 </div>
 
+</div>
 
-<h2 id="data-class"><span class="pheasant-header"><span class="header"><span class="title">Data Class</span></span></span></h2>
+</div>
+
+<h2 id="data-class">Data Class</h2>
 <p>The <code>google_style</code> module also defines a simple <a href="https://docs.python.org/3/library/dataclasses.html">data class</a> <code>ExampleDataClass</code>.</p>
 <div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">Code</span> <span class="number">4</span>
 <span class="title">google_style.ExampleDataClass</span></p>
@@ -611,459 +654,77 @@ class ExampleDataClass:
 </div></div></div>
 
 <p>Then,</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][google_style.ExampleDataClass]</code></pre></div></div></div>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](google_style.ExampleDataClass)</code></pre></div></div></div>
 
 <p>creates the API documentation for the <code>ExampleDataClass</code> class.</p>
-
-<div class="mkapi-node mkapi-node-depth-0" id="google_style.ExampleDataClass">
-<div class="mkapi-node-header mkapi-node-header-dataclass">
-<div class="mkapi-node-kind mkapi-node-kind-dataclass">DATACLASS</div>
-<div class="mkapi-node-name">
+<div class="mkapi-node" id="google_style.ExampleDataClass">
 
 
-<code class="mkapi-node-prefix">google_style.</code><code class="mkapi-node-basename">ExampleDataClass</code><code class="mkapi-node-signature">(x=0)</code>
+<div class="mkapi-object mkapi-object-dataclass">
+<div class="mkapi-object-kind mkapi-object-kind-dataclass">DATACLASS</div>
+<code class="mkapi-object-prefix">google_style.</code>
+  <code class="mkapi-object-name">ExampleDataClass</code>
+  <code class="mkapi-object-signature">(x=0)</code>
+    
+</div>
 
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>A dataclass.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-</div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>A dataclass.</p></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
-      <div class="mkapi-section-name mkapi-section-name-parameters">
-      <span class="mkapi-section-name-body">Parameters</span></div>
-      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
 
-  <li><code class="mkapi-args-name">x</code>
-         <span class="mkapi-args-type">(int, optional)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The first parameter.</span></li>
+<div class="mkapi-section-body mkapi-section-body-parameters">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">x</code>
+<span class="mkapi-args-type">(int, optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The first parameter.</span></li>
 
 </ul></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-attributes">
-      <div class="mkapi-section-name mkapi-section-name-attributes">
-      <span class="mkapi-section-name-body">Attributes</span></div>
-      <div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
+</div>
 
-  <li><code class="mkapi-args-name">x</code>
-         <span class="mkapi-args-type">(int)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The first attribute.</span></li>
+<div class="mkapi-section mkapi-section-attributes">
 
-  <li><code class="mkapi-args-name">y</code>
-         <span class="mkapi-args-type">(int)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The second attribute.</span></li>
+<div class="mkapi-section-name mkapi-section-name-attributes">
+<span class="mkapi-section-name-body">Attributes</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-attributes">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">x</code>
+<span class="mkapi-args-type">(int)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The first attribute.</span></li>
+
+<li><code class="mkapi-args-name">y</code>
+<span class="mkapi-args-type">(int)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The second attribute.</span></li>
 
 </ul></div>
-    </div>
-  
-</div>
-  
 </div>
 
+</div>
+
+</div>
 
 <p>In this example, note that:</p>
 <ul>
 <li>A DATACLASS prefix instead of a CLASS prefix.</li>
 <li>Attributes type inspection as well as parameters if they are data class fields.</li>
-</ul>
-<h2 id="module"><span class="pheasant-header"><span class="header"><span class="title">Module</span></span></span></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The feature of generation of module level docstring will be removed in the future version in favor of "<a href="../../usage/page/">Page mode</a>".</p>
-</div>
-<p>Finally, let's generate the API documentation for the <code>google_style</code> module. The module has a module level docstring like below:</p>
-<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">1</span>
-<span class="title">google_style.py (line 1~10)</span></p>
-<div class="content">
-
-<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">&#34;&#34;&#34;Module level docstring.&#34;&#34;&#34;
-from dataclasses import dataclass, field
-from typing import Iterator, List, Tuple
-
-
-def add(x: int, y: int = 1) -&gt; int:
-    &#34;&#34;&#34;Returns $x + y$.
-
-    Args:
-        x: The first parameter.</code></pre></div></div></div>
-
-</div></div></div>
-
-<p>Then,</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi][google_style]</code></pre></div></div></div>
-
-<p>creates the API documentation for the entire <code>google_style</code> module.</p>
-
-<div class="mkapi-node mkapi-node-depth-0" id="google_style">
-<div class="mkapi-node-header mkapi-node-header-module">
-<div class="mkapi-node-kind mkapi-node-kind-module">MODULE</div>
-<div class="mkapi-node-name">
-
-<span class="mkapi-node-basename">google_style</span>
-
-</div>
-</div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>Module level docstring.</p></div>
-    </div>
-  
-</div>
-  
-    <div class="mkapi-members">
-      
-        <div class="mkapi-member">
-          
-<div class="mkapi-node mkapi-node-depth-1" id="google_style.add">
-<div class="mkapi-node-header mkapi-node-header-function">
-<div class="mkapi-node-kind mkapi-node-kind-function">FUNCTION</div>
-<div class="mkapi-node-name">
-
-
-<code class="mkapi-node-prefix">google_style.</code><code class="mkapi-node-basename">add</code><code class="mkapi-node-signature">(x, y=1)</code>
-
-
-</div>
-</div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>Returns <span><span class="MathJax_Preview">x + y</span><script type="math/tex">x + y</script></span>.</p></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
-      <div class="mkapi-section-name mkapi-section-name-parameters">
-      <span class="mkapi-section-name-body">Parameters</span></div>
-      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
-  <li><code class="mkapi-args-name">x</code>
-         <span class="mkapi-args-type">(int)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The first parameter.</span></li>
-
-  <li><code class="mkapi-args-name">y</code>
-         <span class="mkapi-args-type">(int, optional)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The second parameter. Default=1.</span></li>
-
 </ul></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-returns">
-      <div class="mkapi-section-name mkapi-section-name-returns">
-      <span class="mkapi-section-name-body">Returns</span> <span class="mkapi-args-type">(int)</span></div>
-      <div class="mkapi-section-body mkapi-section-body-returns"><p>Added value.</p></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-examples">
-      <div class="mkapi-section-name mkapi-section-name-examples">
-      <span class="mkapi-section-name-body">Examples</span></div>
-      <div class="mkapi-section-body mkapi-section-body-examples"><p>Examples should be written in doctest format</p>
-<pre><code class="python">&gt;&gt;&gt; add(1, 2)
-3
-</code></pre></div>
-    </div>
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can use the <a href="https://squidfunk.github.io/mkdocs-material/extensions/admonition/">admonition extension of
-MkDocs</a>.</p>
-</div></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-note">
-      <div class="mkapi-section-name mkapi-section-name-note">
-      <span class="mkapi-section-name-body">Note</span></div>
-      <div class="mkapi-section-body mkapi-section-body-note"><p>But you should use <code>Note</code> section instead for consistency.</p></div>
-    </div>
-  
-</div>
-  
-</div>
-
-        </div>
-      
-        <div class="mkapi-member">
-          
-<div class="mkapi-node mkapi-node-depth-1" id="google_style.gen">
-<div class="mkapi-node-header mkapi-node-header-generator">
-<div class="mkapi-node-kind mkapi-node-kind-generator">GENERATOR</div>
-<div class="mkapi-node-name">
-
-
-<code class="mkapi-node-prefix">google_style.</code><code class="mkapi-node-basename">gen</code><code class="mkapi-node-signature">(n)</code>
-
-
-</div>
-</div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>Yields a numbered string.</p></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
-      <div class="mkapi-section-name mkapi-section-name-parameters">
-      <span class="mkapi-section-name-body">Parameters</span></div>
-      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
-  <li><code class="mkapi-args-name">n</code>
-         <span class="mkapi-args-type">(int)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The length of iteration.</span></li>
-
-</ul></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-yields">
-      <div class="mkapi-section-name mkapi-section-name-yields">
-      <span class="mkapi-section-name-body">Yields</span> <span class="mkapi-args-type">(str)</span></div>
-      <div class="mkapi-section-body mkapi-section-body-yields"><p>A numbered string.</p></div>
-    </div>
-  
-</div>
-  
-</div>
-
-        </div>
-      
-        <div class="mkapi-member">
-          
-<div class="mkapi-node mkapi-node-depth-1" id="google_style.ExampleClass">
-<div class="mkapi-node-header mkapi-node-header-class">
-<div class="mkapi-node-kind mkapi-node-kind-class">CLASS</div>
-<div class="mkapi-node-name">
-
-
-<code class="mkapi-node-prefix">google_style.</code><code class="mkapi-node-basename">ExampleClass</code><code class="mkapi-node-signature">(x, y)</code>
-
-
-</div>
-</div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>A normal class.</p></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
-      <div class="mkapi-section-name mkapi-section-name-parameters">
-      <span class="mkapi-section-name-body">Parameters</span></div>
-      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
-  <li><code class="mkapi-args-name">x</code>
-         <span class="mkapi-args-type">(list of int)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The first parameter.</span></li>
-
-  <li><code class="mkapi-args-name">y</code>
-         <span class="mkapi-args-type">(str, int)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The second parameter.</span></li>
-
-</ul></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-attributes">
-      <div class="mkapi-section-name mkapi-section-name-attributes">
-      <span class="mkapi-section-name-body">Attributes</span></div>
-      <div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
-
-  <li><code class="mkapi-args-name">z</code>
-         <span class="mkapi-args-type">(str)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The first attribute.</span></li>
-
-</ul></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-raises">
-      <div class="mkapi-section-name mkapi-section-name-raises">
-      <span class="mkapi-section-name-body">Raises</span></div>
-      <div class="mkapi-section-body mkapi-section-body-raises"><ul class="mkapi-args-list">
-
-  <li><code class="mkapi-args-name">ValueError</code>
-         
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">If the length of <code>x</code> is equal to 0.</span></li>
-
-</ul></div>
-    </div>
-  
-</div>
-  
-    <div class="mkapi-members">
-      
-        <div class="mkapi-member">
-          
-<div class="mkapi-node mkapi-node-depth-2" id="google_style.ExampleClass.message">
-<div class="mkapi-node-header mkapi-node-header-method">
-<div class="mkapi-node-kind mkapi-node-kind-method">METHOD</div>
-<div class="mkapi-node-name">
-
-<code class="mkapi-node-basename">message</code><code class="mkapi-node-signature">(n)</code>
-<span class="mkapi-args-type">&#x2192; list of str</span>
-
-</div>
-</div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>Returns a message list.</p></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
-      <div class="mkapi-section-name mkapi-section-name-parameters">
-      <span class="mkapi-section-name-body">Parameters</span></div>
-      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
-  <li><code class="mkapi-args-name">n</code>
-         <span class="mkapi-args-type">(int)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">Repeatation.</span></li>
-
-</ul></div>
-    </div>
-  
-</div>
-  
-</div>
-
-        </div>
-      
-        <div class="mkapi-member">
-          
-<div class="mkapi-node mkapi-node-depth-2" id="google_style.ExampleClass.readonly_property">
-<div class="mkapi-node-header mkapi-node-header-readonly_property">
-<div class="mkapi-node-kind mkapi-node-kind-readonly_property">READONLY_PROPERTY</div>
-<div class="mkapi-node-name">
-
-<code class="mkapi-node-basename">readonly_property</code><code class="mkapi-node-signature">()</code>
-<span class="mkapi-args-type">&#x2192; str</span>
-
-</div>
-</div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>Read-only property documentation.</p></div>
-    </div>
-  
-</div>
-  
-</div>
-
-        </div>
-      
-        <div class="mkapi-member">
-          
-<div class="mkapi-node mkapi-node-depth-2" id="google_style.ExampleClass.readwrite_property">
-<div class="mkapi-node-header mkapi-node-header-readwrite_property">
-<div class="mkapi-node-kind mkapi-node-kind-readwrite_property">READWRITE_PROPERTY</div>
-<div class="mkapi-node-name">
-
-<code class="mkapi-node-basename">readwrite_property</code><code class="mkapi-node-signature">()</code>
-<span class="mkapi-args-type">&#x2192; list of int</span>
-
-</div>
-</div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>Read-write property documentation.</p></div>
-    </div>
-  
-</div>
-  
-</div>
-
-        </div>
-      
-    </div>
-  
-</div>
-
-        </div>
-      
-        <div class="mkapi-member">
-          
-<div class="mkapi-node mkapi-node-depth-1" id="google_style.ExampleDataClass">
-<div class="mkapi-node-header mkapi-node-header-dataclass">
-<div class="mkapi-node-kind mkapi-node-kind-dataclass">DATACLASS</div>
-<div class="mkapi-node-name">
-
-
-<code class="mkapi-node-prefix">google_style.</code><code class="mkapi-node-basename">ExampleDataClass</code><code class="mkapi-node-signature">(x=0)</code>
-
-
-</div>
-</div>
-  <div class="mkapi-docstring">
-  
-    <div class="mkapi-section">
-      
-      <div class="mkapi-section-body"><p>A dataclass.</p></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-parameters">
-      <div class="mkapi-section-name mkapi-section-name-parameters">
-      <span class="mkapi-section-name-body">Parameters</span></div>
-      <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
-  <li><code class="mkapi-args-name">x</code>
-         <span class="mkapi-args-type">(int, optional)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The first parameter.</span></li>
-
-</ul></div>
-    </div>
-  
-    <div class="mkapi-section mkapi-section-named mkapi-section-attributes">
-      <div class="mkapi-section-name mkapi-section-name-attributes">
-      <span class="mkapi-section-name-body">Attributes</span></div>
-      <div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
-
-  <li><code class="mkapi-args-name">x</code>
-         <span class="mkapi-args-type">(int)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The first attribute.</span></li>
-
-  <li><code class="mkapi-args-name">y</code>
-         <span class="mkapi-args-type">(int)</span>
-         <span class="mkapi-args-dash">&mdash;</span>
-         <span class="mkapi-args-desc">The second attribute.</span></li>
-
-</ul></div>
-    </div>
-  
-</div>
-  
-</div>
-
-        </div>
-      
-    </div>
-  
-</div>
-</div>
                 <footer>
     <div class="footer-buttons">
         <div class="previous"><a href="../.." title="MkApi Documentation"><span>Previous</span></a></div>

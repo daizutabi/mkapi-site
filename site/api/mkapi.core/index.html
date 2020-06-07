@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="daizutabi">
     <link rel="shortcut icon" href="../../img/favicon.ico">
-    <title>mkdocs &mdash; MkApi</title>
+    <title>mkapi.core &mdash; MkApi</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -60,17 +60,17 @@
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
-    <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
-<ul class="subnav hide">
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core/">mkapi.core</a></li>
+    <li class="toctree-l2 current"><button class="section nav-item">mkapi.core</button>
+<ul class="subnav">
+    <li class="toctree-l3 current"><a class="nav-item current" href="./">mkapi.core</a>
+<ul class="subnav">
+</ul></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.base/">base</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.docstring/">docstring</a></li>
 </ul></li>
-    <li class="toctree-l2 current"><button class="section nav-item">mkapi.plugins</button>
-<ul class="subnav">
-    <li class="toctree-l3 current"><a class="nav-item current" href="./">mkdocs</a>
-<ul class="subnav">
-</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.plugins.mkdocs/">mkdocs</a></li>
 </ul></li>
 </ul></li>
                 </ul>
@@ -79,7 +79,8 @@
     <div class="link">
         <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
     </div>
-    <div class="previous"><a href="../mkapi.core.docstring/">&laquo; Previous</a></div>
+    <div class="previous"><a href="../../usage/type/">&laquo; Previous</a></div>
+    <div class="next"><a href="../mkapi.core.base/">Next &raquo;</a></div>
 </div>
         </aside>
         <div id="spacer"><button class="arrow"></button></div>
@@ -91,17 +92,17 @@
             <div id="main">
                 <nav class="breadcrumbs">
 <ul>
-    <li>API &raquo; </li><li>mkapi.plugins</li>
+    <li>API &raquo; </li><li>mkapi.core</li>
 </ul>
 </nav>
                 <div id="content">
-<div class="mkapi-node" id="mkapi.plugins.mkdocs">
+<div class="mkapi-node" id="mkapi.core">
 
 
-<h1 id="mkapipluginsmkdocs" class="mkapi-object mkapi-object-module">
-<span class="mkapi-object-kind mkapi-object-kind-module">MODULE</span>
-<span class="mkapi-object-prefix">MKAPI.PLUGINS.</span>
-  <span class="mkapi-object-name">MKDOCS</span>
+<h1 id="mkapicore" class="mkapi-object mkapi-object-package">
+<span class="mkapi-object-kind mkapi-object-kind-package">PACKAGE</span>
+<span class="mkapi-object-prefix">MKAPI.</span>
+  <span class="mkapi-object-name">CORE</span>
   <span class="mkapi-object-signature"></span>
     
 </h1>
@@ -111,139 +112,16 @@
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>This module provides the MkapiPlugin class.</p>
-<p>MkapiPlugin is a MkDocs plugin that creates Python API documentation from Docstring.</p></div>
+<div class="mkapi-section-body"><p>Package level documentation is written in <code>__init__.py</code>.</p></div>
 </div>
 
 </div>
-
-</div>
-
-<div class="mkapi-node" id="mkapi.plugins.mkdocs.MkapiPlugin">
-
-
-<div class="mkapi-object mkapi-object-class">
-<div class="mkapi-object-kind mkapi-object-kind-class">CLASS</div>
-<code class="mkapi-object-prefix"><a href="#mkapi.plugins.mkdocs">mkapi.plugins.mkdocs</a>.</code>
-  <code class="mkapi-object-name">MkapiPlugin</code>
-  <code class="mkapi-object-signature">()</code>
-    
-</div>
-
-
-<div class="mkapi-docstring">
-
-<div class="mkapi-section">
-
-<div class="mkapi-section-body"><p>MkapiPlugin class for API generation.</p></div>
-</div>
-
-</div>
-
-  <div class="mkapi-members">
-  
-    <div class="mkapi-member">
-      <div class="mkapi-node" id="mkapi.plugins.mkdocs.MkapiPlugin.on_config">
-
-
-<div class="mkapi-object mkapi-object-method">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<code class="mkapi-object-name">on_config</code>
-  <code class="mkapi-object-signature">(config)</code>
-    
-</div>
-
-
-<div class="mkapi-docstring">
-
-<div class="mkapi-section">
-
-<div class="mkapi-section-body"><p>Inserts <code>src_dirs</code> to <code>sys.path</code>.</p></div>
-</div>
-
-</div>
-
-</div>
-    </div>
-  
-    <div class="mkapi-member">
-      <div class="mkapi-node" id="mkapi.plugins.mkdocs.MkapiPlugin.on_files">
-
-
-<div class="mkapi-object mkapi-object-method">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<code class="mkapi-object-name">on_files</code>
-  <code class="mkapi-object-signature">(files, config)</code>
-    
-</div>
-
-
-<div class="mkapi-docstring">
-
-<div class="mkapi-section">
-
-<div class="mkapi-section-body"><p>Collects plugin css ans js and appends them to <code>files</code>.</p></div>
-</div>
-
-</div>
-
-</div>
-    </div>
-  
-    <div class="mkapi-member">
-      <div class="mkapi-node" id="mkapi.plugins.mkdocs.MkapiPlugin.on_page_markdown">
-
-
-<div class="mkapi-object mkapi-object-method">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<code class="mkapi-object-name">on_page_markdown</code>
-  <code class="mkapi-object-signature">(markdown, page, config, files)</code>
-    
-</div>
-
-
-<div class="mkapi-docstring">
-
-<div class="mkapi-section">
-
-<div class="mkapi-section-body"><p>Converts Markdown source to intermidiate version.</p></div>
-</div>
-
-</div>
-
-</div>
-    </div>
-  
-    <div class="mkapi-member">
-      <div class="mkapi-node" id="mkapi.plugins.mkdocs.MkapiPlugin.on_page_content">
-
-
-<div class="mkapi-object mkapi-object-method">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<code class="mkapi-object-name">on_page_content</code>
-  <code class="mkapi-object-signature">(html, page, config, files)</code>
-    
-</div>
-
-
-<div class="mkapi-docstring">
-
-<div class="mkapi-section">
-
-<div class="mkapi-section-body"><p>Merges html and MkApi's node structure.</p></div>
-</div>
-
-</div>
-
-</div>
-    </div>
-  
-  </div>
 
 </div></div>
                 <footer>
     <div class="footer-buttons">
-        <div class="previous"><a href="../mkapi.core.docstring/" title="docstring"><span>Previous</span></a></div>
+        <div class="previous"><a href="../../usage/type/" title="Type Annotation Examples"><span>Previous</span></a></div>
+        <div class="next"><a href="../mkapi.core.base/" title="base"><span>Next</span></a></div>
     </div>
     <div class="footer-note">
         <p>
