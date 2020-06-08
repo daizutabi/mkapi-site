@@ -33,7 +33,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.7.2</div>
+                </div><div class="version">0.7.3</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -104,8 +104,8 @@
 <h1 id="type-annotation-examples">Type Annotation Examples</h1>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">import mkapi</code></pre></div>
 <div class="report"><p><span class="count">[1]</span>
-<span class="start">2020-06-08 09:31:01</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">280ms</span>)</span></p></div></div></div>
+<span class="start">2020-06-08 09:57:57</span> (<span class="time">2.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">282ms</span>)</span></p></div></div></div>
 
 <h2 id="builtin-types">Builtin Types</h2>
 <div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">def builtin(i: int, f: float, s: str, l: list, d: dict, t: tuple, e: set) -&gt; bool:
@@ -124,17 +124,17 @@
 
 mkapi.display(builtin)</code></pre></div>
 <div class="report"><p><span class="count">[2]</span>
-<span class="start">2020-06-08 09:31:01</span> (<span class="time">7.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">287ms</span>)</span></p></div></div>
+<span class="start">2020-06-08 09:57:57</span> (<span class="time">7.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">289ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content"><div class="mkapi-node" id="builtin">
 
 
 <div class="mkapi-object mkapi-object-function">
 <div class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</div>
-<code class="mkapi-object-name">builtin</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">builtin</code>
   <code class="mkapi-object-signature">(i, f, s, l, d, t, e)</code>
-    <span class="mkapi-args-type"> &#x2192; bool</span>
+    <span class="mkapi-args-type"> &#x2192; bool</span></div>
 </div>
 
 
@@ -204,17 +204,17 @@ mkapi.display(builtin)</code></pre></div>
 
 mkapi.display(builtin_default)</code></pre></div>
 <div class="report"><p><span class="count">[3]</span>
-<span class="start">2020-06-08 09:31:01</span> (<span class="time">7.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">294ms</span>)</span></p></div></div>
+<span class="start">2020-06-08 09:57:58</span> (<span class="time">7.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">296ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content"><div class="mkapi-node" id="builtin_default">
 
 
 <div class="mkapi-object mkapi-object-function">
 <div class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</div>
-<code class="mkapi-object-name">builtin_default</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">builtin_default</code>
   <code class="mkapi-object-signature">(i=1, f=1.0, s=&#39;abc&#39;, t=(1, 2))</code>
-
+    </div>
 </div>
 
 
@@ -274,17 +274,17 @@ def basic(l: List[int], t: Tuple[str, int, float], d: Dict[str, int], s: Set[int
 
 mkapi.display(basic)</code></pre></div>
 <div class="report"><p><span class="count">[4]</span>
-<span class="start">2020-06-08 09:31:01</span> (<span class="time">8.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">302ms</span>)</span></p></div></div>
+<span class="start">2020-06-08 09:57:58</span> (<span class="time">8.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">304ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content"><div class="mkapi-node" id="basic">
 
 
 <div class="mkapi-object mkapi-object-function">
 <div class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</div>
-<code class="mkapi-object-name">basic</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">basic</code>
   <code class="mkapi-object-signature">(l, t, d, s)</code>
-
+    </div>
 </div>
 
 
@@ -342,17 +342,17 @@ def function(x: Iterable[str]) -&gt; Iterator[str]:
 
 mkapi.display(function)</code></pre></div>
 <div class="report"><p><span class="count">[5]</span>
-<span class="start">2020-06-08 09:31:01</span> (<span class="time">7.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">309ms</span>)</span></p></div></div>
+<span class="start">2020-06-08 09:57:58</span> (<span class="time">7.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">311ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content"><div class="mkapi-node" id="function">
 
 
 <div class="mkapi-object mkapi-object-function">
 <div class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</div>
-<code class="mkapi-object-name">function</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">function</code>
   <code class="mkapi-object-signature">(x)</code>
-    <span class="mkapi-args-type"> &#x2192; iterator of str</span>
+    <span class="mkapi-args-type"> &#x2192; iterator of str</span></div>
 </div>
 
 
@@ -391,17 +391,17 @@ mkapi.display(function)</code></pre></div>
 
 mkapi.display(generator)</code></pre></div>
 <div class="report"><p><span class="count">[6]</span>
-<span class="start">2020-06-08 09:31:01</span> (<span class="time">7.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">316ms</span>)</span></p></div></div>
+<span class="start">2020-06-08 09:57:58</span> (<span class="time">7.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">318ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content"><div class="mkapi-node" id="generator">
 
 
 <div class="mkapi-object mkapi-object-generator">
 <div class="mkapi-object-kind mkapi-object-kind-generator">GENERATOR</div>
-<code class="mkapi-object-name">generator</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">generator</code>
   <code class="mkapi-object-signature">(x)</code>
-    <span class="mkapi-args-type"> &#x2192; str</span>
+    <span class="mkapi-args-type"> &#x2192; str</span></div>
 </div>
 
 
@@ -428,17 +428,17 @@ def optional(x: Optional[List[int]]):
 
 mkapi.display(optional)</code></pre></div>
 <div class="report"><p><span class="count">[7]</span>
-<span class="start">2020-06-08 09:31:01</span> (<span class="time">7.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">323ms</span>)</span></p></div></div>
+<span class="start">2020-06-08 09:57:58</span> (<span class="time">7.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">325ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content"><div class="mkapi-node" id="optional">
 
 
 <div class="mkapi-object mkapi-object-function">
 <div class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</div>
-<code class="mkapi-object-name">optional</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">optional</code>
   <code class="mkapi-object-signature">(x)</code>
-
+    </div>
 </div>
 
 
@@ -480,17 +480,17 @@ mkapi.display(optional)</code></pre></div>
 
 mkapi.display(optional_default)</code></pre></div>
 <div class="report"><p><span class="count">[8]</span>
-<span class="start">2020-06-08 09:31:01</span> (<span class="time">7.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">330ms</span>)</span></p></div></div>
+<span class="start">2020-06-08 09:57:58</span> (<span class="time">8.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">333ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content"><div class="mkapi-node" id="optional_default">
 
 
 <div class="mkapi-object mkapi-object-function">
 <div class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</div>
-<code class="mkapi-object-name">optional_default</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">optional_default</code>
   <code class="mkapi-object-signature">(x=None)</code>
-
+    </div>
 </div>
 
 
@@ -533,17 +533,17 @@ mkapi.display(optional_default)</code></pre></div>
 
 mkapi.display(union)</code></pre></div>
 <div class="report"><p><span class="count">[9]</span>
-<span class="start">2020-06-08 09:31:01</span> (<span class="time">9.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">339ms</span>)</span></p></div></div>
+<span class="start">2020-06-08 09:57:58</span> (<span class="time">8.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">341ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content"><div class="mkapi-node" id="union">
 
 
 <div class="mkapi-object mkapi-object-function">
 <div class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</div>
-<code class="mkapi-object-name">union</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">union</code>
   <code class="mkapi-object-signature">(x, y)</code>
-
+    </div>
 </div>
 
 
@@ -589,17 +589,17 @@ mkapi.display(union)</code></pre></div>
 
 mkapi.display(union_collection)</code></pre></div>
 <div class="report"><p><span class="count">[10]</span>
-<span class="start">2020-06-08 09:31:01</span> (<span class="time">7.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">346ms</span>)</span></p></div></div>
+<span class="start">2020-06-08 09:57:58</span> (<span class="time">7.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">348ms</span>)</span></p></div></div>
 
 <div class="cell jupyter display"><div class="content"><div class="mkapi-node" id="union_collection">
 
 
 <div class="mkapi-object mkapi-object-function">
 <div class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</div>
-<code class="mkapi-object-name">union_collection</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">union_collection</code>
   <code class="mkapi-object-signature">(x)</code>
-
+    </div>
 </div>
 
 
