@@ -69,6 +69,13 @@
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core/">mkapi.core</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.base/">base</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.docstring/">docstring</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.linker/">linker</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.module/">module</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.node/">node</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.object/">object</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.page/">page</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.renderer/">renderer</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.signature/">signature</a></li>
 </ul></li>
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
 <ul class="subnav hide">
@@ -185,16 +192,17 @@
 <span class="title">link2.py</span></p>
 <div class="content">
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="python">from mkapi.core.base import Section
+from mkapi.core.docstring import get_docstring
 
 def func():
     &#34;&#34;&#34;Internal link example.
 
     * [Section]() --- Imported object.
-    * [](Section) --- Imported object.
+    * [](get_docstring) --- Imported object.
     * [Section.set_html]() --- Member of imported object.
     * [Section definition](Section) --- Alternative text.
     &#34;&#34;&#34;
-    return Section()</code></pre></div></div></div>
+    return Section(), get_docstring(None)</code></pre></div></div></div>
 
 </div></div></div>
 
@@ -217,7 +225,7 @@ def func():
 <div class="mkapi-section-body"><p>Internal link example.</p>
 <ul>
 <li><a href="../../api/mkapi.core.base/#mkapi.core.base.Section">Section</a> --- Imported object.</li>
-<li><a href="../../api/mkapi.core.base/#mkapi.core.base.Section">Section</a> --- Imported object.</li>
+<li><a href="../../api/mkapi.core.docstring/#mkapi.core.docstring.get_docstring">get_docstring</a> --- Imported object.</li>
 <li><a href="../../api/mkapi.core.base/#mkapi.core.base.Base.set_html">Section.set_html</a> --- Member of imported object.</li>
 <li><a href="../../api/mkapi.core.base/#mkapi.core.base.Section">Section definition</a> --- Alternative text.</li>
 </ul></div>
@@ -361,7 +369,7 @@ class Docstring:
 
 <li><code class="mkapi-args-name">type</code>
 <span class="mkapi-args-type">(<a href="../../api/mkapi.core.base/#mkapi.core.base.Type">Type</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type for Returns and Yields sections.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type for missing Returns and Yields sections.</span></li>
 
 </ul></div>
 </div>

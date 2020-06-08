@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="daizutabi">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>node &mdash; MkApi</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../../css/mkapi.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/pheasant.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> MkApi</a>
+                </div><div class="version">0.7.4</div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">MkApi Documentation</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Examples</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../examples/google_style/">Google Style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../examples/numpy_style/">NumPy Style</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/module/">Module and Package</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/inherit/">Docstring Inheritance</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/page/">Page Mode and Internal Links</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/library/">Using MkApi within Python</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/type/">Type Annotation Examples</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">API</button>
+<ul class="subnav">
+    <li class="toctree-l2 current"><button class="section nav-item">mkapi.core</button>
+<ul class="subnav">
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core/">mkapi.core</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.base/">base</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.docstring/">docstring</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.linker/">linker</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.module/">module</a></li>
+    <li class="toctree-l3 current"><a class="nav-item current" href="./">node</a>
+<ul class="subnav">
+</ul></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.object/">object</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.page/">page</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.renderer/">renderer</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.signature/">signature</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.plugins.mkdocs/">mkdocs</a></li>
+</ul></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
+    </div>
+    <div class="previous"><a href="../mkapi.core.module/">&laquo; Previous</a></div>
+    <div class="next"><a href="../mkapi.core.object/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> MkApi</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>API &raquo; </li><li>mkapi.core</li>
+</ul>
+</nav>
+                <div id="content">
+<div class="mkapi-node" id="mkapi.core.node">
+
+
+<h1 id="mkapicorenode" class="mkapi-object mkapi-object-module">
+<span class="mkapi-object-kind mkapi-object-kind-module">MODULE</span>
+<span class="mkapi-object-prefix"><a href="../mkapi.core/#mkapi.core">MKAPI.CORE</a>.</span><span class="mkapi-object-name">NODE</span>
+  <span class="mkapi-object-signature"></span>
+    
+</h1>
+
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>This modules provides Node class that has tree structure.</p></div>
+</div>
+
+</div>
+
+</div>
+
+<div class="mkapi-node" id="mkapi.core.node.Node">
+
+
+<div class="mkapi-object mkapi-object-dataclass">
+<div class="mkapi-object-kind mkapi-object-kind-dataclass">DATACLASS</div>
+<div  class="mkapi-object-body"><code class="mkapi-object-prefix"><a href="#mkapi.core.node">mkapi.core.node</a>.</code><code class="mkapi-object-name">Node</code>
+  <code class="mkapi-object-signature">(obj)</code>
+    </div>
+</div>
+
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Node class represents an object.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-parameters">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">obj</code>
+<span class="mkapi-args-type">(any)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object.</span></li>
+
+</ul></div>
+</div>
+
+<div class="mkapi-section mkapi-section-attributes">
+
+<div class="mkapi-section-name mkapi-section-name-attributes">
+<span class="mkapi-section-name-body">Attributes</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-attributes">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">obj</code>
+<span class="mkapi-args-type">(any)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object.</span></li>
+
+<li><code class="mkapi-args-name">sourcefile</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Source file path.</span></li>
+
+<li><code class="mkapi-args-name">lineno</code>
+<span class="mkapi-args-type">(int)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Line number.</span></li>
+
+<li><code class="mkapi-args-name">object</code>
+<span class="mkapi-args-type">(<a href="../mkapi.core.base/#mkapi.core.base.Object">Object</a>)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object instance.</span></li>
+
+<li><code class="mkapi-args-name">docstring</code>
+<span class="mkapi-args-type">(<a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a>)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Docstring instance.</span></li>
+
+<li><code class="mkapi-args-name">parent</code>
+<span class="mkapi-args-type">(Node, optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Parent Node instance.</span></li>
+
+<li><code class="mkapi-args-name">members</code>
+<span class="mkapi-args-type">(list of Node)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Member Node instances.</span></li>
+
+</ul></div>
+</div>
+
+</div>
+
+  <div class="mkapi-members">
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="mkapi.core.node.Node.get_kind">
+
+
+<div class="mkapi-object mkapi-object-method">
+<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">get_kind</code>
+  <code class="mkapi-object-signature">()</code>
+    <span class="mkapi-args-type"> &#x2192; str</span></div>
+</div>
+
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Returns kind of this object.</p></div>
+</div>
+
+</div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="mkapi.core.node.Node.get_members">
+
+
+<div class="mkapi-object mkapi-object-method">
+<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">get_members</code>
+  <code class="mkapi-object-signature">()</code>
+    <span class="mkapi-args-type"> &#x2192; list of Node</span></div>
+</div>
+
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Returns a list of members.</p></div>
+</div>
+
+</div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="mkapi.core.node.Node.get_markdown">
+
+
+<div class="mkapi-object mkapi-object-method">
+<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">get_markdown</code>
+  <code class="mkapi-object-signature">(level=0, callback=None)</code>
+    <span class="mkapi-args-type"> &#x2192; str</span></div>
+</div>
+
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Returns a Markdown source for docstring of this object.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-parameters">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">level</code>
+<span class="mkapi-args-type">(int, optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Heading level. If 0, <code>&lt;div&gt;</code> tags are used.</span></li>
+
+<li><code class="mkapi-args-name">callback</code>
+<span class="mkapi-args-type">(callable, optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">To modify Markdown source.</span></li>
+
+</ul></div>
+</div>
+
+</div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="mkapi.core.node.Node.set_html">
+
+
+<div class="mkapi-object mkapi-object-method">
+<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">set_html</code>
+  <code class="mkapi-object-signature">(html)</code>
+    </div>
+</div>
+
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Sets HTML to <a href="../mkapi.core.base/#mkapi.core.base.Base">Base</a> instances recursively.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-parameters">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">html</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">HTML that is provided by a Markdown converter.</span></li>
+
+</ul></div>
+</div>
+
+</div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="mkapi.core.node.Node.render">
+
+
+<div class="mkapi-object mkapi-object-method">
+<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">render</code>
+  <code class="mkapi-object-signature">()</code>
+    <span class="mkapi-args-type"> &#x2192; str</span></div>
+</div>
+
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Renders and returns HTML.</p></div>
+</div>
+
+</div>
+
+</div>
+    </div>
+  
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="mkapi.core.node.get_node">
+
+
+<div class="mkapi-object mkapi-object-function">
+<div class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</div>
+<div  class="mkapi-object-body"><code class="mkapi-object-prefix"><a href="#mkapi.core.node">mkapi.core.node</a>.</code><code class="mkapi-object-name">get_node</code>
+  <code class="mkapi-object-signature">(name)</code>
+    <span class="mkapi-args-type"> &#x2192; <a href="./#mkapi.core.node.Node">Node</a></span></div>
+</div>
+
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Returns a Node instace by name or object.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-parameters">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">name</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name or object itself.</span></li>
+
+</ul></div>
+</div>
+
+</div>
+
+</div></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../mkapi.core.module/" title="module"><span>Previous</span></a></div>
+        <div class="next"><a href="../mkapi.core.object/" title="object"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/mkapi.js"></script>
+    <script src="../../js/pheasant.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

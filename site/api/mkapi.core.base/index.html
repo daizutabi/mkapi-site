@@ -67,6 +67,13 @@
 <ul class="subnav">
 </ul></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.docstring/">docstring</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.linker/">linker</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.module/">module</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.node/">node</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.object/">object</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.page/">page</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.renderer/">renderer</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.signature/">signature</a></li>
 </ul></li>
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
 <ul class="subnav hide">
@@ -249,7 +256,8 @@
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>Type class represents type for other classes.</p></div>
+<div class="mkapi-section-body"><p>Type class represents type for <a href="./#mkapi.core.base.Item">Item</a>, <a href="./#mkapi.core.base.Section">Section</a>, <a href="./#mkapi.core.base.Docstring">Docstring</a>,
+and <a href="./#mkapi.core.base.Object">Object</a>.</p></div>
 </div>
 
 <div class="mkapi-section mkapi-section-parameters">
@@ -389,7 +397,7 @@
 
 <li><code class="mkapi-args-name">type</code>
 <span class="mkapi-args-type">(<a href="./#mkapi.core.base.Type">Type</a>, optional)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type of item.</span></li>
 
 </ul></div>
 </div>
@@ -419,7 +427,7 @@
 
 <li><code class="mkapi-args-name">type</code>
 <span class="mkapi-args-type">(<a href="./#mkapi.core.base.Type">Type</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type of item.</span></li>
 
 </ul></div>
 </div>
@@ -517,7 +525,7 @@
 
 <li><code class="mkapi-args-name">type</code>
 <span class="mkapi-args-type">(<a href="./#mkapi.core.base.Type">Type</a>, optional)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type of item.</span></li>
 
 </ul></div>
 </div>
@@ -551,7 +559,7 @@
 
 <li><code class="mkapi-args-name">type</code>
 <span class="mkapi-args-type">(<a href="./#mkapi.core.base.Type">Type</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type of item.</span></li>
 
 </ul></div>
 </div>
@@ -695,7 +703,7 @@ True
 
 <li><code class="mkapi-args-name">type</code>
 <span class="mkapi-args-type">(<a href="./#mkapi.core.base.Type">Type</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type for Returns and Yields sections.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type for missing Returns and Yields sections.</span></li>
 
 </ul></div>
 </div>
@@ -765,7 +773,7 @@ True
 
 <li><code class="mkapi-args-name">name</code>
 <span class="mkapi-args-type">(str, optional)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name. <code>Item</code> for <code>Item</code> class.</span></li>
 
 <li><code class="mkapi-args-name">markdown</code>
 <span class="mkapi-args-type">(str, optional)</span>
@@ -773,19 +781,19 @@ True
 
 <li><code class="mkapi-args-name">prefix</code>
 <span class="mkapi-args-type">(str, optional)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object prefix. <code>mkapi.core.base</code> for <code>Item</code> class.</span></li>
 
 <li><code class="mkapi-args-name">kind</code>
 <span class="mkapi-args-type">(str, optional)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object kind such as 'class', 'function'. etc.</span></li>
 
 <li><code class="mkapi-args-name">type</code>
 <span class="mkapi-args-type">(<a href="./#mkapi.core.base.Type">Type</a>, optional)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type for missing Returns and Yields sections.</span></li>
 
 <li><code class="mkapi-args-name">signature</code>
-<span class="mkapi-args-type">(<a href="../mkapi.core/#mkapi.core.signature.Signature">Signature</a>, optional)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<span class="mkapi-args-type">(<a href="../mkapi.core.signature/#mkapi.core.signature.Signature">Signature</a>, optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Signature if object is callable.</span></li>
 
 </ul></div>
 </div>
@@ -815,23 +823,23 @@ True
 
 <li><code class="mkapi-args-name">prefix</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object prefix. <code>mkapi.core.base</code> for <code>Item</code> class.</span></li>
 
 <li><code class="mkapi-args-name">id</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">CSS ID.</span></li>
 
 <li><code class="mkapi-args-name">kind</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object kind such as 'class', 'function'. etc.</span></li>
 
 <li><code class="mkapi-args-name">type</code>
 <span class="mkapi-args-type">(<a href="./#mkapi.core.base.Type">Type</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type for missing Returns and Yields sections.</span></li>
 
 <li><code class="mkapi-args-name">signature</code>
-<span class="mkapi-args-type">(<a href="../mkapi.core/#mkapi.core.signature.Signature">Signature</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<span class="mkapi-args-type">(<a href="../mkapi.core.signature/#mkapi.core.signature.Signature">Signature</a>)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Signature if object is callable.</span></li>
 
 </ul></div>
 </div>

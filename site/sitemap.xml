@@ -44,6 +44,34 @@
      <lastmod>2020-06-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://mkapi.daizutabi.net/api/mkapi.core.linker/</loc>
+     <lastmod>2020-06-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://mkapi.daizutabi.net/api/mkapi.core.module/</loc>
+     <lastmod>2020-06-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://mkapi.daizutabi.net/api/mkapi.core.node/</loc>
+     <lastmod>2020-06-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://mkapi.daizutabi.net/api/mkapi.core.object/</loc>
+     <lastmod>2020-06-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://mkapi.daizutabi.net/api/mkapi.core.page/</loc>
+     <lastmod>2020-06-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://mkapi.daizutabi.net/api/mkapi.core.renderer/</loc>
+     <lastmod>2020-06-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://mkapi.daizutabi.net/api/mkapi.core.signature/</loc>
+     <lastmod>2020-06-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi.plugins.mkdocs/</loc>
      <lastmod>2020-06-08</lastmod>
      <changefreq>daily</changefreq>

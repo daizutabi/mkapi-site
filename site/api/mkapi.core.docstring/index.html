@@ -67,6 +67,13 @@
     <li class="toctree-l3 current"><a class="nav-item current" href="./">docstring</a>
 <ul class="subnav">
 </ul></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.linker/">linker</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.module/">module</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.node/">node</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.object/">object</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.page/">page</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.renderer/">renderer</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.signature/">signature</a></li>
 </ul></li>
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
 <ul class="subnav hide">
@@ -80,7 +87,7 @@
         <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
     </div>
     <div class="previous"><a href="../mkapi.core.base/">&laquo; Previous</a></div>
-    <div class="next"><a href="../mkapi.plugins.mkdocs/">Next &raquo;</a></div>
+    <div class="next"><a href="../mkapi.core.linker/">Next &raquo;</a></div>
 </div>
         </aside>
         <div id="spacer"><button class="arrow"></button></div>
@@ -245,7 +252,7 @@
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>Yields list of parameter string.</p></div>
+<div class="mkapi-section-body"><p>Yields a list of parameter string.</p></div>
 </div>
 
 <div class="mkapi-section mkapi-section-parameters">
@@ -285,7 +292,7 @@
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>Yields (name, markdown, type).</p></div>
+<div class="mkapi-section-body"><p>Yields a tuple of (name, markdown, type).</p></div>
 </div>
 
 <div class="mkapi-section mkapi-section-parameters">
@@ -329,7 +336,29 @@
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>Returns list of (name, markdown, type).</p></div>
+<div class="mkapi-section-body"><p>Returns a list of (name, markdown, type).</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-parameters">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">doc</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+<li><code class="mkapi-args-name">style</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+</ul></div>
 </div>
 
 </div>
@@ -351,7 +380,29 @@
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>Returns (markdown, type).</p></div>
+<div class="mkapi-section-body"><p>Returns a tuple of (markdown, type).</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-parameters">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">doc</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+<li><code class="mkapi-args-name">style</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+</ul></div>
 </div>
 
 </div>
@@ -373,7 +424,33 @@
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>Returns a <code>Section</code> instance.</p></div>
+<div class="mkapi-section-body"><p>Returns a <a href="../mkapi.core.base/#mkapi.core.base.Section">Section</a> instance.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-parameters">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">name</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+<li><code class="mkapi-args-name">doc</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+<li><code class="mkapi-args-name">style</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+</ul></div>
 </div>
 
 </div>
@@ -398,6 +475,28 @@
 <div class="mkapi-section-body"><p>Parses property's docstring to inspect type.</p></div>
 </div>
 
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-parameters">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">doc</code>
+<span class="mkapi-args-type">(<a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a>)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+<li><code class="mkapi-args-name">obj</code>
+<span class="mkapi-args-type">(any)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+</ul></div>
+</div>
+
 </div>
 
 </div>
@@ -417,7 +516,25 @@
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>Returns a <code>Docstring</code> instance.</p></div>
+<div class="mkapi-section-body"><p>Returns a <a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a> instance.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-parameters">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">obj</code>
+<span class="mkapi-args-type">(any)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+</ul></div>
 </div>
 
 </div>
@@ -426,7 +543,7 @@
                 <footer>
     <div class="footer-buttons">
         <div class="previous"><a href="../mkapi.core.base/" title="base"><span>Previous</span></a></div>
-        <div class="next"><a href="../mkapi.plugins.mkdocs/" title="mkdocs"><span>Next</span></a></div>
+        <div class="next"><a href="../mkapi.core.linker/" title="linker"><span>Next</span></a></div>
     </div>
     <div class="footer-note">
         <p>
