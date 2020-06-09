@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="daizutabi">
     <link rel="shortcut icon" href="../../img/favicon.ico">
-    <title>Module and Package &mdash; MkApi</title>
+    <title>Method and Property Types &mdash; MkApi</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -52,20 +52,18 @@
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
 <ul class="subnav">
-    <li class="toctree-l2 current"><a class="nav-item current" href="./">Module and Package</a>
-<ul class="subnav">
-<li class="toctree-l3"><a class="nav-item toc" href="#embeding-documentation">Embeding Documentation</a></li>
-<li class="toctree-l3"><a class="nav-item toc" href="#heading-documentation">Heading Documentation</a></li>
-</ul></li>
-    <li class="toctree-l2"><a class="nav-item" href="../inherit/">Docstring Inheritance</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../page/">Page Mode and Internal Links</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../library/">Using MkApi within Python</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../type/">Type Annotation Examples</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/module/">Module and Package</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/inherit/">Docstring Inheritance</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/page/">Page Mode and Internal Links</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/library/">Using MkApi within Python</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/type/">Type Annotation Examples</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">Appendix</button>
 <ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="../../appendix/method/">Method and Property Types</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../appendix/inherit/">Inheritance and Special Methods</a></li>
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Method and Property Types</a>
+<ul class="subnav">
+</ul></li>
+    <li class="toctree-l2"><a class="nav-item" href="../inherit/">Inheritance and Special Methods</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -93,7 +91,7 @@
     <div class="link">
         <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
     </div>
-    <div class="previous"><a href="../../examples/numpy_style/">&laquo; Previous</a></div>
+    <div class="previous"><a href="../../usage/type/">&laquo; Previous</a></div>
     <div class="next"><a href="../inherit/">Next &raquo;</a></div>
 </div>
         </aside>
@@ -106,11 +104,11 @@
             <div id="main">
                 <nav class="breadcrumbs">
 <ul>
-    <li>Advanced Usage</li>
+    <li>Appendix</li>
 </ul>
 </nav>
                 <div id="content">
-<h1 id="module-and-package">Module and Package</h1>
+<h1 id="method-and-property-types">Method and Property Types</h1>
 <style type="text/css">
 <!--
 .mkapi-node {
@@ -119,17 +117,141 @@
 -->
 </style>
 
-<p>MkApi can create module and package documentation as well as function and class.</p>
-<h2 id="embeding-documentation">Embeding Documentation</h2>
-<p>Specify a package or module by its full path name.</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](mkapi.core)</code></pre></div></div></div>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">4</span>
+<span class="title">appendix/method.py</span></p>
+<div class="content">
 
-<div class="mkapi-node" id="mkapi.core">
+<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">class A:
+    &#34;&#34;&#34;Class&#34;&#34;&#34;
+
+    def m(self, x):
+        &#34;Method&#34;
+
+    @classmethod
+    def c(cls, x):
+        &#34;Class method&#34;
+
+    @staticmethod
+    def s(x):
+        &#34;Static method&#34;
+
+    @property
+    def r(x):
+        &#34;Read only property&#34;
+
+    @property
+    def w(x):
+        &#34;Read write property&#34;
+
+    @w.setter
+    def w(x):
+        pass</code></pre></div></div></div>
+
+</div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](appendix.method.A)</code></pre></div></div></div>
+
+<div class="mkapi-node" id="appendix.method.A">
 
 
-<div class="mkapi-object mkapi-object-package">
-<div class="mkapi-object-kind mkapi-object-kind-package">PACKAGE</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-prefix">mkapi.</code><code class="mkapi-object-name"><a href="../../api/mkapi.core/#mkapi.core">core</a></code>
+<div class="mkapi-object mkapi-object-class">
+<div class="mkapi-object-kind mkapi-object-kind-class">CLASS</div>
+<div  class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.method.</code><code class="mkapi-object-name">A</code>
+  <code class="mkapi-object-signature">()</code>
+    </div>
+</div>
+
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Class</p></div>
+</div>
+
+</div>
+
+  <div class="mkapi-members">
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="appendix.method.A.m">
+
+
+<div class="mkapi-object mkapi-object-method">
+<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">m</code>
+  <code class="mkapi-object-signature">(x)</code>
+    </div>
+</div>
+
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Method</p></div>
+</div>
+
+</div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="appendix.method.A.c">
+
+
+<div class="mkapi-object mkapi-object-classmethod">
+<div class="mkapi-object-kind mkapi-object-kind-classmethod">CLASSMETHOD</div>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">c</code>
+  <code class="mkapi-object-signature">(x)</code>
+    </div>
+</div>
+
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Class method</p></div>
+</div>
+
+</div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="appendix.method.A.s">
+
+
+<div class="mkapi-object mkapi-object-staticmethod">
+<div class="mkapi-object-kind mkapi-object-kind-staticmethod">STATICMETHOD</div>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">s</code>
+  <code class="mkapi-object-signature">(x)</code>
+    </div>
+</div>
+
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Static method</p></div>
+</div>
+
+</div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="appendix.method.A.r">
+
+
+<div class="mkapi-object mkapi-object-readonly_property">
+<div class="mkapi-object-kind mkapi-object-kind-readonly_property">READONLY_PROPERTY</div>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">r</code>
   <code class="mkapi-object-signature"></code>
     </div>
 </div>
@@ -139,21 +261,21 @@
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>Package level documentation is written in <code>__init__.py</code>.</p></div>
+<div class="mkapi-section-body"><p>Read only property</p></div>
 </div>
 
 </div>
 
 </div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="appendix.method.A.w">
 
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](mkapi.core.base)</code></pre></div></div></div>
 
-<div class="mkapi-node" id="mkapi.core.base">
-
-
-<div class="mkapi-object mkapi-object-module">
-<div class="mkapi-object-kind mkapi-object-kind-module">MODULE</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-prefix"><a href="../../api/mkapi.core/#mkapi.core">mkapi.core</a>.</code><code class="mkapi-object-name"><a href="../../api/mkapi.core.base/#mkapi.core.base">base</a></code>
+<div class="mkapi-object mkapi-object-readwrite_property">
+<div class="mkapi-object-kind mkapi-object-kind-readwrite_property">READWRITE_PROPERTY</div>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">w</code>
   <code class="mkapi-object-signature"></code>
     </div>
 </div>
@@ -163,69 +285,21 @@
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>This module provides entity classes to represent docstring structure.</p></div>
+<div class="mkapi-section-body"><p>Read write property</p></div>
 </div>
 
 </div>
 
 </div>
-
-<p>Unlike function or class, API for its members is not created, so that
-you can select members to show. Or you can use <a href="../page/">Page mode</a> that allows us to get entire project API.</p>
-<h2 id="heading-documentation">Heading Documentation</h2>
-<p>The other method to create module API is heading. For example</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">### ![mkapi](mkapi.core.base)</code></pre></div></div></div>
-
-<div class="mkapi-node" id="mkapi.core.base">
-
-
-<h3 id="mkapicorebase" class="mkapi-object mkapi-object-module">
-<span class="mkapi-object-kind mkapi-object-kind-module">MODULE</span>
-<span class="mkapi-object-prefix"><a href="../../api/mkapi.core/#mkapi.core">mkapi.core</a>.</span><span class="mkapi-object-name"><a href="../../api/mkapi.core.base/#mkapi.core.base">base</a></span>
-  <span class="mkapi-object-signature"></span>
-    
-</h3>
-
-
-<div class="mkapi-docstring">
-
-<div class="mkapi-section">
-
-<div class="mkapi-section-body"><p>This module provides entity classes to represent docstring structure.</p></div>
-</div>
-
-</div>
-
-</div>
-
-<p>If you prefer upper case heading, use the <code>upper</code> <em>filter</em>.</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">### ![mkapi](mkapi.core.base|upper)</code></pre></div></div></div>
-
-<div class="mkapi-node" id="mkapi.core.base">
-
-
-<h3 id="mkapicorebase_1" class="mkapi-object mkapi-object-module">
-<span class="mkapi-object-kind mkapi-object-kind-module">MODULE</span>
-<span class="mkapi-object-prefix"><a href="../../api/mkapi.core/#mkapi.core">MKAPI.CORE</a>.</span><span class="mkapi-object-name"><a href="../../api/mkapi.core.base/#mkapi.core.base">BASE</a></span>
-  <span class="mkapi-object-signature"></span>
-    
-</h3>
-
-
-<div class="mkapi-docstring">
-
-<div class="mkapi-section">
-
-<div class="mkapi-section-body"><p>This module provides entity classes to represent docstring structure.</p></div>
-</div>
-
-</div>
+    </div>
+  
+  </div>
 
 </div></div>
                 <footer>
     <div class="footer-buttons">
-        <div class="previous"><a href="../../examples/numpy_style/" title="NumPy Style"><span>Previous</span></a></div>
-        <div class="next"><a href="../inherit/" title="Docstring Inheritance"><span>Next</span></a></div>
+        <div class="previous"><a href="../../usage/type/" title="Type Annotation Examples"><span>Previous</span></a></div>
+        <div class="next"><a href="../inherit/" title="Inheritance and Special Methods"><span>Next</span></a></div>
     </div>
     <div class="footer-note">
         <p>

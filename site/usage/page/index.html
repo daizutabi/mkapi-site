@@ -33,7 +33,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.7.5</div>
+                </div><div class="version">0.7.6</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -61,6 +61,11 @@
 </ul></li>
     <li class="toctree-l2"><a class="nav-item" href="../library/">Using MkApi within Python</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../type/">Type Annotation Examples</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Appendix</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/method/">Method and Property Types</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/inherit/">Inheritance and Special Methods</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -140,9 +145,9 @@
 <p>The above line create a link to <code>mkapi.core.base.Section</code> object:</p>
 <p>Go to <a href="../../api/mkapi.core.base/#mkapi.core.base.Section">Section</a>.</p>
 <h3 id="link-from-docstring">Link from Docstring</h3>
-<p>You can use this feature even in your docstring. For example, assume that <code>func()</code> is defined in a <code>link</code> module:</p>
+<p>You can use this feature even in your docstring. For example, assume that <code>func()</code> is defined in a <code>link.fullname</code> module:</p>
 <div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">2</span>
-<span class="title">link.py</span></p>
+<span class="title">link/fullname.py</span></p>
 <div class="content">
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="python">def func():
     &#34;&#34;&#34;Internal link example.
@@ -153,13 +158,13 @@
 
 </div></div></div>
 
-<p>The <code>link.func()</code> is rendered as:</p>
-<div class="mkapi-node" id="link.func">
+<p>The <code>link.fullname.func()</code> is rendered as:</p>
+<div class="mkapi-node" id="link.fullname.func">
 
 
 <div class="mkapi-object mkapi-object-function">
 <div class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-prefix">link.</code><code class="mkapi-object-name">func</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-prefix">link.fullname.</code><code class="mkapi-object-name">func</code>
   <code class="mkapi-object-signature">()</code>
     </div>
 </div>
@@ -187,9 +192,9 @@
 </div>
 
 <p>You can click the above "a method" to visit its API.</p>
-<p>Furthermore, if your module imports an object, you can refer it by its name only.</p>
+<p>Furthermore, if your module imports an object, you can refer it by its qualified name only.</p>
 <div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">3</span>
-<span class="title">link2.py</span></p>
+<span class="title">link/qualname.py</span></p>
 <div class="content">
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="python">from mkapi.core.base import Section
 from mkapi.core.docstring import get_docstring
@@ -206,13 +211,13 @@ def func():
 
 </div></div></div>
 
-<p>The <code>link2.func()</code> is rendered as:</p>
-<div class="mkapi-node" id="link2.func">
+<p>The <code>link.qualname.func()</code> is rendered as:</p>
+<div class="mkapi-node" id="link.qualname.func">
 
 
 <div class="mkapi-object mkapi-object-function">
 <div class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-prefix">link2.</code><code class="mkapi-object-name">func</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-prefix">link.qualname.</code><code class="mkapi-object-name">func</code>
   <code class="mkapi-object-signature">()</code>
     </div>
 </div>

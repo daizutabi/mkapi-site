@@ -33,7 +33,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.7.5</div>
+                </div><div class="version">0.7.6</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -57,6 +57,11 @@
     <li class="toctree-l2"><a class="nav-item" href="../../usage/page/">Page Mode and Internal Links</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../usage/library/">Using MkApi within Python</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../usage/type/">Type Annotation Examples</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Appendix</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/method/">Method and Property Types</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/inherit/">Inheritance and Special Methods</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -445,7 +450,7 @@ and <a href="./#mkapi.core.base.Object">Object</a>.</p></div>
 
 <li><code class="mkapi-args-name">type</code>
 <span class="mkapi-args-type">(<a href="./#mkapi.core.base.Type">Type</a>, optional)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type of item.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type of self.</span></li>
 
 </ul></div>
 </div>
@@ -475,7 +480,7 @@ and <a href="./#mkapi.core.base.Object">Object</a>.</p></div>
 
 <li><code class="mkapi-args-name">type</code>
 <span class="mkapi-args-type">(<a href="./#mkapi.core.base.Type">Type</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type of item.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type of self.</span></li>
 
 </ul></div>
 </div>
@@ -573,7 +578,7 @@ and <a href="./#mkapi.core.base.Object">Object</a>.</p></div>
 
 <li><code class="mkapi-args-name">type</code>
 <span class="mkapi-args-type">(<a href="./#mkapi.core.base.Type">Type</a>, optional)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type of item.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type of self.</span></li>
 
 </ul></div>
 </div>
@@ -607,7 +612,7 @@ and <a href="./#mkapi.core.base.Object">Object</a>.</p></div>
 
 <li><code class="mkapi-args-name">type</code>
 <span class="mkapi-args-type">(<a href="./#mkapi.core.base.Type">Type</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type of item.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type of self.</span></li>
 
 </ul></div>
 </div>
@@ -923,7 +928,7 @@ returns None.</p></div>
 <div class="mkapi-object mkapi-object-dataclass">
 <div class="mkapi-object-kind mkapi-object-kind-dataclass">DATACLASS</div>
 <div  class="mkapi-object-body"><code class="mkapi-object-prefix"><a href="#mkapi.core.base">mkapi.core.base</a>.</code><code class="mkapi-object-name">Object</code>
-  <code class="mkapi-object-signature">(name=&#39;&#39;, markdown=&#39;&#39;, prefix=&#39;&#39;, kind=&#39;&#39;, type=&lt;factory&gt;, signature=&lt;factory&gt;)</code>
+  <code class="mkapi-object-signature">(name=&#39;&#39;, markdown=&#39;&#39;, prefix=&#39;&#39;, qualname=&#39;&#39;, kind=&#39;&#39;, type=&lt;factory&gt;, signature=&lt;factory&gt;)</code>
     </div>
 </div>
 
@@ -957,6 +962,10 @@ returns None.</p></div>
 <li><code class="mkapi-args-name">prefix</code>
 <span class="mkapi-args-type">(str, optional)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object prefix. <code>mkapi.core.base</code> for <code>Item</code> class.</span></li>
+
+<li><code class="mkapi-args-name">qualname</code>
+<span class="mkapi-args-type">(str, optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
 
 <li><code class="mkapi-args-name">kind</code>
 <span class="mkapi-args-type">(str, optional)</span>
@@ -999,6 +1008,10 @@ returns None.</p></div>
 <li><code class="mkapi-args-name">prefix</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object prefix. <code>mkapi.core.base</code> for <code>Item</code> class.</span></li>
+
+<li><code class="mkapi-args-name">qualname</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
 
 <li><code class="mkapi-args-name">id</code>
 <span class="mkapi-args-type">(str)</span>
