@@ -124,22 +124,15 @@
 <span class="title">appendix/inherit.py</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">class Abstract:
-    &#34;&#34;&#34;Abstract class.&#34;&#34;&#34;
-
-    def call(self):
-        &#34;&#34;&#34;Abstract method.&#34;&#34;&#34;
-        raise NotImplementedError
+<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">class Base:
+    &#34;&#34;&#34;Base class.&#34;&#34;&#34;
 
     def func(self):
         &#34;&#34;&#34;Function.&#34;&#34;&#34;
 
 
-class Concrete(Abstract):
-    &#34;&#34;&#34;Concrete class.&#34;&#34;&#34;
-
-    def call(self):
-        &#34;&#34;&#34;Concrete method.&#34;&#34;&#34;
+class Sub(Base):
+    &#34;&#34;&#34;Subclass.&#34;&#34;&#34;
 
     # Should be added.
     def func(self):
@@ -147,29 +140,29 @@ class Concrete(Abstract):
 
     # Should not be added.
     def __call__(self):
-        return self.call()
+        pass
 
     # Should not be added.
     def __repr__(self):
-        return self.call()
+        pass
 
     # Should not be added.
     def __str__(self):
-        return self.call()
+        pass
 
     # and so on.</code></pre></div></div></div>
 
 </div></div></div>
 
 <h3 id="superclass">Superclass</h3>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](appendix.inherit.Abstract)</code></pre></div></div></div>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](appendix.inherit.Base)</code></pre></div></div></div>
 
-<div class="mkapi-node" id="appendix.inherit.Abstract">
+<div class="mkapi-node" id="appendix.inherit.Base">
 
 
 <div class="mkapi-object mkapi-object-class">
 <div class="mkapi-object-kind mkapi-object-kind-class">CLASS</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.inherit.</code><code class="mkapi-object-name">Abstract</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.inherit.</code><code class="mkapi-object-name">Base</code>
   <code class="mkapi-object-signature">()</code>
     </div>
 </div>
@@ -179,7 +172,7 @@ class Concrete(Abstract):
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>Abstract class.</p></div>
+<div class="mkapi-section-body"><p>Base class.</p></div>
 </div>
 
 </div>
@@ -187,31 +180,7 @@ class Concrete(Abstract):
   <div class="mkapi-members">
   
     <div class="mkapi-member">
-      <div class="mkapi-node" id="appendix.inherit.Abstract.call">
-
-
-<div class="mkapi-object mkapi-object-method">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-name">call</code>
-  <code class="mkapi-object-signature">()</code>
-    </div>
-</div>
-
-
-<div class="mkapi-docstring">
-
-<div class="mkapi-section">
-
-<div class="mkapi-section-body"><p>Abstract method.</p></div>
-</div>
-
-</div>
-
-</div>
-    </div>
-  
-    <div class="mkapi-member">
-      <div class="mkapi-node" id="appendix.inherit.Abstract.func">
+      <div class="mkapi-node" id="appendix.inherit.Base.func">
 
 
 <div class="mkapi-object mkapi-object-method">
@@ -239,14 +208,14 @@ class Concrete(Abstract):
 </div>
 
 <h3 id="subclass">Subclass</h3>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](appendix.inherit.Concrete)</code></pre></div></div></div>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](appendix.inherit.Sub)</code></pre></div></div></div>
 
-<div class="mkapi-node" id="appendix.inherit.Concrete">
+<div class="mkapi-node" id="appendix.inherit.Sub">
 
 
 <div class="mkapi-object mkapi-object-class">
 <div class="mkapi-object-kind mkapi-object-kind-class">CLASS</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.inherit.</code><code class="mkapi-object-name">Concrete</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.inherit.</code><code class="mkapi-object-name">Sub</code>
   <code class="mkapi-object-signature">()</code>
     </div>
 </div>
@@ -256,7 +225,7 @@ class Concrete(Abstract):
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>Concrete class.</p></div>
+<div class="mkapi-section-body"><p>Subclass.</p></div>
 </div>
 
 </div>
@@ -264,31 +233,7 @@ class Concrete(Abstract):
   <div class="mkapi-members">
   
     <div class="mkapi-member">
-      <div class="mkapi-node" id="appendix.inherit.Concrete.call">
-
-
-<div class="mkapi-object mkapi-object-method">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-name">call</code>
-  <code class="mkapi-object-signature">()</code>
-    </div>
-</div>
-
-
-<div class="mkapi-docstring">
-
-<div class="mkapi-section">
-
-<div class="mkapi-section-body"><p>Concrete method.</p></div>
-</div>
-
-</div>
-
-</div>
-    </div>
-  
-    <div class="mkapi-member">
-      <div class="mkapi-node" id="appendix.inherit.Concrete.func">
+      <div class="mkapi-node" id="appendix.inherit.Sub.func">
 
 
 <div class="mkapi-object mkapi-object-method">
@@ -318,34 +263,34 @@ class Concrete(Abstract):
 <h2 id="implementation">Implementation</h2>
 <p>There are two ways to get docstring: <code>__doc__</code> attribute or <code>inspect.getdoc()</code>.</p>
 <div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="python">import inspect
-from appendix.inherit import Abstract, Concrete
+from appendix.inherit import Base, Sub
 
-Abstract.func.__doc__, inspect.getdoc(Abstract.func)</code></pre></div>
+Base.func.__doc__, inspect.getdoc(Base.func)</code></pre></div>
 <div class="report"><p><span class="count">[2]</span>
-<span class="start">2020-06-09 14:21:02</span> (<span class="time">4.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">519ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;Function.&#39;, &#39;Function.&#39;)</code></pre></div></div></div></div>
+<span class="start">2020-06-09 15:42:11</span> (<span class="time">5.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">432ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;Function.&#39;, &#39;Function.&#39;)</code></pre></div></div></div></div>
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="python">Concrete.func.__doc__, inspect.getdoc(Concrete.func)</code></pre></div>
+<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="python">Sub.func.__doc__, inspect.getdoc(Sub.func)</code></pre></div>
 <div class="report"><p><span class="count">[3]</span>
-<span class="start">2020-06-09 14:21:54</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">525ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Function.&#39;)</code></pre></div></div></div></div>
+<span class="start">2020-06-09 15:42:11</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">435ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Function.&#39;)</code></pre></div></div></div></div>
 
-<p>Because <code>Concrete.func()</code> has no docstring, its <code>__doc__</code> attribute is <code>None</code>. On the other hand, the super class <code>Abstract.func()</code> has docstring, so that you can get the <em>inherited</em> docstring using <code>inspect.getdoc()</code>. Therefore, MkApi uses <code>inspect.getdoc()</code>.</p>
+<p>Because <code>Sub.func()</code> has no docstring, its <code>__doc__</code> attribute is <code>None</code>. On the other hand, the super class <code>Base.func()</code> has docstring, so that you can get the <em>inherited</em> docstring using <code>inspect.getdoc()</code>. Therefore, MkApi uses <code>inspect.getdoc()</code>.</p>
 <p>Now, let's see some special methods:</p>
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="python">Concrete.__call__.__doc__, inspect.getdoc(Concrete.__call__)</code></pre></div>
+<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="python">Sub.__call__.__doc__, inspect.getdoc(Sub.__call__)</code></pre></div>
 <div class="report"><p><span class="count">[4]</span>
-<span class="start">2020-06-09 14:33:38</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">620ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Call self as a function.&#39;)</code></pre></div></div></div></div>
+<span class="start">2020-06-09 15:42:11</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">438ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Call self as a function.&#39;)</code></pre></div></div></div></div>
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="python">Concrete.__repr__.__doc__, inspect.getdoc(Concrete.__repr__)</code></pre></div>
+<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="python">Sub.__repr__.__doc__, inspect.getdoc(Sub.__repr__)</code></pre></div>
 <div class="report"><p><span class="count">[5]</span>
-<span class="start">2020-06-09 14:34:52</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">630ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Return repr(self).&#39;)</code></pre></div></div></div></div>
+<span class="start">2020-06-09 15:42:11</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">441ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Return repr(self).&#39;)</code></pre></div></div></div></div>
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="python">Concrete.__repr__.__doc__, inspect.getdoc(Concrete.__repr__)</code></pre></div>
+<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="python">Sub.__repr__.__doc__, inspect.getdoc(Sub.__repr__)</code></pre></div>
 <div class="report"><p><span class="count">[6]</span>
-<span class="start">2020-06-09 14:34:52</span> (<span class="time">5.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">635ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Return repr(self).&#39;)</code></pre></div></div></div></div>
+<span class="start">2020-06-09 15:42:11</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">444ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Return repr(self).&#39;)</code></pre></div></div></div></div>
 
 <p>These docstrings come from <code>object</code>.</p>
 <div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="python">for name, obj in object.__dict__.items():
@@ -353,8 +298,8 @@ Abstract.func.__doc__, inspect.getdoc(Abstract.func)</code></pre></div>
     if doc and &#39;\n&#39; not in doc:
         print(f&#34;{name}: {doc}&#34;)</code></pre></div>
 <div class="report"><p><span class="count">[7]</span>
-<span class="start">2020-06-09 14:47:10</span> (<span class="time">4.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">458ms</span>)</span></p></div></div><div class="cell jupyter stdout"><div class="code">
+<span class="start">2020-06-09 15:42:11</span> (<span class="time">3.00ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">447ms</span>)</span></p></div></div><div class="cell jupyter stdout"><div class="code">
       <pre><code class="nohighlight">__repr__: Return repr(self).
 __hash__: Return hash(self).
 __str__: Return str(self).
