@@ -139,7 +139,8 @@ h3 ~ .mkapi-docstring {
 .mkapi-section-name-attributes,
 .mkapi-section-name-returns,
 .mkapi-section-name-yields,
-.mkapi-section-name-raises {
+.mkapi-section-name-raises,
+.mkapi-section-name-methods {
   background: #F0F0F0;
   border-bottom: solid 2px #7777FF;
 }
