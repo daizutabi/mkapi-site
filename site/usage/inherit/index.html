@@ -33,7 +33,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.7.6</div>
+                </div><div class="version">0.7.7</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -69,6 +69,7 @@
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/method/">Method and Property Types</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/inherit/">Inheritance and Special Methods</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/order/">Ordering Members in Different Files</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -77,6 +78,7 @@
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core/">mkapi.core</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.base/">base</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.docstring/">docstring</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.inherit/">inherit</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.linker/">linker</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.module/">module</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.node/">node</a></li>
@@ -84,6 +86,7 @@
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.page/">page</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.renderer/">renderer</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.signature/">signature</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.tree/">tree</a></li>
 </ul></li>
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
 <ul class="subnav hide">
@@ -180,8 +183,8 @@ class Item(Base):
 <p>Taking a look at this example, you may notice that:</p>
 <ul>
 <li>In the <code>Base</code>, description for <code>type</code> is omitted.</li>
-<li>In the <code>Item</code>, parameters inherited by superclass are not written.</li>
-<li>In the <code>Item.set_name()</code>, Parameters section doesn't exit.</li>
+<li>In the <code>Item</code>, parameters inherited from superclass are not written.</li>
+<li>In the <code>Item.set_name()</code>, Parameters section itself doesn't exist.</li>
 </ul>
 <h2 id="inheritance-from-superclasses">Inheritance from Superclasses</h2>
 <p>Since the docstring of superclass <code>Base</code> describes the <code>name</code>, the <code>Item</code> class can inherit its description with <code>inherit</code> filter.</p>
@@ -215,7 +218,8 @@ class Item(Base):
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>Item class.</p></div>
+<div class="mkapi-section-body"><p>Base: inherit.Base</p>
+<p>Item class.</p></div>
 </div>
 
 <div class="mkapi-section mkapi-section-parameters">

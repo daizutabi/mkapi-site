@@ -33,7 +33,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.7.6</div>
+                </div><div class="version">0.7.7</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -69,6 +69,7 @@
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/method/">Method and Property Types</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/inherit/">Inheritance and Special Methods</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/order/">Ordering Members in Different Files</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -77,6 +78,7 @@
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core/">mkapi.core</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.base/">base</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.docstring/">docstring</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.inherit/">inherit</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.linker/">linker</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.module/">module</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.node/">node</a></li>
@@ -84,6 +86,7 @@
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.page/">page</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.renderer/">renderer</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.signature/">signature</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.tree/">tree</a></li>
 </ul></li>
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
 <ul class="subnav hide">
@@ -141,7 +144,7 @@ extra_javascript:  # for pymdownx.arithmatex
 <span class="title">google_style.add()</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">def add(x: int, y: int = 1) -&gt; int:
     &#34;&#34;&#34;Returns $x + y$.
 
@@ -166,7 +169,7 @@ extra_javascript:  # for pymdownx.arithmatex
         But you should use `Note` section instead for consistency.
     &#34;&#34;&#34;
     return x + y
-</code></pre></div></div></div></div>
+</code></pre></div></div></div>
 
 </div></div></div>
 
@@ -279,7 +282,7 @@ MkDocs</a>.</p>
 <span class="title">google_style.gen()</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">def gen(n) -&gt; Iterator[str]:
     &#34;&#34;&#34;Yields a numbered string.
 
@@ -291,7 +294,7 @@ MkDocs</a>.</p>
     &#34;&#34;&#34;
     for x in range(n):
         yield f&#34;a{x}&#34;
-</code></pre></div></div></div></div>
+</code></pre></div></div></div>
 
 </div></div></div>
 
@@ -361,7 +364,7 @@ MkDocs</a>.</p>
 <span class="title">google_style.ExampleClass</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">class ExampleClass:
     def __init__(self, x: List[int], y: Tuple[str, int]):
         &#34;&#34;&#34;A normal class.
@@ -401,7 +404,7 @@ MkDocs</a>.</p>
     @readwrite_property.setter
     def readwrite_property(self, value):
         &#34;&#34;&#34;Docstring in setter is ignored.&#34;&#34;&#34;
-</code></pre></div></div></div></div>
+</code></pre></div></div></div>
 
 </div></div></div>
 
@@ -643,7 +646,7 @@ MkDocs</a>.</p>
 <span class="title">google_style.ExampleDataClass</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter source"><div class="code">
+<div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">@dataclass
 class ExampleDataClass:
     &#34;&#34;&#34;A dataclass.
@@ -658,7 +661,7 @@ class ExampleDataClass:
 
     x: int = 0
     y: int = field(default=1, init=False)
-</code></pre></div></div></div></div>
+</code></pre></div></div></div>
 
 </div></div></div>
 

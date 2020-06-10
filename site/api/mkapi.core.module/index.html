@@ -33,7 +33,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.7.6</div>
+                </div><div class="version">0.7.7</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -62,6 +62,7 @@
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/method/">Method and Property Types</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/inherit/">Inheritance and Special Methods</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/order/">Ordering Members in Different Files</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -70,6 +71,7 @@
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core/">mkapi.core</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.base/">base</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.docstring/">docstring</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.inherit/">inherit</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.linker/">linker</a></li>
     <li class="toctree-l3 current"><a class="nav-item current" href="./">module</a>
 <ul class="subnav">
@@ -79,6 +81,7 @@
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.page/">page</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.renderer/">renderer</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.signature/">signature</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.tree/">tree</a></li>
 </ul></li>
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
 <ul class="subnav hide">
@@ -145,7 +148,8 @@
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>Module class represents an module.</p></div>
+<div class="mkapi-section-body"><p>Base: <a href="../mkapi.core.tree/#mkapi.core.tree.Tree">mkapi.core.tree.Tree</a></p>
+<p>Module class represents an module.</p></div>
 </div>
 
 <div class="mkapi-section mkapi-section-parameters">
@@ -198,7 +202,7 @@
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Docstring instance.</span></li>
 
 <li><code class="mkapi-args-name">parent</code>
-<span class="mkapi-args-type">(any)</span>
+<span class="mkapi-args-type">(Module, optional)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Parent Module instance.</span></li>
 
 <li><code class="mkapi-args-name">members</code>
@@ -207,7 +211,8 @@
 
 <li><code class="mkapi-args-name">objects</code>
 <span class="mkapi-args-type">(list of str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">If self is module, object member names are
+collected in this list.</span></li>
 
 </ul></div>
 </div>
@@ -232,7 +237,7 @@
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>Returns kind of this object.</p></div>
+<div class="mkapi-section-body"><p>Returns kind of self.</p></div>
 </div>
 
 </div>
