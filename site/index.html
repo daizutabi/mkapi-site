@@ -34,7 +34,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="." class="site-name"> MkApi</a>
-                </div><div class="version">0.7.7</div>
+                </div><div class="version">0.7.8</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="./search.html" method="get">
@@ -122,9 +122,10 @@
 </ul>
 <p>Features of MkApi are:</p>
 <ul>
-<li><strong>Section syntax</strong>: Supported sections are <code>Args</code>, <code>Arguments</code>, <code>Attributes</code>, <code>Example[s]</code>, <code>Note[s]</code>, <code>Parameters</code>, <code>Raises</code>, <code>Returns</code>, <code>References</code>, <code>Todo</code>, <code>Warning[s]</code>, <code>Warns</code>, and <code>Yields</code>.</li>
-<li><strong>Type annotation</strong>: If you write your function such as <code>def func(x: int) -&gt; str:</code>, you don't need write type(s) in <code>Args</code>, <code>Parameters</code>, <code>Returns</code>, or <code>Yields</code> section again. You can overwrite the type annotation in the corresponding docstring.</li>
-<li><strong>Object type inspection</strong>: MkApi plugin creates <code>CLASS</code>, <code>DATACLASS</code>, <code>FUNCTION</code>, <code>GENERATOR</code>, <code>METHOD</code>, or <code>PROPERTY</code> prefix for each object.</li>
+<li><strong>Section syntax</strong>: Supported section identifiers are <code>Args</code>, <code>Arguments</code>, <code>Attributes</code>, <code>Example[s]</code>, <code>Note[s]</code>, <code>Parameters</code>, <code>Raises</code>, <code>Returns</code>, <code>References</code>, <code>Todo</code>, <code>Warning[s]</code>, <code>Warns</code>, and <code>Yields</code>.</li>
+<li><strong>Type annotation</strong>: If you write your function such as <code>def func(x: int) -&gt; str:</code>, you don't need write type(s) in Parameters, Returns, or Yields section again. You can overwrite the type annotation in the corresponding docstring.</li>
+<li><strong>Object type inspection</strong>: MkApi plugin creates CLASS, DATACLASS, FUNCTION, GENERATOR, METHOD, or PROPERTY prefix for each object.</li>
+<li><strong>Attribute inspection</strong>: If you write attributes with description as comment at module level or in <code>__init__()</code> of class, Attributes section is automatically created.</li>
 <li><strong>Docstring inheritance</strong>: Docstring of a subclass can inherit parameters and attributes description from its superclasses.</li>
 <li><strong>Page mode</strong>: Comprehensive API documentation for your project, in which objects are linked to each other by type annotation.</li>
 </ul>

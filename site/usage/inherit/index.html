@@ -33,7 +33,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.7.7</div>
+                </div><div class="version">0.7.8</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -129,17 +129,18 @@
 
 <h2 id="example-classes">Example classes</h2>
 <p>Define two classes to explain <strong>Docstring inheritance</strong>.</p>
-<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">1</span>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">2</span>
 <span class="title">inherit.py</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">from dataclasses import dataclass
+<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">import abc
+from dataclasses import dataclass
 
 from mkapi.core.base import Type
 
 
 @dataclass
-class Base:
+class Base(abc.ABC):
     &#34;&#34;&#34;Base class.
 
     Parameters:
@@ -216,10 +217,25 @@ class Item(Base):
 
 <div class="mkapi-docstring">
 
+<div class="mkapi-section mkapi-section-bases">
+
+<div class="mkapi-section-name mkapi-section-name-bases">
+<span class="mkapi-section-name-body">Bases</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-bases">
+
+
+<span class="mkapi-base">inherit.Base</span>
+
+<span class="mkapi-base">abc.ABC</span>
+</div>
+</div>
+
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>Base: inherit.Base</p>
-<p>Item class.</p></div>
+<div class="mkapi-section-body"><p>Item class.</p></div>
 </div>
 
 <div class="mkapi-section mkapi-section-parameters">

@@ -33,7 +33,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.7.7</div>
+                </div><div class="version">0.7.8</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -366,22 +366,27 @@ MkDocs</a>.</p>
 
 <div class="pheasant-fenced-code"><div class="cell jupyter source"><div class="code">
       <pre><code class="python">class ExampleClass:
+    &#34;&#34;&#34;A normal class.
+
+    Args:
+        x: The first parameter.
+        y: The second parameter.
+
+    Raises:
+        ValueError: If the length of `x` is equal to 0.
+    &#34;&#34;&#34;
+
     def __init__(self, x: List[int], y: Tuple[str, int]):
-        &#34;&#34;&#34;A normal class.
-
-        Args:
-            x: The first parameter.
-            y: The second parameter.
-
-        Attributes:
-            z (str): The first attribute.
-
-        Raises:
-            ValueError: If the length of `x` is equal to 0.
-        &#34;&#34;&#34;
         if len(x) == 0:
             raise ValueError()
-        self.z = &#34;abc&#34;
+        self.a: str = &#34;abc&#34;  #: The first attribute. Comment *inline* with attribute.
+        #: The second attribute. Comment *before* attribute.
+        self.b: Dict[str, int] = {&#34;a&#34;: 1}
+        self.c = None
+        &#34;&#34;&#34;int, optional: The third attribute. Docstring *after* attribute.
+
+        Multiple paragraphs are supported.&#34;&#34;&#34;
+        self.d = 100  # Not attribute description because &#39;:&#39; is missing.
 
     def message(self, n: int) -&gt; List[str]:
         &#34;&#34;&#34;Returns a message list.
@@ -389,7 +394,7 @@ MkDocs</a>.</p>
         Args:
             n: Repeatation.
         &#34;&#34;&#34;
-        return [self.z] * n
+        return [self.a] * n
 
     @property
     def readonly_property(self):
@@ -463,9 +468,18 @@ MkDocs</a>.</p>
 
 <ul class="mkapi-args-list">
 
-<li><code class="mkapi-args-name">z</code>
+<li><code class="mkapi-args-name">a</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The first attribute.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The first attribute. Comment <em>inline</em> with attribute.</span></li>
+
+<li><code class="mkapi-args-name">b</code>
+<span class="mkapi-args-type">(dict(str: int))</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The second attribute. Comment <em>before</em> attribute.</span></li>
+
+<li><code class="mkapi-args-name">c</code>
+<span class="mkapi-args-type">(int, optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The third attribute. Docstring <em>after</em> attribute.<br>
+Multiple paragraphs are supported.</span></li>
 
 </ul></div>
 </div>
@@ -588,13 +602,17 @@ MkDocs</a>.</p>
 
 <p>In this example, note that:</p>
 <ul>
-<li>Docstring of <code>__init__</code> function is treated as a class-level docstring.</li>
 <li>Type annotation using <code>typing</code> package (<code>List</code> and <code>Tuple</code> in this case) is converted into readable style.</li>
+<li>Attributes section is inserted with type and description. These information is collected from inspection of <code>__init__</code> function.</li>
 <li>Bound methods (<code>message</code> in this case) have a METHOD prefix instead of a FUNCTION prefix.</li>
 <li>If callable objects have neither Returns nor Yields, the type appears on the object definition line like type annotation.</li>
 <li>For properties, the type can be written at the beginning of the docstring or as type annotation.</li>
 <li>Whether a property is read-only or read-write is inspected.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although you can write the docstring for class in the <code>__init__()</code> function, the attribute inspection only works when you write it as a class level docstring.</p>
+</div>
 <h2 id="method">Method</h2>
 <p>You can select a method of class (or any other attribute that can have docstring) to generate API.</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](google_style.ExampleClass.message)</code></pre></div></div></div>

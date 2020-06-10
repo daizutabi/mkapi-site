@@ -33,7 +33,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.7.7</div>
+                </div><div class="version">0.7.8</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -55,6 +55,7 @@
     <li class="toctree-l2 current"><a class="nav-item current" href="./">Module and Package</a>
 <ul class="subnav">
 <li class="toctree-l3"><a class="nav-item toc" href="#embeding-documentation">Embeding Documentation</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#module-level-attribute">Module Level Attribute</a></li>
 <li class="toctree-l3"><a class="nav-item toc" href="#heading-documentation">Heading Documentation</a></li>
 </ul></li>
     <li class="toctree-l2"><a class="nav-item" href="../inherit/">Docstring Inheritance</a></li>
@@ -175,16 +176,95 @@
 
 <p>Unlike function or class, API for its members is not created, so that
 you can select members to show. Or you can use <a href="../page/">Page mode</a> that allows us to get entire project API.</p>
+<h2 id="module-level-attribute">Module Level Attribute</h2>
+<p>As class level attributes, module level attributes can be inspected. Here is the beginning part of <code>google_style.py</code>.</p>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">1</span>
+<span class="title">google_style.py: line number 1-18</span></p>
+<div class="content">
+
+<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">&#34;&#34;&#34;Module level docstring.&#34;&#34;&#34;
+from dataclasses import dataclass, field
+from typing import Dict, Iterator, List, Tuple
+
+#: The first module level attribute. Comment *before* attribute.
+first_attribute: int = 1
+second_attribute = &#34;abc&#34;  #: str: The second module level attribute. *Inline* style.
+third_attribute: List[int] = [1, 2, 3]
+&#34;&#34;&#34;The third module level attribute. Docstring *after* attribute.
+
+Multiple paragraphs are supported.
+&#34;&#34;&#34;
+not_attribute = 123  # Not attribute description because &#39;:&#39; is missing.
+
+
+def add(x: int, y: int = 1) -&gt; int:
+    &#34;&#34;&#34;Returns $x + y$.
+</code></pre></div></div></div>
+
+</div></div></div>
+
+<p>Although there is no Attributes section in docstring, MkApi automatically creates the section if attributes are correctly documented.</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](google_style)</code></pre></div></div></div>
+
+<div class="mkapi-node" id="google_style">
+
+
+<div class="mkapi-object mkapi-object-module">
+<div class="mkapi-object-kind mkapi-object-kind-module">MODULE</div>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">google_style</code>
+  <code class="mkapi-object-signature"></code>
+    </div>
+</div>
+
+
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Module level docstring.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-attributes">
+
+<div class="mkapi-section-name mkapi-section-name-attributes">
+<span class="mkapi-section-name-body">Attributes</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-attributes">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">first_attribute</code>
+<span class="mkapi-args-type">(int)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The first module level attribute. Comment <em>before</em> attribute.</span></li>
+
+<li><code class="mkapi-args-name">second_attribute</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The second module level attribute. <em>Inline</em> style.</span></li>
+
+<li><code class="mkapi-args-name">third_attribute</code>
+<span class="mkapi-args-type">(list of int)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The third module level attribute. Docstring <em>after</em> attribute.<br>
+Multiple paragraphs are supported.</span></li>
+
+</ul></div>
+</div>
+
+</div>
+
+</div>
+
 <h2 id="heading-documentation">Heading Documentation</h2>
 <p>The other method to create module API is heading. For example</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">### ![mkapi](mkapi.core.base)</code></pre></div></div></div>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">### ![mkapi](google_style)</code></pre></div></div></div>
 
-<div class="mkapi-node" id="mkapi.core.base">
+<div class="mkapi-node" id="google_style">
 
 
-<h3 id="mkapicorebase" class="mkapi-object mkapi-object-module">
+<h3 id="google_style" class="mkapi-object mkapi-object-module">
 <span class="mkapi-object-kind mkapi-object-kind-module">MODULE</span>
-<span class="mkapi-object-prefix"><a href="../../api/mkapi.core/#mkapi.core">mkapi.core</a>.</span><span class="mkapi-object-name"><a href="../../api/mkapi.core.base/#mkapi.core.base">base</a></span>
+<span class="mkapi-object-name">google_style</span>
   <span class="mkapi-object-signature"></span>
     
 </h3>
@@ -194,22 +274,49 @@ you can select members to show. Or you can use <a href="../page/">Page mode</a> 
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>This module provides entity classes to represent docstring structure.</p></div>
+<div class="mkapi-section-body"><p>Module level docstring.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-attributes">
+
+<div class="mkapi-section-name mkapi-section-name-attributes">
+<span class="mkapi-section-name-body">Attributes</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-attributes">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">first_attribute</code>
+<span class="mkapi-args-type">(int)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The first module level attribute. Comment <em>before</em> attribute.</span></li>
+
+<li><code class="mkapi-args-name">second_attribute</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The second module level attribute. <em>Inline</em> style.</span></li>
+
+<li><code class="mkapi-args-name">third_attribute</code>
+<span class="mkapi-args-type">(list of int)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The third module level attribute. Docstring <em>after</em> attribute.<br>
+Multiple paragraphs are supported.</span></li>
+
+</ul></div>
 </div>
 
 </div>
 
 </div>
 
-<p>If you prefer upper case heading, use the <code>upper</code> <em>filter</em>.</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">### ![mkapi](mkapi.core.base|upper)</code></pre></div></div></div>
+<p>If you prefer upper case heading, use the <code>upper</code> filter.</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">### ![mkapi](google_style|upper)</code></pre></div></div></div>
 
-<div class="mkapi-node" id="mkapi.core.base">
+<div class="mkapi-node" id="google_style">
 
 
-<h3 id="mkapicorebase_1" class="mkapi-object mkapi-object-module">
+<h3 id="google_style_1" class="mkapi-object mkapi-object-module">
 <span class="mkapi-object-kind mkapi-object-kind-module">MODULE</span>
-<span class="mkapi-object-prefix"><a href="../../api/mkapi.core/#mkapi.core">MKAPI.CORE</a>.</span><span class="mkapi-object-name"><a href="../../api/mkapi.core.base/#mkapi.core.base">BASE</a></span>
+<span class="mkapi-object-name">GOOGLE_STYLE</span>
   <span class="mkapi-object-signature"></span>
     
 </h3>
@@ -219,7 +326,34 @@ you can select members to show. Or you can use <a href="../page/">Page mode</a> 
 
 <div class="mkapi-section">
 
-<div class="mkapi-section-body"><p>This module provides entity classes to represent docstring structure.</p></div>
+<div class="mkapi-section-body"><p>Module level docstring.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-attributes">
+
+<div class="mkapi-section-name mkapi-section-name-attributes">
+<span class="mkapi-section-name-body">Attributes</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-attributes">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">first_attribute</code>
+<span class="mkapi-args-type">(int)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The first module level attribute. Comment <em>before</em> attribute.</span></li>
+
+<li><code class="mkapi-args-name">second_attribute</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The second module level attribute. <em>Inline</em> style.</span></li>
+
+<li><code class="mkapi-args-name">third_attribute</code>
+<span class="mkapi-args-type">(list of int)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">The third module level attribute. Docstring <em>after</em> attribute.<br>
+Multiple paragraphs are supported.</span></li>
+
+</ul></div>
 </div>
 
 </div>

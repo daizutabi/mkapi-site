@@ -33,7 +33,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.7.7</div>
+                </div><div class="version">0.7.8</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -443,8 +443,8 @@ If name is '', both sections are inherited.</span></li>
 <div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; from mkapi.core.object import get_object
 &gt;&gt;&gt; base = Node(get_object('mkapi.core.base.Base'))
 &gt;&gt;&gt; node = Node(get_object('mkapi.core.base.Type'))
-&gt;&gt;&gt; [item.name for item in base.docstring['Attributes'].items]
-['html']
+&gt;&gt;&gt; [item.name for item in base.docstring['Parameters'].items]
+['name', 'markdown']
 &gt;&gt;&gt; inherit_signature(base)
 &gt;&gt;&gt; section = base.docstring['Attributes']
 &gt;&gt;&gt; [item.name for item in section.items]
