@@ -33,7 +33,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.7.8</div>
+                </div><div class="version">0.8.0</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -56,10 +56,10 @@
     <li class="toctree-l2"><a class="nav-item" href="../../usage/inherit/">Docstring Inheritance</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../usage/page/">Page Mode and Internal Links</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../usage/library/">Using MkApi within Python</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../usage/type/">Type Annotation Examples</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">Appendix</button>
 <ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/type/">Type Annotation Examples</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/method/">Method and Property Types</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/inherit/">Inheritance and Special Methods</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/order/">Ordering Members in Different Files</a></li>
@@ -116,8 +116,7 @@
 
 <h1 id="mkapicoretree" class="mkapi-object mkapi-object-module">
 <span class="mkapi-object-kind mkapi-object-kind-module">MODULE</span>
-<span class="mkapi-object-prefix"><a href="../mkapi.core/#mkapi.core">MKAPI.CORE</a>.</span><span class="mkapi-object-name">TREE</span>
-  <span class="mkapi-object-signature"></span>
+<span class="mkapi-object-prefix"><a href="../mkapi.core/#mkapi.core">MKAPI.CORE</a>.</span><span class="mkapi-object-name">TREE</span><span class="mkapi-object-signature"></span>
     
 </h1>
 
@@ -130,6 +129,27 @@
 <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</p></div>
 </div>
 
+<div class="mkapi-section mkapi-section-classes">
+
+<div class="mkapi-section-name mkapi-section-name-classes">
+<span class="mkapi-section-name-body">Classes</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-classes">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name dataclass" title="dataclass">
+
+<span class="mkapi-object-name"><a href="#mkapi.core.tree.Tree">Tree</a></span></code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Tree class. This class is the base class of <a href="../mkapi.core.node/#mkapi.core.node.Node">Node</a>
+and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</span></li>
+
+</ul></div>
+</div>
+
 </div>
 
 </div>
@@ -139,8 +159,7 @@
 
 <div class="mkapi-object mkapi-object-dataclass">
 <div class="mkapi-object-kind mkapi-object-kind-dataclass">DATACLASS</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-prefix"><a href="#mkapi.core.tree">mkapi.core.tree</a>.</code><code class="mkapi-object-name">Tree</code>
-  <code class="mkapi-object-signature">(obj)</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-prefix"><a href="#mkapi.core.tree">mkapi.core.tree</a>.</code><code class="mkapi-object-name">Tree</code><code class="mkapi-object-signature">(obj, recursive=True)</code>
     </div>
 </div>
 
@@ -167,6 +186,10 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</p></di
 <li><code class="mkapi-args-name">obj</code>
 <span class="mkapi-args-type">(any)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object.</span></li>
+
+<li><code class="mkapi-args-name">recursive</code>
+<span class="mkapi-args-type">(bool, optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
 
 </ul></div>
 </div>
@@ -210,6 +233,42 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</p></di
 <span class="mkapi-args-type">(list of any)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Member instances.</span></li>
 
+<li><code class="mkapi-args-name">recursive</code>
+<span class="mkapi-args-type">(bool)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+</ul></div>
+</div>
+
+<div class="mkapi-section mkapi-section-methods">
+
+<div class="mkapi-section-name mkapi-section-name-methods">
+<span class="mkapi-section-name-body">Methods</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-methods">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name method" title="method">
+
+<span class="mkapi-object-name"><a href="#mkapi.core.tree.Tree.get_kind">get_kind</a></span><span class="mkapi-object-signature">()</span></code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns kind of self.</span></li>
+
+<li><code class="mkapi-args-name method" title="method">
+
+<span class="mkapi-object-name"><a href="#mkapi.core.tree.Tree.get_members">get_members</a></span><span class="mkapi-object-signature">()</span></code>
+<span class="mkapi-args-type">(list of Tree)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a list of members.</span></li>
+
+<li><code class="mkapi-args-name method" title="method">
+
+<span class="mkapi-object-name"><a href="#mkapi.core.tree.Tree.get_markdown">get_markdown</a></span><span class="mkapi-object-signature">()</span></code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a Markdown source for docstring of self.</span></li>
+
 </ul></div>
 </div>
 
@@ -223,8 +282,7 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</p></di
 
 <div class="mkapi-object mkapi-object-method">
 <div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-name">get_kind</code>
-  <code class="mkapi-object-signature">()</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">get_kind</code><code class="mkapi-object-signature">()</code>
     <span class="mkapi-args-type"> &#x2192; str</span></div>
 </div>
 
@@ -247,8 +305,7 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</p></di
 
 <div class="mkapi-object mkapi-object-method">
 <div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-name">get_members</code>
-  <code class="mkapi-object-signature">()</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">get_members</code><code class="mkapi-object-signature">()</code>
     <span class="mkapi-args-type"> &#x2192; list of Tree</span></div>
 </div>
 
@@ -271,8 +328,7 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</p></di
 
 <div class="mkapi-object mkapi-object-method">
 <div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-name">get_markdown</code>
-  <code class="mkapi-object-signature">()</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">get_markdown</code><code class="mkapi-object-signature">()</code>
     <span class="mkapi-args-type"> &#x2192; str</span></div>
 </div>
 

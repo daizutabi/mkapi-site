@@ -33,7 +33,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.7.8</div>
+                </div><div class="version">0.8.0</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -63,10 +63,10 @@
 </ul></li>
     <li class="toctree-l2"><a class="nav-item" href="../page/">Page Mode and Internal Links</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../library/">Using MkApi within Python</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../type/">Type Annotation Examples</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">Appendix</button>
 <ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/type/">Type Annotation Examples</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/method/">Method and Property Types</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/inherit/">Inheritance and Special Methods</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/order/">Ordering Members in Different Files</a></li>
@@ -133,14 +133,13 @@
 <span class="title">inherit.py</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">import abc
-from dataclasses import dataclass
+<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">from dataclasses import dataclass
 
 from mkapi.core.base import Type
 
 
 @dataclass
-class Base(abc.ABC):
+class Base:
     &#34;&#34;&#34;Base class.
 
     Parameters:
@@ -209,8 +208,7 @@ class Item(Base):
 
 <div class="mkapi-object mkapi-object-dataclass">
 <div class="mkapi-object-kind mkapi-object-kind-dataclass">DATACLASS</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-prefix">inherit.</code><code class="mkapi-object-name">Item</code>
-  <code class="mkapi-object-signature">(name, type, markdown)</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-prefix">inherit.</code><code class="mkapi-object-name">Item</code><code class="mkapi-object-signature">(name, type, markdown)</code>
     </div>
 </div>
 
@@ -228,8 +226,6 @@ class Item(Base):
 
 
 <span class="mkapi-base">inherit.Base</span>
-
-<span class="mkapi-base">abc.ABC</span>
 </div>
 </div>
 
@@ -290,6 +286,26 @@ class Item(Base):
 </ul></div>
 </div>
 
+<div class="mkapi-section mkapi-section-methods">
+
+<div class="mkapi-section-name mkapi-section-name-methods">
+<span class="mkapi-section-name-body">Methods</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-methods">
+
+<ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name method" title="method">
+
+<span class="mkapi-object-name"><a href="#inherit.Item.set_name">set_name</a></span><span class="mkapi-object-signature">(name)</span></code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Sets name in upper case.</span></li>
+
+</ul></div>
+</div>
+
 </div>
 
   <div class="mkapi-members">
@@ -300,8 +316,7 @@ class Item(Base):
 
 <div class="mkapi-object mkapi-object-method">
 <div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-name">set_name</code>
-  <code class="mkapi-object-signature">(name)</code>
+<div  class="mkapi-object-body"><code class="mkapi-object-name">set_name</code><code class="mkapi-object-signature">(name)</code>
     </div>
 </div>
 
