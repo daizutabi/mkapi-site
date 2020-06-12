@@ -1,127 +1,189 @@
 <!DOCTYPE html>
-<html>
-
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="daizutabi">
-    <link rel="shortcut icon" href="../../img/favicon.ico">
-    <title>tree &mdash; MkApi</title>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
-    <link rel="stylesheet" href="../../css/theme.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-    <link rel="stylesheet" href="../../css/mkapi.css">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
-    <link rel="stylesheet" href="../../css/pheasant.css">
-    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script> 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="daizutabi">
+  <link rel="canonical" href="https://mkapi.daizutabi.net/api/mkapi.core.tree/">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>mkapi.core.tree - MkApi</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../../css/mkapi-common.css" rel="stylesheet" />
+  <link href="../../css/mkapi-readthedocs.css" rel="stylesheet" />
+  <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+  <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+  <link href="../../css/pheasant.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "mkapi.core.tree";
+    var mkdocs_page_input_path = "api\\mkapi.core.tree.md";
+    var mkdocs_page_url = "/api/mkapi.core.tree/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
 </head>
 
-<body ontouchstart="">
-    <div id="container">
-        <aside>
-            <div class="home">
-                <div class="title">
-                    <button class="hamburger"></button>
-                    <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.8.1</div>
-                <div class="search">
-                    <div role="search">
-    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-    </form>
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> MkApi</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
 </div>
-                </div>
-            </div>
-            <nav class="nav">
-                <ul class="root">
-                    <li class="toctree-l1"><a class="nav-item" href="../..">MkApi Documentation</a></li>
-                    <li class="toctree-l1"><button class="section nav-item">Examples</button>
-<ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="../../examples/google_style/">Google Style</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../examples/numpy_style/">NumPy Style</a></li>
-</ul></li>
-                    <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
-<ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="../../usage/module/">Module and Package</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../usage/inherit/">Docstring Inheritance</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../usage/page/">Page Mode and Internal Links</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../usage/library/">Using MkApi within Python</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../usage/custom/">Customization</a></li>
-</ul></li>
-                    <li class="toctree-l1"><button class="section nav-item">Appendix</button>
-<ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="../../appendix/type/">Type Annotation Examples</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../appendix/method/">Method and Property Types</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../appendix/inherit/">Inheritance and Special Methods</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../appendix/order/">Ordering Members in Different Files</a></li>
-</ul></li>
-                    <li class="toctree-l1"><button class="section nav-item">API</button>
-<ul class="subnav">
-    <li class="toctree-l2 current"><button class="section nav-item">mkapi.core</button>
-<ul class="subnav">
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core/">mkapi.core</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.base/">base</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.docstring/">docstring</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.inherit/">inherit</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.linker/">linker</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.module/">module</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.node/">node</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.object/">object</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.page/">page</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.renderer/">renderer</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.signature/">signature</a></li>
-    <li class="toctree-l3 current"><a class="nav-item current" href="./">tree</a>
-<ul class="subnav">
-</ul></li>
-</ul></li>
-    <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
-<ul class="subnav hide">
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.plugins.mkdocs/">mkdocs</a></li>
-</ul></li>
-</ul></li>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">MkApi Documentation</a>
+                    </li>
                 </ul>
-            </nav>
-            <div class="repo">
-    <div class="link">
-        <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
+                <p class="caption"><span class="caption-text">Examples</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../examples/google_style/">Google Style</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../examples/numpy_style/">NumPy Style</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../usage/module/">Module and Package</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../usage/inherit/">Docstring Inheritance</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../usage/page/">Page Mode and Internal Links</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../usage/library/">Using MkApi within Python</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../usage/custom/">Customization</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Appendix</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/type/">Type Annotation Examples</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/method/">Method and Property Types</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/inherit/">Inheritance and Special Methods</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/order/">Ordering Members in Different Files</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">API</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">mkapi.core</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core/">mkapi.core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.base/">mkapi.core.base</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.docstring/">mkapi.core.docstring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.inherit/">mkapi.core.inherit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.linker/">mkapi.core.linker</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.module/">mkapi.core.module</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.node/">mkapi.core.node</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.object/">mkapi.core.object</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.page/">mkapi.core.page</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.renderer/">mkapi.core.renderer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.signature/">mkapi.core.signature</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">mkapi.core.tree</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#mkapicoretreetree">mkapi.core.tree.Tree</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#mkapicoretreetreeget_kind">mkapi.core.tree.Tree.get_kind</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mkapicoretreetreeget_members">mkapi.core.tree.Tree.get_members</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mkapicoretreetreeget_markdown">mkapi.core.tree.Tree.get_markdown</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">mkapi.plugins</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.plugins.mkdocs/">mkapi.plugins.mkdocs</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
     </div>
-    <div class="previous"><a href="../mkapi.core.signature/">&laquo; Previous</a></div>
-    <div class="next"><a href="../mkapi.plugins.mkdocs/">Next &raquo;</a></div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">MkApi</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>mkapi.core &raquo;</li>
+        
+      
+        
+          <li>API &raquo;</li>
+        
+      
+    
+    <li>mkapi.core.tree</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
 </div>
-        </aside>
-        <div id="spacer"><button class="arrow"></button></div>
-        <main>
-            <div class="home-top">
-                <button class="hamburger"></button>
-                <a href="../.." class="site-name"> MkApi</a>
-            </div>
-            <div id="main">
-                <nav class="breadcrumbs">
-<ul>
-    <li>API &raquo; </li><li>mkapi.core</li>
-</ul>
-</nav>
-                <div id="content">
+          <div role="main">
+            <div class="section">
+              
+                
 <div class="mkapi-node" id="mkapi.core.tree">
-
-
-<h1 id="mkapicoretree" class="mkapi-object mkapi-object-module">
+<h1 id="mkapicoretree" class="mkapi-object mkapi-object-module plain">
 <span class="mkapi-object-kind mkapi-object-kind-module">MODULE</span>
 <span class="mkapi-object-prefix"><a href="../mkapi.core/#mkapi.core">MKAPI.CORE</a>.</span><span class="mkapi-object-name">TREE</span><span class="mkapi-object-signature"></span>
     
 </h1>
-
-
 <div class="mkapi-docstring">
 
 <div class="mkapi-section">
@@ -137,13 +199,9 @@
 
 </div>
 
-<div class="mkapi-section-body mkapi-section-body-classes">
+<div class="mkapi-section-body mkapi-section-body-classes"><ul class="mkapi-args-list">
 
-<ul class="mkapi-args-list">
-
-<li><code class="mkapi-args-name dataclass" title="dataclass">
-
-<span class="mkapi-object-name"><a href="#mkapi.core.tree.Tree">Tree</a></span></code>
+<li><code class="mkapi-args-name dataclass" title="dataclass"><a href="#mkapi.core.tree.Tree">Tree</a></code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Tree class. This class is the base class of <a href="../mkapi.core.node/#mkapi.core.node.Node">Node</a>
 and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</span></li>
@@ -156,15 +214,11 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</span><
 </div>
 
 <div class="mkapi-node" id="mkapi.core.tree.Tree">
-
-
-<div class="mkapi-object mkapi-object-dataclass">
-<div class="mkapi-object-kind mkapi-object-kind-dataclass">DATACLASS</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-prefix"><a href="#mkapi.core.tree">mkapi.core.tree</a>.</code><code class="mkapi-object-name">Tree</code><code class="mkapi-object-signature">(obj, recursive=True)</code>
-    </div>
-</div>
-
-
+<h2 id="mkapicoretreetree" class="mkapi-object mkapi-object-dataclass code">
+<span class="mkapi-object-kind mkapi-object-kind-dataclass">DATACLASS</span>
+<code class="mkapi-object-prefix"><a href="#mkapi.core.tree">mkapi.core.tree</a>.</code><code class="mkapi-object-name">Tree</code><code class="mkapi-object-signature">(obj, recursive=True)</code>
+    
+</h2>
 <div class="mkapi-docstring">
 
 <div class="mkapi-section">
@@ -180,9 +234,7 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</p></di
 
 </div>
 
-<div class="mkapi-section-body mkapi-section-body-parameters">
-
-<ul class="mkapi-args-list">
+<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
 
 <li><code class="mkapi-args-name">obj</code>
 <span class="mkapi-args-type">(any)</span>
@@ -202,9 +254,7 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</p></di
 
 </div>
 
-<div class="mkapi-section-body mkapi-section-body-attributes">
-
-<ul class="mkapi-args-list">
+<div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
 
 <li><code class="mkapi-args-name">obj</code>
 <span class="mkapi-args-type">(any)</span>
@@ -248,25 +298,17 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</p></di
 
 </div>
 
-<div class="mkapi-section-body mkapi-section-body-methods">
+<div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
 
-<ul class="mkapi-args-list">
-
-<li><code class="mkapi-args-name method" title="method">
-
-<span class="mkapi-object-name"><a href="#mkapi.core.tree.Tree.get_kind">get_kind</a></span><span class="mkapi-object-signature">()</span></code>
+<li><code class="mkapi-args-name method" title="method"><a href="#mkapi.core.tree.Tree.get_kind">get_kind</a><span class="mkapi-object-signature">()</span></code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns kind of self.</span></li>
 
-<li><code class="mkapi-args-name method" title="method">
-
-<span class="mkapi-object-name"><a href="#mkapi.core.tree.Tree.get_members">get_members</a></span><span class="mkapi-object-signature">()</span></code>
+<li><code class="mkapi-args-name method" title="method"><a href="#mkapi.core.tree.Tree.get_members">get_members</a><span class="mkapi-object-signature">()</span></code>
 <span class="mkapi-args-type">(list of Tree)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a list of members.</span></li>
 
-<li><code class="mkapi-args-name method" title="method">
-
-<span class="mkapi-object-name"><a href="#mkapi.core.tree.Tree.get_markdown">get_markdown</a></span><span class="mkapi-object-signature">()</span></code>
+<li><code class="mkapi-args-name method" title="method"><a href="#mkapi.core.tree.Tree.get_markdown">get_markdown</a><span class="mkapi-object-signature">()</span></code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a Markdown source for docstring of self.</span></li>
 
@@ -279,15 +321,11 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</p></di
   
     <div class="mkapi-member">
       <div class="mkapi-node" id="mkapi.core.tree.Tree.get_kind">
-
-
-<div class="mkapi-object mkapi-object-method">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-name">get_kind</code><code class="mkapi-object-signature">()</code>
-    <span class="mkapi-args-type"> &#x2192; str</span></div>
-</div>
-
-
+<h3 id="mkapicoretreetreeget_kind" class="mkapi-object mkapi-object-method code">
+<span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
+<code class="mkapi-object-name">get_kind</code><code class="mkapi-object-signature">()</code>
+    <span class="mkapi-args-type"> &#x2192; str</span>
+</h3>
 <div class="mkapi-docstring">
 
 <div class="mkapi-section">
@@ -302,15 +340,11 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</p></di
   
     <div class="mkapi-member">
       <div class="mkapi-node" id="mkapi.core.tree.Tree.get_members">
-
-
-<div class="mkapi-object mkapi-object-method">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-name">get_members</code><code class="mkapi-object-signature">()</code>
-    <span class="mkapi-args-type"> &#x2192; list of Tree</span></div>
-</div>
-
-
+<h3 id="mkapicoretreetreeget_members" class="mkapi-object mkapi-object-method code">
+<span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
+<code class="mkapi-object-name">get_members</code><code class="mkapi-object-signature">()</code>
+    <span class="mkapi-args-type"> &#x2192; list of Tree</span>
+</h3>
 <div class="mkapi-docstring">
 
 <div class="mkapi-section">
@@ -325,15 +359,11 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</p></di
   
     <div class="mkapi-member">
       <div class="mkapi-node" id="mkapi.core.tree.Tree.get_markdown">
-
-
-<div class="mkapi-object mkapi-object-method">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div  class="mkapi-object-body"><code class="mkapi-object-name">get_markdown</code><code class="mkapi-object-signature">()</code>
-    <span class="mkapi-args-type"> &#x2192; str</span></div>
-</div>
-
-
+<h3 id="mkapicoretreetreeget_markdown" class="mkapi-object mkapi-object-method code">
+<span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
+<code class="mkapi-object-name">get_markdown</code><code class="mkapi-object-signature">()</code>
+    <span class="mkapi-args-type"> &#x2192; str</span>
+</h3>
 <div class="mkapi-docstring">
 
 <div class="mkapi-section">
@@ -348,28 +378,63 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</p></di
   
   </div>
 
-</div></div>
-                <footer>
-    <div class="footer-buttons">
-        <div class="previous"><a href="../mkapi.core.signature/" title="signature"><span>Previous</span></a></div>
-        <div class="next"><a href="../mkapi.plugins.mkdocs/" title="mkdocs"><span>Next</span></a></div>
-    </div>
-    <div class="footer-note">
-        <p>
-            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
-            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
-        </p>
-    </div>
-</footer>
+</div>
+              
             </div>
-        </main>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../mkapi.plugins.mkdocs/" class="btn btn-neutral float-right" title="mkapi.plugins.mkdocs">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../mkapi.core.signature/" class="btn btn-neutral" title="mkapi.core.signature"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
     </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../mkapi.core.signature/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../mkapi.plugins.mkdocs/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
     <script>var base_url = '../..';</script>
     <script src="../../js/theme.js"></script>
-    <script src="../../js/mkapi.js"></script>
-    <script src="../../js/pheasant.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script src="../../search/main.js"></script>
-</body>
+      <script src="../../js/mkapi.js"></script>
+      <script src="../../js/pheasant.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../search/main.js"></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
+</body>
 </html>
