@@ -96,33 +96,33 @@
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core/">mkapi.core</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.base/">base</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.base/">mkapi.core.base</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.docstring/">docstring</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.docstring/">mkapi.core.docstring</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.inherit/">inherit</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.inherit/">mkapi.core.inherit</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.linker/">linker</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.linker/">mkapi.core.linker</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.module/">module</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.module/">mkapi.core.module</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.node/">node</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.node/">mkapi.core.node</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.object/">object</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.object/">mkapi.core.object</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.page/">page</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.page/">mkapi.core.page</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.renderer/">renderer</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.renderer/">mkapi.core.renderer</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.signature/">signature</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.signature/">mkapi.core.signature</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.tree/">tree</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.core.tree/">mkapi.core.tree</a>
                 </li>
     </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="#">mkapi.plugins</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.plugins.mkdocs/">mkdocs</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/mkapi.plugins.mkdocs/">mkapi.plugins.mkdocs</a>
                 </li>
     </ul>
                     </li>
@@ -181,23 +181,27 @@
     &#34;&#34;&#34;Example class.&#34;&#34;&#34;
 
     def method(self, x):
-        &#34;Method.&#34;
+        &#34;&#34;&#34;Method.&#34;&#34;&#34;
+
+    def generator(self, x):
+        &#34;&#34;&#34;Generator.&#34;&#34;&#34;
+        yield 1
 
     @classmethod
     def class_method(cls, x):
-        &#34;Class method.&#34;
+        &#34;&#34;&#34;Class method.&#34;&#34;&#34;
 
     @staticmethod
     def static_method(x):
-        &#34;Static method.&#34;
+        &#34;&#34;&#34;Static method.&#34;&#34;&#34;
 
     @property
     def read_only_property(x):
-        &#34;Read only property.&#34;
+        &#34;&#34;&#34;Read only property.&#34;&#34;&#34;
 
     @property
     def read_write_property(x):
-        &#34;Read write property.&#34;
+        &#34;&#34;&#34;Read write property.&#34;&#34;&#34;
 
     @read_write_property.setter
     def read_write_property(x):
@@ -253,6 +257,10 @@
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Method.</span></li>
 
+<li><code class="mkapi-args-name generator" title="generator"><a href="#appendix.method.MethodTypeExample.generator">generator</a><span class="mkapi-object-signature">(x)</span></code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Generator.</span></li>
+
 <li><code class="mkapi-args-name classmethod" title="classmethod"><a href="#appendix.method.MethodTypeExample.class_method">class_method</a><span class="mkapi-object-signature">(x)</span></code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Class method.</span></li>
@@ -280,6 +288,25 @@
 <div class="mkapi-section">
 
 <div class="mkapi-section-body"><p>Method.</p></div>
+</div>
+
+</div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="appendix.method.MethodTypeExample.generator">
+<div class="mkapi-object mkapi-object-generator code">
+<div class="mkapi-object-kind mkapi-object-kind-generator">GENERATOR</div>
+<div class="mkapi-object-body"><code class="mkapi-object-name">generator</code><code class="mkapi-object-signature">(x)</code>
+    </div>
+</div>
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Generator.</p></div>
 </div>
 
 </div>

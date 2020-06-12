@@ -9,7 +9,7 @@
   <meta name="author" content="daizutabi">
   <link rel="canonical" href="https://mkapi.daizutabi.net/api/mkapi.plugins.mkdocs/">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>mkdocs - MkApi</title>
+  <title>mkapi.plugins.mkdocs - MkApi</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -23,7 +23,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "mkdocs";
+    var mkdocs_page_name = "mkapi.plugins.mkdocs";
     var mkdocs_page_input_path = "api\\mkapi.plugins.mkdocs.md";
     var mkdocs_page_url = "/api/mkapi.plugins.mkdocs/";
   </script>
@@ -94,34 +94,48 @@
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../mkapi.core/">mkapi.core</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.base/">base</a>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.base/">mkapi.core.base</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.docstring/">docstring</a>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.docstring/">mkapi.core.docstring</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.inherit/">inherit</a>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.inherit/">mkapi.core.inherit</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.linker/">linker</a>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.linker/">mkapi.core.linker</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.module/">module</a>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.module/">mkapi.core.module</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.node/">node</a>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.node/">mkapi.core.node</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.object/">object</a>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.object/">mkapi.core.object</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.page/">page</a>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.page/">mkapi.core.page</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.renderer/">renderer</a>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.renderer/">mkapi.core.renderer</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.signature/">signature</a>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.signature/">mkapi.core.signature</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.tree/">tree</a>
+                <li class="toctree-l2"><a class="reference internal" href="../mkapi.core.tree/">mkapi.core.tree</a>
                 </li>
     </ul>
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="#">mkapi.plugins</a>
     <ul class="current">
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">mkdocs</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">mkapi.plugins.mkdocs</a>
     <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#mkapipluginsmkdocsmkapiplugin">MkapiPlugin</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#mkdocspluginsbasepluginload_config">load_config</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mkapipluginsmkdocsmkapipluginon_config">on_config</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mkapipluginsmkdocsmkapipluginon_files">on_files</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mkapipluginsmkdocsmkapipluginon_page_markdown">on_page_markdown</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mkapipluginsmkdocsmkapipluginon_page_content">on_page_content</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                 </li>
     </ul>
@@ -156,7 +170,7 @@
         
       
     
-    <li>mkdocs</li>
+    <li>mkapi.plugins.mkdocs</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -203,11 +217,11 @@
 </div>
 
 <div class="mkapi-node" id="mkapi.plugins.mkdocs.MkapiPlugin">
-<div class="mkapi-object mkapi-object-class code">
-<div class="mkapi-object-kind mkapi-object-kind-class">CLASS</div>
-<div class="mkapi-object-body"><code class="mkapi-object-prefix"><a href="#mkapi.plugins.mkdocs">mkapi.plugins.mkdocs</a>.</code><code class="mkapi-object-name">MkapiPlugin</code><code class="mkapi-object-signature">()</code>
-    </div>
-</div>
+<h2 id="mkapipluginsmkdocsmkapiplugin" class="mkapi-object mkapi-object-class code">
+<span class="mkapi-object-kind mkapi-object-kind-class">CLASS</span>
+<code class="mkapi-object-prefix"><a href="#mkapi.plugins.mkdocs">mkapi.plugins.mkdocs</a>.</code><code class="mkapi-object-name">MkapiPlugin</code><code class="mkapi-object-signature">()</code>
+    
+</h2>
 <div class="mkapi-docstring">
 
 <div class="mkapi-section mkapi-section-bases">
@@ -265,11 +279,11 @@
   
     <div class="mkapi-member">
       <div class="mkapi-node" id="mkdocs.plugins.BasePlugin.load_config">
-<div class="mkapi-object mkapi-object-method code">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">load_config</code><code class="mkapi-object-signature">(options, config_file_path=None)</code>
-    </div>
-</div>
+<h3 id="mkdocspluginsbasepluginload_config" class="mkapi-object mkapi-object-method code">
+<span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
+<code class="mkapi-object-name">load_config</code><code class="mkapi-object-signature">(options, config_file_path=None)</code>
+    
+</h3>
 <div class="mkapi-docstring">
 
 <div class="mkapi-section">
@@ -304,11 +318,11 @@
   
     <div class="mkapi-member">
       <div class="mkapi-node" id="mkapi.plugins.mkdocs.MkapiPlugin.on_config">
-<div class="mkapi-object mkapi-object-method code">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">on_config</code><code class="mkapi-object-signature">(config)</code>
-    </div>
-</div>
+<h3 id="mkapipluginsmkdocsmkapipluginon_config" class="mkapi-object mkapi-object-method code">
+<span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
+<code class="mkapi-object-name">on_config</code><code class="mkapi-object-signature">(config)</code>
+    
+</h3>
 <div class="mkapi-docstring">
 
 <div class="mkapi-section">
@@ -339,11 +353,11 @@
   
     <div class="mkapi-member">
       <div class="mkapi-node" id="mkapi.plugins.mkdocs.MkapiPlugin.on_files">
-<div class="mkapi-object mkapi-object-method code">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">on_files</code><code class="mkapi-object-signature">(files, config)</code>
-    </div>
-</div>
+<h3 id="mkapipluginsmkdocsmkapipluginon_files" class="mkapi-object mkapi-object-method code">
+<span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
+<code class="mkapi-object-name">on_files</code><code class="mkapi-object-signature">(files, config)</code>
+    
+</h3>
 <div class="mkapi-docstring">
 
 <div class="mkapi-section">
@@ -378,11 +392,11 @@
   
     <div class="mkapi-member">
       <div class="mkapi-node" id="mkapi.plugins.mkdocs.MkapiPlugin.on_page_markdown">
-<div class="mkapi-object mkapi-object-method code">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">on_page_markdown</code><code class="mkapi-object-signature">(markdown, page, config, files)</code>
-    </div>
-</div>
+<h3 id="mkapipluginsmkdocsmkapipluginon_page_markdown" class="mkapi-object mkapi-object-method code">
+<span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
+<code class="mkapi-object-name">on_page_markdown</code><code class="mkapi-object-signature">(markdown, page, config, files)</code>
+    
+</h3>
 <div class="mkapi-docstring">
 
 <div class="mkapi-section">
@@ -425,11 +439,11 @@
   
     <div class="mkapi-member">
       <div class="mkapi-node" id="mkapi.plugins.mkdocs.MkapiPlugin.on_page_content">
-<div class="mkapi-object mkapi-object-method code">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">on_page_content</code><code class="mkapi-object-signature">(html, page, config, files)</code>
-    </div>
-</div>
+<h3 id="mkapipluginsmkdocsmkapipluginon_page_content" class="mkapi-object mkapi-object-method code">
+<span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
+<code class="mkapi-object-name">on_page_content</code><code class="mkapi-object-signature">(html, page, config, files)</code>
+    
+</h3>
 <div class="mkapi-docstring">
 
 <div class="mkapi-section">
@@ -481,7 +495,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../mkapi.core.tree/" class="btn btn-neutral" title="tree"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../mkapi.core.tree/" class="btn btn-neutral" title="mkapi.core.tree"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
