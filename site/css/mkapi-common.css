@@ -111,11 +111,11 @@ span.mkapi-object-signature {
   margin-left: 20px;
 }
 
-/* h1 ~ .mkapi-docstring,
-h2 ~ .mkapi-docstring,
-h3 ~ .mkapi-docstring {
+h1.mkapi-object.plain ~ .mkapi-docstring,
+h2.mkapi-object.plain ~ .mkapi-docstring,
+h3.mkapi-object.plain ~ .mkapi-docstring {
   margin-left: 0px;
-} */
+}
 
 .mkapi-section {
   margin-top: 2px;
