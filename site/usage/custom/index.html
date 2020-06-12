@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="daizutabi">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Customization &mdash; MkApi</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../../css/mkapi.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/pheasant.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> MkApi</a>
+                </div><div class="version">0.8.1</div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">MkApi Documentation</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Examples</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../examples/google_style/">Google Style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../examples/numpy_style/">NumPy Style</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../module/">Module and Package</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../inherit/">Docstring Inheritance</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../page/">Page Mode and Internal Links</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../library/">Using MkApi within Python</a></li>
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Customization</a>
+<ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#customization-on_config">Customization &#39;on_config&#39;.</a></li>
+</ul></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Appendix</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/type/">Type Annotation Examples</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/method/">Method and Property Types</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/inherit/">Inheritance and Special Methods</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/order/">Ordering Members in Different Files</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">API</button>
+<ul class="subnav">
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core/">mkapi.core</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.base/">base</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.docstring/">docstring</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.inherit/">inherit</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.linker/">linker</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.module/">module</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.node/">node</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.object/">object</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.page/">page</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.renderer/">renderer</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.signature/">signature</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.tree/">tree</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.plugins.mkdocs/">mkdocs</a></li>
+</ul></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
+    </div>
+    <div class="previous"><a href="../library/">&laquo; Previous</a></div>
+    <div class="next"><a href="../../appendix/type/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> MkApi</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Advanced Usage</li>
+</ul>
+</nav>
+                <div id="content">
+<h1 id="customization">Customization</h1>
+<h2 id="customization-on_config">Customization &#39;on_config&#39;.</h2>
+<p>MkApi has an option <code>on_config</code> to allow users to configure MkDocs/MkApi or
+user system environment. Here is an example directory structure and the corresponding <code>mkdocs.yml</code>:</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yml"># Directory structure
+your_project:
+  - docs:
+    - index.md
+  - examples:
+    - custom.py
+  - mkdocs.yml</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yml"># mkdocs.yml
+plugins:
+  - search
+  - mkapi:
+      src_dirs: [examples]
+      on_config: custom.on_config_without_args</code></pre></div></div></div>
+
+<p>Customization script is saved in <code>examples/custom.py</code>:</p>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">5</span>
+<span class="title">examples/custom.py</span></p>
+<div class="content">
+
+<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">def on_config_without_args():
+    # Here you can do all you want.
+    print(&#34;Called.&#34;)
+
+
+def on_config_with_config(config):
+    print(&#34;Called with config.&#34;)
+    print(config[&#34;docs_dir&#34;])
+
+    # You can change config, for example:
+    # config[&#39;docs_dir&#39;] = &#39;other_directory&#39;
+
+    # Optionally, you can return altered config to customize MkDocs.
+    # return config
+
+
+def on_config_with_mkapi(config, mkapi):
+    print(&#34;Called with config and mkapi.&#34;)
+    print(config[&#34;docs_dir&#34;])
+    print(mkapi)</code></pre></div></div></div>
+
+</div></div></div>
+
+<p>Let's build the documentation.</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="bash">$ mkdocs build
+INFO    -  [MkApi] Calling user &#39;on_config&#39; with []
+Called.
+INFO    -  Cleaning site directory
+...</code></pre></div></div></div>
+
+<p><code>on_config()</code> can take <code>config</code> and/or <code>mkapi</code> arguments.</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yml"># mkdocs.yml
+plugins:
+  - search
+  - mkapi:
+      src_dirs: [examples]
+      on_config: custom.on_config_with_config</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="bash">$ mkdocs build
+INFO    -  [MkApi] Calling user &#39;on_config&#39; with [&#39;config&#39;]
+Called with config.
+C:\Users\daizu\Documents\github\mkapi\docs
+INFO    -  Cleaning site directory
+...</code></pre></div></div></div>
+
+<p>And,</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yml"># mkdocs.yml
+plugins:
+  - search
+  - mkapi:
+      src_dirs: [examples]
+      on_config: custom.on_config_with_mkapi</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="bash">$ mkdocs build
+INFO    -  [MkApi] Calling user &#39;on_config&#39; with [&#39;config&#39;, &#39;mkapi&#39;]
+Called with config and mkapi.
+C:\Users\daizu\Documents\github\mkapi\docs
+&lt;mkapi.plugins.mkdocs.MkapiPlugin object at 0x000001DF712D0F08&gt;
+INFO    -  Cleaning site directory
+...</code></pre></div></div></div></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../library/" title="Using MkApi within Python"><span>Previous</span></a></div>
+        <div class="next"><a href="../../appendix/type/" title="Type Annotation Examples"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/mkapi.js"></script>
+    <script src="../../js/pheasant.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>
