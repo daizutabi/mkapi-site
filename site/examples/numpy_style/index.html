@@ -127,7 +127,7 @@
 -->
 </style>
 
-<p>Let's start realistic examples. Here, a sample Python file <code>numpy_style.py</code> is stored under the <code>examples</code> directory relative to the <code>mkdocs.yml</code> directory, so you should configure <code>mkdocs.yml</code> like below. In addition, we add two extensions and an extra javascript for demonstration.</p>
+<p>Let's start realistic examples. Here, a sample Python file <code>numpy_style.py</code> is stored under the <code>examples</code> directory relative to the <code>mkdocs.yml</code> directory, so we would configure <code>mkdocs.yml</code> like below. In addition, we add two extensions and an extra javascript for demonstration.</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yml">plugins:
   - search
   - mkapi:
@@ -168,7 +168,7 @@ extra_javascript:  # for pymdownx.arithmatex
 
     Examples
     --------
-    Examples should be written in doctest format
+    Examples should be written in doctest format.
 
     &gt;&gt;&gt; add(1, 2)
     3
@@ -183,7 +183,7 @@ extra_javascript:  # for pymdownx.arithmatex
 
 </div></div></div>
 
-<p>Then, you can write an entry to generate API for the function anywhere in your Markdown source:</p>
+<p>Then, write a <em>tag</em> anywhere in your Markdown source:</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](numpy_style.add)</code></pre></div></div></div>
 
 <p>MkApi generates the API documentation for the <code>add()</code> function.</p>
@@ -242,7 +242,7 @@ docstring style.</p>
 
 </div>
 
-<div class="mkapi-section-body mkapi-section-body-examples"><p>Examples should be written in doctest format</p>
+<div class="mkapi-section-body mkapi-section-body-examples"><p>Examples should be written in doctest format.</p>
 <pre><code class="python">&gt;&gt;&gt; add(1, 2)
 3
 </code></pre></div>
@@ -269,7 +269,7 @@ Just skip one line.</p></div>
 </div>
 <p>In this simple example, you can see some features of MkApi.</p>
 <ul>
-<li>Type inspection of <code>add</code> (FUNCTION prefix is added before <code>numpy_style.add</code>).</li>
+<li>Type inspection of <code>add()</code> (FUNCTION prefix is added before <code>numpy_style.add</code>).</li>
 <li>Use of type annotation for both Parameters and Returns sections.</li>
 <li>Add <em>optional</em> if parameters have default values.</li>
 <li>Default value replacement by the <code>{default}</code> keyword in the Parameters section.</li>
@@ -305,7 +305,7 @@ Just skip one line.</p></div>
 <p>Then,</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](numpy_style.gen)</code></pre></div></div></div>
 
-<p>creates the API documentation for the <code>gen()</code> generator.</p>
+<p>creates the documentation for the <code>gen()</code> generator.</p>
 <div class="mkapi-node" id="numpy_style.gen">
 <div class="mkapi-object mkapi-object-generator code">
 <div class="mkapi-object-kind mkapi-object-kind-generator">GENERATOR</div>
@@ -353,7 +353,7 @@ Just skip one line.</p></div>
 <ul>
 <li>A GENERATOR prefix instead of a FUNCTION prefix.</li>
 <li>The parameter <code>n</code> has no type annotation but you can specify it in the Parameters section directly.</li>
-<li>Yields type is not <em>iterator of str</em> but <em>str</em>, because <code>gen()</code> is a generator.</li>
+<li>Yields type is not <em>iterator of str</em> but <em>str</em>, because the <code>gen()</code> is a generator.</li>
 </ul>
 <h2 id="class">Class</h2>
 <p>The <code>numpy_style</code> module also defines a simple class <code>ExampleClass</code>.</p>
@@ -420,7 +420,7 @@ Just skip one line.</p></div>
 <p>As usual,</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](numpy_style.ExampleClass)</code></pre></div></div></div>
 
-<p>creates the API documentation for the <code>ExampleClass</code> class.</p>
+<p>creates the documentation for the <code>ExampleClass</code> class.</p>
 <div class="mkapi-node" id="numpy_style.ExampleClass">
 <div class="mkapi-object mkapi-object-class code">
 <div class="mkapi-object-kind mkapi-object-kind-class">CLASS</div>
@@ -565,21 +565,21 @@ Multiple paragraphs are supported.</span></li>
 <p>In this example, note that:</p>
 <ul>
 <li>Type annotation using <code>typing</code> package (<code>List</code> and <code>Tuple</code> in this case) is converted into readable style.</li>
-<li>Attributes section is inserted with type and description. These information is collected from inspection of <code>__init__()</code> function.</li>
+<li>Attributes section is inserted with type and description. These information is collected from <code>__init__()</code> function.</li>
 <li>Bound methods (<code>message</code> in this case) have a METHOD prefix instead of a FUNCTION prefix.</li>
 <li>If callable objects have neither Returns nor Yields, the type appears on the object definition line like type annotation.</li>
-<li>Propertes are moved to the Attributes section with [RO] or [RW] that indicates whether the property is read-only or read-write.</li>
+<li>Propertes are moved to the Attributes section with [RO] or [RW] suffix that indicates whether the property is read-only or read-write.</li>
 <li>Methods section is newly created that displays a list of methods defined in this class. Note that it has a hyperlink to the definition.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Although you can write the docstring for class in the <code>__init__()</code> function, the attribute inspection only works when you write it as a class level docstring.</p>
+<p>Although you can write the docstring for a class in the <code>__init__()</code> function, the attribute inspection only works when you write it as a class level docstring.</p>
 </div>
 <h2 id="method">Method</h2>
-<p>You can select a method of class (or any other attribute that can have docstring) to generate API.</p>
+<p>You can select a method of class (or any other attribute that can have docstring) to generate the documentation.</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](numpy_style.ExampleClass.message)</code></pre></div></div></div>
 
-<p>creates the API documentation for the <code>message()</code> of <code>ExampleClass</code> class.</p>
+<p>creates the documentation for the <code>message()</code> of <code>ExampleClass</code> class.</p>
 <div class="mkapi-node" id="numpy_style.ExampleClass.message">
 <div class="mkapi-object mkapi-object-method code">
 <div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
@@ -646,7 +646,7 @@ class ExampleDataClass:
 <p>Then,</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](numpy_style.ExampleDataClass)</code></pre></div></div></div>
 
-<p>creates the API documentation for the <code>ExampleDataClass</code> class.</p>
+<p>creates the documentation for the <code>ExampleDataClass</code> class.</p>
 <div class="mkapi-node" id="numpy_style.ExampleDataClass">
 <div class="mkapi-object mkapi-object-dataclass code">
 <div class="mkapi-object-kind mkapi-object-kind-dataclass">DATACLASS</div>

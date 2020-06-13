@@ -134,17 +134,17 @@
 <p>The rest (<code>'mkapi'</code>) is a root package name, which is assumed to exist in the <code>mkdocs.yml</code> directory. However, if a root package is in <code>src</code> directory, for example, you can specify it like this:</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yaml">  - API: mkapi/api/src/mkapi</code></pre></div></div></div>
 
-<p>MkApi searches all packages and modules and create a Markdown source for one package or module, which is saved in the <code>api</code> directory. The rest work is done by MkDocs. You can see the API documentation of MkApi in the left navigation menu.</p>
+<p>MkApi searches all packages and modules and create a Markdown source for one package or module, which is saved in the <code>api</code> directory. The rest work is done by MkDocs. You can see the documentation of MkApi in the left navigation menu.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
 <li>If a package or module has no package- or module-level docstring, MkApi doesn't process it.</li>
-<li>For upper case heading, use the <code>upper</code> filter like this: <code>- API: mkapi/api/mkapi|upper</code>. See <a href="../module/#heading-documentation">Heading Documentation</a>.</li>
+<li>For upper case heading, use the <code>upper</code> filter. See <a href="../module/#documentation-with-heading">Documentation with Heading</a>.</li>
 </ul>
 </div>
 <h2 id="internal-links">Internal Links</h2>
 <h3 id="link-from-markdown">Link from Markdown</h3>
-<p>Once a project API documentation is generated, you can use hyperlink to it using normal Markdown syntax.</p>
+<p>Once a project documentation is generated, you can use hyperlink to it using normal Markdown syntax.</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">Go to [Section](mkapi.core.base.Section).</code></pre></div></div></div>
 
 <p>The above line create a link to <code>mkapi.core.base.Section</code> object:</p>
@@ -191,7 +191,7 @@
 
 </div>
 
-<p>You can click the above "a method" to visit its API.</p>
+<p>You can click the above "a method" to visit its documentation.</p>
 <p>Furthermore, if your module imports an object, you can refer it by its qualified name only.</p>
 <div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">4</span>
 <span class="title">link/qualname.py</span></p>
@@ -236,10 +236,10 @@ def func():
 </div>
 
 <h3 id="link-from-embedding-mode">Link from Embedding Mode</h3>
-<p>API documentation created by the embedding mode has link to its project documentation.</p>
+<p>Documentation created by the embedding mode has link to its project documentation.</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](mkapi.core.docstring.section_heading)</code></pre></div></div></div>
 
-<p>creates API of the <code>section_heading()</code>:</p>
+<p>creates the documentation of the <code>section_heading()</code>:</p>
 <div class="mkapi-node" id="mkapi.core.docstring.section_heading">
 <div class="mkapi-object mkapi-object-function code">
 <div class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</div>
@@ -289,9 +289,9 @@ def func():
 
 </div>
 
-<p>Then, you can click the prefix (<code>mkapi.core.docstring</code>) or the function name (<code>section_heading</code>) to go to the project documentation.</p>
+<p>You can click the prefix (<code>mkapi.core.docstring</code>) or the function name (<code>section_heading</code>) to go to the project documentation.</p>
 <h3 id="link-from-type">Link from Type</h3>
-<p>The <code>Docstring</code> class of MkApi has an attribute <code>sections</code> that is a list of <code>Section</code> class instance like below:</p>
+<p><a href="../../api/mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a> class of MkApi has an attribute <code>sections</code> that is a list of <code>Section</code> class instance like below:</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="python"># Mimic code of Docstring class.
 from dataclasses import dataclass
 from typing import List
@@ -304,7 +304,7 @@ class Docstring:
     sections: List[Section] = field(default_factory=list)
     type: str = &#34;&#34;</code></pre></div></div></div>
 
-<p>Corresponding <em>real</em> API documentation is like below:</p>
+<p>Corresponding <em>real</em> documentation is like below:</p>
 <div class="mkapi-node" id="mkapi.core.base.Docstring">
 <div class="mkapi-object mkapi-object-dataclass code">
 <div class="mkapi-object-kind mkapi-object-kind-dataclass">DATACLASS</div>

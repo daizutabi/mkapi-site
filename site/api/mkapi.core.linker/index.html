@@ -413,6 +413,10 @@
 &gt;&gt;&gt; obj = get_object('mkapi.core.base.Object')
 &gt;&gt;&gt; replace_link(obj, '[Signature]()')
 '[Signature](!mkapi.core.signature.Signature)'
+&gt;&gt;&gt; replace_link(obj, '[](Signature)')
+'[Signature](!mkapi.core.signature.Signature)'
+&gt;&gt;&gt; replace_link(obj, '[text](Signature)')
+'[text](!mkapi.core.signature.Signature)'
 &gt;&gt;&gt; replace_link(obj, '[dummy.Dummy]()')
 '[dummy.Dummy]()'
 </code></pre></div>

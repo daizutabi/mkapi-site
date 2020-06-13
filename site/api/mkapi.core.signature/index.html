@@ -86,6 +86,7 @@
 <li class="toctree-l4"><a class="nav-item toc" href="#mkapicoresignatureto_string">to_string</a></li>
 <li class="toctree-l4"><a class="nav-item toc" href="#mkapicoresignaturea_of_b">a_of_b</a></li>
 <li class="toctree-l4"><a class="nav-item toc" href="#mkapicoresignatureunion">union</a></li>
+<li class="toctree-l4"><a class="nav-item toc" href="#mkapicoresignatureto_string_args">to_string_args</a></li>
 </ul></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.tree/">mkapi.core.tree</a></li>
 </ul></li>
@@ -167,6 +168,10 @@ signature and types.</p></div>
 <li><code class="mkapi-args-name function" title="function"><a href="#mkapi.core.signature.union">union</a><span class="mkapi-object-signature">(annotation)</span></code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a string for union annotation.</span></li>
+
+<li><code class="mkapi-args-name function" title="function"><a href="#mkapi.core.signature.to_string_args">to_string_args</a><span class="mkapi-object-signature">(annotation)</span></code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a string for callable and generator annotation.</span></li>
 
 </ul></div>
 </div>
@@ -296,11 +301,15 @@ and value is type string.</span></li>
 
 </div>
 
-<div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; from typing import Iterator, List
+<div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; from typing import Callable, Iterator, List
 &gt;&gt;&gt; to_string(Iterator[str])
 'iterator of str'
 &gt;&gt;&gt; to_string(Iterator[str], 'yields')
 'str'
+&gt;&gt;&gt; to_string(Callable)
+'callable'
+&gt;&gt;&gt; to_string(Callable[[int, float], str])
+'callable(int, float: str)'
 &gt;&gt;&gt; from mkapi.core.node import Node
 &gt;&gt;&gt; to_string(List[Node])
 'list of [Node](!mkapi.core.node.Node)'
@@ -348,14 +357,13 @@ and value is type string.</span></li>
 </div>
 
 <div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; from typing import List, Iterable, Iterator
-&gt;&gt;&gt; a = List[str]
-&gt;&gt;&gt; a_of_b(a)
+&gt;&gt;&gt; a_of_b(List[str])
 'list of str'
-&gt;&gt;&gt; a = Iterable[int]
-&gt;&gt;&gt; a_of_b(a)
+&gt;&gt;&gt; a_of_b(List[List[str]])
+'list of list of str'
+&gt;&gt;&gt; a_of_b(Iterable[int])
 'iterable of int'
-&gt;&gt;&gt; a = Iterator[float]
-&gt;&gt;&gt; a_of_b(a)
+&gt;&gt;&gt; a_of_b(Iterator[float])
 'iterator of float'
 </code></pre></div>
 </div>
@@ -401,18 +409,71 @@ and value is type string.</span></li>
 </div>
 
 <div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; from typing import List, Optional, Tuple, Union
-&gt;&gt;&gt; a = Optional[List[str]]
-&gt;&gt;&gt; union(a)
+&gt;&gt;&gt; union(Optional[List[str]])
 'list of str, optional'
-&gt;&gt;&gt; a = Union[str, int]
-&gt;&gt;&gt; union(a)
+&gt;&gt;&gt; union(Union[str, int])
 'str or int'
-&gt;&gt;&gt; a = Union[str, int, float]
-&gt;&gt;&gt; union(a)
+&gt;&gt;&gt; union(Union[str, int, float])
 'str, int, or float'
-&gt;&gt;&gt; a = Union[List[str], Tuple[int, int]]
-&gt;&gt;&gt; union(a)
+&gt;&gt;&gt; union(Union[List[str], Tuple[int, int]])
 'Union(list of str, (int, int))'
+</code></pre></div>
+</div>
+
+</div>
+
+</div>
+
+<div class="mkapi-node" id="mkapi.core.signature.to_string_args">
+<h2 id="mkapicoresignatureto_string_args" class="mkapi-object mkapi-object-function code">
+<span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
+<code class="mkapi-object-prefix"><a href="#mkapi.core.signature">mkapi.core.signature</a>.</code><code class="mkapi-object-name">to_string_args</code><code class="mkapi-object-signature">(annotation)</code>
+    <span class="mkapi-args-type"> &#x2192; str</span>
+</h2>
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Returns a string for callable and generator annotation.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">annotation</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Annotation</span></li>
+
+</ul></div>
+</div>
+
+<div class="mkapi-section mkapi-section-examples">
+
+<div class="mkapi-section-name mkapi-section-name-examples">
+<span class="mkapi-section-name-body">Examples</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; from typing import Callable, List, Tuple, Any
+&gt;&gt;&gt; from typing import Generator, AsyncGenerator
+&gt;&gt;&gt; to_string_args(Callable[[int, List[str]], Tuple[int, int]])
+'callable(int, list of str: (int, int))'
+&gt;&gt;&gt; to_string_args(Callable[[int], Any])
+'callable(int)'
+&gt;&gt;&gt; to_string_args(Callable[[str], None])
+'callable(str)'
+&gt;&gt;&gt; to_string_args(Callable[..., int])
+'callable(...: int)'
+&gt;&gt;&gt; to_string_args(Generator[int, float, str])
+'generator(int, float, str)'
+&gt;&gt;&gt; to_string_args(AsyncGenerator[int, float])
+'asyncgenerator(int, float)'
 </code></pre></div>
 </div>
 

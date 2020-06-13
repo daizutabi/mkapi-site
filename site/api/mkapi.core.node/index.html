@@ -154,7 +154,7 @@
 
 <div class="mkapi-section-body mkapi-section-body-functions"><ul class="mkapi-args-list">
 
-<li><code class="mkapi-args-name function" title="function"><a href="#mkapi.core.node.is_member">is_member</a><span class="mkapi-object-signature">(name,obj,sourcefiles)</span></code>
+<li><code class="mkapi-args-name function" title="function"><a href="#mkapi.core.node.is_member">is_member</a><span class="mkapi-object-signature">(obj,name,sourcefiles)</span></code>
 <span class="mkapi-args-type">(int)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns an integer thats indicates if <code>obj</code> is a member or not.</span></li>
 
@@ -277,6 +277,14 @@ unique source files given by <code>mro()</code> of the class. Otherwise, 0.</spa
 
 <div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
 
+<li><code class="mkapi-args-name method" title="method"><a href="#mkapi.core.tree.Tree.__getitem__">__getitem__</a><span class="mkapi-object-signature">(index)</span></code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a member Tree instance.</span></li>
+
+<li><code class="mkapi-args-name method" title="method"><a href="#mkapi.core.tree.Tree.__getattr__">__getattr__</a><span class="mkapi-object-signature">(name)</span></code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a member Tree instance whose name is equal to <code>name</code>.</span></li>
+
 <li><code class="mkapi-args-name method" title="method"><a href="#mkapi.core.node.Node.get_kind">get_kind</a><span class="mkapi-object-signature">()</span></code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns kind of self.</span></li>
@@ -303,6 +311,78 @@ unique source files given by <code>mro()</code> of the class. Otherwise, 0.</spa
 </div>
 
   <div class="mkapi-members">
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="mkapi.core.tree.Tree.__getitem__">
+<h3 id="mkapicoretreetreegetitem" class="mkapi-object mkapi-object-method code">
+<span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
+<code class="mkapi-object-name"><a href="../mkapi.core.tree/#mkapi.core.tree.Tree.__getitem__">__getitem__</a></code><code class="mkapi-object-signature">(index)</code>
+    
+</h3>
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Returns a member Tree instance.</p>
+<p>If <code>index</code> is str, a member Tree instance whose name is equal to <code>index</code>
+is returned.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">index</code>
+<span class="mkapi-args-type">(int or str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+</ul></div>
+</div>
+
+</div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="mkapi.core.tree.Tree.__getattr__">
+<h3 id="mkapicoretreetreegetattr" class="mkapi-object mkapi-object-method code">
+<span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
+<code class="mkapi-object-name"><a href="../mkapi.core.tree/#mkapi.core.tree.Tree.__getattr__">__getattr__</a></code><code class="mkapi-object-signature">(name)</code>
+    
+</h3>
+<div class="mkapi-docstring">
+
+<div class="mkapi-section">
+
+<div class="mkapi-section-body"><p>Returns a member Tree instance whose name is equal to <code>name</code>.</p></div>
+</div>
+
+<div class="mkapi-section mkapi-section-parameters">
+
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+
+<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
+
+<li><code class="mkapi-args-name">name</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+</ul></div>
+</div>
+
+</div>
+
+</div>
+    </div>
   
     <div class="mkapi-member">
       <div class="mkapi-node" id="mkapi.core.node.Node.get_kind">
@@ -442,7 +522,7 @@ unique source files given by <code>mro()</code> of the class. Otherwise, 0.</spa
 <div class="mkapi-node" id="mkapi.core.node.is_member">
 <h2 id="mkapicorenodeis_member" class="mkapi-object mkapi-object-function code">
 <span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.node">mkapi.core.node</a>.</code><code class="mkapi-object-name">is_member</code><code class="mkapi-object-signature">(name, obj, sourcefiles)</code>
+<code class="mkapi-object-prefix"><a href="#mkapi.core.node">mkapi.core.node</a>.</code><code class="mkapi-object-name">is_member</code><code class="mkapi-object-signature">(obj, name=&#39;&#39;, sourcefiles=None)</code>
     <span class="mkapi-args-type"> &#x2192; int</span>
 </h2>
 <div class="mkapi-docstring">
@@ -467,16 +547,16 @@ unique source files given by <code>mro()</code> of the class. Otherwise, 0.</spa
 
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
 
-<li><code class="mkapi-args-name">name</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
-
 <li><code class="mkapi-args-name">obj</code>
 <span class="mkapi-args-type">(any)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object</span></li>
 
+<li><code class="mkapi-args-name">name</code>
+<span class="mkapi-args-type">(str, optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
+
 <li><code class="mkapi-args-name">sourcefiles</code>
-<span class="mkapi-args-type">(list of str)</span>
+<span class="mkapi-args-type">(list of str, optional)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Parent source files. If the parent is a class,
 those of the superclasses should be included in the order
 of <code>mro()</code>.</span></li>

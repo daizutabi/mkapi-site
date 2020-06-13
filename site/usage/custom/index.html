@@ -131,14 +131,14 @@ plugins:
   - search
   - mkapi:
       src_dirs: [examples]
-      on_config: custom.on_config_without_args</code></pre></div></div></div>
+      on_config: custom.on_config</code></pre></div></div></div>
 
-<p>Customization script is saved in <code>examples/custom.py</code>:</p>
+<p>Customization script is defined in <code>examples/custom.py</code>:</p>
 <div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">5</span>
 <span class="title">examples/custom.py</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">def on_config_without_args():
+<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">def on_config():
     # Here you can do all you want.
     print(&#34;Called.&#34;)
 
@@ -183,7 +183,6 @@ C:\Users\daizu\Documents\github\mkapi\docs
 INFO    -  Cleaning site directory
 ...</code></pre></div></div></div>
 
-<p>And,</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yml"># mkdocs.yml
 plugins:
   - search

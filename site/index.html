@@ -144,7 +144,7 @@
 <h2 id="usage">Usage</h2>
 <p>MkApi provides two modes to generate API documentation: Embedding mode and Page mode.</p>
 <h3 id="embedding-mode">Embedding Mode</h3>
-<p>To generate the API documentation in a Markdown source, add an exclamation mark (!), followed by <code>mkapi</code> in brackets, and the object full name in parentheses. Yes, this is like adding an image. The object can be a function, class, or module.</p>
+<p>To generate the API documentation in a Markdown source, add an exclamation mark (!), followed by <code>mkapi</code> in brackets, and the object full name in parentheses. Yes, this is like adding an image. The object can be a function, class, or module, <em>etc</em>.</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](&lt;object.full.name&gt;)</code></pre></div></div></div>
 
 <p>MkApi imports objects that you specify. If they aren't in the <code>sys.path</code>, configure <code>mkdocs.yml</code> like below:</p>
@@ -153,7 +153,7 @@
   - mkapi:
       src_dirs: [&lt;path1&gt;, &lt;path2&gt;, ...]</code></pre></div></div></div>
 
-<p>Here, <code>pathX</code>s are inserted to <code>sys.path</code>. These <code>pathX</code>s must be relative to the <code>mkdocs.yml</code> directory.</p>
+<p>Here, <code>pathX</code>s are inserted to <code>sys.path</code>. These <code>pathX</code>s are relative to the <code>mkdocs.yml</code> directory.</p>
 <p>The embedding mode is useful to embed an object interface in an arbitrary position of a Markdown source. For more details, see:</p>
 <ul>
 <li><a href="examples/google_style/">Google style examples</a></li>

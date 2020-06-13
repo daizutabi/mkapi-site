@@ -56,7 +56,6 @@
     <li class="toctree-l2"><a class="nav-item" href="../module/">Module and Package</a></li>
     <li class="toctree-l2 current"><a class="nav-item current" href="./">Docstring Inheritance</a>
 <ul class="subnav">
-<li class="toctree-l3"><a class="nav-item toc" href="#example-classes">Example classes</a></li>
 <li class="toctree-l3"><a class="nav-item toc" href="#inheritance-from-superclasses">Inheritance from Superclasses</a></li>
 <li class="toctree-l3"><a class="nav-item toc" href="#inheritance-from-signature">Inheritance from Signature</a></li>
 <li class="toctree-l3"><a class="nav-item toc" href="#example-of-strict-mode">Example of Strict Mode</a></li>
@@ -129,7 +128,6 @@
 -->
 </style>
 
-<h2 id="example-classes">Example classes</h2>
 <p>Define two classes to explain <strong>Docstring inheritance</strong>.</p>
 <div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">2</span>
 <span class="title">inherit.py</span></p>
@@ -185,11 +183,11 @@ class Item(Base):
 <p>Taking a look at this example, you may notice that:</p>
 <ul>
 <li>In the <code>Base</code>, description for <code>type</code> is omitted.</li>
-<li>In the <code>Item</code>, parameters inherited from superclass are not written.</li>
+<li>In the <code>Item</code>, parameters inherited from the superclass are not written.</li>
 <li>In the <code>Item.set_name()</code>, Parameters section itself doesn't exist.</li>
 </ul>
 <h2 id="inheritance-from-superclasses">Inheritance from Superclasses</h2>
-<p>Since the docstring of superclass <code>Base</code> describes the <code>name</code>, the <code>Item</code> class can inherit its description with <code>inherit</code> filter.</p>
+<p>Since the docstring of the superclass <code>Base</code> describes the <code>name</code>, the <code>Item</code> class can inherit its description with <code>inherit</code> filter.</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](inherit.Item|inherit)</code></pre></div></div></div>
 
 <p>By inheritance from superclasses, you don't need to write duplicated description.</p>
