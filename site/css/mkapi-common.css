@@ -105,6 +105,9 @@ code.mkapi-object-signature,
 span.mkapi-object-signature {
   font-weight: bold;
   color: #5577AA;
+  border: none;
+  padding: 0px;
+  margin: 0px;
 }
 
 /**************************************************
@@ -215,7 +218,8 @@ h3.mkapi-object.plain ~ .mkapi-docstring {
 .mkapi-object code {
   background: none;
   border: none;
-  padding: 0px 0px;
+  margin: 0px;
+  padding: 0px;
   font-size: 0.9rem;
 }
 
@@ -310,6 +314,7 @@ h3.mkapi-object.plain ~ .mkapi-docstring {
   border: none;
   font-size: 0.9rem;
   padding: 0px;
+  margin: 0px;
 }
 
 

@@ -1,111 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://mkapi.daizutabi.net/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/examples/google_style/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/examples/numpy_style/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/usage/module/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/usage/inherit/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/usage/page/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/usage/library/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/usage/custom/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/appendix/type/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/appendix/method/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/appendix/inherit/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/appendix/order/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi.core/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi.core.base/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi.core.docstring/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi.core.inherit/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi.core.linker/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi.core.module/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi.core.node/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi.core.object/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi.core.page/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi.core.renderer/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi.core.signature/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi.core.tree/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi.plugins/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://mkapi.daizutabi.net/api/mkapi.plugins.mkdocs/</loc>
-     <lastmod>2020-06-13</lastmod>
+     <lastmod>2020-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
