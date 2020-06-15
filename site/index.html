@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
     <link rel="stylesheet" href="css/pheasant.css">
+    <link rel="stylesheet" href="custom.css">
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
@@ -35,7 +36,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="." class="site-name"> MkApi</a>
-                </div><div class="version">0.8.6</div>
+                </div><div class="version">1.0.0</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="./search.html" method="get">
@@ -52,6 +53,7 @@
 <li class="toctree-l2"><a class="nav-item toc" href="#configuration">Configuration</a></li>
 <li class="toctree-l2"><a class="nav-item toc" href="#usage">Usage</a></li>
 </ul></li>
+                    <li class="toctree-l1"><a class="nav-item" href="release/">Release Notes</a></li>
                     <li class="toctree-l1"><button class="section nav-item">Examples</button>
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="examples/google_style/">Google Style</a></li>
@@ -91,7 +93,7 @@
     <li class="toctree-l3"><a class="nav-item" href="api/mkapi.core.page/">mkapi.core.page</a></li>
     <li class="toctree-l3"><a class="nav-item" href="api/mkapi.core.renderer/">mkapi.core.renderer</a></li>
     <li class="toctree-l3"><a class="nav-item" href="api/mkapi.core.signature/">mkapi.core.signature</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="api/mkapi.core.tree/">mkapi.core.tree</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="api/mkapi.core.structure/">mkapi.core.structure</a></li>
 </ul></li>
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
 <ul class="subnav hide">
@@ -105,7 +107,7 @@
     <div class="link">
         <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
     </div>
-    <div class="next"><a href="examples/google_style/">Next &raquo;</a></div>
+    <div class="next"><a href="release/">Next &raquo;</a></div>
 </div>
         </aside>
         <div id="spacer"><button class="arrow"></button></div>
@@ -122,7 +124,7 @@
 </nav>
                 <div id="content">
 <h1 id="mkapi-documentation">MkApi Documentation</h1>
-<p>MkApi plugin for <a href="https://www.mkdocs.org/">MkDocs</a> generates API documentation for Python code. MkApi supports two styles of docstrings: <a href="http://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">Google</a> and <a href="https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard">NumPy</a>. The <a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/index.html#">Napoleon package</a> provides complete examples:</p>
+<p>MkApi plugin for <a href="https://www.mkdocs.org/">MkDocs</a> generates API documentation for Python code. MkApi supports two styles of docstrings: <a href="http://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">Google</a> and <a href="https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard">NumPy</a>. The <a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/index.html#">Napoleon project</a> provides complete examples:</p>
 <ul>
 <li><a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html#example-google">Example Google Style Python Docstrings</a></li>
 <li><a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html#example-numpy">Example NumPy Style Python Docstrings</a></li>
@@ -135,6 +137,7 @@
 <li><strong>Attribute inspection</strong>: If you write attributes with description as comment at module level or in <code>__init__()</code> of class, Attributes section is automatically created.</li>
 <li><strong>Docstring inheritance</strong>: Docstring of a subclass can inherit parameters and attributes description from its superclasses.</li>
 <li><strong>Page mode</strong>: Comprehensive API documentation for your project, in which objects are linked to each other by type annotation.</li>
+<li><strong>Bidirectional Link</strong>: Using the Page mode, bidirectional links are created between documentation and source code.</li>
 </ul>
 <h2 id="installation">Installation</h2>
 <p>Install the plugin using pip:</p>
@@ -173,7 +176,7 @@
 <p>For more details, see <a href="usage/page/">Page Mode and Internal Links</a></p></div>
                 <footer>
     <div class="footer-buttons">
-        <div class="next"><a href="examples/google_style/" title="Google Style"><span>Next</span></a></div>
+        <div class="next"><a href="release/" title="Release Notes"><span>Next</span></a></div>
     </div>
     <div class="footer-note">
         <p>

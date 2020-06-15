@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="daizutabi">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <title>mkapi.core.structure &mdash; MkApi</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../../../css/mkapi-common.css">
+    <link rel="stylesheet" href="../../../css/mkapi-ivory.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../../css/pheasant.css">
+    <link rel="stylesheet" href="../../../custom.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../../.." class="site-name"> MkApi</a>
+                </div><div class="version">1.0.0</div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../../..">MkApi Documentation</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../../../release/">Release Notes</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Examples</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../examples/google_style/">Google Style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../examples/numpy_style/">NumPy Style</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../usage/module/">Module and Package</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../usage/inherit/">Docstring Inheritance</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../usage/page/">Page Mode and Internal Links</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../usage/library/">Using MkApi within Python</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../usage/custom/">Customization</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Appendix</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/type/">Type Annotation Examples</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/method/">Method and Property Types</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/inherit/">Inheritance and Special Methods</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/order/">Ordering Members in Different Files</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">API</button>
+<ul class="subnav">
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi/">mkapi</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core/">mkapi.core</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.base/">mkapi.core.base</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.docstring/">mkapi.core.docstring</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.inherit/">mkapi.core.inherit</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.linker/">mkapi.core.linker</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.module/">mkapi.core.module</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.node/">mkapi.core.node</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.object/">mkapi.core.object</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.page/">mkapi.core.page</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.renderer/">mkapi.core.renderer</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.signature/">mkapi.core.signature</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.structure/">mkapi.core.structure</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.plugins/">mkapi.plugins</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.plugins.mkdocs/">mkapi.plugins.mkdocs</a></li>
+</ul></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
+    </div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../../.." class="site-name"> MkApi</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">MKAPI.CORE.</span><span class="mkapi-object-name">STRUCTURE</span><span class="mkapi-object-signature"></span>
+<span id="mkapi.core.structure"></span><a class="mkapi-docs-link" href="../../mkapi.core.structure">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;This module provides base class of [Node](mkapi.core.node.Node) and</span>
+<span class="sd">[Module](mkapi.core.module.Module).&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">from</span> <span class="nn">mkapi.core.base</span> <span class="kn">import</span> <span class="n">Base</span><span class="p">,</span> <span class="n">Type</span>
+<span class="kn">from</span> <span class="nn">mkapi.core.docstring</span> <span class="kn">import</span> <span class="n">Docstring</span><span class="p">,</span> <span class="n">get_docstring</span>
+<span class="kn">from</span> <span class="nn">mkapi.core.object</span> <span class="kn">import</span> <span class="p">(</span><span class="n">get_qualname</span><span class="p">,</span> <span class="n">get_sourcefile_and_lineno</span><span class="p">,</span>
+                               <span class="n">split_prefix_and_name</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">mkapi.core.signature</span> <span class="kn">import</span> <span class="n">Signature</span><span class="p">,</span> <span class="n">get_signature</span>
+
+<span class="s2">&quot;a.b.c&quot;</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">Object</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span><span id="mkapi.core.structure.Object"></span><a class="mkapi-docs-link"href="../../mkapi.core.structure#mkapi.core.structure.Object">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Object class represents an object.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        name: Object name.</span>
+<span class="sd">        prefix: Object prefix.</span>
+<span class="sd">        qualname: Qualified name.</span>
+<span class="sd">        kind: Object kind such as &#39;class&#39;, &#39;function&#39;, *etc.*</span>
+<span class="sd">        signature: Signature if object is module or callable.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        id: ID attribute of HTML.</span>
+<span class="sd">        type: Type for missing Returns and Yields sections.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">qualname</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">kind</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">signature</span><span class="p">:</span> <span class="n">Signature</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="n">Signature</span><span class="p">)</span>
+    <span class="n">module</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">markdown</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="n">Type</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="n">Type</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">mkapi.core</span> <span class="kn">import</span> <span class="n">linker</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">prefix</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">prefix</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">])</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">qualname</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">[:</span> <span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">qualname</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">markdown</span><span class="p">:</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">linker</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">prefix</span><span class="p">:</span>
+                <span class="n">prefix</span> <span class="o">=</span> <span class="n">linker</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">prefix</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">prefix</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">prefix</span><span class="p">,</span> <span class="n">name</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Base</span><span class="p">]:</span><span id="mkapi.core.structure.Object.__iter__"></span><a class="mkapi-docs-link"href="../../mkapi.core.structure#mkapi.core.structure.Object.__iter__">DOCS</a>
+        <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span>
+        <span class="k">yield</span> <span class="bp">self</span>
+
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">Tree</span><span class="p">:</span><span id="mkapi.core.structure.Tree"></span><a class="mkapi-docs-link"href="../../mkapi.core.structure#mkapi.core.structure.Tree">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Tree class. This class is the base class of [Node](mkapi.core.node.Node)</span>
+<span class="sd">    and [Module](mkapi.core.module.Module).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        obj: Object.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        sourcefile: Source file path.</span>
+<span class="sd">        lineno: Line number.</span>
+<span class="sd">        object: Object instance.</span>
+<span class="sd">        docstring: Docstring instance.</span>
+<span class="sd">        parent: Parent instance.</span>
+<span class="sd">        members: Member instances.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="n">field</span><span class="p">()</span>
+    <span class="n">sourcefile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">lineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">object</span><span class="p">:</span> <span class="n">Object</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">docstring</span><span class="p">:</span> <span class="n">Docstring</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">parent</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">members</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sourcefile</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span> <span class="o">=</span> <span class="n">get_sourcefile_and_lineno</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+        <span class="n">prefix</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="n">split_prefix_and_name</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+        <span class="n">qualname</span> <span class="o">=</span> <span class="n">get_qualname</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+        <span class="n">kind</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_kind</span><span class="p">()</span>
+        <span class="n">signature</span> <span class="o">=</span> <span class="n">get_signature</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">object</span> <span class="o">=</span> <span class="n">Object</span><span class="p">(</span>
+            <span class="n">prefix</span><span class="o">=</span><span class="n">prefix</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">qualname</span><span class="o">=</span><span class="n">qualname</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="n">kind</span><span class="p">,</span> <span class="n">signature</span><span class="o">=</span><span class="n">signature</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">docstring</span> <span class="o">=</span> <span class="n">get_docstring</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">members</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_members</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>
+            <span class="n">member</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">class_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
+        <span class="nb">id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">id</span>
+        <span class="n">sections</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">docstring</span><span class="o">.</span><span class="n">sections</span><span class="p">)</span>
+        <span class="n">numbers</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">)</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">class_name</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="nb">id</span><span class="si">!r}</span><span class="s2">, num_sections=</span><span class="si">{</span><span class="n">sections</span><span class="si">}</span><span class="s2">, num_members=</span><span class="si">{</span><span class="n">numbers</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]):</span><span id="mkapi.core.structure.Tree.__getitem__"></span><a class="mkapi-docs-link"href="../../mkapi.core.structure#mkapi.core.structure.Tree.__getitem__">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;Returns a member Tree instance.</span>
+
+<span class="sd">        If `index` is str, a member Tree instance whose name is equal to `index`</span>
+<span class="sd">        is returned.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span>
+            <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">index</span><span class="p">:</span>
+                <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">node</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="s2">&quot;.&quot;</span> <span class="ow">in</span> <span class="n">index</span><span class="p">:</span>
+            <span class="n">names</span> <span class="o">=</span> <span class="n">index</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">names</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">index</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">member</span>
+        <span class="k">raise</span> <span class="ne">IndexError</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">name</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">get_kind</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.structure.Tree.get_kind"></span><a class="mkapi-docs-link"href="../../mkapi.core.structure#mkapi.core.structure.Tree.get_kind">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;Returns kind of self.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">get_members</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Tree&quot;</span><span class="p">]:</span><span id="mkapi.core.structure.Tree.get_members"></span><a class="mkapi-docs-link"href="../../mkapi.core.structure#mkapi.core.structure.Tree.get_members">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;Returns a list of members.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">get_markdown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.structure.Tree.get_markdown"></span><a class="mkapi-docs-link"href="../../mkapi.core.structure#mkapi.core.structure.Tree.get_markdown">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;Returns a Markdown source for docstring of self.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="mkapi.core.structure.Tree.walk"></span><a class="mkapi-docs-link"href="../../mkapi.core.structure#mkapi.core.structure.Tree.walk">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;Yields all members.&quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span>
+        <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>
+            <span class="k">yield from</span> <span class="n">member</span><span class="o">.</span><span class="n">walk</span><span class="p">()</span>
+</code></pre></div>
+</div>
+</div></div>
+                <footer>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/mkapi.js"></script>
+    <script src="../../../js/pheasant.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="../../../search/main.js"></script>
+</body>
+
+</html>

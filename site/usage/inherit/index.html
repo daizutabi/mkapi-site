@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
     <link rel="stylesheet" href="../../css/pheasant.css">
+    <link rel="stylesheet" href="../../custom.css">
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
@@ -34,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.8.6</div>
+                </div><div class="version">1.0.0</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -46,6 +47,7 @@
             <nav class="nav">
                 <ul class="root">
                     <li class="toctree-l1"><a class="nav-item" href="../..">MkApi Documentation</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../../release/">Release Notes</a></li>
                     <li class="toctree-l1"><button class="section nav-item">Examples</button>
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../examples/google_style/">Google Style</a></li>
@@ -58,8 +60,8 @@
 <ul class="subnav">
 <li class="toctree-l3"><a class="nav-item toc" href="#inheritance-from-superclasses">Inheritance from Superclasses</a></li>
 <li class="toctree-l3"><a class="nav-item toc" href="#inheritance-from-signature">Inheritance from Signature</a></li>
-<li class="toctree-l3"><a class="nav-item toc" href="#example-of-strict-mode">Example of Strict Mode</a></li>
 <li class="toctree-l3"><a class="nav-item toc" href="#inheritance-in-page-mode">Inheritance in Page Mode</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#inheritance-in-dataclass">Inheritance in Dataclass</a></li>
 </ul></li>
     <li class="toctree-l2"><a class="nav-item" href="../page/">Page Mode and Internal Links</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../library/">Using MkApi within Python</a></li>
@@ -91,7 +93,7 @@
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.page/">mkapi.core.page</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.renderer/">mkapi.core.renderer</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.signature/">mkapi.core.signature</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.tree/">mkapi.core.tree</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.structure/">mkapi.core.structure</a></li>
 </ul></li>
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
 <ul class="subnav hide">
@@ -192,111 +194,67 @@ class Item(Base):
 <li>In the <code>Item.set_name()</code>, Parameters section itself doesn't exist.</li>
 </ul>
 <h2 id="inheritance-from-superclasses">Inheritance from Superclasses</h2>
-<p>Since the docstring of the superclass <code>Base</code> describes the <code>name</code>, the <code>Item</code> class can inherit its description with <code>inherit</code> filter.</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](inherit.Item|inherit)</code></pre></div></div></div>
-
-<p>By inheritance from superclasses, you don't need to write duplicated description.</p>
-<h2 id="inheritance-from-signature">Inheritance from Signature</h2>
-<p>Using <code>strict</code> filter, MkApi adds missing parameters and attributes from the signature. Description is still empty but type is inspected. Note that <code>strict</code> filter invokes <code>inherit</code> filter at the same time.</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](inherit.Item|strict)</code></pre></div></div></div>
-
-<p>Inheritance from signature has two benefits:</p>
-<ul>
-<li>You can find parameters and attributes that wait for description.</li>
-<li>Users can know their types at least if you use type annotation.</li>
-</ul>
-<h2 id="example-of-strict-mode">Example of Strict Mode</h2>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](inherit.Item|strict)</code></pre></div></div></div>
+<p>Since the docstring of the superclass <code>Base</code> describes the <code>name</code>, the <code>Item</code> class can inherit its description.</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](inherit.Item)</code></pre></div></div></div>
 
 <div class="mkapi-node" id="inherit.Item">
 <div class="mkapi-object mkapi-object-dataclass code">
 <div class="mkapi-object-kind mkapi-object-kind-dataclass">DATACLASS</div>
-<div class="mkapi-object-body"><code class="mkapi-object-prefix">inherit.</code><code class="mkapi-object-name">Item</code><code class="mkapi-object-signature">(name,</code> <code class="mkapi-object-signature">type,</code> <code class="mkapi-object-signature">markdown)</code>
-    </div>
+<div class="mkapi-object-body"><code class="mkapi-object-prefix">inherit.</code><code class="mkapi-object-name">Item</code><code class="mkapi-object-signature">(name,</code> <code class="mkapi-object-signature">type,</code> <code class="mkapi-object-signature">markdown)</code></div>
 </div>
 <div class="mkapi-docstring">
-
-<div class="mkapi-section mkapi-section-bases">
-
-<div class="mkapi-section-name mkapi-section-name-bases">
-<span class="mkapi-section-name-body">Bases</span>
-
-</div>
-
-<div class="mkapi-section-body mkapi-section-body-bases">
-<span class="mkapi-base">inherit.Base</span>
-</div>
-</div>
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Item class.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">name</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
 
-<li><code class="mkapi-args-name">type</code>
-<span class="mkapi-args-type">(<a href="../../api/mkapi.core.base/#mkapi.core.base.Type">Type</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
 
 <li><code class="mkapi-args-name">markdown</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object markdown.</span></li>
 
+
 </ul></div>
 </div>
-
 <div class="mkapi-section mkapi-section-attributes">
-
 <div class="mkapi-section-name mkapi-section-name-attributes">
 <span class="mkapi-section-name-body">Attributes</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
+<li><code class="mkapi-args-name">markdown</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object markdown.</span></li>
 
 <li><code class="mkapi-args-name">name</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
 
-<li><code class="mkapi-args-name">type</code>
-<span class="mkapi-args-type">(<a href="../../api/mkapi.core.base/#mkapi.core.base.Type">Type</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
 
-<li><code class="mkapi-args-name">markdown</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object markdown.</span></li>
 
 </ul></div>
 </div>
-
 <div class="mkapi-section mkapi-section-methods">
-
 <div class="mkapi-section-name mkapi-section-name-methods">
 <span class="mkapi-section-name-body">Methods</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
-
-<li class="method"><code class="mkapi-args-name" title="method"><a href="#inherit.Item.set_name">set_name</a></code><code class="mkapi-object-signature">(name)</code>
+<li class="method"><code class="mkapi-args-name"><a href="#inherit.Item.set_name">set_name</a></code><code class="mkapi-object-signature">(name)</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Sets name in upper case.</span></li>
 
+
 </ul></div>
 </div>
-
 </div>
 
   <div class="mkapi-members">
@@ -305,32 +263,25 @@ class Item(Base):
       <div class="mkapi-node" id="inherit.Item.set_name">
 <div class="mkapi-object mkapi-object-method code">
 <div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">set_name</code><code class="mkapi-object-signature">(name)</code>
-    </div>
+<div class="mkapi-object-body"><code class="mkapi-object-name">set_name</code><code class="mkapi-object-signature">(name)</code></div>
 </div>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Sets name in upper case.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">name</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">A New name.</span></li>
 
+
 </ul></div>
 </div>
-
 </div>
 
 </div>
@@ -340,11 +291,270 @@ class Item(Base):
 
 </div>
 
+<p>By inheritance from superclasses, you don't need to write duplicated description.</p>
+<h2 id="inheritance-from-signature">Inheritance from Signature</h2>
+<p>Using <code>strict</code> filter, MkApi also adds parameters and attributes without description using its signature. Description is still empty but type is inspected.</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](inherit.Item|strict)</code></pre></div></div></div>
+
+<div class="mkapi-node" id="inherit.Item">
+<div class="mkapi-object mkapi-object-dataclass code">
+<div class="mkapi-object-kind mkapi-object-kind-dataclass">DATACLASS</div>
+<div class="mkapi-object-body"><code class="mkapi-object-prefix">inherit.</code><code class="mkapi-object-name">Item</code><code class="mkapi-object-signature">(name,</code> <code class="mkapi-object-signature">type,</code> <code class="mkapi-object-signature">markdown)</code></div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section mkapi-section-bases">
+<div class="mkapi-section-name mkapi-section-name-bases">
+<span class="mkapi-section-name-body">Bases</span>
+
+</div>
+<div class="mkapi-section-body mkapi-section-body-bases">
+<span class="mkapi-base">inherit.Base</span>
+</div>
+</div>
+<div class="mkapi-section">
+<div class="mkapi-section-body"><p>Item class.</p></div>
+</div>
+<div class="mkapi-section mkapi-section-parameters">
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
+<li><code class="mkapi-args-name">name</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
+
+<li><code class="mkapi-args-name">type</code>
+<span class="mkapi-args-type">(<a href="../../api/mkapi.core.base/#mkapi.core.base.Type">Type</a>)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+<li><code class="mkapi-args-name">markdown</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object markdown.</span></li>
+
+
+</ul></div>
+</div>
+<div class="mkapi-section mkapi-section-attributes">
+<div class="mkapi-section-name mkapi-section-name-attributes">
+<span class="mkapi-section-name-body">Attributes</span>
+
+</div>
+<div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
+<li><code class="mkapi-args-name">markdown</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object markdown.</span></li>
+
+<li><code class="mkapi-args-name">name</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
+
+<li><code class="mkapi-args-name">type</code>
+<span class="mkapi-args-type">(<a href="../../api/mkapi.core.base/#mkapi.core.base.Type">Type</a>)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+
+</ul></div>
+</div>
+<div class="mkapi-section mkapi-section-methods">
+<div class="mkapi-section-name mkapi-section-name-methods">
+<span class="mkapi-section-name-body">Methods</span>
+
+</div>
+<div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
+<li class="method"><code class="mkapi-args-name"><a href="#inherit.Item.set_name">set_name</a></code><code class="mkapi-object-signature">(name)</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Sets name in upper case.</span></li>
+
+
+</ul></div>
+</div>
+</div>
+
+  <div class="mkapi-members">
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="inherit.Item.set_name">
+<div class="mkapi-object mkapi-object-method code">
+<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
+<div class="mkapi-object-body"><code class="mkapi-object-name">set_name</code><code class="mkapi-object-signature">(name)</code></div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+<div class="mkapi-section-body"><p>Sets name in upper case.</p></div>
+</div>
+<div class="mkapi-section mkapi-section-parameters">
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
+<li><code class="mkapi-args-name">name</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">A New name.</span></li>
+
+
+</ul></div>
+</div>
+</div>
+
+</div>
+    </div>
+  
+  </div>
+
+</div>
+
+<p>Inheritance from signature has two benefits:</p>
+<ul>
+<li>You can find parameters and attributes that wait for description.</li>
+<li>Users can know their types at least if you use type annotation.</li>
+</ul>
 <h2 id="inheritance-in-page-mode">Inheritance in Page Mode</h2>
 <p>Inheritance in <a href="../page/">page mode</a> is straightforward. For example,</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yaml">nav:
   - index.md
-  - API: mkapi/api/mkapi|upper|strict</code></pre></div></div></div></div>
+  - API: mkapi/api/mkapi|upper|strict</code></pre></div></div></div>
+
+<h2 id="inheritance-in-dataclass">Inheritance in Dataclass</h2>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">3</span>
+<span class="title">inherit_comment.py</span></p>
+<div class="content">
+
+<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">from dataclasses import dataclass
+
+from mkapi.core.base import Type
+
+
+@dataclass
+class Base:
+    &#34;&#34;&#34;Base class.&#34;&#34;&#34;
+
+    name: str  #: Object name.
+    type: Type  #: Object type.
+
+    def set_name(self, name: str):
+        &#34;&#34;&#34;Sets name.
+
+        Args:
+            name: A New name.
+        &#34;&#34;&#34;
+        self.name = name
+
+
+@dataclass
+class Item(Base):
+    &#34;&#34;&#34;Item class.&#34;&#34;&#34;
+
+    markdown: str  #: Object Markdown.
+
+    def set_name(self, name: str):
+        &#34;&#34;&#34;Sets name in upper case.&#34;&#34;&#34;
+        self.name = name.upper()</code></pre></div></div></div>
+
+</div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](inherit_comment.Item)</code></pre></div></div></div>
+
+<div class="mkapi-node" id="inherit_comment.Item">
+<div class="mkapi-object mkapi-object-dataclass code">
+<div class="mkapi-object-kind mkapi-object-kind-dataclass">DATACLASS</div>
+<div class="mkapi-object-body"><code class="mkapi-object-prefix">inherit_comment.</code><code class="mkapi-object-name">Item</code><code class="mkapi-object-signature">(name,</code> <code class="mkapi-object-signature">type,</code> <code class="mkapi-object-signature">markdown)</code></div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+<div class="mkapi-section-body"><p>Item class.</p></div>
+</div>
+<div class="mkapi-section mkapi-section-parameters">
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
+<li><code class="mkapi-args-name">name</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
+
+<li><code class="mkapi-args-name">type</code>
+<span class="mkapi-args-type">(<a href="../../api/mkapi.core.base/#mkapi.core.base.Type">Type</a>)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object type.</span></li>
+
+<li><code class="mkapi-args-name">markdown</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object Markdown.</span></li>
+
+
+</ul></div>
+</div>
+<div class="mkapi-section mkapi-section-attributes">
+<div class="mkapi-section-name mkapi-section-name-attributes">
+<span class="mkapi-section-name-body">Attributes</span>
+
+</div>
+<div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
+<li><code class="mkapi-args-name">markdown</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object Markdown.</span></li>
+
+<li><code class="mkapi-args-name">name</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
+
+<li><code class="mkapi-args-name">type</code>
+<span class="mkapi-args-type">(<a href="../../api/mkapi.core.base/#mkapi.core.base.Type">Type</a>)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object type.</span></li>
+
+
+</ul></div>
+</div>
+<div class="mkapi-section mkapi-section-methods">
+<div class="mkapi-section-name mkapi-section-name-methods">
+<span class="mkapi-section-name-body">Methods</span>
+
+</div>
+<div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
+<li class="method"><code class="mkapi-args-name"><a href="#inherit_comment.Item.set_name">set_name</a></code><code class="mkapi-object-signature">(name)</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Sets name in upper case.</span></li>
+
+
+</ul></div>
+</div>
+</div>
+
+  <div class="mkapi-members">
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="inherit_comment.Item.set_name">
+<div class="mkapi-object mkapi-object-method code">
+<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
+<div class="mkapi-object-body"><code class="mkapi-object-name">set_name</code><code class="mkapi-object-signature">(name)</code></div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+<div class="mkapi-section-body"><p>Sets name in upper case.</p></div>
+</div>
+<div class="mkapi-section mkapi-section-parameters">
+<div class="mkapi-section-name mkapi-section-name-parameters">
+<span class="mkapi-section-name-body">Parameters</span>
+
+</div>
+<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
+<li><code class="mkapi-args-name">name</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">A New name.</span></li>
+
+
+</ul></div>
+</div>
+</div>
+
+</div>
+    </div>
+  
+  </div>
+
+</div></div>
                 <footer>
     <div class="footer-buttons">
         <div class="previous"><a href="../module/" title="Module and Package"><span>Previous</span></a></div>

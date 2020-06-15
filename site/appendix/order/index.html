@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
     <link rel="stylesheet" href="../../css/pheasant.css">
+    <link rel="stylesheet" href="../../custom.css">
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
@@ -34,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.8.6</div>
+                </div><div class="version">1.0.0</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -46,6 +47,7 @@
             <nav class="nav">
                 <ul class="root">
                     <li class="toctree-l1"><a class="nav-item" href="../..">MkApi Documentation</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../../release/">Release Notes</a></li>
                     <li class="toctree-l1"><button class="section nav-item">Examples</button>
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../examples/google_style/">Google Style</a></li>
@@ -87,7 +89,7 @@
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.page/">mkapi.core.page</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.renderer/">mkapi.core.renderer</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.signature/">mkapi.core.signature</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.tree/">mkapi.core.tree</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.structure/">mkapi.core.structure</a></li>
 </ul></li>
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
 <ul class="subnav hide">
@@ -128,7 +130,7 @@
 </style>
 
 <p>Class members that are defined in different files are sorted by a key of (minus of <em>source file index</em>, line number).</p>
-<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">8</span>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">9</span>
 <span class="title">appendix/member_order_base.py</span></p>
 <div class="content">
 
@@ -149,7 +151,7 @@ class A:
 
 </div></div></div>
 
-<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">9</span>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">10</span>
 <span class="title">appendix/member_order_sub.py</span></p>
 <div class="content">
 
@@ -170,27 +172,22 @@ class C(A, B):
 <div class="mkapi-node" id="appendix.member_order_base.A">
 <div class="mkapi-object mkapi-object-class code">
 <div class="mkapi-object-kind mkapi-object-kind-class">CLASS</div>
-<div class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.member_order_base.</code><code class="mkapi-object-name">A</code><code class="mkapi-object-signature">()</code>
-    </div>
+<div class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.member_order_base.</code><code class="mkapi-object-name">A</code><code class="mkapi-object-signature">()</code></div>
 </div>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section mkapi-section-methods">
-
 <div class="mkapi-section-name mkapi-section-name-methods">
 <span class="mkapi-section-name-body">Methods</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
-
-<li class="method"><code class="mkapi-args-name" title="method"><a href="#appendix.member_order_base.A.a">a</a></code><code class="mkapi-object-signature">()</code>
+<li class="method"><code class="mkapi-args-name"><a href="#appendix.member_order_base.A.a">a</a></code><code class="mkapi-object-signature">()</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">mro index: 1, sourcefile index: 1, line number: 13.</span></li>
 
+
 </ul></div>
 </div>
-
 </div>
 
   <div class="mkapi-members">
@@ -199,16 +196,12 @@ class C(A, B):
       <div class="mkapi-node" id="appendix.member_order_base.A.a">
 <div class="mkapi-object mkapi-object-method code">
 <div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">a</code><code class="mkapi-object-signature">()</code>
-    </div>
+<div class="mkapi-object-body"><code class="mkapi-object-name">a</code><code class="mkapi-object-signature">()</code></div>
 </div>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>mro index: 1, sourcefile index: 1, line number: 13.</p></div>
 </div>
-
 </div>
 
 </div>
@@ -221,27 +214,22 @@ class C(A, B):
 <div class="mkapi-node" id="appendix.member_order_sub.B">
 <div class="mkapi-object mkapi-object-class code">
 <div class="mkapi-object-kind mkapi-object-kind-class">CLASS</div>
-<div class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.member_order_sub.</code><code class="mkapi-object-name">B</code><code class="mkapi-object-signature">()</code>
-    </div>
+<div class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.member_order_sub.</code><code class="mkapi-object-name">B</code><code class="mkapi-object-signature">()</code></div>
 </div>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section mkapi-section-methods">
-
 <div class="mkapi-section-name mkapi-section-name-methods">
 <span class="mkapi-section-name-body">Methods</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
-
-<li class="method"><code class="mkapi-args-name" title="method"><a href="#appendix.member_order_sub.B.b">b</a></code><code class="mkapi-object-signature">()</code>
+<li class="method"><code class="mkapi-args-name"><a href="#appendix.member_order_sub.B.b">b</a></code><code class="mkapi-object-signature">()</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">mro index: 2, sourcefile index: 0, line number: 5.</span></li>
 
+
 </ul></div>
 </div>
-
 </div>
 
   <div class="mkapi-members">
@@ -250,16 +238,12 @@ class C(A, B):
       <div class="mkapi-node" id="appendix.member_order_sub.B.b">
 <div class="mkapi-object mkapi-object-method code">
 <div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">b</code><code class="mkapi-object-signature">()</code>
-    </div>
+<div class="mkapi-object-body"><code class="mkapi-object-name">b</code><code class="mkapi-object-signature">()</code></div>
 </div>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>mro index: 2, sourcefile index: 0, line number: 5.</p></div>
 </div>
-
 </div>
 
 </div>
@@ -272,54 +256,30 @@ class C(A, B):
 <div class="mkapi-node" id="appendix.member_order_sub.C">
 <div class="mkapi-object mkapi-object-class code">
 <div class="mkapi-object-kind mkapi-object-kind-class">CLASS</div>
-<div class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.member_order_sub.</code><code class="mkapi-object-name">C</code><code class="mkapi-object-signature">()</code>
-    </div>
+<div class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.member_order_sub.</code><code class="mkapi-object-name">C</code><code class="mkapi-object-signature">()</code></div>
 </div>
 <div class="mkapi-docstring">
-
-<div class="mkapi-section mkapi-section-bases">
-
-<div class="mkapi-section-name mkapi-section-name-bases">
-<span class="mkapi-section-name-body">Bases</span>
-
-</div>
-
-<div class="mkapi-section-body mkapi-section-body-bases">
-<span class="mkapi-base">appendix.member_order_base.A</span>
-
-<span class="mkapi-base">appendix.member_order_sub.B</span>
-</div>
-</div>
-
-<div class="mkapi-section">
-
-<div class="mkapi-section-body"></div>
-</div>
-
 <div class="mkapi-section mkapi-section-methods">
-
 <div class="mkapi-section-name mkapi-section-name-methods">
 <span class="mkapi-section-name-body">Methods</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
-
-<li class="method"><code class="mkapi-args-name" title="method"><a href="#appendix.member_order_base.A.a">a</a></code><code class="mkapi-object-signature">()</code>
+<li class="method"><code class="mkapi-args-name"><a href="#appendix.member_order_base.A.a">a</a></code><code class="mkapi-object-signature">()</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">mro index: 1, sourcefile index: 1, line number: 13.</span></li>
 
-<li class="method"><code class="mkapi-args-name" title="method"><a href="#appendix.member_order_sub.B.b">b</a></code><code class="mkapi-object-signature">()</code>
+<li class="method"><code class="mkapi-args-name"><a href="#appendix.member_order_sub.B.b">b</a></code><code class="mkapi-object-signature">()</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">mro index: 2, sourcefile index: 0, line number: 5.</span></li>
 
-<li class="method"><code class="mkapi-args-name" title="method"><a href="#appendix.member_order_sub.C.c">c</a></code><code class="mkapi-object-signature">()</code>
+<li class="method"><code class="mkapi-args-name"><a href="#appendix.member_order_sub.C.c">c</a></code><code class="mkapi-object-signature">()</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">mro index: 0, sourcefile index: 0, line number: 10.</span></li>
 
+
 </ul></div>
 </div>
-
 </div>
 
   <div class="mkapi-members">
@@ -328,16 +288,12 @@ class C(A, B):
       <div class="mkapi-node" id="appendix.member_order_base.A.a">
 <div class="mkapi-object mkapi-object-method code">
 <div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">a</code><code class="mkapi-object-signature">()</code>
-    </div>
+<div class="mkapi-object-body"><code class="mkapi-object-name">a</code><code class="mkapi-object-signature">()</code></div>
 </div>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>mro index: 1, sourcefile index: 1, line number: 13.</p></div>
 </div>
-
 </div>
 
 </div>
@@ -347,16 +303,12 @@ class C(A, B):
       <div class="mkapi-node" id="appendix.member_order_sub.B.b">
 <div class="mkapi-object mkapi-object-method code">
 <div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">b</code><code class="mkapi-object-signature">()</code>
-    </div>
+<div class="mkapi-object-body"><code class="mkapi-object-name">b</code><code class="mkapi-object-signature">()</code></div>
 </div>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>mro index: 2, sourcefile index: 0, line number: 5.</p></div>
 </div>
-
 </div>
 
 </div>
@@ -366,16 +318,12 @@ class C(A, B):
       <div class="mkapi-node" id="appendix.member_order_sub.C.c">
 <div class="mkapi-object mkapi-object-method code">
 <div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">c</code><code class="mkapi-object-signature">()</code>
-    </div>
+<div class="mkapi-object-body"><code class="mkapi-object-name">c</code><code class="mkapi-object-signature">()</code></div>
 </div>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>mro index: 0, sourcefile index: 0, line number: 10.</p></div>
 </div>
-
 </div>
 
 </div>

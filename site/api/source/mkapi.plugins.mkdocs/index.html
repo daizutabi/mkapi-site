@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="daizutabi">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <title>mkapi.plugins.mkdocs &mdash; MkApi</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../../../css/mkapi-common.css">
+    <link rel="stylesheet" href="../../../css/mkapi-ivory.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../../css/pheasant.css">
+    <link rel="stylesheet" href="../../../custom.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../../.." class="site-name"> MkApi</a>
+                </div><div class="version">1.0.0</div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../../..">MkApi Documentation</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../../../release/">Release Notes</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Examples</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../examples/google_style/">Google Style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../examples/numpy_style/">NumPy Style</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../usage/module/">Module and Package</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../usage/inherit/">Docstring Inheritance</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../usage/page/">Page Mode and Internal Links</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../usage/library/">Using MkApi within Python</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../usage/custom/">Customization</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Appendix</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/type/">Type Annotation Examples</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/method/">Method and Property Types</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/inherit/">Inheritance and Special Methods</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/order/">Ordering Members in Different Files</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">API</button>
+<ul class="subnav">
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi/">mkapi</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core/">mkapi.core</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.base/">mkapi.core.base</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.docstring/">mkapi.core.docstring</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.inherit/">mkapi.core.inherit</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.linker/">mkapi.core.linker</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.module/">mkapi.core.module</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.node/">mkapi.core.node</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.object/">mkapi.core.object</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.page/">mkapi.core.page</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.renderer/">mkapi.core.renderer</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.signature/">mkapi.core.signature</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.structure/">mkapi.core.structure</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.plugins/">mkapi.plugins</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.plugins.mkdocs/">mkapi.plugins.mkdocs</a></li>
+</ul></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
+    </div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../../.." class="site-name"> MkApi</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">MKAPI.PLUGINS.</span><span class="mkapi-object-name">MKDOCS</span><span class="mkapi-object-signature"></span>
+<span id="mkapi.plugins.mkdocs"></span><a class="mkapi-docs-link" href="../../mkapi.plugins.mkdocs">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;This module provides the MkapiPlugin class.</span>
+
+<span class="sd">MkapiPlugin is a MkDocs plugin that creates Python API documentation from Docstring.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">inspect</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">import</span> <span class="nn">yaml</span>
+<span class="kn">from</span> <span class="nn">mkdocs.config</span> <span class="kn">import</span> <span class="n">config_options</span>
+<span class="kn">from</span> <span class="nn">mkdocs.plugins</span> <span class="kn">import</span> <span class="n">BasePlugin</span>
+<span class="kn">from</span> <span class="nn">mkdocs.structure.files</span> <span class="kn">import</span> <span class="n">get_files</span>
+
+<span class="kn">import</span> <span class="nn">mkapi</span>
+<span class="kn">import</span> <span class="nn">mkapi.plugins.api</span>
+<span class="kn">from</span> <span class="nn">mkapi.core.object</span> <span class="kn">import</span> <span class="n">get_object</span>
+<span class="kn">from</span> <span class="nn">mkapi.core.page</span> <span class="kn">import</span> <span class="n">Page</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;mkdocs&quot;</span><span class="p">)</span>
+<span class="n">global_config</span> <span class="o">=</span> <span class="p">{}</span>
+
+
+<span class="k">class</span> <span class="nc">MkapiPlugin</span><span class="p">(</span><span class="n">BasePlugin</span><span class="p">):</span><span id="mkapi.plugins.mkdocs.MkapiPlugin"></span><a class="mkapi-docs-link"href="../../mkapi.plugins.mkdocs#mkapi.plugins.mkdocs.MkapiPlugin">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;MkapiPlugin class for API generation.&quot;&quot;&quot;</span>
+
+    <span class="n">config_scheme</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="s2">&quot;src_dirs&quot;</span><span class="p">,</span> <span class="n">config_options</span><span class="o">.</span><span class="n">Type</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="p">[])),</span>
+        <span class="p">(</span><span class="s2">&quot;on_config&quot;</span><span class="p">,</span> <span class="n">config_options</span><span class="o">.</span><span class="n">Type</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)),</span>
+        <span class="p">(</span><span class="s2">&quot;callback&quot;</span><span class="p">,</span> <span class="n">config_options</span><span class="o">.</span><span class="n">Type</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)),</span>
+    <span class="p">)</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">on_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span><span id="mkapi.plugins.mkdocs.MkapiPlugin.on_config"></span><a class="mkapi-docs-link"href="../../mkapi.plugins.mkdocs#mkapi.plugins.mkdocs.MkapiPlugin.on_config">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;Inserts `src_dirs` to `sys.path`.&quot;&quot;&quot;</span>
+        <span class="n">config_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;config_file_path&quot;</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">src_dir</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;src_dirs&quot;</span><span class="p">]:</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config_dir</span><span class="p">,</span> <span class="n">src_dir</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">path</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+                <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;src_dirs&quot;</span><span class="p">]:</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">path</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+                <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pages</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">abs_api_paths</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="p">:</span>
+            <span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">abs_api_paths</span> <span class="o">=</span> <span class="n">mkapi</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">create_nav</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+            <span class="n">global_config</span><span class="p">[</span><span class="s2">&quot;config&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">config</span>
+            <span class="n">global_config</span><span class="p">[</span><span class="s2">&quot;abs_api_paths&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">abs_api_paths</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">config</span> <span class="o">=</span> <span class="n">global_config</span><span class="p">[</span><span class="s2">&quot;config&quot;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">abs_api_paths</span> <span class="o">=</span> <span class="n">global_config</span><span class="p">[</span><span class="s2">&quot;abs_api_paths&quot;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;on_config&quot;</span><span class="p">]:</span>
+            <span class="n">on_config</span> <span class="o">=</span> <span class="n">get_object</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;on_config&quot;</span><span class="p">])</span>
+            <span class="n">kwargs</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">params</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">signature</span><span class="p">(</span><span class="n">on_config</span><span class="p">)</span><span class="o">.</span><span class="n">parameters</span>
+            <span class="k">if</span> <span class="s2">&quot;config&quot;</span> <span class="ow">in</span> <span class="n">params</span><span class="p">:</span>
+                <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;config&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">config</span>
+            <span class="k">if</span> <span class="s2">&quot;mkapi&quot;</span> <span class="ow">in</span> <span class="n">params</span><span class="p">:</span>
+                <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;mkapi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[MkApi] Calling user &#39;on_config&#39; with </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">config_</span> <span class="o">=</span> <span class="n">on_config</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">config_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">config</span> <span class="o">=</span> <span class="n">config_</span>
+
+        <span class="k">return</span> <span class="n">config</span>
+
+    <span class="k">def</span> <span class="nf">on_files</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">files</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span><span id="mkapi.plugins.mkdocs.MkapiPlugin.on_files"></span><a class="mkapi-docs-link"href="../../mkapi.plugins.mkdocs#mkapi.plugins.mkdocs.MkapiPlugin.on_files">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;Collects plugin CSS ans JavaScript and appends them to `files`.&quot;&quot;&quot;</span>
+        <span class="n">root</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">mkapi</span><span class="o">.</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;theme&quot;</span><span class="p">)</span>
+        <span class="n">docs_dir</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;docs_dir&quot;</span><span class="p">]</span>
+        <span class="n">config</span><span class="p">[</span><span class="s2">&quot;docs_dir&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">root</span>
+        <span class="n">files_</span> <span class="o">=</span> <span class="n">get_files</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+        <span class="n">config</span><span class="p">[</span><span class="s2">&quot;docs_dir&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">docs_dir</span>
+        <span class="n">theme_name</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;theme&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+
+        <span class="n">css</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">js</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files_</span><span class="p">:</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">src_path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.css&quot;</span><span class="p">):</span>
+                <span class="k">if</span> <span class="s2">&quot;common&quot;</span> <span class="ow">in</span> <span class="n">path</span> <span class="ow">or</span> <span class="n">theme_name</span> <span class="ow">in</span> <span class="n">path</span><span class="p">:</span>
+                    <span class="n">files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+                    <span class="n">css</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">path</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.js&quot;</span><span class="p">):</span>
+                <span class="n">files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+                <span class="n">js</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">path</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.yml&quot;</span><span class="p">):</span>
+                <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">path</span><span class="p">))</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="n">data</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+                <span class="n">css</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;extra_css&quot;</span><span class="p">,</span> <span class="p">[])</span> <span class="o">+</span> <span class="n">css</span>
+                <span class="n">js</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;extra_javascript&quot;</span><span class="p">,</span> <span class="p">[])</span> <span class="o">+</span> <span class="n">js</span>
+        <span class="n">css</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">css</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;extra_css&quot;</span><span class="p">]]</span>
+        <span class="n">js</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">js</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;extra_javascript&quot;</span><span class="p">]]</span>
+        <span class="n">config</span><span class="p">[</span><span class="s2">&quot;extra_css&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">css</span> <span class="o">+</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;extra_css&quot;</span><span class="p">]</span>
+        <span class="n">config</span><span class="p">[</span><span class="s2">&quot;extra_javascript&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">js</span> <span class="o">+</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;extra_javascript&quot;</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">files</span>
+
+    <span class="k">def</span> <span class="nf">on_page_markdown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">markdown</span><span class="p">,</span> <span class="n">page</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">files</span><span class="p">):</span><span id="mkapi.plugins.mkdocs.MkapiPlugin.on_page_markdown"></span><a class="mkapi-docs-link"href="../../mkapi.plugins.mkdocs#mkapi.plugins.mkdocs.MkapiPlugin.on_page_markdown">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;Converts Markdown source to intermidiate version.&quot;&quot;&quot;</span>
+        <span class="n">abs_src_path</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">abs_src_path</span>
+        <span class="n">clean_page_title</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+        <span class="n">page</span> <span class="o">=</span> <span class="n">Page</span><span class="p">(</span><span class="n">markdown</span><span class="p">,</span> <span class="n">abs_src_path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">abs_api_paths</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pages</span><span class="p">[</span><span class="n">abs_src_path</span><span class="p">]</span> <span class="o">=</span> <span class="n">page</span>
+        <span class="k">return</span> <span class="n">page</span><span class="o">.</span><span class="n">markdown</span>
+
+    <span class="k">def</span> <span class="nf">on_page_content</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">page</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">files</span><span class="p">):</span><span id="mkapi.plugins.mkdocs.MkapiPlugin.on_page_content"></span><a class="mkapi-docs-link"href="../../mkapi.plugins.mkdocs#mkapi.plugins.mkdocs.MkapiPlugin.on_page_content">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;Merges html and MkApi&#39;s node structure.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">page</span><span class="o">.</span><span class="n">title</span><span class="p">:</span>
+            <span class="n">page</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;&lt;.*?&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">page</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+        <span class="n">abs_src_path</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">abs_src_path</span>
+        <span class="n">page</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pages</span><span class="p">[</span><span class="n">abs_src_path</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">page</span><span class="o">.</span><span class="n">content</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">on_page_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">page</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">nav</span><span class="p">):</span>
+        <span class="n">abs_src_path</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">abs_src_path</span>
+        <span class="k">if</span> <span class="n">abs_src_path</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">abs_api_paths</span><span class="p">:</span>
+            <span class="n">clear_prefix</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">toc</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">context</span>
+
+    <span class="k">def</span> <span class="nf">on_serve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">server</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">builder</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;theme&quot;</span><span class="p">,</span> <span class="s2">&quot;templates&quot;</span><span class="p">]:</span>
+            <span class="n">root</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">mkapi</span><span class="o">.</span><span class="vm">__file__</span><span class="p">),</span> <span class="n">path</span><span class="p">)</span>
+            <span class="n">server</span><span class="o">.</span><span class="n">watch</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">builder</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">server</span> <span class="o">=</span> <span class="n">server</span>
+        <span class="k">return</span> <span class="n">server</span>
+
+
+<span class="k">def</span> <span class="nf">clear_prefix</span><span class="p">(</span><span class="n">toc</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">toc_item</span> <span class="ow">in</span> <span class="n">toc</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">toc_item</span><span class="o">.</span><span class="n">level</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">toc_item</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">toc_item</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">clear_prefix</span><span class="p">(</span><span class="n">toc_item</span><span class="o">.</span><span class="n">children</span><span class="p">)</span>
+    <span class="k">return</span>
+
+
+<span class="k">def</span> <span class="nf">clean_page_title</span><span class="p">(</span><span class="n">page</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">title</span>
+    <span class="k">if</span> <span class="n">title</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;![mkapi](&quot;</span><span class="p">):</span>
+        <span class="n">page</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">[</span><span class="mi">9</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+</div>
+</div></div>
+                <footer>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/mkapi.js"></script>
+    <script src="../../../js/pheasant.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="../../../search/main.js"></script>
+</body>
+
+</html>

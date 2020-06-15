@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
     <link rel="stylesheet" href="../../css/pheasant.css">
+    <link rel="stylesheet" href="../../custom.css">
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
@@ -34,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.8.6</div>
+                </div><div class="version">1.0.0</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -46,6 +47,7 @@
             <nav class="nav">
                 <ul class="root">
                     <li class="toctree-l1"><a class="nav-item" href="../..">MkApi Documentation</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../../release/">Release Notes</a></li>
                     <li class="toctree-l1"><button class="section nav-item">Examples</button>
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../examples/google_style/">Google Style</a></li>
@@ -92,7 +94,7 @@
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.page/">mkapi.core.page</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.renderer/">mkapi.core.renderer</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.signature/">mkapi.core.signature</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.tree/">mkapi.core.tree</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.structure/">mkapi.core.structure</a></li>
 </ul></li>
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
 <ul class="subnav hide">
@@ -126,48 +128,41 @@
 <div class="mkapi-node" id="mkapi.core.object">
 <h1 id="mkapicoreobject" class="mkapi-object mkapi-object-module plain">
 <span class="mkapi-object-kind mkapi-object-kind-module">MODULE</span>
-<span class="mkapi-object-prefix"><a href="../mkapi.core/#mkapi.core">MKAPI.CORE</a>.</span><span class="mkapi-object-name">OBJECT</span><span class="mkapi-object-signature"></span>
-    
+<span class="mkapi-object-prefix"><a href="../mkapi.core/#mkapi.core">MKAPI.CORE</a>.</span><span class="mkapi-object-name">OBJECT</span><span class="mkapi-object-signature"></span><a class="mkapi-src-link" href="../source/mkapi.core.object#mkapi.core.object">SOURCE</a>
 </h1>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>This module provides utility functions that relates to object.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-functions">
-
 <div class="mkapi-section-name mkapi-section-name-functions">
 <span class="mkapi-section-name-body">Functions</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-functions"><ul class="mkapi-args-list">
-
-<li class="function"><code class="mkapi-args-name" title="function"><a href="#mkapi.core.object.get_object">get_object</a></code><code class="mkapi-object-signature">(name)</code>
-<span class="mkapi-args-type">(any)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Reutrns an object specified by <code>name</code>.</span></li>
-
-<li class="function"><code class="mkapi-args-name" title="function"><a href="#mkapi.core.object.get_fullname">get_fullname</a></code><code class="mkapi-object-signature">(obj,</code> <code class="mkapi-object-signature">name)</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Reutrns an object full name specified by <code>name</code>.</span></li>
-
-<li class="function"><code class="mkapi-args-name" title="function"><a href="#mkapi.core.object.split_prefix_and_name">split_prefix_and_name</a></code><code class="mkapi-object-signature">(obj)</code>
-<span class="mkapi-args-type">(str, str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Splits an object full name into prefix and name.</span></li>
-
-<li class="function"><code class="mkapi-args-name" title="function"><a href="#mkapi.core.object.get_sourcefiles">get_sourcefiles</a></code><code class="mkapi-object-signature">(obj)</code>
-<span class="mkapi-args-type">(list of str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a list of source file.</span></li>
-
-<li class="function"><code class="mkapi-args-name" title="function"><a href="#mkapi.core.object.from_object">from_object</a></code><code class="mkapi-object-signature">(obj)</code>
+<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.object.from_object">from_object</a></code><code class="mkapi-object-signature">(obj)</code>
 <span class="mkapi-args-type">(bool)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns True, if the docstring of <code>obj</code> is the same as that of <code>object</code>.</span></li>
 
+<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.object.get_fullname">get_fullname</a></code><code class="mkapi-object-signature">(obj,</code> <code class="mkapi-object-signature">name)</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Reutrns an object full name specified by <code>name</code>.</span></li>
+
+<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.object.get_object">get_object</a></code><code class="mkapi-object-signature">(name)</code>
+<span class="mkapi-args-type">(any)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Reutrns an object specified by <code>name</code>.</span></li>
+
+<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.object.get_sourcefiles">get_sourcefiles</a></code><code class="mkapi-object-signature">(obj)</code>
+<span class="mkapi-args-type">(list of str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a list of source file.</span></li>
+
+<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.object.split_prefix_and_name">split_prefix_and_name</a></code><code class="mkapi-object-signature">(obj)</code>
+<span class="mkapi-args-type">(str, str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Splits an object full name into prefix and name.</span></li>
+
+
 </ul></div>
 </div>
-
 </div>
 
 </div>
@@ -175,39 +170,30 @@
 <div class="mkapi-node" id="mkapi.core.object.get_object">
 <h2 id="mkapicoreobjectget_object" class="mkapi-object mkapi-object-function code">
 <span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.object">mkapi.core.object</a>.</code><code class="mkapi-object-name">get_object</code><code class="mkapi-object-signature">(name)</code>
-    <span class="mkapi-args-type"> &#x2192; any</span>
+<code class="mkapi-object-prefix"><a href="#mkapi.core.object">mkapi.core.object</a>.</code><code class="mkapi-object-name">get_object</code><code class="mkapi-object-signature">(name)</code><span class="mkapi-args-type"> &#x2192; any</span><a class="mkapi-src-link" href="../source/mkapi.core.object#mkapi.core.object.get_object">SOURCE</a>
 </h2>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Reutrns an object specified by <code>name</code>.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">name</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
 
+
 </ul></div>
 </div>
-
 <div class="mkapi-section mkapi-section-examples">
-
 <div class="mkapi-section-name mkapi-section-name-examples">
 <span class="mkapi-section-name-body">Examples</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; import inspect
 &gt;&gt;&gt; obj = get_object('mkapi.core')
 &gt;&gt;&gt; inspect.ismodule(obj)
@@ -223,7 +209,6 @@ True
 True
 </code></pre></div>
 </div>
-
 </div>
 
 </div>
@@ -231,25 +216,18 @@ True
 <div class="mkapi-node" id="mkapi.core.object.get_fullname">
 <h2 id="mkapicoreobjectget_fullname" class="mkapi-object mkapi-object-function code">
 <span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.object">mkapi.core.object</a>.</code><code class="mkapi-object-name">get_fullname</code><code class="mkapi-object-signature">(obj,</code> <code class="mkapi-object-signature">name)</code>
-    <span class="mkapi-args-type"> &#x2192; str</span>
+<code class="mkapi-object-prefix"><a href="#mkapi.core.object">mkapi.core.object</a>.</code><code class="mkapi-object-name">get_fullname</code><code class="mkapi-object-signature">(obj,</code> <code class="mkapi-object-signature">name)</code><span class="mkapi-args-type"> &#x2192; str</span><a class="mkapi-src-link" href="../source/mkapi.core.object#mkapi.core.object.get_fullname">SOURCE</a>
 </h2>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Reutrns an object full name specified by <code>name</code>.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">obj</code>
 <span class="mkapi-args-type">(any)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object that has a module.</span></li>
@@ -258,27 +236,23 @@ True
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name in the module.</span></li>
 
+
 </ul></div>
 </div>
-
 <div class="mkapi-section mkapi-section-examples">
-
 <div class="mkapi-section-name mkapi-section-name-examples">
 <span class="mkapi-section-name-body">Examples</span>
 
 </div>
-
-<div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; import inspect
-&gt;&gt;&gt; obj = get_object('mkapi.core.base.Item')
+<div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; obj = get_object('mkapi.core.base.Item')
 &gt;&gt;&gt; get_fullname(obj, 'Section')
 'mkapi.core.base.Section'
-&gt;&gt;&gt; get_fullname(obj, 'linker.link')
-'mkapi.core.linker.link'
+&gt;&gt;&gt; get_fullname(obj, 'preprocess')
+'mkapi.core.preprocess'
 &gt;&gt;&gt; get_fullname(obj, 'abc')
 ''
 </code></pre></div>
 </div>
-
 </div>
 
 </div>
@@ -286,39 +260,30 @@ True
 <div class="mkapi-node" id="mkapi.core.object.split_prefix_and_name">
 <h2 id="mkapicoreobjectsplit_prefix_and_name" class="mkapi-object mkapi-object-function code">
 <span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.object">mkapi.core.object</a>.</code><code class="mkapi-object-name">split_prefix_and_name</code><code class="mkapi-object-signature">(obj)</code>
-    <span class="mkapi-args-type"> &#x2192; (str, str)</span>
+<code class="mkapi-object-prefix"><a href="#mkapi.core.object">mkapi.core.object</a>.</code><code class="mkapi-object-name">split_prefix_and_name</code><code class="mkapi-object-signature">(obj)</code><span class="mkapi-args-type"> &#x2192; (str, str)</span><a class="mkapi-src-link" href="../source/mkapi.core.object#mkapi.core.object.split_prefix_and_name">SOURCE</a>
 </h2>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Splits an object full name into prefix and name.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">obj</code>
 <span class="mkapi-args-type">(any)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object that has a module.</span></li>
 
+
 </ul></div>
 </div>
-
 <div class="mkapi-section mkapi-section-examples">
-
 <div class="mkapi-section-name mkapi-section-name-examples">
 <span class="mkapi-section-name-body">Examples</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; import inspect
 &gt;&gt;&gt; obj = get_object('mkapi.core')
 &gt;&gt;&gt; split_prefix_and_name(obj)
@@ -334,7 +299,6 @@ True
 ('mkapi.core.node.Node', 'get_markdown')
 </code></pre></div>
 </div>
-
 </div>
 
 </div>
@@ -342,33 +306,26 @@ True
 <div class="mkapi-node" id="mkapi.core.object.get_sourcefiles">
 <h2 id="mkapicoreobjectget_sourcefiles" class="mkapi-object mkapi-object-function code">
 <span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.object">mkapi.core.object</a>.</code><code class="mkapi-object-name">get_sourcefiles</code><code class="mkapi-object-signature">(obj)</code>
-    <span class="mkapi-args-type"> &#x2192; list of str</span>
+<code class="mkapi-object-prefix"><a href="#mkapi.core.object">mkapi.core.object</a>.</code><code class="mkapi-object-name">get_sourcefiles</code><code class="mkapi-object-signature">(obj)</code><span class="mkapi-args-type"> &#x2192; list of str</span><a class="mkapi-src-link" href="../source/mkapi.core.object#mkapi.core.object.get_sourcefiles">SOURCE</a>
 </h2>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Returns a list of source file.</p>
 <p>If <code>obj</code> is a class, source files of its superclasses are also included.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">obj</code>
 <span class="mkapi-args-type">(any)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
 
+
 </ul></div>
 </div>
-
 </div>
 
 </div>
@@ -376,39 +333,34 @@ True
 <div class="mkapi-node" id="mkapi.core.object.from_object">
 <h2 id="mkapicoreobjectfrom_object" class="mkapi-object mkapi-object-function code">
 <span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.object">mkapi.core.object</a>.</code><code class="mkapi-object-name">from_object</code><code class="mkapi-object-signature">(obj)</code>
-    <span class="mkapi-args-type"> &#x2192; bool</span>
+<code class="mkapi-object-prefix"><a href="#mkapi.core.object">mkapi.core.object</a>.</code><code class="mkapi-object-name">from_object</code><code class="mkapi-object-signature">(obj)</code><span class="mkapi-args-type"> &#x2192; bool</span><a class="mkapi-src-link" href="../source/mkapi.core.object#mkapi.core.object.from_object">SOURCE</a>
 </h2>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Returns True, if the docstring of <code>obj</code> is the same as that of <code>object</code>.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">obj</code>
 <span class="mkapi-args-type">(any)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object.</span></li>
 
+<li><code class="mkapi-args-name">name</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
+
+
 </ul></div>
 </div>
-
 <div class="mkapi-section mkapi-section-examples">
-
 <div class="mkapi-section-name mkapi-section-name-examples">
 <span class="mkapi-section-name-body">Examples</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; class A: pass
 &gt;&gt;&gt; from_object(A.__call__)
 True
@@ -418,7 +370,6 @@ True
 True
 </code></pre></div>
 </div>
-
 </div>
 
 </div></div>

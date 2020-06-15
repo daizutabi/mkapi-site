@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="daizutabi">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <title>mkapi.core.linker &mdash; MkApi</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../../../css/mkapi-common.css">
+    <link rel="stylesheet" href="../../../css/mkapi-ivory.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../../css/pheasant.css">
+    <link rel="stylesheet" href="../../../custom.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../../.." class="site-name"> MkApi</a>
+                </div><div class="version">1.0.0</div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../../..">MkApi Documentation</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../../../release/">Release Notes</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Examples</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../examples/google_style/">Google Style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../examples/numpy_style/">NumPy Style</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../usage/module/">Module and Package</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../usage/inherit/">Docstring Inheritance</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../usage/page/">Page Mode and Internal Links</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../usage/library/">Using MkApi within Python</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../usage/custom/">Customization</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Appendix</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/type/">Type Annotation Examples</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/method/">Method and Property Types</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/inherit/">Inheritance and Special Methods</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/order/">Ordering Members in Different Files</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">API</button>
+<ul class="subnav">
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi/">mkapi</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core/">mkapi.core</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.base/">mkapi.core.base</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.docstring/">mkapi.core.docstring</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.inherit/">mkapi.core.inherit</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.linker/">mkapi.core.linker</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.module/">mkapi.core.module</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.node/">mkapi.core.node</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.object/">mkapi.core.object</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.page/">mkapi.core.page</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.renderer/">mkapi.core.renderer</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.signature/">mkapi.core.signature</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.structure/">mkapi.core.structure</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.plugins/">mkapi.plugins</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.plugins.mkdocs/">mkapi.plugins.mkdocs</a></li>
+</ul></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
+    </div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../../.." class="site-name"> MkApi</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">MKAPI.CORE.</span><span class="mkapi-object-name">LINKER</span><span class="mkapi-object-signature"></span>
+<span id="mkapi.core.linker"></span><a class="mkapi-docs-link" href="../../mkapi.core.linker">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;This module provides functions that relate to link.&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">html.parser</span> <span class="kn">import</span> <span class="n">HTMLParser</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
+
+<span class="kn">from</span> <span class="nn">mkapi.core.object</span> <span class="kn">import</span> <span class="n">get_fullname</span>
+<span class="kn">from</span> <span class="nn">mkapi.core.regex</span> <span class="kn">import</span> <span class="n">LINK_PATTERN</span>
+
+
+<span class="k">def</span> <span class="nf">link</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">href</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.linker.link"></span><a class="mkapi-docs-link"href="../../mkapi.core.linker#mkapi.core.linker.link">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Reutrns Markdown link with a mark that indicates this link was created by MkApi.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        name: Link name.</span>
+<span class="sd">        href: Reference.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; link(&#39;abc&#39;, &#39;xyz&#39;)</span>
+<span class="sd">        &#39;[abc](!xyz)&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">](!</span><span class="si">{</span><span class="n">href</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">get_link</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">include_module</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.linker.get_link"></span><a class="mkapi-docs-link"href="../../mkapi.core.linker#mkapi.core.linker.get_link">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Returns Markdown link for object, if possible.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        obj: Object</span>
+<span class="sd">        include_module: If True, link text includes module path.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; get_link(get_fullname)</span>
+<span class="sd">        &#39;[get_fullname](!mkapi.core.object.get_fullname)&#39;</span>
+<span class="sd">        &gt;&gt;&gt; get_link(get_fullname, include_module=True)</span>
+<span class="sd">        &#39;[mkapi.core.object.get_fullname](!mkapi.core.object.get_fullname)&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;__qualname__&quot;</span><span class="p">):</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__qualname__</span>
+    <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;__name__&quot;</span><span class="p">):</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__name__</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;__module__&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">name</span>
+    <span class="n">module</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__module__</span>
+    <span class="k">if</span> <span class="n">module</span> <span class="o">==</span> <span class="s2">&quot;builtins&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">name</span>
+    <span class="n">fullname</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">module</span><span class="p">,</span> <span class="n">name</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">include_module</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">fullname</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__name__</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">text</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">link</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">fullname</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">resolve_link</span><span class="p">(</span><span class="n">markdown</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">abs_src_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">abs_api_paths</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.linker.resolve_link"></span><a class="mkapi-docs-link"href="../../mkapi.core.linker#mkapi.core.linker.resolve_link">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Reutrns resolved link.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        markdown: Markdown source.</span>
+<span class="sd">        abs_src_path: Absolute source path of Markdown.</span>
+<span class="sd">        abs_api_paths: A list of API paths.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; abs_src_path = &#39;/src/examples/example.md&#39;</span>
+<span class="sd">        &gt;&gt;&gt; abs_api_paths = [&#39;/api/a&#39;,&#39;/api/b&#39;, &#39;/api/b.c&#39;]</span>
+<span class="sd">        &gt;&gt;&gt; resolve_link(&#39;[abc](!b.c.d)&#39;, abs_src_path, abs_api_paths)</span>
+<span class="sd">        &#39;[abc](../../api/b.c#b.c.d)&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">replace</span><span class="p">(</span><span class="n">match</span><span class="p">):</span>
+        <span class="n">name</span><span class="p">,</span> <span class="n">href</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">href</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;!!&quot;</span><span class="p">):</span>  <span class="c1"># Just for MkApi documentation.</span>
+            <span class="n">href</span> <span class="o">=</span> <span class="n">href</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">](</span><span class="si">{</span><span class="n">href</span><span class="si">}</span><span class="s2">)&quot;</span>
+        <span class="k">if</span> <span class="n">href</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;!&quot;</span><span class="p">):</span>
+            <span class="n">href</span> <span class="o">=</span> <span class="n">href</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="n">from_mkapi</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">from_mkapi</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="n">href</span> <span class="o">=</span> <span class="n">resolve_href</span><span class="p">(</span><span class="n">href</span><span class="p">,</span> <span class="n">abs_src_path</span><span class="p">,</span> <span class="n">abs_api_paths</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">href</span><span class="p">:</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">](</span><span class="si">{</span><span class="n">href</span><span class="si">}</span><span class="s2">)&quot;</span>
+        <span class="k">elif</span> <span class="n">from_mkapi</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">name</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">LINK_PATTERN</span><span class="p">,</span> <span class="n">replace</span><span class="p">,</span> <span class="n">markdown</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">resolve_href</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">abs_src_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">abs_api_paths</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">abs_api_path</span> <span class="o">=</span> <span class="n">match_last</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">abs_api_paths</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">abs_api_path</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">relpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="n">abs_api_path</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">abs_src_path</span><span class="p">))</span>
+    <span class="n">relpath</span> <span class="o">=</span> <span class="n">relpath</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot;#&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">relpath</span><span class="p">,</span> <span class="n">name</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">match_last</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">abs_api_paths</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">abs_api_path</span> <span class="ow">in</span> <span class="n">abs_api_paths</span><span class="p">:</span>
+        <span class="n">dirname</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">abs_api_path</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">path</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]):</span>
+            <span class="n">match</span> <span class="o">=</span> <span class="n">abs_api_path</span>
+    <span class="k">return</span> <span class="n">match</span>
+
+
+<span class="k">class</span> <span class="nc">_ObjectParser</span><span class="p">(</span><span class="n">HTMLParser</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">feed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;href&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;heading_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">}</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">feed</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+        <span class="n">href</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">href</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">prefix_url</span><span class="p">,</span> <span class="n">name_url</span> <span class="o">=</span> <span class="n">href</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">href</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">prefix_url</span><span class="p">,</span> <span class="n">name_url</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">href</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">prefix_url</span><span class="p">,</span> <span class="n">name_url</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">[</span><span class="s2">&quot;prefix_url&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">prefix_url</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">[</span><span class="s2">&quot;name_url&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name_url</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span>
+
+    <span class="k">def</span> <span class="nf">handle_starttag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag</span><span class="p">,</span> <span class="n">attrs</span><span class="p">):</span>
+        <span class="n">context</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span>
+        <span class="k">if</span> <span class="n">tag</span> <span class="o">==</span> <span class="s2">&quot;p&quot;</span><span class="p">:</span>
+            <span class="n">context</span><span class="p">[</span><span class="s2">&quot;level&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">elif</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;h[1-6]&quot;</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
+            <span class="n">context</span><span class="p">[</span><span class="s2">&quot;level&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tag</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+            <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">attrs</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">attr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">[</span><span class="s2">&quot;heading_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">attr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">tag</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">attrs</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">attr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;href&quot;</span><span class="p">:</span>
+                    <span class="n">href</span> <span class="o">=</span> <span class="n">attr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">href</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;./&quot;</span><span class="p">):</span>
+                        <span class="n">href</span> <span class="o">=</span> <span class="n">href</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">href</span><span class="p">)</span>
+
+
+<span class="n">parser</span> <span class="o">=</span> <span class="n">_ObjectParser</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">resolve_object</span><span class="p">(</span><span class="n">html</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span><span id="mkapi.core.linker.resolve_object"></span><a class="mkapi-docs-link"href="../../mkapi.core.linker#mkapi.core.linker.resolve_object">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Reutrns an object context dictionary.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        html: HTML source.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; resolve_object(&quot;&lt;p&gt;&lt;a href=&#39;a&#39;&gt;p&lt;/a&gt;&lt;a href=&#39;b&#39;&gt;n&lt;/a&gt;&lt;/p&gt;&quot;)</span>
+<span class="sd">        {&#39;heading_id&#39;: &#39;&#39;, &#39;level&#39;: 0, &#39;prefix_url&#39;: &#39;a&#39;, &#39;name_url&#39;: &#39;b&#39;}</span>
+<span class="sd">        &gt;&gt;&gt; resolve_object(&quot;&lt;h2 id=&#39;i&#39;&gt;&lt;a href=&#39;a&#39;&gt;p&lt;/a&gt;&lt;a href=&#39;b&#39;&gt;n&lt;/a&gt;&lt;/h2&gt;&quot;)</span>
+<span class="sd">        {&#39;heading_id&#39;: &#39;i&#39;, &#39;level&#39;: 2, &#39;prefix_url&#39;: &#39;a&#39;, &#39;name_url&#39;: &#39;b&#39;}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">parser</span><span class="o">.</span><span class="n">feed</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+
+
+<span class="n">REPLACE_LINK_PATTERN</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\[(.*?)\]\((.*?)\)&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">replace_link</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">markdown</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.linker.replace_link"></span><a class="mkapi-docs-link"href="../../mkapi.core.linker#mkapi.core.linker.replace_link">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Returns a replaced link with object full name.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        obj: Object that has a module.</span>
+<span class="sd">        markdown: Markdown</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; from mkapi.core.object import get_object</span>
+<span class="sd">        &gt;&gt;&gt; obj = get_object(&#39;mkapi.core.structure.Object&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; replace_link(obj, &#39;[Signature]()&#39;)</span>
+<span class="sd">        &#39;[Signature](!mkapi.core.signature.Signature)&#39;</span>
+<span class="sd">        &gt;&gt;&gt; replace_link(obj, &#39;[](Signature)&#39;)</span>
+<span class="sd">        &#39;[Signature](!mkapi.core.signature.Signature)&#39;</span>
+<span class="sd">        &gt;&gt;&gt; replace_link(obj, &#39;[text](Signature)&#39;)</span>
+<span class="sd">        &#39;[text](!mkapi.core.signature.Signature)&#39;</span>
+<span class="sd">        &gt;&gt;&gt; replace_link(obj, &#39;[dummy.Dummy]()&#39;)</span>
+<span class="sd">        &#39;[dummy.Dummy]()&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">replace</span><span class="p">(</span><span class="n">match</span><span class="p">):</span>
+        <span class="n">text</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="p">:</span>
+            <span class="n">name</span><span class="p">,</span> <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="p">,</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">fullname</span> <span class="o">=</span> <span class="n">get_fullname</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">fullname</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">text</span><span class="p">:</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="n">text</span>
+            <span class="k">return</span> <span class="n">link</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">fullname</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">REPLACE_LINK_PATTERN</span><span class="p">,</span> <span class="n">replace</span><span class="p">,</span> <span class="n">markdown</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div></div>
+                <footer>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../js/mkapi.js"></script>
+    <script src="../../../js/pheasant.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="../../../search/main.js"></script>
+</body>
+
+</html>

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
     <link rel="stylesheet" href="../../css/pheasant.css">
+    <link rel="stylesheet" href="../../custom.css">
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
@@ -34,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.8.6</div>
+                </div><div class="version">1.0.0</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -46,6 +47,7 @@
             <nav class="nav">
                 <ul class="root">
                     <li class="toctree-l1"><a class="nav-item" href="../..">MkApi Documentation</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../../release/">Release Notes</a></li>
                     <li class="toctree-l1"><button class="section nav-item">Examples</button>
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../examples/google_style/">Google Style</a></li>
@@ -92,7 +94,7 @@
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.page/">mkapi.core.page</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.renderer/">mkapi.core.renderer</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.signature/">mkapi.core.signature</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.tree/">mkapi.core.tree</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.structure/">mkapi.core.structure</a></li>
 </ul></li>
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
 <ul class="subnav hide">
@@ -126,48 +128,41 @@
 <div class="mkapi-node" id="mkapi.core.linker">
 <h1 id="mkapicorelinker" class="mkapi-object mkapi-object-module plain">
 <span class="mkapi-object-kind mkapi-object-kind-module">MODULE</span>
-<span class="mkapi-object-prefix"><a href="../mkapi.core/#mkapi.core">MKAPI.CORE</a>.</span><span class="mkapi-object-name">LINKER</span><span class="mkapi-object-signature"></span>
-    
+<span class="mkapi-object-prefix"><a href="../mkapi.core/#mkapi.core">MKAPI.CORE</a>.</span><span class="mkapi-object-name">LINKER</span><span class="mkapi-object-signature"></span><a class="mkapi-src-link" href="../source/mkapi.core.linker#mkapi.core.linker">SOURCE</a>
 </h1>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>This module provides functions that relate to link.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-functions">
-
 <div class="mkapi-section-name mkapi-section-name-functions">
 <span class="mkapi-section-name-body">Functions</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-functions"><ul class="mkapi-args-list">
-
-<li class="function"><code class="mkapi-args-name" title="function"><a href="#mkapi.core.linker.link">link</a></code><code class="mkapi-object-signature">(name,</code> <code class="mkapi-object-signature">href)</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Reutrns Markdown link with a mark that indicates this link was created by MkApi.</span></li>
-
-<li class="function"><code class="mkapi-args-name" title="function"><a href="#mkapi.core.linker.get_link">get_link</a></code><code class="mkapi-object-signature">(obj,</code> <code class="mkapi-object-signature">include_module)</code>
+<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.linker.get_link">get_link</a></code><code class="mkapi-object-signature">(obj,</code> <code class="mkapi-object-signature">include_module)</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns Markdown link for object, if possible.</span></li>
 
-<li class="function"><code class="mkapi-args-name" title="function"><a href="#mkapi.core.linker.resolve_link">resolve_link</a></code><code class="mkapi-object-signature">(markdown,</code> <code class="mkapi-object-signature">abs_src_path,</code> <code class="mkapi-object-signature">abs_api_paths)</code>
+<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.linker.link">link</a></code><code class="mkapi-object-signature">(name,</code> <code class="mkapi-object-signature">href)</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Reutrns resolved link.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Reutrns Markdown link with a mark that indicates this link was created by MkApi.</span></li>
 
-<li class="function"><code class="mkapi-args-name" title="function"><a href="#mkapi.core.linker.resolve_object">resolve_object</a></code><code class="mkapi-object-signature">(html)</code>
-<span class="mkapi-args-type">(dict(str: any))</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Reutrns an object context dictionary.</span></li>
-
-<li class="function"><code class="mkapi-args-name" title="function"><a href="#mkapi.core.linker.replace_link">replace_link</a></code><code class="mkapi-object-signature">(obj,</code> <code class="mkapi-object-signature">markdown)</code>
+<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.linker.replace_link">replace_link</a></code><code class="mkapi-object-signature">(obj,</code> <code class="mkapi-object-signature">markdown)</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a replaced link with object full name.</span></li>
 
+<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.linker.resolve_link">resolve_link</a></code><code class="mkapi-object-signature">(markdown,</code> <code class="mkapi-object-signature">abs_src_path,</code> <code class="mkapi-object-signature">abs_api_paths)</code>
+<span class="mkapi-args-type">(str)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Reutrns resolved link.</span></li>
+
+<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.linker.resolve_object">resolve_object</a></code><code class="mkapi-object-signature">(html)</code>
+<span class="mkapi-args-type">(dict(str: any))</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Reutrns an object context dictionary.</span></li>
+
+
 </ul></div>
 </div>
-
 </div>
 
 </div>
@@ -175,25 +170,18 @@
 <div class="mkapi-node" id="mkapi.core.linker.link">
 <h2 id="mkapicorelinkerlink" class="mkapi-object mkapi-object-function code">
 <span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.linker">mkapi.core.linker</a>.</code><code class="mkapi-object-name">link</code><code class="mkapi-object-signature">(name,</code> <code class="mkapi-object-signature">href)</code>
-    <span class="mkapi-args-type"> &#x2192; str</span>
+<code class="mkapi-object-prefix"><a href="#mkapi.core.linker">mkapi.core.linker</a>.</code><code class="mkapi-object-name">link</code><code class="mkapi-object-signature">(name,</code> <code class="mkapi-object-signature">href)</code><span class="mkapi-args-type"> &#x2192; str</span><a class="mkapi-src-link" href="../source/mkapi.core.linker#mkapi.core.linker.link">SOURCE</a>
 </h2>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Reutrns Markdown link with a mark that indicates this link was created by MkApi.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">name</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Link name.</span></li>
@@ -202,21 +190,18 @@
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Reference.</span></li>
 
+
 </ul></div>
 </div>
-
 <div class="mkapi-section mkapi-section-examples">
-
 <div class="mkapi-section-name mkapi-section-name-examples">
 <span class="mkapi-section-name-body">Examples</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; link('abc', 'xyz')
 '[abc](!xyz)'
 </code></pre></div>
 </div>
-
 </div>
 
 </div>
@@ -224,25 +209,18 @@
 <div class="mkapi-node" id="mkapi.core.linker.get_link">
 <h2 id="mkapicorelinkerget_link" class="mkapi-object mkapi-object-function code">
 <span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.linker">mkapi.core.linker</a>.</code><code class="mkapi-object-name">get_link</code><code class="mkapi-object-signature">(obj,</code> <code class="mkapi-object-signature">include_module=False)</code>
-    <span class="mkapi-args-type"> &#x2192; str</span>
+<code class="mkapi-object-prefix"><a href="#mkapi.core.linker">mkapi.core.linker</a>.</code><code class="mkapi-object-name">get_link</code><code class="mkapi-object-signature">(obj,</code> <code class="mkapi-object-signature">include_module=False)</code><span class="mkapi-args-type"> &#x2192; str</span><a class="mkapi-src-link" href="../source/mkapi.core.linker#mkapi.core.linker.get_link">SOURCE</a>
 </h2>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Returns Markdown link for object, if possible.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">obj</code>
 <span class="mkapi-args-type">(any)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object</span></li>
@@ -251,23 +229,20 @@
 <span class="mkapi-args-type">(bool, optional)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">If True, link text includes module path.</span></li>
 
+
 </ul></div>
 </div>
-
 <div class="mkapi-section mkapi-section-examples">
-
 <div class="mkapi-section-name mkapi-section-name-examples">
 <span class="mkapi-section-name-body">Examples</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; get_link(get_fullname)
 '[get_fullname](!mkapi.core.object.get_fullname)'
 &gt;&gt;&gt; get_link(get_fullname, include_module=True)
 '[mkapi.core.object.get_fullname](!mkapi.core.object.get_fullname)'
 </code></pre></div>
 </div>
-
 </div>
 
 </div>
@@ -275,25 +250,18 @@
 <div class="mkapi-node" id="mkapi.core.linker.resolve_link">
 <h2 id="mkapicorelinkerresolve_link" class="mkapi-object mkapi-object-function code">
 <span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.linker">mkapi.core.linker</a>.</code><code class="mkapi-object-name">resolve_link</code><code class="mkapi-object-signature">(markdown,</code> <code class="mkapi-object-signature">abs_src_path,</code> <code class="mkapi-object-signature">abs_api_paths)</code>
-    <span class="mkapi-args-type"> &#x2192; str</span>
+<code class="mkapi-object-prefix"><a href="#mkapi.core.linker">mkapi.core.linker</a>.</code><code class="mkapi-object-name">resolve_link</code><code class="mkapi-object-signature">(markdown,</code> <code class="mkapi-object-signature">abs_src_path,</code> <code class="mkapi-object-signature">abs_api_paths)</code><span class="mkapi-args-type"> &#x2192; str</span><a class="mkapi-src-link" href="../source/mkapi.core.linker#mkapi.core.linker.resolve_link">SOURCE</a>
 </h2>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Reutrns resolved link.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">markdown</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Markdown source.</span></li>
@@ -306,23 +274,20 @@
 <span class="mkapi-args-type">(list of str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">A list of API paths.</span></li>
 
+
 </ul></div>
 </div>
-
 <div class="mkapi-section mkapi-section-examples">
-
 <div class="mkapi-section-name mkapi-section-name-examples">
 <span class="mkapi-section-name-body">Examples</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; abs_src_path = '/src/examples/example.md'
 &gt;&gt;&gt; abs_api_paths = ['/api/a','/api/b', '/api/b.c']
 &gt;&gt;&gt; resolve_link('[abc](!b.c.d)', abs_src_path, abs_api_paths)
 '[abc](../../api/b.c#b.c.d)'
 </code></pre></div>
 </div>
-
 </div>
 
 </div>
@@ -330,46 +295,36 @@
 <div class="mkapi-node" id="mkapi.core.linker.resolve_object">
 <h2 id="mkapicorelinkerresolve_object" class="mkapi-object mkapi-object-function code">
 <span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.linker">mkapi.core.linker</a>.</code><code class="mkapi-object-name">resolve_object</code><code class="mkapi-object-signature">(html)</code>
-    <span class="mkapi-args-type"> &#x2192; dict(str: any)</span>
+<code class="mkapi-object-prefix"><a href="#mkapi.core.linker">mkapi.core.linker</a>.</code><code class="mkapi-object-name">resolve_object</code><code class="mkapi-object-signature">(html)</code><span class="mkapi-args-type"> &#x2192; dict(str: any)</span><a class="mkapi-src-link" href="../source/mkapi.core.linker#mkapi.core.linker.resolve_object">SOURCE</a>
 </h2>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Reutrns an object context dictionary.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">html</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">HTML source.</span></li>
 
+
 </ul></div>
 </div>
-
 <div class="mkapi-section mkapi-section-examples">
-
 <div class="mkapi-section-name mkapi-section-name-examples">
 <span class="mkapi-section-name-body">Examples</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; resolve_object(&quot;&lt;p&gt;&lt;a href='a'&gt;p&lt;/a&gt;&lt;a href='b'&gt;n&lt;/a&gt;&lt;/p&gt;&quot;)
 {'heading_id': '', 'level': 0, 'prefix_url': 'a', 'name_url': 'b'}
 &gt;&gt;&gt; resolve_object(&quot;&lt;h2 id='i'&gt;&lt;a href='a'&gt;p&lt;/a&gt;&lt;a href='b'&gt;n&lt;/a&gt;&lt;/h2&gt;&quot;)
 {'heading_id': 'i', 'level': 2, 'prefix_url': 'a', 'name_url': 'b'}
 </code></pre></div>
 </div>
-
 </div>
 
 </div>
@@ -377,25 +332,18 @@
 <div class="mkapi-node" id="mkapi.core.linker.replace_link">
 <h2 id="mkapicorelinkerreplace_link" class="mkapi-object mkapi-object-function code">
 <span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.linker">mkapi.core.linker</a>.</code><code class="mkapi-object-name">replace_link</code><code class="mkapi-object-signature">(obj,</code> <code class="mkapi-object-signature">markdown)</code>
-    <span class="mkapi-args-type"> &#x2192; str</span>
+<code class="mkapi-object-prefix"><a href="#mkapi.core.linker">mkapi.core.linker</a>.</code><code class="mkapi-object-name">replace_link</code><code class="mkapi-object-signature">(obj,</code> <code class="mkapi-object-signature">markdown)</code><span class="mkapi-args-type"> &#x2192; str</span><a class="mkapi-src-link" href="../source/mkapi.core.linker#mkapi.core.linker.replace_link">SOURCE</a>
 </h2>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Returns a replaced link with object full name.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">obj</code>
 <span class="mkapi-args-type">(any)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object that has a module.</span></li>
@@ -404,18 +352,16 @@
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Markdown</span></li>
 
+
 </ul></div>
 </div>
-
 <div class="mkapi-section mkapi-section-examples">
-
 <div class="mkapi-section-name mkapi-section-name-examples">
 <span class="mkapi-section-name-body">Examples</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; from mkapi.core.object import get_object
-&gt;&gt;&gt; obj = get_object('mkapi.core.base.Object')
+&gt;&gt;&gt; obj = get_object('mkapi.core.structure.Object')
 &gt;&gt;&gt; replace_link(obj, '[Signature]()')
 '[Signature](!mkapi.core.signature.Signature)'
 &gt;&gt;&gt; replace_link(obj, '[](Signature)')
@@ -426,7 +372,6 @@
 '[dummy.Dummy]()'
 </code></pre></div>
 </div>
-
 </div>
 
 </div></div>

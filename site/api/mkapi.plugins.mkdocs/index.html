@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
     <link rel="stylesheet" href="../../css/pheasant.css">
+    <link rel="stylesheet" href="../../custom.css">
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
@@ -34,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.8.6</div>
+                </div><div class="version">1.0.0</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -46,6 +47,7 @@
             <nav class="nav">
                 <ul class="root">
                     <li class="toctree-l1"><a class="nav-item" href="../..">MkApi Documentation</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../../release/">Release Notes</a></li>
                     <li class="toctree-l1"><button class="section nav-item">Examples</button>
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../examples/google_style/">Google Style</a></li>
@@ -85,7 +87,7 @@
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.page/">mkapi.core.page</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.renderer/">mkapi.core.renderer</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.signature/">mkapi.core.signature</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.tree/">mkapi.core.tree</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.structure/">mkapi.core.structure</a></li>
 </ul></li>
     <li class="toctree-l2 current"><button class="section nav-item">mkapi.plugins</button>
 <ul class="subnav">
@@ -121,33 +123,26 @@
 <div class="mkapi-node" id="mkapi.plugins.mkdocs">
 <h1 id="mkapipluginsmkdocs" class="mkapi-object mkapi-object-module plain">
 <span class="mkapi-object-kind mkapi-object-kind-module">MODULE</span>
-<span class="mkapi-object-prefix"><a href="../mkapi.plugins/#mkapi.plugins">MKAPI.PLUGINS</a>.</span><span class="mkapi-object-name">MKDOCS</span><span class="mkapi-object-signature"></span>
-    
+<span class="mkapi-object-prefix"><a href="../mkapi.plugins/#mkapi.plugins">MKAPI.PLUGINS</a>.</span><span class="mkapi-object-name">MKDOCS</span><span class="mkapi-object-signature"></span><a class="mkapi-src-link" href="../source/mkapi.plugins.mkdocs#mkapi.plugins.mkdocs">SOURCE</a>
 </h1>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>This module provides the MkapiPlugin class.</p>
 <p>MkapiPlugin is a MkDocs plugin that creates Python API documentation from Docstring.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-classes">
-
 <div class="mkapi-section-name mkapi-section-name-classes">
 <span class="mkapi-section-name-body">Classes</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-classes"><ul class="mkapi-args-list">
-
-<li class="class"><code class="mkapi-args-name" title="class"><a href="#mkapi.plugins.mkdocs.MkapiPlugin">MkapiPlugin</a></code>
+<li class="class"><code class="mkapi-args-name"><a href="#mkapi.plugins.mkdocs.MkapiPlugin">MkapiPlugin</a></code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">MkapiPlugin class for API generation.</span></li>
 
+
 </ul></div>
 </div>
-
 </div>
 
 </div>
@@ -155,60 +150,75 @@
 <div class="mkapi-node" id="mkapi.plugins.mkdocs.MkapiPlugin">
 <h2 id="mkapipluginsmkdocsmkapiplugin" class="mkapi-object mkapi-object-class code">
 <span class="mkapi-object-kind mkapi-object-kind-class">CLASS</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.plugins.mkdocs">mkapi.plugins.mkdocs</a>.</code><code class="mkapi-object-name">MkapiPlugin</code><code class="mkapi-object-signature">()</code>
-    
+<code class="mkapi-object-prefix"><a href="#mkapi.plugins.mkdocs">mkapi.plugins.mkdocs</a>.</code><code class="mkapi-object-name">MkapiPlugin</code><code class="mkapi-object-signature">()</code><a class="mkapi-src-link" href="../source/mkapi.plugins.mkdocs#mkapi.plugins.mkdocs.MkapiPlugin">SOURCE</a>
 </h2>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section mkapi-section-bases">
-
 <div class="mkapi-section-name mkapi-section-name-bases">
 <span class="mkapi-section-name-body">Bases</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-bases">
 <span class="mkapi-base">mkdocs.plugins.BasePlugin</span>
 </div>
 </div>
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>MkapiPlugin class for API generation.</p></div>
 </div>
+<div class="mkapi-section mkapi-section-attributes">
+<div class="mkapi-section-name mkapi-section-name-attributes">
+<span class="mkapi-section-name-body">Attributes</span>
 
+</div>
+<div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
+<li><code class="mkapi-args-name">__class__.server</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+<li><code class="mkapi-args-name">abs_api_paths</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+<li><code class="mkapi-args-name">config</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+<li><code class="mkapi-args-name">pages</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
+
+</ul></div>
+</div>
 <div class="mkapi-section mkapi-section-methods">
-
 <div class="mkapi-section-name mkapi-section-name-methods">
 <span class="mkapi-section-name-body">Methods</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
-
-<li class="method"><code class="mkapi-args-name" title="method"><a href="#mkdocs.plugins.BasePlugin.load_config">load_config</a></code><code class="mkapi-object-signature">(options,</code> <code class="mkapi-object-signature">config_file_path)</code>
+<li class="method"><code class="mkapi-args-name"><a href="#mkdocs.plugins.BasePlugin.load_config">load_config</a></code><code class="mkapi-object-signature">(options,</code> <code class="mkapi-object-signature">config_file_path)</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Load config from a dict of options. Returns a tuple of (errors, warnings).</span></li>
 
-<li class="method"><code class="mkapi-args-name" title="method"><a href="#mkapi.plugins.mkdocs.MkapiPlugin.on_config">on_config</a></code><code class="mkapi-object-signature">(config)</code>
+<li class="method"><code class="mkapi-args-name"><a href="#mkapi.plugins.mkdocs.MkapiPlugin.on_config">on_config</a></code><code class="mkapi-object-signature">(config)</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Inserts <code>src_dirs</code> to <code>sys.path</code>.</span></li>
 
-<li class="method"><code class="mkapi-args-name" title="method"><a href="#mkapi.plugins.mkdocs.MkapiPlugin.on_files">on_files</a></code><code class="mkapi-object-signature">(files,</code> <code class="mkapi-object-signature">config)</code>
+<li class="method"><code class="mkapi-args-name"><a href="#mkapi.plugins.mkdocs.MkapiPlugin.on_files">on_files</a></code><code class="mkapi-object-signature">(files,</code> <code class="mkapi-object-signature">config)</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Collects plugin CSS ans JavaScript and appends them to <code>files</code>.</span></li>
 
-<li class="method"><code class="mkapi-args-name" title="method"><a href="#mkapi.plugins.mkdocs.MkapiPlugin.on_page_markdown">on_page_markdown</a></code><code class="mkapi-object-signature">(markdown,</code> <code class="mkapi-object-signature">page,</code> <code class="mkapi-object-signature">config,</code> <code class="mkapi-object-signature">files)</code>
-
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Converts Markdown source to intermidiate version.</span></li>
-
-<li class="method"><code class="mkapi-args-name" title="method"><a href="#mkapi.plugins.mkdocs.MkapiPlugin.on_page_content">on_page_content</a></code><code class="mkapi-object-signature">(html,</code> <code class="mkapi-object-signature">page,</code> <code class="mkapi-object-signature">config,</code> <code class="mkapi-object-signature">files)</code>
+<li class="method"><code class="mkapi-args-name"><a href="#mkapi.plugins.mkdocs.MkapiPlugin.on_page_content">on_page_content</a></code><code class="mkapi-object-signature">(html,</code> <code class="mkapi-object-signature">page,</code> <code class="mkapi-object-signature">config,</code> <code class="mkapi-object-signature">files)</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Merges html and MkApi's node structure.</span></li>
 
+<li class="method"><code class="mkapi-args-name"><a href="#mkapi.plugins.mkdocs.MkapiPlugin.on_page_markdown">on_page_markdown</a></code><code class="mkapi-object-signature">(markdown,</code> <code class="mkapi-object-signature">page,</code> <code class="mkapi-object-signature">config,</code> <code class="mkapi-object-signature">files)</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Converts Markdown source to intermidiate version.</span></li>
+
+
 </ul></div>
 </div>
-
 </div>
 
   <div class="mkapi-members">
@@ -217,36 +227,29 @@
       <div class="mkapi-node" id="mkdocs.plugins.BasePlugin.load_config">
 <h3 id="mkdocspluginsbasepluginload_config" class="mkapi-object mkapi-object-method code">
 <span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
-<code class="mkapi-object-name">load_config</code><code class="mkapi-object-signature">(options,</code> <code class="mkapi-object-signature">config_file_path=None)</code>
-    
+<code class="mkapi-object-name">load_config</code><code class="mkapi-object-signature">(options,</code> <code class="mkapi-object-signature">config_file_path=None)</code><a class="mkapi-src-link" href="../source/mkdocs.plugins#mkdocs.plugins.BasePlugin.load_config">SOURCE</a>
 </h3>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Load config from a dict of options. Returns a tuple of (errors, warnings).</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">options</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
 
 <li><code class="mkapi-args-name">config_file_path</code>
-<span class="mkapi-args-type">(, optional)</span>
+<span class="mkapi-args-type">(optional)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+
 
 </ul></div>
 </div>
-
 </div>
 
 </div>
@@ -256,32 +259,25 @@
       <div class="mkapi-node" id="mkapi.plugins.mkdocs.MkapiPlugin.on_config">
 <h3 id="mkapipluginsmkdocsmkapipluginon_config" class="mkapi-object mkapi-object-method code">
 <span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
-<code class="mkapi-object-name">on_config</code><code class="mkapi-object-signature">(config)</code>
-    
+<code class="mkapi-object-name">on_config</code><code class="mkapi-object-signature">(config)</code><a class="mkapi-src-link" href="../source/mkapi.plugins.mkdocs#mkapi.plugins.mkdocs.MkapiPlugin.on_config">SOURCE</a>
 </h3>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Inserts <code>src_dirs</code> to <code>sys.path</code>.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">config</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
 
+
 </ul></div>
 </div>
-
 </div>
 
 </div>
@@ -291,25 +287,18 @@
       <div class="mkapi-node" id="mkapi.plugins.mkdocs.MkapiPlugin.on_files">
 <h3 id="mkapipluginsmkdocsmkapipluginon_files" class="mkapi-object mkapi-object-method code">
 <span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
-<code class="mkapi-object-name">on_files</code><code class="mkapi-object-signature">(files,</code> <code class="mkapi-object-signature">config)</code>
-    
+<code class="mkapi-object-name">on_files</code><code class="mkapi-object-signature">(files,</code> <code class="mkapi-object-signature">config)</code><a class="mkapi-src-link" href="../source/mkapi.plugins.mkdocs#mkapi.plugins.mkdocs.MkapiPlugin.on_files">SOURCE</a>
 </h3>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Collects plugin CSS ans JavaScript and appends them to <code>files</code>.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">files</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
@@ -318,9 +307,9 @@
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
 
+
 </ul></div>
 </div>
-
 </div>
 
 </div>
@@ -330,25 +319,18 @@
       <div class="mkapi-node" id="mkapi.plugins.mkdocs.MkapiPlugin.on_page_markdown">
 <h3 id="mkapipluginsmkdocsmkapipluginon_page_markdown" class="mkapi-object mkapi-object-method code">
 <span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
-<code class="mkapi-object-name">on_page_markdown</code><code class="mkapi-object-signature">(markdown,</code> <code class="mkapi-object-signature">page,</code> <code class="mkapi-object-signature">config,</code> <code class="mkapi-object-signature">files)</code>
-    
+<code class="mkapi-object-name">on_page_markdown</code><code class="mkapi-object-signature">(markdown,</code> <code class="mkapi-object-signature">page,</code> <code class="mkapi-object-signature">config,</code> <code class="mkapi-object-signature">files)</code><a class="mkapi-src-link" href="../source/mkapi.plugins.mkdocs#mkapi.plugins.mkdocs.MkapiPlugin.on_page_markdown">SOURCE</a>
 </h3>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Converts Markdown source to intermidiate version.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">markdown</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
@@ -365,9 +347,9 @@
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
 
+
 </ul></div>
 </div>
-
 </div>
 
 </div>
@@ -377,25 +359,18 @@
       <div class="mkapi-node" id="mkapi.plugins.mkdocs.MkapiPlugin.on_page_content">
 <h3 id="mkapipluginsmkdocsmkapipluginon_page_content" class="mkapi-object mkapi-object-method code">
 <span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
-<code class="mkapi-object-name">on_page_content</code><code class="mkapi-object-signature">(html,</code> <code class="mkapi-object-signature">page,</code> <code class="mkapi-object-signature">config,</code> <code class="mkapi-object-signature">files)</code>
-    
+<code class="mkapi-object-name">on_page_content</code><code class="mkapi-object-signature">(html,</code> <code class="mkapi-object-signature">page,</code> <code class="mkapi-object-signature">config,</code> <code class="mkapi-object-signature">files)</code><a class="mkapi-src-link" href="../source/mkapi.plugins.mkdocs#mkapi.plugins.mkdocs.MkapiPlugin.on_page_content">SOURCE</a>
 </h3>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Merges html and MkApi's node structure.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-parameters">
-
 <div class="mkapi-section-name mkapi-section-name-parameters">
 <span class="mkapi-section-name-body">Parameters</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-
 <li><code class="mkapi-args-name">html</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
@@ -412,9 +387,9 @@
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
 
+
 </ul></div>
 </div>
-
 </div>
 
 </div>

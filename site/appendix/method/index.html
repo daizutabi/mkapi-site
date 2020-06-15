@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
     <link rel="stylesheet" href="../../css/pheasant.css">
+    <link rel="stylesheet" href="../../custom.css">
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
@@ -34,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">0.8.6</div>
+                </div><div class="version">1.0.0</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -46,6 +47,7 @@
             <nav class="nav">
                 <ul class="root">
                     <li class="toctree-l1"><a class="nav-item" href="../..">MkApi Documentation</a></li>
+                    <li class="toctree-l1"><a class="nav-item" href="../../release/">Release Notes</a></li>
                     <li class="toctree-l1"><button class="section nav-item">Examples</button>
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../examples/google_style/">Google Style</a></li>
@@ -87,7 +89,7 @@
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.page/">mkapi.core.page</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.renderer/">mkapi.core.renderer</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.signature/">mkapi.core.signature</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.tree/">mkapi.core.tree</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.structure/">mkapi.core.structure</a></li>
 </ul></li>
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
 <ul class="subnav hide">
@@ -127,7 +129,7 @@
 -->
 </style>
 
-<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">6</span>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">7</span>
 <span class="title">appendix/method.py</span></p>
 <div class="content">
 
@@ -168,64 +170,54 @@
 <div class="mkapi-node" id="appendix.method.MethodTypeExample">
 <div class="mkapi-object mkapi-object-class code">
 <div class="mkapi-object-kind mkapi-object-kind-class">CLASS</div>
-<div class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.method.</code><code class="mkapi-object-name">MethodTypeExample</code><code class="mkapi-object-signature">()</code>
-    </div>
+<div class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.method.</code><code class="mkapi-object-name">MethodTypeExample</code><code class="mkapi-object-signature">()</code></div>
 </div>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Example class.</p></div>
 </div>
-
 <div class="mkapi-section mkapi-section-attributes">
-
 <div class="mkapi-section-name mkapi-section-name-attributes">
 <span class="mkapi-section-name-body">Attributes</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
-
-<li class="readonly_property"><code class="mkapi-args-name" title="readonly_property">read_only_property</code>
+<li class="readonly_property"><code class="mkapi-args-name">read_only_property</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Read only property.</span></li>
 
-<li class="readwrite_property"><code class="mkapi-args-name" title="readwrite_property">read_write_property</code>
+<li class="readwrite_property"><code class="mkapi-args-name">read_write_property</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Read write property.</span></li>
 
+
 </ul></div>
 </div>
-
 <div class="mkapi-section mkapi-section-methods">
-
 <div class="mkapi-section-name mkapi-section-name-methods">
 <span class="mkapi-section-name-body">Methods</span>
 
 </div>
-
 <div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
-
-<li class="method"><code class="mkapi-args-name" title="method"><a href="#appendix.method.MethodTypeExample.method">method</a></code><code class="mkapi-object-signature">(x)</code>
-
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Method.</span></li>
-
-<li class="generator"><code class="mkapi-args-name" title="generator"><a href="#appendix.method.MethodTypeExample.generator">generator</a></code><code class="mkapi-object-signature">(x)</code>
-
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Generator.</span></li>
-
-<li class="classmethod"><code class="mkapi-args-name" title="classmethod"><a href="#appendix.method.MethodTypeExample.class_method">class_method</a></code><code class="mkapi-object-signature">(x)</code>
+<li class="classmethod"><code class="mkapi-args-name"><a href="#appendix.method.MethodTypeExample.class_method">class_method</a></code><code class="mkapi-object-signature">(x)</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Class method.</span></li>
 
-<li class="staticmethod"><code class="mkapi-args-name" title="staticmethod"><a href="#appendix.method.MethodTypeExample.static_method">static_method</a></code><code class="mkapi-object-signature">(x)</code>
+<li class="generator"><code class="mkapi-args-name"><a href="#appendix.method.MethodTypeExample.generator">generator</a></code><code class="mkapi-object-signature">(x)</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Generator.</span></li>
+
+<li class="method"><code class="mkapi-args-name"><a href="#appendix.method.MethodTypeExample.method">method</a></code><code class="mkapi-object-signature">(x)</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Method.</span></li>
+
+<li class="staticmethod"><code class="mkapi-args-name"><a href="#appendix.method.MethodTypeExample.static_method">static_method</a></code><code class="mkapi-object-signature">(x)</code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Static method.</span></li>
 
+
 </ul></div>
 </div>
-
 </div>
 
   <div class="mkapi-members">
@@ -234,16 +226,12 @@
       <div class="mkapi-node" id="appendix.method.MethodTypeExample.method">
 <div class="mkapi-object mkapi-object-method code">
 <div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">method</code><code class="mkapi-object-signature">(x)</code>
-    </div>
+<div class="mkapi-object-body"><code class="mkapi-object-name">method</code><code class="mkapi-object-signature">(x)</code></div>
 </div>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Method.</p></div>
 </div>
-
 </div>
 
 </div>
@@ -253,16 +241,12 @@
       <div class="mkapi-node" id="appendix.method.MethodTypeExample.generator">
 <div class="mkapi-object mkapi-object-generator code">
 <div class="mkapi-object-kind mkapi-object-kind-generator">GENERATOR</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">generator</code><code class="mkapi-object-signature">(x)</code>
-    </div>
+<div class="mkapi-object-body"><code class="mkapi-object-name">generator</code><code class="mkapi-object-signature">(x)</code></div>
 </div>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Generator.</p></div>
 </div>
-
 </div>
 
 </div>
@@ -272,16 +256,12 @@
       <div class="mkapi-node" id="appendix.method.MethodTypeExample.class_method">
 <div class="mkapi-object mkapi-object-classmethod code">
 <div class="mkapi-object-kind mkapi-object-kind-classmethod">CLASSMETHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">class_method</code><code class="mkapi-object-signature">(x)</code>
-    </div>
+<div class="mkapi-object-body"><code class="mkapi-object-name">class_method</code><code class="mkapi-object-signature">(x)</code></div>
 </div>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Class method.</p></div>
 </div>
-
 </div>
 
 </div>
@@ -291,16 +271,12 @@
       <div class="mkapi-node" id="appendix.method.MethodTypeExample.static_method">
 <div class="mkapi-object mkapi-object-staticmethod code">
 <div class="mkapi-object-kind mkapi-object-kind-staticmethod">STATICMETHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">static_method</code><code class="mkapi-object-signature">(x)</code>
-    </div>
+<div class="mkapi-object-body"><code class="mkapi-object-name">static_method</code><code class="mkapi-object-signature">(x)</code></div>
 </div>
 <div class="mkapi-docstring">
-
 <div class="mkapi-section">
-
 <div class="mkapi-section-body"><p>Static method.</p></div>
 </div>
-
 </div>
 
 </div>
