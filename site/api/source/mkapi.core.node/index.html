@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.2</div>
+                </div><div class="version">1.0.1</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -311,7 +311,7 @@
     <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">members</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">.</span><span class="n">sourcefile_index</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">lineno</span><span class="p">))</span>
 
 
-<span class="k">def</span> <span class="nf">get_node</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">sourcefile_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">use_cache</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Node</span><span class="p">:</span><span id="mkapi.core.node.get_node"></span><a class="mkapi-docs-link" title="mkapi.core.node.get_node" href="../../mkapi.core.node#mkapi.core.node.get_node">DOCS</a>
+<span class="k">def</span> <span class="nf">get_node</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">sourcefile_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Node</span><span class="p">:</span><span id="mkapi.core.node.get_node"></span><a class="mkapi-docs-link" title="mkapi.core.node.get_node" href="../../mkapi.core.node#mkapi.core.node.get_node">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Returns a Node instace by name or object.</span>
 
 <span class="sd">    Args:</span>
@@ -319,6 +319,16 @@
 <span class="sd">        sourcefile_index: If `obj` is a member of class, this value is the index of</span>
 <span class="sd">            unique source files given by `mro()` of the class. Otherwise, 0.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">get_object</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">return</span> <span class="n">Node</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">sourcefile_index</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">get_node_from_module</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
     <span class="kn">from</span> <span class="nn">mkapi.core.module</span> <span class="kn">import</span> <span class="n">modules</span>
 
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
@@ -326,14 +336,7 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="n">obj</span> <span class="o">=</span> <span class="n">name</span>
 
-    <span class="k">if</span> <span class="n">use_cache</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;__qualname__&quot;</span><span class="p">):</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;__module__&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__module__</span> <span class="ow">in</span> <span class="n">modules</span><span class="p">:</span>
-            <span class="n">node</span> <span class="o">=</span> <span class="n">modules</span><span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="vm">__module__</span><span class="p">]</span><span class="o">.</span><span class="n">node</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="k">return</span> <span class="n">node</span><span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="vm">__qualname__</span><span class="p">]</span>
-            <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
-                <span class="k">pass</span>
-    <span class="k">return</span> <span class="n">Node</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">sourcefile_index</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">modules</span><span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="vm">__module__</span><span class="p">]</span><span class="o">.</span><span class="n">node</span><span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="vm">__qualname__</span><span class="p">]</span>
 </code></pre></div>
 </div>
 </div></div>
