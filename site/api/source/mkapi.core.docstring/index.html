@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.0</div>
+                </div><div class="version">1.0.1</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -166,7 +166,7 @@
     <span class="k">return</span> <span class="n">name</span>
 
 
-<span class="k">def</span> <span class="nf">section_heading</span><span class="p">(</span><span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span><span id="mkapi.core.docstring.section_heading"></span><a class="mkapi-docs-link"href="../../mkapi.core.docstring#mkapi.core.docstring.section_heading">DOCS</a>
+<span class="k">def</span> <span class="nf">section_heading</span><span class="p">(</span><span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span><span id="mkapi.core.docstring.section_heading"></span><a class="mkapi-docs-link" title="mkapi.core.docstring.section_heading" href="../../mkapi.core.docstring#mkapi.core.docstring.section_heading">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Returns a tuple of (section name, style name).</span>
 
 <span class="sd">    Args:</span>
@@ -188,7 +188,7 @@
         <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span>
 
 
-<span class="k">def</span> <span class="nf">split_section</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]:</span><span id="mkapi.core.docstring.split_section"></span><a class="mkapi-docs-link"href="../../mkapi.core.docstring#mkapi.core.docstring.split_section">DOCS</a>
+<span class="k">def</span> <span class="nf">split_section</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]:</span><span id="mkapi.core.docstring.split_section"></span><a class="mkapi-docs-link" title="mkapi.core.docstring.split_section" href="../../mkapi.core.docstring#mkapi.core.docstring.split_section">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Yields a tuple of (section name, contents, style).</span>
 
 <span class="sd">    Args:</span>
@@ -231,7 +231,7 @@
         <span class="k">yield</span> <span class="n">name</span><span class="p">,</span> <span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="n">start</span><span class="p">:]),</span> <span class="n">style</span>
 
 
-<span class="k">def</span> <span class="nf">split_parameter</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span><span id="mkapi.core.docstring.split_parameter"></span><a class="mkapi-docs-link"href="../../mkapi.core.docstring#mkapi.core.docstring.split_parameter">DOCS</a>
+<span class="k">def</span> <span class="nf">split_parameter</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span><span id="mkapi.core.docstring.split_parameter"></span><a class="mkapi-docs-link" title="mkapi.core.docstring.split_parameter" href="../../mkapi.core.docstring#mkapi.core.docstring.split_parameter">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Yields a list of parameter string.</span>
 
 <span class="sd">    Args:</span>
@@ -249,7 +249,7 @@
             <span class="n">start</span> <span class="o">=</span> <span class="n">stop</span>
 
 
-<span class="k">def</span> <span class="nf">parse_parameter</span><span class="p">(</span><span class="n">lines</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">style</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Item</span><span class="p">:</span><span id="mkapi.core.docstring.parse_parameter"></span><a class="mkapi-docs-link"href="../../mkapi.core.docstring#mkapi.core.docstring.parse_parameter">DOCS</a>
+<span class="k">def</span> <span class="nf">parse_parameter</span><span class="p">(</span><span class="n">lines</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">style</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Item</span><span class="p">:</span><span id="mkapi.core.docstring.parse_parameter"></span><a class="mkapi-docs-link" title="mkapi.core.docstring.parse_parameter" href="../../mkapi.core.docstring#mkapi.core.docstring.parse_parameter">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Returns a Item instance that represents a parameter.</span>
 
 <span class="sd">    Args:</span>
@@ -277,12 +277,12 @@
     <span class="k">return</span> <span class="n">Item</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">Type</span><span class="p">(</span><span class="nb">type</span><span class="p">),</span> <span class="n">Inline</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">parsed</span><span class="p">)))</span>
 
 
-<span class="k">def</span> <span class="nf">parse_parameters</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Item</span><span class="p">]:</span><span id="mkapi.core.docstring.parse_parameters"></span><a class="mkapi-docs-link"href="../../mkapi.core.docstring#mkapi.core.docstring.parse_parameters">DOCS</a>
+<span class="k">def</span> <span class="nf">parse_parameters</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Item</span><span class="p">]:</span><span id="mkapi.core.docstring.parse_parameters"></span><a class="mkapi-docs-link" title="mkapi.core.docstring.parse_parameters" href="../../mkapi.core.docstring#mkapi.core.docstring.parse_parameters">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Returns a list of Item.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">parse_parameter</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span> <span class="k">for</span> <span class="n">lines</span> <span class="ow">in</span> <span class="n">split_parameter</span><span class="p">(</span><span class="n">doc</span><span class="p">)]</span>
 
 
-<span class="k">def</span> <span class="nf">parse_returns</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span><span id="mkapi.core.docstring.parse_returns"></span><a class="mkapi-docs-link"href="../../mkapi.core.docstring#mkapi.core.docstring.parse_returns">DOCS</a>
+<span class="k">def</span> <span class="nf">parse_returns</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span><span id="mkapi.core.docstring.parse_returns"></span><a class="mkapi-docs-link" title="mkapi.core.docstring.parse_returns" href="../../mkapi.core.docstring#mkapi.core.docstring.parse_returns">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Returns a tuple of (type, markdown).&quot;&quot;&quot;</span>
     <span class="n">lines</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">style</span> <span class="o">==</span> <span class="s2">&quot;google&quot;</span><span class="p">:</span>
@@ -298,7 +298,7 @@
     <span class="k">return</span> <span class="nb">type</span><span class="p">,</span> <span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">get_section</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">doc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Section</span><span class="p">:</span><span id="mkapi.core.docstring.get_section"></span><a class="mkapi-docs-link"href="../../mkapi.core.docstring#mkapi.core.docstring.get_section">DOCS</a>
+<span class="k">def</span> <span class="nf">get_section</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">doc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Section</span><span class="p">:</span><span id="mkapi.core.docstring.get_section"></span><a class="mkapi-docs-link" title="mkapi.core.docstring.get_section" href="../../mkapi.core.docstring#mkapi.core.docstring.get_section">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Returns a [Section]() instance.&quot;&quot;&quot;</span>
     <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="n">markdown</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
@@ -312,7 +312,7 @@
     <span class="k">return</span> <span class="n">Section</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">markdown</span><span class="p">,</span> <span class="n">items</span><span class="p">,</span> <span class="n">Type</span><span class="p">(</span><span class="nb">type</span><span class="p">))</span>
 
 
-<span class="k">def</span> <span class="nf">parse_bases</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span><span id="mkapi.core.docstring.parse_bases"></span><a class="mkapi-docs-link"href="../../mkapi.core.docstring#mkapi.core.docstring.parse_bases">DOCS</a>
+<span class="k">def</span> <span class="nf">parse_bases</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span><span id="mkapi.core.docstring.parse_bases"></span><a class="mkapi-docs-link" title="mkapi.core.docstring.parse_bases" href="../../mkapi.core.docstring#mkapi.core.docstring.parse_bases">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Parses base classes to create a Base(s) line.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">inspect</span><span class="o">.</span><span class="n">isclass</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;mro&quot;</span><span class="p">):</span>
         <span class="k">return</span>
@@ -324,7 +324,7 @@
     <span class="n">doc</span><span class="o">.</span><span class="n">set_section</span><span class="p">(</span><span class="n">Section</span><span class="p">(</span><span class="s2">&quot;Bases&quot;</span><span class="p">,</span> <span class="n">items</span><span class="o">=</span><span class="n">items</span><span class="p">))</span>
 
 
-<span class="k">def</span> <span class="nf">parse_property</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span><span id="mkapi.core.docstring.parse_property"></span><a class="mkapi-docs-link"href="../../mkapi.core.docstring#mkapi.core.docstring.parse_property">DOCS</a>
+<span class="k">def</span> <span class="nf">parse_property</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span><span id="mkapi.core.docstring.parse_property"></span><a class="mkapi-docs-link" title="mkapi.core.docstring.parse_property" href="../../mkapi.core.docstring#mkapi.core.docstring.parse_property">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Parses property&#39;s docstring to inspect type.&quot;&quot;&quot;</span>
     <span class="n">doc</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">Type</span><span class="p">(</span><span class="n">get_signature</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">fget</span><span class="p">)</span><span class="o">.</span><span class="n">returns</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">doc</span><span class="o">.</span><span class="n">type</span><span class="p">:</span>
@@ -336,7 +336,7 @@
             <span class="n">section</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="n">markdown</span>
 
 
-<span class="k">def</span> <span class="nf">parse_source</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span><span id="mkapi.core.docstring.parse_source"></span><a class="mkapi-docs-link"href="../../mkapi.core.docstring#mkapi.core.docstring.parse_source">DOCS</a>
+<span class="k">def</span> <span class="nf">parse_source</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span><span id="mkapi.core.docstring.parse_source"></span><a class="mkapi-docs-link" title="mkapi.core.docstring.parse_source" href="../../mkapi.core.docstring#mkapi.core.docstring.parse_source">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Parses parameters&#39; docstring to inspect type and description from source.</span>
 
 <span class="sd">    Examples:</span>
@@ -419,7 +419,7 @@
                     <span class="n">item</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="n">replace_link</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">markdown</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">get_docstring</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Docstring</span><span class="p">:</span><span id="mkapi.core.docstring.get_docstring"></span><a class="mkapi-docs-link"href="../../mkapi.core.docstring#mkapi.core.docstring.get_docstring">DOCS</a>
+<span class="k">def</span> <span class="nf">get_docstring</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Docstring</span><span class="p">:</span><span id="mkapi.core.docstring.get_docstring"></span><a class="mkapi-docs-link" title="mkapi.core.docstring.get_docstring" href="../../mkapi.core.docstring#mkapi.core.docstring.get_docstring">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Returns a [Docstring]() instance.&quot;&quot;&quot;</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getdoc</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">doc</span><span class="p">:</span>

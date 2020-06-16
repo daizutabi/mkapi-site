@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.0</div>
+                </div><div class="version">1.0.1</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -508,16 +508,16 @@ Multiple paragraphs are supported.</span></li>
 <li>Type annotation using <code>typing</code> package (<code>List</code> and <code>Tuple</code> in this case) is converted into readable style.</li>
 <li>Attributes section is inserted with type and description. These information is collected from the source code.</li>
 <li>Bound methods (<code>message</code> in this case) have a METHOD prefix instead of a FUNCTION prefix.</li>
-<li>If callable objects have neither Returns nor Yields, the type appears on the object definition line like type annotation.</li>
+<li>If callable objects have neither Returns nor Yields, the type appears on the object signature line like type annotation.</li>
 <li>Propertes are moved to the Attributes section with [RO] or [RW] suffix that indicates whether the property is read-only or read-write.</li>
-<li>Methods section is newly created that displays a list of methods defined in this class. Note that it has a hyperlink to the definition.</li>
+<li>Methods section is newly created that displays a list of methods defined in this class. Note that it has a hyperlink to the object.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Although you can write the docstring for a class in the <code>__init__()</code> function, the attribute inspection only works when you write it as a class level docstring.</p>
 </div>
 <h2 id="method">Method</h2>
-<p>You can select a method of class (or any other attribute that can have docstring) to generate the documentation.</p>
+<p>You can select a method of class (or any other object that can have docstring) to generate the documentation.</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](google_style.ExampleClass.message)</code></pre></div></div></div>
 
 <p>creates the documentation for the <code>message()</code> of <code>ExampleClass</code> class.</p>

@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.0</div>
+                </div><div class="version">1.0.1</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -132,7 +132,7 @@
 
 
 <span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">Base</span><span class="p">:</span><span id="mkapi.core.base.Base"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Base">DOCS</a>
+<span class="k">class</span> <span class="nc">Base</span><span class="p">:</span><span id="mkapi.core.base.Base"></span><a class="mkapi-docs-link" title="mkapi.core.base.Base" href="../../mkapi.core.base#mkapi.core.base.Base">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Base class.</span>
 
 <span class="sd">    Examples:</span>
@@ -158,16 +158,16 @@
         <span class="n">class_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">class_name</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">!r}</span><span class="s2">)&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span><span id="mkapi.core.base.Base.__bool__"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Base.__bool__">DOCS</a>
+    <span class="k">def</span> <span class="fm">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span><span id="mkapi.core.base.Base.__bool__"></span><a class="mkapi-docs-link" title="mkapi.core.base.Base.__bool__" href="../../mkapi.core.base#mkapi.core.base.Base.__bool__">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Returns True if name is not empty.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="s2">&quot;Base&quot;</span><span class="p">]:</span><span id="mkapi.core.base.Base.__iter__"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Base.__iter__">DOCS</a>
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="s2">&quot;Base&quot;</span><span class="p">]:</span><span id="mkapi.core.base.Base.__iter__"></span><a class="mkapi-docs-link" title="mkapi.core.base.Base.__iter__" href="../../mkapi.core.base#mkapi.core.base.Base.__iter__">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Yields self if markdown is not empty.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">markdown</span><span class="p">:</span>
             <span class="k">yield</span> <span class="bp">self</span>
 
-    <span class="k">def</span> <span class="nf">set_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span><span id="mkapi.core.base.Base.set_html"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Base.set_html">DOCS</a>
+    <span class="k">def</span> <span class="nf">set_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span><span id="mkapi.core.base.Base.set_html"></span><a class="mkapi-docs-link" title="mkapi.core.base.Base.set_html" href="../../mkapi.core.base#mkapi.core.base.Base.set_html">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Sets HTML string.</span>
 
 <span class="sd">        Args:</span>
@@ -175,7 +175,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">html</span> <span class="o">=</span> <span class="n">html</span>
 
-    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="mkapi.core.base.Base.copy"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Base.copy">DOCS</a>
+    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="mkapi.core.base.Base.copy"></span><a class="mkapi-docs-link" title="mkapi.core.base.Base.copy" href="../../mkapi.core.base#mkapi.core.base.Base.copy">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Copys self.</span>
 
 <span class="sd">        Examples:</span>
@@ -193,7 +193,7 @@
 
 
 <span class="nd">@dataclass</span><span class="p">(</span><span class="nb">repr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">Inline</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span><span id="mkapi.core.base.Inline"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Inline">DOCS</a>
+<span class="k">class</span> <span class="nc">Inline</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span><span id="mkapi.core.base.Inline"></span><a class="mkapi-docs-link" title="mkapi.core.base.Inline" href="../../mkapi.core.base#mkapi.core.base.Inline">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Inline class.</span>
 
 <span class="sd">    Examples:</span>
@@ -221,17 +221,17 @@
     <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
 
-    <span class="k">def</span> <span class="nf">set_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span><span id="mkapi.core.base.Inline.set_html"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Inline.set_html">DOCS</a>
+    <span class="k">def</span> <span class="nf">set_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span><span id="mkapi.core.base.Inline.set_html"></span><a class="mkapi-docs-link" title="mkapi.core.base.Inline.set_html" href="../../mkapi.core.base#mkapi.core.base.Inline.set_html">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Sets `html` attribute cleaning `p` tags.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">html</span> <span class="o">=</span> <span class="n">preprocess</span><span class="o">.</span><span class="n">strip_ptags</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="mkapi.core.base.Inline.copy"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Inline.copy">DOCS</a>
+    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="mkapi.core.base.Inline.copy"></span><a class="mkapi-docs-link" title="mkapi.core.base.Inline.copy" href="../../mkapi.core.base#mkapi.core.base.Inline.copy">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Copys self.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 
 
 <span class="nd">@dataclass</span><span class="p">(</span><span class="nb">repr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">Type</span><span class="p">(</span><span class="n">Inline</span><span class="p">):</span><span id="mkapi.core.base.Type"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Type">DOCS</a>
+<span class="k">class</span> <span class="nc">Type</span><span class="p">(</span><span class="n">Inline</span><span class="p">):</span><span id="mkapi.core.base.Type"></span><a class="mkapi-docs-link" title="mkapi.core.base.Type" href="../../mkapi.core.base#mkapi.core.base.Type">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Type class represents type of [Item](), [Section](), [Docstring](),</span>
 <span class="sd">    or [Object]().</span>
 
@@ -260,7 +260,7 @@
 
 
 <span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">Type</span><span class="p">):</span><span id="mkapi.core.base.Item"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Item">DOCS</a>
+<span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">Type</span><span class="p">):</span><span id="mkapi.core.base.Item"></span><a class="mkapi-docs-link" title="mkapi.core.base.Item" href="../../mkapi.core.base#mkapi.core.base.Item">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Item class represents an item in Parameters, Attributes, and Raises sections,</span>
 <span class="sd">    *etc.*</span>
 
@@ -309,17 +309,17 @@
         <span class="n">class_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">class_name</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">!r}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">name</span><span class="si">!r}</span><span class="s2">)&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Base</span><span class="p">]:</span><span id="mkapi.core.base.Item.__iter__"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Item.__iter__">DOCS</a>
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Base</span><span class="p">]:</span><span id="mkapi.core.base.Item.__iter__"></span><a class="mkapi-docs-link" title="mkapi.core.base.Item.__iter__" href="../../mkapi.core.base#mkapi.core.base.Item.__iter__">DOCS</a>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">markdown</span><span class="p">:</span>
             <span class="k">yield</span> <span class="bp">self</span>
         <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span>
         <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">description</span>
 
-    <span class="k">def</span> <span class="nf">set_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span><span id="mkapi.core.base.Item.set_html"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Item.set_html">DOCS</a>
+    <span class="k">def</span> <span class="nf">set_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span><span id="mkapi.core.base.Item.set_html"></span><a class="mkapi-docs-link" title="mkapi.core.base.Item.set_html" href="../../mkapi.core.base#mkapi.core.base.Item.set_html">DOCS</a>
         <span class="n">html</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&lt;strong&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;__&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&lt;/strong&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;__&quot;</span><span class="p">)</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">set_html</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">to_tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span><span id="mkapi.core.base.Item.to_tuple"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Item.to_tuple">DOCS</a>
+    <span class="k">def</span> <span class="nf">to_tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span><span id="mkapi.core.base.Item.to_tuple"></span><a class="mkapi-docs-link" title="mkapi.core.base.Item.to_tuple" href="../../mkapi.core.base#mkapi.core.base.Item.to_tuple">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Returns a tuple of (name, type, description).</span>
 
 <span class="sd">        Examples:</span>
@@ -329,7 +329,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="o">.</span><span class="n">name</span>
 
-    <span class="k">def</span> <span class="nf">set_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">Type</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span><span id="mkapi.core.base.Item.set_type"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Item.set_type">DOCS</a>
+    <span class="k">def</span> <span class="nf">set_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">Type</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span><span id="mkapi.core.base.Item.set_type"></span><a class="mkapi-docs-link" title="mkapi.core.base.Item.set_type" href="../../mkapi.core.base#mkapi.core.base.Item.set_type">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Sets type.</span>
 
 <span class="sd">        Args:</span>
@@ -345,7 +345,7 @@
         <span class="k">if</span> <span class="nb">type</span><span class="o">.</span><span class="n">name</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="nb">type</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">set_description</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="n">Inline</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span><span id="mkapi.core.base.Item.set_description"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Item.set_description">DOCS</a>
+    <span class="k">def</span> <span class="nf">set_description</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="n">Inline</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span><span id="mkapi.core.base.Item.set_description"></span><a class="mkapi-docs-link" title="mkapi.core.base.Item.set_description" href="../../mkapi.core.base#mkapi.core.base.Item.set_description">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Sets description.</span>
 
 <span class="sd">        Args:</span>
@@ -361,7 +361,7 @@
         <span class="k">if</span> <span class="n">description</span><span class="o">.</span><span class="n">name</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">description</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="s2">&quot;Item&quot;</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span><span id="mkapi.core.base.Item.update"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Item.update">DOCS</a>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="s2">&quot;Item&quot;</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span><span id="mkapi.core.base.Item.update"></span><a class="mkapi-docs-link" title="mkapi.core.base.Item.update" href="../../mkapi.core.base#mkapi.core.base.Item.update">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Updates type and description.</span>
 
 <span class="sd">        Args:</span>
@@ -391,7 +391,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">description</span><span class="p">,</span> <span class="n">force</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_type</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">force</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="mkapi.core.base.Item.copy"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Item.copy">DOCS</a>
+    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="mkapi.core.base.Item.copy"></span><a class="mkapi-docs-link" title="mkapi.core.base.Item.copy" href="../../mkapi.core.base#mkapi.core.base.Item.copy">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Copys self.</span>
 
 <span class="sd">        Examples:</span>
@@ -406,7 +406,7 @@
 
 
 <span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">Section</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span><span id="mkapi.core.base.Section"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Section">DOCS</a>
+<span class="k">class</span> <span class="nc">Section</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span><span id="mkapi.core.base.Section"></span><a class="mkapi-docs-link" title="mkapi.core.base.Section" href="../../mkapi.core.base#mkapi.core.base.Section">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Section class represents a section in docstring.</span>
 
 <span class="sd">    Args:</span>
@@ -434,11 +434,11 @@
         <span class="n">class_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">class_name</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">!r}</span><span class="s2">, num_items=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="mkapi.core.base.Section.__bool__"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Section.__bool__">DOCS</a>
+    <span class="k">def</span> <span class="fm">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="mkapi.core.base.Section.__bool__"></span><a class="mkapi-docs-link" title="mkapi.core.base.Section.__bool__" href="../../mkapi.core.base#mkapi.core.base.Section.__bool__">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Returns True if the number of items is larger than 0.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
 
-    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Base</span><span class="p">]:</span><span id="mkapi.core.base.Section.__iter__"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Section.__iter__">DOCS</a>
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Base</span><span class="p">]:</span><span id="mkapi.core.base.Section.__iter__"></span><a class="mkapi-docs-link" title="mkapi.core.base.Section.__iter__" href="../../mkapi.core.base#mkapi.core.base.Section.__iter__">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Yields a [Base]() instance that has non empty Markdown.&quot;&quot;&quot;</span>
         <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">markdown</span><span class="p">:</span>
@@ -446,7 +446,7 @@
         <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
             <span class="k">yield from</span> <span class="n">item</span>
 
-    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Item</span><span class="p">:</span><span id="mkapi.core.base.Section.__getitem__"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Section.__getitem__">DOCS</a>
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Item</span><span class="p">:</span><span id="mkapi.core.base.Section.__getitem__"></span><a class="mkapi-docs-link" title="mkapi.core.base.Section.__getitem__" href="../../mkapi.core.base#mkapi.core.base.Section.__getitem__">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Returns an [Item]() instance whose name is equal to `name`.</span>
 
 <span class="sd">        If there is no Item instance, a Item instance is newly created.</span>
@@ -470,7 +470,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">item</span>
 
-    <span class="k">def</span> <span class="fm">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span><span id="mkapi.core.base.Section.__delitem__"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Section.__delitem__">DOCS</a>
+    <span class="k">def</span> <span class="fm">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span><span id="mkapi.core.base.Section.__delitem__"></span><a class="mkapi-docs-link" title="mkapi.core.base.Section.__delitem__" href="../../mkapi.core.base#mkapi.core.base.Section.__delitem__">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Delete an [Item]() instance whose name is equal to `name`.</span>
 
 <span class="sd">        Args:</span>
@@ -482,7 +482,7 @@
                 <span class="k">return</span>
         <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;name not found: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span><span id="mkapi.core.base.Section.__contains__"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Section.__contains__">DOCS</a>
+    <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span><span id="mkapi.core.base.Section.__contains__"></span><a class="mkapi-docs-link" title="mkapi.core.base.Section.__contains__" href="../../mkapi.core.base#mkapi.core.base.Section.__contains__">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Returns True if there is an [Item]() instance whose name is equal to `name`.</span>
 
 <span class="sd">        Args:</span>
@@ -493,7 +493,7 @@
                 <span class="k">return</span> <span class="kc">True</span>
         <span class="k">return</span> <span class="kc">False</span>
 
-    <span class="k">def</span> <span class="nf">set_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">Item</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span><span id="mkapi.core.base.Section.set_item"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Section.set_item">DOCS</a>
+    <span class="k">def</span> <span class="nf">set_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">Item</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span><span id="mkapi.core.base.Section.set_item"></span><a class="mkapi-docs-link" title="mkapi.core.base.Section.set_item" href="../../mkapi.core.base#mkapi.core.base.Section.set_item">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Sets an [Item]().</span>
 
 <span class="sd">        Args:</span>
@@ -522,7 +522,7 @@
                 <span class="k">return</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">section</span><span class="p">:</span> <span class="s2">&quot;Section&quot;</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span><span id="mkapi.core.base.Section.update"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Section.update">DOCS</a>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">section</span><span class="p">:</span> <span class="s2">&quot;Section&quot;</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span><span id="mkapi.core.base.Section.update"></span><a class="mkapi-docs-link" title="mkapi.core.base.Section.update" href="../../mkapi.core.base#mkapi.core.base.Section.update">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Updates items.</span>
 
 <span class="sd">        Args:</span>
@@ -546,7 +546,7 @@
         <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">section</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">set_item</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">force</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">section</span><span class="p">:</span> <span class="s2">&quot;Section&quot;</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Section&quot;</span><span class="p">:</span><span id="mkapi.core.base.Section.merge"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Section.merge">DOCS</a>
+    <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">section</span><span class="p">:</span> <span class="s2">&quot;Section&quot;</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Section&quot;</span><span class="p">:</span><span id="mkapi.core.base.Section.merge"></span><a class="mkapi-docs-link" title="mkapi.core.base.Section.merge" href="../../mkapi.core.base#mkapi.core.base.Section.merge">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Returns a merged Section</span>
 
 <span class="sd">        Examples:</span>
@@ -571,7 +571,7 @@
             <span class="n">merged</span><span class="o">.</span><span class="n">set_item</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="n">force</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">merged</span>
 
-    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="mkapi.core.base.Section.copy"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Section.copy">DOCS</a>
+    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="mkapi.core.base.Section.copy"></span><a class="mkapi-docs-link" title="mkapi.core.base.Section.copy" href="../../mkapi.core.base#mkapi.core.base.Section.copy">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Copys self.</span>
 
 <span class="sd">        Examples:</span>
@@ -587,7 +587,7 @@
 
 
 <span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">Docstring</span><span class="p">:</span><span id="mkapi.core.base.Docstring"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Docstring">DOCS</a>
+<span class="k">class</span> <span class="nc">Docstring</span><span class="p">:</span><span id="mkapi.core.base.Docstring"></span><a class="mkapi-docs-link" title="mkapi.core.base.Docstring" href="../../mkapi.core.base#mkapi.core.base.Docstring">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Docstring class represents a docstring of an object.</span>
 
 <span class="sd">    Args:</span>
@@ -633,17 +633,17 @@
         <span class="n">num_sections</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">)</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">class_name</span><span class="si">}</span><span class="s2">(num_sections=</span><span class="si">{</span><span class="n">num_sections</span><span class="si">}</span><span class="s2">)&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="mkapi.core.base.Docstring.__bool__"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Docstring.__bool__">DOCS</a>
+    <span class="k">def</span> <span class="fm">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span id="mkapi.core.base.Docstring.__bool__"></span><a class="mkapi-docs-link" title="mkapi.core.base.Docstring.__bool__" href="../../mkapi.core.base#mkapi.core.base.Docstring.__bool__">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Returns True if the number of sections is larger than 0.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
 
-    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Base</span><span class="p">]:</span><span id="mkapi.core.base.Docstring.__iter__"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Docstring.__iter__">DOCS</a>
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Base</span><span class="p">]:</span><span id="mkapi.core.base.Docstring.__iter__"></span><a class="mkapi-docs-link" title="mkapi.core.base.Docstring.__iter__" href="../../mkapi.core.base#mkapi.core.base.Docstring.__iter__">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Yields [Base]() instance.&quot;&quot;&quot;</span>
         <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span>
         <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">sections</span><span class="p">:</span>
             <span class="k">yield from</span> <span class="n">section</span>
 
-    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Section</span><span class="p">:</span><span id="mkapi.core.base.Docstring.__getitem__"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Docstring.__getitem__">DOCS</a>
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Section</span><span class="p">:</span><span id="mkapi.core.base.Docstring.__getitem__"></span><a class="mkapi-docs-link" title="mkapi.core.base.Docstring.__getitem__" href="../../mkapi.core.base#mkapi.core.base.Docstring.__getitem__">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Returns a [Section]() instance whose name is equal to `name`.</span>
 
 <span class="sd">        If there is no Section instance, a Section instance is newly created.</span>
@@ -658,7 +658,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">set_section</span><span class="p">(</span><span class="n">section</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">section</span>
 
-    <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span><span id="mkapi.core.base.Docstring.__contains__"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Docstring.__contains__">DOCS</a>
+    <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span><span id="mkapi.core.base.Docstring.__contains__"></span><a class="mkapi-docs-link" title="mkapi.core.base.Docstring.__contains__" href="../../mkapi.core.base#mkapi.core.base.Docstring.__contains__">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Returns True if there is a [Section]() instance whose name is</span>
 <span class="sd">        equal to `name`.</span>
 
@@ -670,7 +670,7 @@
                 <span class="k">return</span> <span class="kc">True</span>
         <span class="k">return</span> <span class="kc">False</span>
 
-    <span class="k">def</span> <span class="nf">set_section</span><span class="p">(</span><span id="mkapi.core.base.Docstring.set_section"></span><a class="mkapi-docs-link"href="../../mkapi.core.base#mkapi.core.base.Docstring.set_section">DOCS</a>
+    <span class="k">def</span> <span class="nf">set_section</span><span class="p">(</span><span id="mkapi.core.base.Docstring.set_section"></span><a class="mkapi-docs-link" title="mkapi.core.base.Docstring.set_section" href="../../mkapi.core.base#mkapi.core.base.Docstring.set_section">DOCS</a>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">section</span><span class="p">:</span> <span class="n">Section</span><span class="p">,</span>
         <span class="n">force</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
