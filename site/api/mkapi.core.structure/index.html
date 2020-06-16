@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.2</div>
+                </div><div class="version">1.0.3</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -47,7 +47,6 @@
             <nav class="nav">
                 <ul class="root">
                     <li class="toctree-l1"><a class="nav-item" href="../..">MkApi Documentation</a></li>
-                    <li class="toctree-l1"><a class="nav-item" href="../../release/">Release Notes</a></li>
                     <li class="toctree-l1"><button class="section nav-item">Examples</button>
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../examples/google_style/">Google Style</a></li>
@@ -207,6 +206,10 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</span><
 
 </div>
 <div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
+<li><code class="mkapi-args-name">callback</code>
+<span class="mkapi-args-type">(callable(<a href="../mkapi.core.base/#mkapi.core.base.Base">Base</a>: str), optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Callback function to modify HTML string.</span></li>
+
 <li><code class="mkapi-args-name">html</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">HTML string after conversion.</span></li>
@@ -266,7 +269,7 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</span><
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.base.Base.copy">copy</a></code><code class="mkapi-object-signature">()</code>
 
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Copys self.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a copy of the Object instance.</span></li>
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.base.Base.set_html">set_html</a></code><code class="mkapi-object-signature">(html)</code>
 
@@ -330,23 +333,7 @@ and <a href="../mkapi.core.module/#mkapi.core.module.Module">Module</a>.</span><
 </h3>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Copys self.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-examples">
-<div class="mkapi-section-name mkapi-section-name-examples">
-<span class="mkapi-section-name-body">Examples</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; a = Base('x', 'text')
-&gt;&gt;&gt; b = a
-&gt;&gt;&gt; b.name = 'y'
-&gt;&gt;&gt; a.name
-'y'
-&gt;&gt;&gt; c = a.copy()
-&gt;&gt;&gt; c.name = 'z'
-&gt;&gt;&gt; a.name
-'y'
-</code></pre></div>
+<div class="mkapi-section-body"><p>Returns a copy of the Object instance.</p></div>
 </div>
 </div>
 

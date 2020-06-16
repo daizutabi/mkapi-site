@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.2</div>
+                </div><div class="version">1.0.3</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -47,7 +47,6 @@
             <nav class="nav">
                 <ul class="root">
                     <li class="toctree-l1"><a class="nav-item" href="../../..">MkApi Documentation</a></li>
-                    <li class="toctree-l1"><a class="nav-item" href="../../../release/">Release Notes</a></li>
                     <li class="toctree-l1"><button class="section nav-item">Examples</button>
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../../examples/google_style/">Google Style</a></li>
@@ -126,7 +125,7 @@
 <div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;This modules provides Node class that has tree structure.&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">inspect</span>
 <span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
 
 <span class="kn">from</span> <span class="nn">mkapi.core.base</span> <span class="kn">import</span> <span class="n">Base</span><span class="p">,</span> <span class="n">Type</span>
 <span class="kn">from</span> <span class="nn">mkapi.core.object</span> <span class="kn">import</span> <span class="n">from_object</span><span class="p">,</span> <span class="n">get_object</span><span class="p">,</span> <span class="n">get_sourcefiles</span>
@@ -182,26 +181,32 @@
     <span class="k">def</span> <span class="nf">get_members</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Node&quot;</span><span class="p">]:</span>  <span class="c1"># type:ignore</span><span id="mkapi.core.node.Node.get_members"></span><a class="mkapi-docs-link" title="mkapi.core.node.Node.get_members" href="../../mkapi.core.node#mkapi.core.node.Node.get_members">DOCS</a>
         <span class="k">return</span> <span class="n">get_members</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">get_markdown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.node.Node.get_markdown"></span><a class="mkapi-docs-link" title="mkapi.core.node.Node.get_markdown" href="../../mkapi.core.node#mkapi.core.node.Node.get_markdown">DOCS</a>
+    <span class="k">def</span> <span class="nf">get_markdown</span><span class="p">(</span><span id="mkapi.core.node.Node.get_markdown"></span><a class="mkapi-docs-link" title="mkapi.core.node.Node.get_markdown" href="../../mkapi.core.node#mkapi.core.node.Node.get_markdown">DOCS</a>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">callback</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="n">Base</span><span class="p">],</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Returns a Markdown source for docstring of this object.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            level: Heading level. If 0, `&lt;div&gt;` tags are used.</span>
-<span class="sd">            callback (callable, optional): To modify Markdown source.</span>
+<span class="sd">            callback: To modify Markdown source.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">markdowns</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">member_objects</span> <span class="o">=</span> <span class="p">[</span><span class="n">member</span><span class="o">.</span><span class="n">object</span> <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">]</span>
+        <span class="n">class_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
         <span class="k">for</span> <span class="n">base</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">callback</span><span class="p">:</span>
                 <span class="n">markdown</span> <span class="o">=</span> <span class="n">callback</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">markdown</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">markdown</span>
+            <span class="n">markdown</span> <span class="o">=</span> <span class="n">markdown</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{class}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">class_name</span><span class="p">)</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">Object</span><span class="p">):</span>
                 <span class="k">if</span> <span class="n">level</span><span class="p">:</span>
                     <span class="k">if</span> <span class="n">base</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">object</span><span class="p">:</span>
                         <span class="n">markdown</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span> <span class="o">*</span> <span class="n">level</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">markdown</span>
                     <span class="k">elif</span> <span class="n">base</span> <span class="ow">in</span> <span class="n">member_objects</span><span class="p">:</span>
                         <span class="n">markdown</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span> <span class="o">*</span> <span class="p">(</span><span class="n">level</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">markdown</span>
+                <span class="k">if</span> <span class="s2">&quot;class&quot;</span> <span class="ow">in</span> <span class="n">base</span><span class="o">.</span><span class="n">kind</span><span class="p">:</span>
+                    <span class="n">class_name</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">name</span>
             <span class="n">markdowns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">markdown</span><span class="p">)</span>
         <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&lt;!-- mkapi:sep --&gt;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">markdowns</span><span class="p">)</span>
 
@@ -272,6 +277,8 @@
         <span class="n">name</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__name__</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">property</span><span class="p">):</span>
         <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">fget</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;__pytest_wrapped__&quot;</span><span class="p">):</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">__pytest_wrapped__</span><span class="o">.</span><span class="n">obj</span>
     <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;__func__&quot;</span><span class="p">,</span> <span class="s2">&quot;__self__&quot;</span><span class="p">]:</span>
         <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
     <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">):</span>

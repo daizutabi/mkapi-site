@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.2</div>
+                </div><div class="version">1.0.3</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -47,7 +47,6 @@
             <nav class="nav">
                 <ul class="root">
                     <li class="toctree-l1"><a class="nav-item" href="../../..">MkApi Documentation</a></li>
-                    <li class="toctree-l1"><a class="nav-item" href="../../../release/">Release Notes</a></li>
                     <li class="toctree-l1"><button class="section nav-item">Examples</button>
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../../examples/google_style/">Google Style</a></li>
@@ -365,7 +364,7 @@
     <span class="n">section</span> <span class="o">=</span> <span class="n">signature</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">doc</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">section</span><span class="p">:</span>
         <span class="k">return</span>
-    <span class="k">if</span> <span class="n">is_dataclass</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="ow">and</span> <span class="s1">&#39;Parameters&#39;</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">is_dataclass</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="ow">and</span> <span class="s2">&quot;Parameters&quot;</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">[</span><span class="s2">&quot;Parameters&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="n">section</span><span class="p">:</span>
                 <span class="n">doc</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">set_item</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
@@ -387,11 +386,10 @@
 
     <span class="k">if</span> <span class="s2">&quot;Parameters&quot;</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">[</span><span class="s2">&quot;Parameters&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
-            <span class="n">description</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">description</span><span class="o">.</span><span class="n">name</span>
-            <span class="k">if</span> <span class="s2">&quot;</span><span class="si">{default}</span><span class="s2">&quot;</span> <span class="ow">in</span> <span class="n">description</span> <span class="ow">and</span> <span class="n">item</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="n">signature</span><span class="p">:</span>
+            <span class="n">description</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">description</span>
+            <span class="k">if</span> <span class="s2">&quot;</span><span class="si">{default}</span><span class="s2">&quot;</span> <span class="ow">in</span> <span class="n">description</span><span class="o">.</span><span class="n">name</span> <span class="ow">and</span> <span class="n">item</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="n">signature</span><span class="p">:</span>
                 <span class="n">default</span> <span class="o">=</span> <span class="n">signature</span><span class="o">.</span><span class="n">defaults</span><span class="p">[</span><span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
-                <span class="n">description</span> <span class="o">=</span> <span class="n">description</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{default}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
-                <span class="n">item</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">Inline</span><span class="p">(</span><span class="n">description</span><span class="p">),</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="n">description</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="n">description</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{default}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
 
     <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Returns&quot;</span><span class="p">,</span> <span class="s2">&quot;Yields&quot;</span><span class="p">]:</span>
         <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
@@ -410,13 +408,9 @@
 
     <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">sections</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">section</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Example&quot;</span><span class="p">,</span> <span class="s2">&quot;Examples&quot;</span><span class="p">]:</span>
-            <span class="k">break</span>
-        <span class="k">if</span> <span class="n">section</span><span class="o">.</span><span class="n">markdown</span><span class="p">:</span>
-            <span class="n">section</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="n">replace_link</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">section</span><span class="o">.</span><span class="n">markdown</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">section</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">markdown</span><span class="p">:</span>
-                    <span class="n">item</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="n">replace_link</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">markdown</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">for</span> <span class="n">base</span> <span class="ow">in</span> <span class="n">section</span><span class="p">:</span>
+            <span class="n">base</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="n">replace_link</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">base</span><span class="o">.</span><span class="n">markdown</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">get_docstring</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Docstring</span><span class="p">:</span><span id="mkapi.core.docstring.get_docstring"></span><a class="mkapi-docs-link" title="mkapi.core.docstring.get_docstring" href="../../mkapi.core.docstring#mkapi.core.docstring.get_docstring">DOCS</a>

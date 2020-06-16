@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.2</div>
+                </div><div class="version">1.0.3</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -47,7 +47,6 @@
             <nav class="nav">
                 <ul class="root">
                     <li class="toctree-l1"><a class="nav-item" href="../..">MkApi Documentation</a></li>
-                    <li class="toctree-l1"><a class="nav-item" href="../../release/">Release Notes</a></li>
                     <li class="toctree-l1"><button class="section nav-item">Examples</button>
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../examples/google_style/">Google Style</a></li>
@@ -151,8 +150,8 @@
 
 <li class="dataclass"><code class="mkapi-args-name"><a href="#mkapi.core.base.Type">Type</a></code>
 
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type class represents type of <a href="./#mkapi.core.base.Item">Item</a>, <a href="./#mkapi.core.base.Section">Section</a>, <a href="./#mkapi.core.base.Docstring">Docstring</a>,
-or <a href="">Object</a>.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Type class represents type of <a href="./#mkapi.core.base.Item">Item</a>, <a href="./#mkapi.core.base.Section">Section</a>, <a href="./#mkapi.core.base.Docstring">Docstring</a>, or
+<a href="../mkapi.core.structure/#mkapi.core.structure.Object">Object</a>.</span></li>
 
 <li class="dataclass"><code class="mkapi-args-name"><a href="#mkapi.core.base.Item">Item</a></code>
 
@@ -206,6 +205,10 @@ or <a href="">Object</a>.</span></li>
 
 </div>
 <div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
+<li><code class="mkapi-args-name">callback</code>
+<span class="mkapi-args-type">(callable(<a href="./#mkapi.core.base.Base">Base</a>: str), optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Callback function to modify HTML string.</span></li>
+
 <li><code class="mkapi-args-name">html</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">HTML string after conversion.</span></li>
@@ -256,7 +259,7 @@ False
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.base.Base.copy">copy</a></code><code class="mkapi-object-signature">()</code>
 
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Copys self.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a copy of the Base instance.</span></li>
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.base.Base.set_html">set_html</a></code><code class="mkapi-object-signature">(html)</code>
 
@@ -335,23 +338,7 @@ False
 </h3>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Copys self.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-examples">
-<div class="mkapi-section-name mkapi-section-name-examples">
-<span class="mkapi-section-name-body">Examples</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; a = Base('x', 'text')
-&gt;&gt;&gt; b = a
-&gt;&gt;&gt; b.name = 'y'
-&gt;&gt;&gt; a.name
-'y'
-&gt;&gt;&gt; c = a.copy()
-&gt;&gt;&gt; c.name = 'z'
-&gt;&gt;&gt; a.name
-'y'
-</code></pre></div>
+<div class="mkapi-section-body"><p>Returns a copy of the Base instance.</p></div>
 </div>
 </div>
 
@@ -399,6 +386,10 @@ False
 
 </div>
 <div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
+<li><code class="mkapi-args-name">callback</code>
+<span class="mkapi-args-type">(callable(<a href="./#mkapi.core.base.Base">Base</a>: str), optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Callback function to modify HTML string.</span></li>
+
 <li><code class="mkapi-args-name">html</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">HTML string after conversion.</span></li>
@@ -454,7 +445,7 @@ Inline('markdown')
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.base.Inline.copy">copy</a></code><code class="mkapi-object-signature">()</code>
 
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Copys self.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a copy of the Inline instance.</span></li>
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.base.Inline.set_html">set_html</a></code><code class="mkapi-object-signature">(html)</code>
 
@@ -533,7 +524,7 @@ Inline('markdown')
 </h3>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Copys self.</p></div>
+<div class="mkapi-section-body"><p>Returns a copy of the Inline instance.</p></div>
 </div>
 </div>
 
@@ -562,8 +553,8 @@ Inline('markdown')
 </div>
 </div>
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Type class represents type of <a href="./#mkapi.core.base.Item">Item</a>, <a href="./#mkapi.core.base.Section">Section</a>, <a href="./#mkapi.core.base.Docstring">Docstring</a>,
-or <a href="">Object</a>.</p></div>
+<div class="mkapi-section-body"><p>Type class represents type of <a href="./#mkapi.core.base.Item">Item</a>, <a href="./#mkapi.core.base.Section">Section</a>, <a href="./#mkapi.core.base.Docstring">Docstring</a>, or
+<a href="../mkapi.core.structure/#mkapi.core.structure.Object">Object</a>.</p></div>
 </div>
 <div class="mkapi-section mkapi-section-parameters">
 <div class="mkapi-section-name mkapi-section-name-parameters">
@@ -584,6 +575,10 @@ or <a href="">Object</a>.</p></div>
 
 </div>
 <div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
+<li><code class="mkapi-args-name">callback</code>
+<span class="mkapi-args-type">(callable(<a href="./#mkapi.core.base.Base">Base</a>: str), optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Callback function to modify HTML string.</span></li>
+
 <li><code class="mkapi-args-name">html</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">HTML string after conversion.</span></li>
@@ -634,7 +629,7 @@ Type('str')
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.base.Inline.copy">copy</a></code><code class="mkapi-object-signature">()</code>
 
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Copys self.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a copy of the Type instance.</span></li>
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.base.Inline.set_html">set_html</a></code><code class="mkapi-object-signature">(html)</code>
 
@@ -713,7 +708,7 @@ Type('str')
 </h3>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Copys self.</p></div>
+<div class="mkapi-section-body"><p>Returns a copy of the Type instance.</p></div>
 </div>
 </div>
 
@@ -779,6 +774,10 @@ as a class attribute in HTML.</span></li>
 
 </div>
 <div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
+<li><code class="mkapi-args-name">callback</code>
+<span class="mkapi-args-type">(callable(<a href="./#mkapi.core.base.Base">Base</a>: str), optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Callback function to modify HTML string.</span></li>
+
 <li><code class="mkapi-args-name">description</code>
 <span class="mkapi-args-type">(<a href="./#mkapi.core.base.Inline">Inline</a>, optional)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Description of self.</span></li>
@@ -850,7 +849,7 @@ True
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.base.Item.copy">copy</a></code><code class="mkapi-object-signature">()</code>
 
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Copys self.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a copy of the Item instance.</span></li>
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.base.Item.set_description">set_description</a></code><code class="mkapi-object-signature">(description,</code> <code class="mkapi-object-signature">force)</code>
 
@@ -1067,7 +1066,7 @@ description.</span></li>
 </div>
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
 <li><code class="mkapi-args-name">item</code>
-<span class="mkapi-args-type">(item)</span>
+<span class="mkapi-args-type">(<a href="./#mkapi.core.base.Item">Item</a>)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Item instance.</span></li>
 
 <li><code class="mkapi-args-name">force</code>
@@ -1113,20 +1112,7 @@ description.</span></li>
 </h3>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Copys self.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-examples">
-<div class="mkapi-section-name mkapi-section-name-examples">
-<span class="mkapi-section-name-body">Examples</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; item = Item('x', 'str', 'description', kind='rw')
-&gt;&gt;&gt; new = item.copy()
-&gt;&gt;&gt; new.description
-Inline('description')
-&gt;&gt;&gt; new.kind
-'rw'
-</code></pre></div>
+<div class="mkapi-section-body"><p>Returns a copy of the Item instance.</p></div>
 </div>
 </div>
 
@@ -1186,6 +1172,10 @@ Inline('description')
 
 </div>
 <div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
+<li><code class="mkapi-args-name">callback</code>
+<span class="mkapi-args-type">(callable(<a href="./#mkapi.core.base.Base">Base</a>: str), optional)</span>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Callback function to modify HTML string.</span></li>
+
 <li><code class="mkapi-args-name">html</code>
 <span class="mkapi-args-type">(str)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">HTML string after conversion.</span></li>
@@ -1250,10 +1240,10 @@ Section('Parameters', num_items=3)
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.base.Section.copy">copy</a></code><code class="mkapi-object-signature">()</code>
 
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Copys self.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a copy of the Section instace.</span></li>
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.base.Section.merge">merge</a></code><code class="mkapi-object-signature">(section,</code> <code class="mkapi-object-signature">force)</code>
-<span class="mkapi-args-type">(section)</span>
+<span class="mkapi-args-type">(<a href="./#mkapi.core.base.Section">Section</a>)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a merged Section</span></li>
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.base.Base.set_html">set_html</a></code><code class="mkapi-object-signature">(html)</code>
@@ -1483,7 +1473,7 @@ Item('y', '')
 
 </div>
 <div class="mkapi-section-body mkapi-section-body-see also"><ul>
-<li>[Section.update]</li>
+<li><a href="./#mkapi.core.base.Section.update">Section.update</a></li>
 </ul></div>
 </div>
 </div>
@@ -1508,7 +1498,7 @@ Item('y', '')
 </div>
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
 <li><code class="mkapi-args-name">section</code>
-<span class="mkapi-args-type">(section)</span>
+<span class="mkapi-args-type">(<a href="./#mkapi.core.base.Section">Section</a>)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Section instance.</span></li>
 
 <li><code class="mkapi-args-name">force</code>
@@ -1546,7 +1536,7 @@ Item('y', '')
       <div class="mkapi-node" id="mkapi.core.base.Section.merge">
 <h3 id="mkapicorebasesectionmerge" class="mkapi-object mkapi-object-method code">
 <span class="mkapi-object-kind mkapi-object-kind-method">METHOD</span>
-<code class="mkapi-object-name">merge</code><code class="mkapi-object-signature">(section,</code> <code class="mkapi-object-signature">force=False)</code><span class="mkapi-args-type"> &#x2192; section</span><a class="mkapi-src-link" href="../source/mkapi.core.base#mkapi.core.base.Section.merge" title="mkapi.core.base.Section.merge">SOURCE</a>
+<code class="mkapi-object-name">merge</code><code class="mkapi-object-signature">(section,</code> <code class="mkapi-object-signature">force=False)</code><span class="mkapi-args-type"> &#x2192; <a href="./#mkapi.core.base.Section">Section</a></span><a class="mkapi-src-link" href="../source/mkapi.core.base#mkapi.core.base.Section.merge" title="mkapi.core.base.Section.merge">SOURCE</a>
 </h3>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
@@ -1559,7 +1549,7 @@ Item('y', '')
 </div>
 <div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
 <li><code class="mkapi-args-name">section</code>
-<span class="mkapi-args-type">(section)</span>
+<span class="mkapi-args-type">(<a href="./#mkapi.core.base.Section">Section</a>)</span>
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
 
 <li><code class="mkapi-args-name">force</code>
@@ -1600,7 +1590,7 @@ Item('y', '')
 </h3>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Copys self.</p></div>
+<div class="mkapi-section-body"><p>Returns a copy of the Section instace.</p></div>
 </div>
 <div class="mkapi-section mkapi-section-examples">
 <div class="mkapi-section-name mkapi-section-name-examples">
