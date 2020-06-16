@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.1</div>
+                </div><div class="version">1.0.2</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -134,7 +134,7 @@
 -->
 </style>
 
-<p>Let's start realistic examples. Here, a sample Python file <code>numpy_style.py</code> is stored under the <code>examples</code> directory relative to the <code>mkdocs.yml</code> directory, so we would configure <code>mkdocs.yml</code> like below. In addition, we add two extensions and an extra javascript for demonstration.</p>
+<p>Let's start concrete examples. Here, a sample Python file <code>numpy_style.py</code> is stored under the <code>examples</code> directory relative to the <code>mkdocs.yml</code> directory, so we would configure <code>mkdocs.yml</code> like below. In addition, we add two extensions and an extra javascript for demonstration.</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yml">plugins:
   - search
   - mkapi:
@@ -527,7 +527,7 @@ Multiple paragraphs are supported.</span></li>
 <li>Attributes section is inserted with type and description. These information is collected from the source code.</li>
 <li>Bound methods (<code>message</code> in this case) have a METHOD prefix instead of a FUNCTION prefix.</li>
 <li>If callable objects have neither Returns nor Yields, the type appears on the object signature line like type annotation.</li>
-<li>Propertes are moved to the Attributes section with [RO] or [RW] suffix that indicates whether the property is read-only or read-write.</li>
+<li>Properties are moved to the Attributes section with [RO] or [RW] suffix that indicates whether the property is read-only or read-write.</li>
 <li>Methods section is newly created that displays a list of methods defined in this class. Note that it has a hyperlink to the object.</li>
 </ul>
 <div class="admonition note">
@@ -646,7 +646,15 @@ class ExampleDataClass:
 <ul>
 <li>A DATACLASS prefix instead of a CLASS prefix.</li>
 <li>Attributes type inspection as well as parameters if they are data class fields.</li>
-</ul></div>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/index.html#">Napoleon project</a> provides complete examples:</p>
+<ul>
+<li><a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html#example-google">Example Google Style Python Docstrings</a></li>
+<li><a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html#example-numpy">Example NumPy Style Python Docstrings</a></li>
+</ul>
+</div></div>
                 <footer>
     <div class="footer-buttons">
         <div class="previous"><a href="../google_style/" title="Google Style"><span>Previous</span></a></div>

@@ -36,7 +36,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.1</div>
+                </div><div class="version">1.0.2</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="./search.html" method="get">
@@ -124,20 +124,16 @@
 </nav>
                 <div id="content">
 <h1 id="mkapi-documentation">MkApi Documentation</h1>
-<p>MkApi plugin for <a href="https://www.mkdocs.org/">MkDocs</a> generates API documentation for Python code. MkApi supports two styles of docstrings: <a href="http://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">Google</a> and <a href="https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard">NumPy</a>. The <a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/index.html#">Napoleon project</a> provides complete examples:</p>
-<ul>
-<li><a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html#example-google">Example Google Style Python Docstrings</a></li>
-<li><a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html#example-numpy">Example NumPy Style Python Docstrings</a></li>
-</ul>
+<p>MkApi plugin for <a href="https://www.mkdocs.org/">MkDocs</a> generates API documentation for Python code. MkApi supports two styles of docstrings: <a href="http://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">Google</a> and <a href="https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard">NumPy</a>.</p>
 <p>Features of MkApi are:</p>
 <ul>
-<li><strong>Section syntax</strong>: Supported section identifiers are <code>Args</code>, <code>Arguments</code>, <code>Attributes</code>, <code>Example[s]</code>, <code>Note[s]</code>, <code>Parameters</code>, <code>Raises</code>, <code>Returns</code>, <code>References</code>, <code>Todo</code>, <code>Warning[s]</code>, <code>Warns</code>, and <code>Yields</code>.</li>
 <li><strong>Type annotation</strong>: If you write your function such as <code>def func(x: int) -&gt; str:</code>, you don't need write type(s) in Parameters, Returns, or Yields section again. You can overwrite the type annotation in the corresponding docstring.</li>
 <li><strong>Object type inspection</strong>: MkApi plugin creates CLASS, DATACLASS, FUNCTION, GENERATOR, or METHOD prefix for each object.</li>
-<li><strong>Attribute inspection</strong>: If you write attributes with description as comment at module level or in <code>__init__()</code> of class, Attributes section is automatically created.</li>
+<li><strong>Attribute inspection</strong>: If you write attributes with description as comment in module or class, Attributes section is automatically created.</li>
 <li><strong>Docstring inheritance</strong>: Docstring of a subclass can inherit parameters and attributes description from its superclasses.</li>
 <li><strong>Page mode</strong>: Comprehensive API documentation for your project, in which objects are linked to each other by type annotation.</li>
 <li><strong>Bidirectional Link</strong>: Using the Page mode, bidirectional links are created between documentation and source code.</li>
+<li><strong>Table of Contents</strong>: Using the Page mode, table of contents are inserted into the documentation of each package, module, and class.</li>
 </ul>
 <h2 id="installation">Installation</h2>
 <p>Install the plugin using pip:</p>
@@ -150,19 +146,19 @@
   - mkapi</code></pre></div></div></div>
 
 <h2 id="usage">Usage</h2>
-<p>MkApi provides two modes to generate API documentation: Embedding mode and Page mode.</p>
+<p>MkApi provides two modes to generate documentation: Embedding mode and Page mode.</p>
 <h3 id="embedding-mode">Embedding Mode</h3>
-<p>To generate the API documentation in a Markdown source, add an exclamation mark (!), followed by <code>mkapi</code> in brackets, and the object full name in parentheses. Yes, this is like adding an image. The object can be a function, class, or module, <em>etc</em>.</p>
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](&lt;object.full.name&gt;)</code></pre></div></div></div>
+<p>To generate the documentation from docstring in a Markdown source, add an exclamation mark (!), followed by <code>mkapi</code> in brackets, and the object full name in parentheses. Yes, this is like adding an image. The object can be a function, class, or module, <em>etc</em>.</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](&lt;package.module.object&gt;)</code></pre></div></div></div>
 
-<p>MkApi imports objects that you specify. If they aren't in the <code>sys.path</code>, configure <code>mkdocs.yml</code> like below:</p>
+<p>MkApi imports modules that you specify. If they aren't in the <code>sys.path</code>, configure <code>mkdocs.yml</code> like below:</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yml">plugins:
   - search
   - mkapi:
       src_dirs: [&lt;path1&gt;, &lt;path2&gt;, ...]</code></pre></div></div></div>
 
 <p>Here, <code>pathX</code>s are inserted to <code>sys.path</code>. These <code>pathX</code>s are relative to the <code>mkdocs.yml</code> directory.</p>
-<p>The embedding mode is useful to embed an object interface in an arbitrary position of a Markdown source. For more details, see:</p>
+<p>The embedding mode is useful to embed documentation of an object in an arbitrary position of a Markdown source. For more details, see:</p>
 <ul>
 <li><a href="examples/google_style/">Google style examples</a></li>
 <li><a href="examples/numpy_style/">NumPy style examples</a></li>

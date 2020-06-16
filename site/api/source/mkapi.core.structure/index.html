@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.1</div>
+                </div><div class="version">1.0.2</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -237,6 +237,9 @@
 
 <span class="sd">        If `index` is str, a member Tree instance whose name is equal to `index`</span>
 <span class="sd">        is returned.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            IndexError: If no member found.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
             <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span>
