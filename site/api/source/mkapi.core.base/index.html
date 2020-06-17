@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.3</div>
+                </div><div class="version">1.0.4</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -66,6 +66,8 @@
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/method/">Method and Property Types</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/inherit/">Inheritance and Special Methods</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/order/">Ordering Members in Different Files</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/decorator/">Decorators</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/filter/">Filters and Varialbes</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -151,9 +153,9 @@
 
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>  <span class="c1">#: Name of self.</span>
     <span class="n">markdown</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>  <span class="c1">#: Markdown source.</span>
-    <span class="n">html</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1">#: HTML string after conversion.</span>
+    <span class="n">html</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1">#: HTML output after conversion.</span>
     <span class="n">callback</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="s2">&quot;Base&quot;</span><span class="p">],</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="sd">&quot;&quot;&quot;Callback function to modify HTML string.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Callback function to modify HTML output.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">class_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
@@ -169,10 +171,10 @@
             <span class="k">yield</span> <span class="bp">self</span>
 
     <span class="k">def</span> <span class="nf">set_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span><span id="mkapi.core.base.Base.set_html"></span><a class="mkapi-docs-link" title="mkapi.core.base.Base.set_html" href="../../mkapi.core.base#mkapi.core.base.Base.set_html">DOCS</a>
-        <span class="sd">&quot;&quot;&quot;Sets HTML string.</span>
+        <span class="sd">&quot;&quot;&quot;Sets HTML output.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            html: HTML string.</span>
+<span class="sd">            html: HTML output.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">html</span> <span class="o">=</span> <span class="n">html</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">:</span>

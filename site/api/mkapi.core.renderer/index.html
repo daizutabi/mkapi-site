@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.3</div>
+                </div><div class="version">1.0.4</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -66,6 +66,8 @@
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/method/">Method and Property Types</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/inherit/">Inheritance and Special Methods</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/order/">Ordering Members in Different Files</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/decorator/">Decorators</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/filter/">Filters and Varialbes</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -152,7 +154,7 @@ to create API documentation.</p></div>
 <li class="dataclass"><code class="mkapi-args-name"><a href="#mkapi.core.renderer.Renderer">Renderer</a></code>
 
 <span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Renderer instance renders Node instance recursively to create
-API documentation.</span></li>
+API documentation.<a class="mkapi-args-src-link" href="../source/mkapi.core.renderer#mkapi.core.renderer.Renderer" title="Source for mkapi.core.renderer.Renderer"></a></span></li>
 
 
 </ul></div>
@@ -192,31 +194,31 @@ API documentation.</p></div>
 <div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.renderer.Renderer.render">render</a></code><code class="mkapi-object-signature">(node,</code> <code class="mkapi-object-signature">filters)</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a rendered HTML for Node.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a rendered HTML for Node.<a class="mkapi-args-src-link" href="../source/mkapi.core.renderer#mkapi.core.renderer.Renderer.render" title="Source for mkapi.core.renderer.Renderer.render"></a></span></li>
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.renderer.Renderer.render_docstring">render_docstring</a></code><code class="mkapi-object-signature">(docstring,</code> <code class="mkapi-object-signature">filters)</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a rendered HTML for Docstring.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a rendered HTML for Docstring.<a class="mkapi-args-src-link" href="../source/mkapi.core.renderer#mkapi.core.renderer.Renderer.render_docstring" title="Source for mkapi.core.renderer.Renderer.render_docstring"></a></span></li>
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.renderer.Renderer.render_module">render_module</a></code><code class="mkapi-object-signature">(module,</code> <code class="mkapi-object-signature">filters)</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a rendered Markdown for Module.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a rendered Markdown for Module.<a class="mkapi-args-src-link" href="../source/mkapi.core.renderer#mkapi.core.renderer.Renderer.render_module" title="Source for mkapi.core.renderer.Renderer.render_module"></a></span></li>
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.renderer.Renderer.render_node">render_node</a></code><code class="mkapi-object-signature">(node,</code> <code class="mkapi-object-signature">object,</code> <code class="mkapi-object-signature">docstring,</code> <code class="mkapi-object-signature">members)</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a rendered HTML for Node using prerendered components.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a rendered HTML for Node using prerendered components.<a class="mkapi-args-src-link" href="../source/mkapi.core.renderer#mkapi.core.renderer.Renderer.render_node" title="Source for mkapi.core.renderer.Renderer.render_node"></a></span></li>
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.renderer.Renderer.render_object">render_object</a></code><code class="mkapi-object-signature">(object,</code> <code class="mkapi-object-signature">filters)</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a rendered HTML for Object.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a rendered HTML for Object.<a class="mkapi-args-src-link" href="../source/mkapi.core.renderer#mkapi.core.renderer.Renderer.render_object" title="Source for mkapi.core.renderer.Renderer.render_object"></a></span></li>
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.renderer.Renderer.render_object_member">render_object_member</a></code><code class="mkapi-object-signature">(name,</code> <code class="mkapi-object-signature">url,</code> <code class="mkapi-object-signature">signature)</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a rendered HTML for Object in toc.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a rendered HTML for Object in toc.<a class="mkapi-args-src-link" href="../source/mkapi.core.renderer#mkapi.core.renderer.Renderer.render_object_member" title="Source for mkapi.core.renderer.Renderer.render_object_member"></a></span></li>
 
 <li class="method"><code class="mkapi-args-name"><a href="#mkapi.core.renderer.Renderer.render_section">render_section</a></code><code class="mkapi-object-signature">(section,</code> <code class="mkapi-object-signature">filters)</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a rendered HTML for Section.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a rendered HTML for Section.<a class="mkapi-args-src-link" href="../source/mkapi.core.renderer#mkapi.core.renderer.Renderer.render_section" title="Source for mkapi.core.renderer.Renderer.render_section"></a></span></li>
 
 
 </ul></div>

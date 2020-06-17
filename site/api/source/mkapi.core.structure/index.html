@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.3</div>
+                </div><div class="version">1.0.4</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -66,6 +66,8 @@
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/method/">Method and Property Types</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/inherit/">Inheritance and Special Methods</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/order/">Ordering Members in Different Files</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/decorator/">Decorators</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/filter/">Filters and Varialbes</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -178,6 +180,11 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">prefix</span><span class="p">,</span> <span class="n">name</span><span class="p">])</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">class_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
+        <span class="nb">id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">class_name</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="nb">id</span><span class="si">!r}</span><span class="s2">)&quot;</span>
 
     <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Base</span><span class="p">]:</span><span id="mkapi.core.structure.Object.__iter__"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Object.__iter__" href="../../mkapi.core.structure#mkapi.core.structure.Object.__iter__">DOCS</a>
         <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span>

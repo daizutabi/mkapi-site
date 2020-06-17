@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.3</div>
+                </div><div class="version">1.0.4</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -66,6 +66,8 @@
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/method/">Method and Property Types</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/inherit/">Inheritance and Special Methods</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/order/">Ordering Members in Different Files</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/decorator/">Decorators</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/filter/">Filters and Varialbes</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -212,8 +214,7 @@
 <span class="sd">        &gt;&gt;&gt; split_prefix_and_name(obj)</span>
 <span class="sd">        (&#39;mkapi.core.node.Node&#39;, &#39;get_markdown&#39;)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">property</span><span class="p">):</span>
-        <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">fget</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">get_origin</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">ismodule</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
         <span class="n">prefix</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__name__</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -230,18 +231,14 @@
 
 
 <span class="k">def</span> <span class="nf">get_qualname</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">property</span><span class="p">):</span>
-        <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">fget</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">get_origin</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;__qualname__&quot;</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__qualname__</span>
     <span class="k">return</span> <span class="s2">&quot;&quot;</span>
 
 
 <span class="k">def</span> <span class="nf">get_sourcefile_and_lineno</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">property</span><span class="p">):</span>
-        <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">fget</span>
-    <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;__pytest_wrapped__&quot;</span><span class="p">):</span>
-        <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">__pytest_wrapped__</span><span class="o">.</span><span class="n">obj</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">get_origin</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">sourcefile</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getsourcefile</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span>
     <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
@@ -299,6 +296,30 @@
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">False</span>
     <span class="k">return</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getdoc</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="o">==</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="vm">__doc__</span>
+
+
+<span class="k">def</span> <span class="nf">get_origin</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span><span id="mkapi.core.object.get_origin"></span><a class="mkapi-docs-link" title="mkapi.core.object.get_origin" href="../../mkapi.core.object#mkapi.core.object.get_origin">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Returns an original object.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; class A:</span>
+<span class="sd">        ...    @property</span>
+<span class="sd">        ...    def x(self):</span>
+<span class="sd">        ...        pass</span>
+<span class="sd">        &gt;&gt;&gt; hasattr(A.x, __name__)</span>
+<span class="sd">        False</span>
+<span class="sd">        &gt;&gt;&gt; get_origin(A.x).__name__</span>
+<span class="sd">        &#39;x&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">property</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">get_origin</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">fget</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">obj</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;__wrapped__&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">get_origin</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">__wrapped__</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;__pytest_wrapped__&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">get_origin</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">__pytest_wrapped__</span><span class="o">.</span><span class="n">obj</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">obj</span>
 </code></pre></div>
 </div>
 </div></div>

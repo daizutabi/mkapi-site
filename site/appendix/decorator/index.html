@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="daizutabi">
     <link rel="shortcut icon" href="../../img/favicon.ico">
-    <title>Ordering Members in Different Files &mdash; MkApi</title>
+    <title>Decorators &mdash; MkApi</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -65,10 +65,11 @@
     <li class="toctree-l2"><a class="nav-item" href="../type/">Type Annotation Examples</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../method/">Method and Property Types</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../inherit/">Inheritance and Special Methods</a></li>
-    <li class="toctree-l2 current"><a class="nav-item current" href="./">Ordering Members in Different Files</a>
+    <li class="toctree-l2"><a class="nav-item" href="../order/">Ordering Members in Different Files</a></li>
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Decorators</a>
 <ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#appendixdecorated">appendix.decorated</a></li>
 </ul></li>
-    <li class="toctree-l2"><a class="nav-item" href="../decorator/">Decorators</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../filter/">Filters and Varialbes</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
@@ -104,8 +105,8 @@
     <div class="link">
         <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
     </div>
-    <div class="previous"><a href="../inherit/">&laquo; Previous</a></div>
-    <div class="next"><a href="../decorator/">Next &raquo;</a></div>
+    <div class="previous"><a href="../order/">&laquo; Previous</a></div>
+    <div class="next"><a href="../filter/">Next &raquo;</a></div>
 </div>
         </aside>
         <div id="spacer"><button class="arrow"></button></div>
@@ -121,7 +122,7 @@
 </ul>
 </nav>
                 <div id="content">
-<h1 id="ordering-members-in-different-files">Ordering Members in Different Files</h1>
+<h1 id="decorators">Decorators</h1>
 <style type="text/css">
 <!--
 .mkapi-node {
@@ -130,61 +131,116 @@
 -->
 </style>
 
-<p>Class members that are defined in different files are sorted by a key of (minus of <em>source file index</em>, line number).</p>
-<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">9</span>
-<span class="title">appendix/member_order_base.py</span></p>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">11</span>
+<span class="title">appendix/decorator.py</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python"># other code
-
-# other code
-
-# other code
-
-# other code
-
-# other code
+<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">from functools import wraps
 
 
-class A:
-    def a(self):
-        &#34;&#34;&#34;mro index: 1, sourcefile index: 1, line number: 13.&#34;&#34;&#34;</code></pre></div></div></div>
+def deco_without_wraps(func):
+    def _func(*args, **kwargs):
+        return func(*args, **kwargs)
+
+    return _func
+
+
+def deco_with_wraps(func):
+    @wraps(func)
+    def _func(*args, **kwargs):
+        return func(*args, **kwargs)
+
+    return _func</code></pre></div></div></div>
 
 </div></div></div>
 
-<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">10</span>
-<span class="title">appendix/member_order_sub.py</span></p>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">12</span>
+<span class="title">appendix/decorated.py</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">from appendix.member_order_base import A
+<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">&#34;&#34;&#34;Decorator examples.&#34;&#34;&#34;
+import pytest
+
+from appendix.decorator import deco_with_wraps, deco_without_wraps
 
 
-class B:
-    def b(self):
-        &#34;&#34;&#34;mro index: 2, sourcefile index: 0, line number: 5.&#34;&#34;&#34;
+@deco_without_wraps
+def func_without_wraps():
+    &#34;&#34;&#34;Decorated function without `wraps`.&#34;&#34;&#34;
 
 
-class C(A, B):
-    def c(self):
-        &#34;&#34;&#34;mro index: 0, sourcefile index: 0, line number: 10.&#34;&#34;&#34;</code></pre></div></div></div>
+@deco_with_wraps
+def func_with_wraps():
+    &#34;&#34;&#34;Decorated function with `wraps`.&#34;&#34;&#34;
+
+
+@deco_with_wraps
+@deco_with_wraps
+def func_with_wraps_double():
+    &#34;&#34;&#34;Doubly decorated function with `wraps`.&#34;&#34;&#34;
+
+
+@pytest.fixture
+def fixture():
+    &#34;&#34;&#34;Fixture.&#34;&#34;&#34;
+    yield 1
+
+
+@pytest.fixture
+@deco_with_wraps
+def fixture_with_wraps():
+    &#34;&#34;&#34;Fixture.&#34;&#34;&#34;
+    yield 1</code></pre></div></div></div>
 
 </div></div></div>
 
-<div class="mkapi-node" id="appendix.member_order_base.A">
-<div class="mkapi-object mkapi-object-class code">
-<div class="mkapi-object-kind mkapi-object-kind-class">CLASS</div>
-<div class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.member_order_base.</code><code class="mkapi-object-name">A</code><code class="mkapi-object-signature">()</code></div>
-</div>
+<div class="pheasant-fenced-code"><div class="cell jupyter input"><div class="code"><pre><code class="python">import inspect
+
+from appendix.decorated import func_with_wraps, func_without_wraps
+
+funcs = [func_with_wraps, func_without_wraps]
+for func in funcs:
+    sourcefile = inspect.getsourcefile(func)
+    is_wrapped = hasattr(func, &#39;__wrapped__&#39;)
+    print(f&#34;[{func.__name__}]: {sourcefile}, {is_wrapped}&#34;)</code></pre></div>
+<div class="report"><p><span class="count">[1]</span>
+<span class="start">2020-06-17 11:00:00</span> (<span class="time">46.0ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">522ms</span>)</span></p></div></div><div class="cell jupyter stdout"><div class="code">
+      <pre><code class="nohighlight">[func_with_wraps]: ../../examples\appendix\decorator.py, True
+[_func]: ../../examples\appendix\decorator.py, False</code></pre></div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">## ![mkapi](appendix.decorated|all)</code></pre></div></div></div>
+
+<div class="mkapi-node" id="appendix.decorated">
+<h2 id="appendixdecorated" class="mkapi-object mkapi-object-module plain">
+<span class="mkapi-object-kind mkapi-object-kind-module">MODULE</span>
+<span class="mkapi-object-prefix">appendix.</span><span class="mkapi-object-name">decorated</span><span class="mkapi-object-signature"></span>
+</h2>
 <div class="mkapi-docstring">
-<div class="mkapi-section mkapi-section-methods">
-<div class="mkapi-section-name mkapi-section-name-methods">
-<span class="mkapi-section-name-body">Methods</span>
+<div class="mkapi-section">
+<div class="mkapi-section-body"><p>Decorator examples.</p></div>
+</div>
+<div class="mkapi-section mkapi-section-functions">
+<div class="mkapi-section-name mkapi-section-name-functions">
+<span class="mkapi-section-name-body">Functions</span>
 
 </div>
-<div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
-<li class="method"><code class="mkapi-args-name">a</code><code class="mkapi-object-signature">()</code>
+<div class="mkapi-section-body mkapi-section-body-functions"><ul class="mkapi-args-list">
+<li class="function"><code class="mkapi-args-name"><a href="#appendix.decorated.fixture">fixture</a></code><code class="mkapi-object-signature">()</code>
 
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">mro index: 1, sourcefile index: 1, line number: 13.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Fixture.</span></li>
+
+<li class="function"><code class="mkapi-args-name"><a href="#appendix.decorated.fixture_with_wraps">fixture_with_wraps</a></code><code class="mkapi-object-signature">()</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Fixture.</span></li>
+
+<li class="function"><code class="mkapi-args-name"><a href="#appendix.decorated.func_with_wraps">func_with_wraps</a></code><code class="mkapi-object-signature">()</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Decorated function with <code>wraps</code>.</span></li>
+
+<li class="function"><code class="mkapi-args-name"><a href="#appendix.decorated.func_with_wraps_double">func_with_wraps_double</a></code><code class="mkapi-object-signature">()</code>
+
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Doubly decorated function with <code>wraps</code>.</span></li>
 
 
 </ul></div>
@@ -194,106 +250,14 @@ class C(A, B):
   <div class="mkapi-members">
   
     <div class="mkapi-member">
-      <div class="mkapi-node" id="appendix.member_order_base.A.a">
-<div class="mkapi-object mkapi-object-method code">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">a</code><code class="mkapi-object-signature">()</code></div>
-</div>
+      <div class="mkapi-node" id="appendix.decorated.func_with_wraps">
+<h3 id="appendixdecoratedfunc_with_wraps" class="mkapi-object mkapi-object-function code">
+<span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
+<code class="mkapi-object-prefix">appendix.decorated.</code><code class="mkapi-object-name">func_with_wraps</code><code class="mkapi-object-signature">()</code>
+</h3>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>mro index: 1, sourcefile index: 1, line number: 13.</p></div>
-</div>
-</div>
-
-</div>
-    </div>
-  
-  </div>
-
-</div>
-
-<div class="mkapi-node" id="appendix.member_order_sub.B">
-<div class="mkapi-object mkapi-object-class code">
-<div class="mkapi-object-kind mkapi-object-kind-class">CLASS</div>
-<div class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.member_order_sub.</code><code class="mkapi-object-name">B</code><code class="mkapi-object-signature">()</code></div>
-</div>
-<div class="mkapi-docstring">
-<div class="mkapi-section mkapi-section-methods">
-<div class="mkapi-section-name mkapi-section-name-methods">
-<span class="mkapi-section-name-body">Methods</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
-<li class="method"><code class="mkapi-args-name">b</code><code class="mkapi-object-signature">()</code>
-
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">mro index: 2, sourcefile index: 0, line number: 5.</span></li>
-
-
-</ul></div>
-</div>
-</div>
-
-  <div class="mkapi-members">
-  
-    <div class="mkapi-member">
-      <div class="mkapi-node" id="appendix.member_order_sub.B.b">
-<div class="mkapi-object mkapi-object-method code">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">b</code><code class="mkapi-object-signature">()</code></div>
-</div>
-<div class="mkapi-docstring">
-<div class="mkapi-section">
-<div class="mkapi-section-body"><p>mro index: 2, sourcefile index: 0, line number: 5.</p></div>
-</div>
-</div>
-
-</div>
-    </div>
-  
-  </div>
-
-</div>
-
-<div class="mkapi-node" id="appendix.member_order_sub.C">
-<div class="mkapi-object mkapi-object-class code">
-<div class="mkapi-object-kind mkapi-object-kind-class">CLASS</div>
-<div class="mkapi-object-body"><code class="mkapi-object-prefix">appendix.member_order_sub.</code><code class="mkapi-object-name">C</code><code class="mkapi-object-signature">()</code></div>
-</div>
-<div class="mkapi-docstring">
-<div class="mkapi-section mkapi-section-methods">
-<div class="mkapi-section-name mkapi-section-name-methods">
-<span class="mkapi-section-name-body">Methods</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
-<li class="method"><code class="mkapi-args-name">a</code><code class="mkapi-object-signature">()</code>
-
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">mro index: 1, sourcefile index: 1, line number: 13.</span></li>
-
-<li class="method"><code class="mkapi-args-name">b</code><code class="mkapi-object-signature">()</code>
-
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">mro index: 2, sourcefile index: 0, line number: 5.</span></li>
-
-<li class="method"><code class="mkapi-args-name">c</code><code class="mkapi-object-signature">()</code>
-
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">mro index: 0, sourcefile index: 0, line number: 10.</span></li>
-
-
-</ul></div>
-</div>
-</div>
-
-  <div class="mkapi-members">
-  
-    <div class="mkapi-member">
-      <div class="mkapi-node" id="appendix.member_order_base.A.a">
-<div class="mkapi-object mkapi-object-method code">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">a</code><code class="mkapi-object-signature">()</code></div>
-</div>
-<div class="mkapi-docstring">
-<div class="mkapi-section">
-<div class="mkapi-section-body"><p>mro index: 1, sourcefile index: 1, line number: 13.</p></div>
+<div class="mkapi-section-body"><p>Decorated function with <code>wraps</code>.</p></div>
 </div>
 </div>
 
@@ -301,14 +265,14 @@ class C(A, B):
     </div>
   
     <div class="mkapi-member">
-      <div class="mkapi-node" id="appendix.member_order_sub.B.b">
-<div class="mkapi-object mkapi-object-method code">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">b</code><code class="mkapi-object-signature">()</code></div>
-</div>
+      <div class="mkapi-node" id="appendix.decorated.func_with_wraps_double">
+<h3 id="appendixdecoratedfunc_with_wraps_double" class="mkapi-object mkapi-object-function code">
+<span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
+<code class="mkapi-object-prefix">appendix.decorated.</code><code class="mkapi-object-name">func_with_wraps_double</code><code class="mkapi-object-signature">()</code>
+</h3>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>mro index: 2, sourcefile index: 0, line number: 5.</p></div>
+<div class="mkapi-section-body"><p>Doubly decorated function with <code>wraps</code>.</p></div>
 </div>
 </div>
 
@@ -316,14 +280,29 @@ class C(A, B):
     </div>
   
     <div class="mkapi-member">
-      <div class="mkapi-node" id="appendix.member_order_sub.C.c">
-<div class="mkapi-object mkapi-object-method code">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">c</code><code class="mkapi-object-signature">()</code></div>
-</div>
+      <div class="mkapi-node" id="appendix.decorated.fixture">
+<h3 id="appendixdecoratedfixture" class="mkapi-object mkapi-object-function code">
+<span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
+<code class="mkapi-object-prefix">appendix.decorated.</code><code class="mkapi-object-name">fixture</code><code class="mkapi-object-signature">()</code>
+</h3>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>mro index: 0, sourcefile index: 0, line number: 10.</p></div>
+<div class="mkapi-section-body"><p>Fixture.</p></div>
+</div>
+</div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="appendix.decorated.fixture_with_wraps">
+<h3 id="appendixdecoratedfixture_with_wraps" class="mkapi-object mkapi-object-function code">
+<span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
+<code class="mkapi-object-prefix">appendix.decorated.</code><code class="mkapi-object-name">fixture_with_wraps</code><code class="mkapi-object-signature">()</code>
+</h3>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+<div class="mkapi-section-body"><p>Fixture.</p></div>
 </div>
 </div>
 
@@ -335,8 +314,8 @@ class C(A, B):
 </div></div>
                 <footer>
     <div class="footer-buttons">
-        <div class="previous"><a href="../inherit/" title="Inheritance and Special Methods"><span>Previous</span></a></div>
-        <div class="next"><a href="../decorator/" title="Decorators"><span>Next</span></a></div>
+        <div class="previous"><a href="../order/" title="Ordering Members in Different Files"><span>Previous</span></a></div>
+        <div class="next"><a href="../filter/" title="Filters and Varialbes"><span>Next</span></a></div>
     </div>
     <div class="footer-note">
         <p>

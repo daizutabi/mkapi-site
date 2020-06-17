@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.3</div>
+                </div><div class="version">1.0.4</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -66,6 +66,8 @@
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/method/">Method and Property Types</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/inherit/">Inheritance and Special Methods</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/order/">Ordering Members in Different Files</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/decorator/">Decorators</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/filter/">Filters and Varialbes</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -142,7 +144,7 @@ signature and types.</p></div>
 <div class="mkapi-section-body mkapi-section-body-classes"><ul class="mkapi-args-list">
 <li class="dataclass"><code class="mkapi-args-name"><a href="#mkapi.core.signature.Signature">Signature</a></code>
 
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Signature class.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Signature class.<a class="mkapi-args-src-link" href="../source/mkapi.core.signature#mkapi.core.signature.Signature" title="Source for mkapi.core.signature.Signature"></a></span></li>
 
 
 </ul></div>
@@ -155,19 +157,19 @@ signature and types.</p></div>
 <div class="mkapi-section-body mkapi-section-body-functions"><ul class="mkapi-args-list">
 <li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.signature.a_of_b">a_of_b</a></code><code class="mkapi-object-signature">(annotation,</code> <code class="mkapi-object-signature">obj)</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns A of B style string.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns A of B style string.<a class="mkapi-args-src-link" href="../source/mkapi.core.signature#mkapi.core.signature.a_of_b" title="Source for mkapi.core.signature.a_of_b"></a></span></li>
 
 <li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.signature.to_string">to_string</a></code><code class="mkapi-object-signature">(annotation,</code> <code class="mkapi-object-signature">kind,</code> <code class="mkapi-object-signature">obj)</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns string expression of annotation.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns string expression of annotation.<a class="mkapi-args-src-link" href="../source/mkapi.core.signature#mkapi.core.signature.to_string" title="Source for mkapi.core.signature.to_string"></a></span></li>
 
 <li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.signature.to_string_args">to_string_args</a></code><code class="mkapi-object-signature">(annotation,</code> <code class="mkapi-object-signature">obj)</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a string for callable and generator annotation.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a string for callable and generator annotation.<a class="mkapi-args-src-link" href="../source/mkapi.core.signature#mkapi.core.signature.to_string_args" title="Source for mkapi.core.signature.to_string_args"></a></span></li>
 
 <li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.signature.union">union</a></code><code class="mkapi-object-signature">(annotation,</code> <code class="mkapi-object-signature">obj)</code>
 <span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a string for union annotation.</span></li>
+<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a string for union annotation.<a class="mkapi-args-src-link" href="../source/mkapi.core.signature#mkapi.core.signature.union" title="Source for mkapi.core.signature.union"></a></span></li>
 
 
 </ul></div>
@@ -270,7 +272,7 @@ value is default value.</span></li>
 &gt;&gt;&gt; s.parameters['name'].to_tuple()
 ('name', 'str, optional', 'Name of self.')
 &gt;&gt;&gt; s.attributes['html'].to_tuple()
-('html', 'str', 'HTML string after conversion.')
+('html', 'str', 'HTML output after conversion.')
 </code></pre></div>
 </div>
 </div>

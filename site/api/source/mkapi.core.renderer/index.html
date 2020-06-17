@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.3</div>
+                </div><div class="version">1.0.4</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -66,6 +66,8 @@
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/method/">Method and Property Types</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/inherit/">Inheritance and Special Methods</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/order/">Ordering Members in Different Files</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/decorator/">Decorators</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/filter/">Filters and Varialbes</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -201,6 +203,8 @@
         <span class="k">if</span> <span class="n">context</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;level&quot;</span><span class="p">):</span>
             <span class="k">if</span> <span class="nb">object</span><span class="o">.</span><span class="n">kind</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;module&quot;</span><span class="p">,</span> <span class="s2">&quot;package&quot;</span><span class="p">]:</span>
                 <span class="n">filters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;plain&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="s2">&quot;plain&quot;</span> <span class="ow">in</span> <span class="n">filters</span><span class="p">:</span>
+                <span class="k">del</span> <span class="n">filters</span><span class="p">[</span><span class="n">filters</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;plain&quot;</span><span class="p">)]</span>
             <span class="n">template</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s2">&quot;object_heading&quot;</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">template</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s2">&quot;object_div&quot;</span><span class="p">]</span>
