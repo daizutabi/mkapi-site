@@ -78,6 +78,7 @@
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
 <ul class="subnav hide">
     <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core/">mkapi.core</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.attribute/">mkapi.core.attribute</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.base/">mkapi.core.base</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.docstring/">mkapi.core.docstring</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.inherit/">mkapi.core.inherit</a></li>
@@ -119,7 +120,7 @@
                 <div id="content"><div class="mkapi-node">
 <h1 id="" class="mkapi-object mkapi-object-code plain">
 <span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
-<span class="mkapi-object-prefix">MKAPI.CORE.</span><span class="mkapi-object-name">OBJECT</span><span class="mkapi-object-signature"></span>
+<span class="mkapi-object-prefix">MKAPI.CORE.</span><span class="mkapi-object-name">OBJECT</span>
 <span id="mkapi.core.object"></span><a class="mkapi-docs-link" href="../../mkapi.core.object">DOCS</a>
 </h1>
 
@@ -214,7 +215,6 @@
 <span class="sd">        &gt;&gt;&gt; split_prefix_and_name(obj)</span>
 <span class="sd">        (&#39;mkapi.core.node.Node&#39;, &#39;get_markdown&#39;)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">obj</span> <span class="o">=</span> <span class="n">get_origin</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">ismodule</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
         <span class="n">prefix</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__name__</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -231,14 +231,12 @@
 
 
 <span class="k">def</span> <span class="nf">get_qualname</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
-    <span class="n">obj</span> <span class="o">=</span> <span class="n">get_origin</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;__qualname__&quot;</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__qualname__</span>
     <span class="k">return</span> <span class="s2">&quot;&quot;</span>
 
 
 <span class="k">def</span> <span class="nf">get_sourcefile_and_lineno</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-    <span class="n">obj</span> <span class="o">=</span> <span class="n">get_origin</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">sourcefile</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getsourcefile</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span>
     <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>

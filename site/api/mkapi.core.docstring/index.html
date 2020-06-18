@@ -78,6 +78,7 @@
     <li class="toctree-l2 current"><button class="section nav-item">mkapi.core</button>
 <ul class="subnav">
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core/">mkapi.core</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.attribute/">mkapi.core.attribute</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.base/">mkapi.core.base</a></li>
     <li class="toctree-l3 current"><a class="nav-item current" href="./">mkapi.core.docstring</a>
 <ul class="subnav">
@@ -89,7 +90,6 @@
 <li class="toctree-l4"><a class="nav-item toc" href="#mkapicoredocstringparse_returns">parse_returns</a></li>
 <li class="toctree-l4"><a class="nav-item toc" href="#mkapicoredocstringget_section">get_section</a></li>
 <li class="toctree-l4"><a class="nav-item toc" href="#mkapicoredocstringparse_bases">parse_bases</a></li>
-<li class="toctree-l4"><a class="nav-item toc" href="#mkapicoredocstringparse_property">parse_property</a></li>
 <li class="toctree-l4"><a class="nav-item toc" href="#mkapicoredocstringparse_source">parse_source</a></li>
 <li class="toctree-l4"><a class="nav-item toc" href="#mkapicoredocstringget_docstring">get_docstring</a></li>
 </ul></li>
@@ -133,391 +133,394 @@
 </nav>
                 <div id="content">
 <div class="mkapi-node" id="mkapi.core.docstring">
-<h1 id="mkapicoredocstring" class="mkapi-object mkapi-object-module plain">
-<span class="mkapi-object-kind mkapi-object-kind-module">MODULE</span>
-<span class="mkapi-object-prefix"><a href="../mkapi.core/#mkapi.core">MKAPI.CORE</a>.</span><span class="mkapi-object-name">DOCSTRING</span><span class="mkapi-object-signature"></span><a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring" title="mkapi.core.docstring">SOURCE</a>
-</h1>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain">
+    <div class="mkapi-object-kind module">MODULE</div>
+    <h1 id="mkapicoredocstring" class="mkapi-object-body module"><span class="mkapi-object-prefix"><a href="../mkapi.core/#mkapi.core">MKAPI.CORE</a>.</span><span class="mkapi-object-name">DOCSTRING</span></h1>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring" title="Source for mkapi.core.docstring">&lt;/&gt;</a>
+  </div>
+</div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>This module provides functions that parse docstring.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-functions">
-<div class="mkapi-section-name mkapi-section-name-functions">
-<span class="mkapi-section-name-body">Functions</span>
+      <div class="mkapi-section-body"><p>This module provides functions that parse docstring.</p></div>
+    </div>
+  <div class="mkapi-section functions">
+      <div class="mkapi-section-name functions">
+          <span class="mkapi-section-name-body functions">Functions</span> 
+        </div>
+      <div class="mkapi-section-body functions"><ul class="mkapi-items">
+<li class="function"><code class="mkapi-item-name"><a href="#mkapi.core.docstring.get_docstring">get_docstring</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">obj</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(<a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Returns a <a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a> instance.<a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.get_docstring" title="Source for mkapi.core.docstring.get_docstring">&lt;/&gt;</a></span></li>
 
-</div>
-<div class="mkapi-section-body mkapi-section-body-functions"><ul class="mkapi-args-list">
-<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.docstring.get_docstring">get_docstring</a></code><code class="mkapi-object-signature">(obj)</code>
-<span class="mkapi-args-type">(<a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a <a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a> instance.<a class="mkapi-args-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.get_docstring" title="Source for mkapi.core.docstring.get_docstring"></a></span></li>
+<li class="function"><code class="mkapi-item-name"><a href="#mkapi.core.docstring.get_section">get_section</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">doc</code>, <code class="mkapi-object-signature">style</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(<a href="../mkapi.core.base/#mkapi.core.base.Section">Section</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Returns a <a href="../mkapi.core.base/#mkapi.core.base.Section">Section</a> instance.<a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.get_section" title="Source for mkapi.core.docstring.get_section">&lt;/&gt;</a></span></li>
 
-<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.docstring.get_section">get_section</a></code><code class="mkapi-object-signature">(name,</code> <code class="mkapi-object-signature">doc,</code> <code class="mkapi-object-signature">style)</code>
-<span class="mkapi-args-type">(<a href="../mkapi.core.base/#mkapi.core.base.Section">Section</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a <a href="../mkapi.core.base/#mkapi.core.base.Section">Section</a> instance.<a class="mkapi-args-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.get_section" title="Source for mkapi.core.docstring.get_section"></a></span></li>
+<li class="function"><code class="mkapi-item-name"><a href="#mkapi.core.docstring.parse_bases">parse_bases</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">doc</code>, <code class="mkapi-object-signature">obj</code><code class="mkapi-object-parenthesis">)</code>
 
-<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.docstring.parse_bases">parse_bases</a></code><code class="mkapi-object-signature">(doc,</code> <code class="mkapi-object-signature">obj)</code>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Parses base classes to create a Base(s) line.<a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_bases" title="Source for mkapi.core.docstring.parse_bases">&lt;/&gt;</a></span></li>
 
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Parses base classes to create a Base(s) line.<a class="mkapi-args-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_bases" title="Source for mkapi.core.docstring.parse_bases"></a></span></li>
+<li class="function"><code class="mkapi-item-name"><a href="#mkapi.core.docstring.parse_parameter">parse_parameter</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">lines</code>, <code class="mkapi-object-signature">style</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(<a href="../mkapi.core.base/#mkapi.core.base.Item">Item</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Returns a Item instance that represents a parameter.<a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_parameter" title="Source for mkapi.core.docstring.parse_parameter">&lt;/&gt;</a></span></li>
 
-<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.docstring.parse_parameter">parse_parameter</a></code><code class="mkapi-object-signature">(lines,</code> <code class="mkapi-object-signature">style)</code>
-<span class="mkapi-args-type">(<a href="../mkapi.core.base/#mkapi.core.base.Item">Item</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a Item instance that represents a parameter.<a class="mkapi-args-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_parameter" title="Source for mkapi.core.docstring.parse_parameter"></a></span></li>
+<li class="function"><code class="mkapi-item-name"><a href="#mkapi.core.docstring.parse_parameters">parse_parameters</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">doc</code>, <code class="mkapi-object-signature">style</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(list of <a href="../mkapi.core.base/#mkapi.core.base.Item">Item</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Returns a list of Item.<a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_parameters" title="Source for mkapi.core.docstring.parse_parameters">&lt;/&gt;</a></span></li>
 
-<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.docstring.parse_parameters">parse_parameters</a></code><code class="mkapi-object-signature">(doc,</code> <code class="mkapi-object-signature">style)</code>
-<span class="mkapi-args-type">(list of <a href="../mkapi.core.base/#mkapi.core.base.Item">Item</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a list of Item.<a class="mkapi-args-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_parameters" title="Source for mkapi.core.docstring.parse_parameters"></a></span></li>
+<li class="function"><code class="mkapi-item-name"><a href="#mkapi.core.docstring.parse_returns">parse_returns</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">doc</code>, <code class="mkapi-object-signature">style</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(str, str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Returns a tuple of (type, markdown).<a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_returns" title="Source for mkapi.core.docstring.parse_returns">&lt;/&gt;</a></span></li>
 
-<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.docstring.parse_property">parse_property</a></code><code class="mkapi-object-signature">(doc,</code> <code class="mkapi-object-signature">obj)</code>
+<li class="function"><code class="mkapi-item-name"><a href="#mkapi.core.docstring.parse_source">parse_source</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">doc</code>, <code class="mkapi-object-signature">obj</code><code class="mkapi-object-parenthesis">)</code>
 
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Parses property's docstring to inspect type.<a class="mkapi-args-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_property" title="Source for mkapi.core.docstring.parse_property"></a></span></li>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Parses parameters' docstring to inspect type and description from source.<a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_source" title="Source for mkapi.core.docstring.parse_source">&lt;/&gt;</a></span></li>
 
-<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.docstring.parse_returns">parse_returns</a></code><code class="mkapi-object-signature">(doc,</code> <code class="mkapi-object-signature">style)</code>
-<span class="mkapi-args-type">(str, str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a tuple of (type, markdown).<a class="mkapi-args-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_returns" title="Source for mkapi.core.docstring.parse_returns"></a></span></li>
+<li class="function"><code class="mkapi-item-name"><a href="#mkapi.core.docstring.section_heading">section_heading</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">line</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(str, str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Returns a tuple of (section name, style name).<a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.section_heading" title="Source for mkapi.core.docstring.section_heading">&lt;/&gt;</a></span></li>
 
-<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.docstring.parse_source">parse_source</a></code><code class="mkapi-object-signature">(doc,</code> <code class="mkapi-object-signature">obj)</code>
+<li class="generator"><code class="mkapi-item-name"><a href="#mkapi.core.docstring.split_parameter">split_parameter</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">doc</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(list of str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Yields a list of parameter string.<a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.split_parameter" title="Source for mkapi.core.docstring.split_parameter">&lt;/&gt;</a></span></li>
 
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Parses parameters' docstring to inspect type and description from source.<a class="mkapi-args-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_source" title="Source for mkapi.core.docstring.parse_source"></a></span></li>
-
-<li class="function"><code class="mkapi-args-name"><a href="#mkapi.core.docstring.section_heading">section_heading</a></code><code class="mkapi-object-signature">(line)</code>
-<span class="mkapi-args-type">(str, str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Returns a tuple of (section name, style name).<a class="mkapi-args-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.section_heading" title="Source for mkapi.core.docstring.section_heading"></a></span></li>
-
-<li class="generator"><code class="mkapi-args-name"><a href="#mkapi.core.docstring.split_parameter">split_parameter</a></code><code class="mkapi-object-signature">(doc)</code>
-<span class="mkapi-args-type">(list of str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Yields a list of parameter string.<a class="mkapi-args-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.split_parameter" title="Source for mkapi.core.docstring.split_parameter"></a></span></li>
-
-<li class="generator"><code class="mkapi-args-name"><a href="#mkapi.core.docstring.split_section">split_section</a></code><code class="mkapi-object-signature">(doc)</code>
-<span class="mkapi-args-type">(str, str, str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Yields a tuple of (section name, contents, style).<a class="mkapi-args-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.split_section" title="Source for mkapi.core.docstring.split_section"></a></span></li>
+<li class="generator"><code class="mkapi-item-name"><a href="#mkapi.core.docstring.split_section">split_section</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">doc</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(str, str, str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Yields a tuple of (section name, contents, style).<a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.split_section" title="Source for mkapi.core.docstring.split_section">&lt;/&gt;</a></span></li>
 
 
 </ul></div>
-</div>
-</div>
+    </div>
+  </div>
 
 </div>
 
 <div class="mkapi-node" id="mkapi.core.docstring.section_heading">
-<h2 id="mkapicoredocstringsection_heading" class="mkapi-object mkapi-object-function code">
-<span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">section_heading</code><code class="mkapi-object-signature">(line)</code><span class="mkapi-args-type"> &#x2192; (str, str)</span><a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.section_heading" title="mkapi.core.docstring.section_heading">SOURCE</a>
-</h2>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code">
+    <div class="mkapi-object-kind function">FUNCTION</div>
+    <h2 id="mkapicoredocstringsection_heading" class="mkapi-object-body function"><code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">section_heading</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">line</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; (str, str)</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.section_heading" title="Source for mkapi.core.docstring.section_heading">&lt;/&gt;</a>
+  </div>
+</div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Returns a tuple of (section name, style name).</p></div>
-</div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">line</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Docstring line.</span></li>
+      <div class="mkapi-section-body"><p>Returns a tuple of (section name, style name).</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">line</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Docstring line.</span></li>
 
 
 </ul></div>
-</div>
-<div class="mkapi-section mkapi-section-examples">
-<div class="mkapi-section-name mkapi-section-name-examples">
-<span class="mkapi-section-name-body">Examples</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; section_heading(&quot;Args:&quot;)
+    </div>
+  <div class="mkapi-section examples">
+      <div class="mkapi-section-name examples">
+          <span class="mkapi-section-name-body examples">Examples</span> 
+        </div>
+      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; section_heading(&quot;Args:&quot;)
 ('Args', 'google')
 &gt;&gt;&gt; section_heading(&quot;Raises&quot;)
 ('Raises', 'numpy')
 &gt;&gt;&gt; section_heading(&quot;other&quot;)
 ('', '')
 </code></pre></div>
-</div>
-</div>
+    </div>
+  </div>
 
 </div>
 
 <div class="mkapi-node" id="mkapi.core.docstring.split_section">
-<h2 id="mkapicoredocstringsplit_section" class="mkapi-object mkapi-object-generator code">
-<span class="mkapi-object-kind mkapi-object-kind-generator">GENERATOR</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">split_section</code><code class="mkapi-object-signature">(doc)</code><span class="mkapi-args-type"> &#x2192; (str, str, str)</span><a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.split_section" title="mkapi.core.docstring.split_section">SOURCE</a>
-</h2>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object generator code">
+    <div class="mkapi-object-kind generator">GENERATOR</div>
+    <h2 id="mkapicoredocstringsplit_section" class="mkapi-object-body generator"><code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">split_section</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">doc</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; (str, str, str)</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.split_section" title="Source for mkapi.core.docstring.split_section">&lt;/&gt;</a>
+  </div>
+</div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Yields a tuple of (section name, contents, style).</p></div>
-</div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">doc</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Docstring</span></li>
+      <div class="mkapi-section-body"><p>Yields a tuple of (section name, contents, style).</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">doc</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Docstring</span></li>
 
 
 </ul></div>
-</div>
-<div class="mkapi-section mkapi-section-examples">
-<div class="mkapi-section-name mkapi-section-name-examples">
-<span class="mkapi-section-name-body">Examples</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; doc = &quot;abc\n\nArgs:\n    x: X\n&quot;
+    </div>
+  <div class="mkapi-section examples">
+      <div class="mkapi-section-name examples">
+          <span class="mkapi-section-name-body examples">Examples</span> 
+        </div>
+      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; doc = &quot;abc\n\nArgs:\n    x: X\n&quot;
 &gt;&gt;&gt; it = split_section(doc)
 &gt;&gt;&gt; next(it)
 ('', 'abc', '')
 &gt;&gt;&gt; next(it)
 ('Parameters', 'x: X', 'google')
 </code></pre></div>
-</div>
-</div>
+    </div>
+  </div>
 
 </div>
 
 <div class="mkapi-node" id="mkapi.core.docstring.split_parameter">
-<h2 id="mkapicoredocstringsplit_parameter" class="mkapi-object mkapi-object-generator code">
-<span class="mkapi-object-kind mkapi-object-kind-generator">GENERATOR</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">split_parameter</code><code class="mkapi-object-signature">(doc)</code><span class="mkapi-args-type"> &#x2192; list of str</span><a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.split_parameter" title="mkapi.core.docstring.split_parameter">SOURCE</a>
-</h2>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object generator code">
+    <div class="mkapi-object-kind generator">GENERATOR</div>
+    <h2 id="mkapicoredocstringsplit_parameter" class="mkapi-object-body generator"><code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">split_parameter</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">doc</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; list of str</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.split_parameter" title="Source for mkapi.core.docstring.split_parameter">&lt;/&gt;</a>
+  </div>
+</div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Yields a list of parameter string.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">doc</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Docstring</span></li>
+      <div class="mkapi-section-body"><p>Yields a list of parameter string.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">doc</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Docstring</span></li>
 
 
 </ul></div>
-</div>
-</div>
+    </div>
+  </div>
 
 </div>
 
 <div class="mkapi-node" id="mkapi.core.docstring.parse_parameter">
-<h2 id="mkapicoredocstringparse_parameter" class="mkapi-object mkapi-object-function code">
-<span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">parse_parameter</code><code class="mkapi-object-signature">(lines,</code> <code class="mkapi-object-signature">style)</code><span class="mkapi-args-type"> &#x2192; <a href="../mkapi.core.base/#mkapi.core.base.Item">Item</a></span><a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_parameter" title="mkapi.core.docstring.parse_parameter">SOURCE</a>
-</h2>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code">
+    <div class="mkapi-object-kind function">FUNCTION</div>
+    <h2 id="mkapicoredocstringparse_parameter" class="mkapi-object-body function"><code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">parse_parameter</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">lines</code>, <code class="mkapi-object-signature">style</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; <a href="../mkapi.core.base/#mkapi.core.base.Item">Item</a></span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_parameter" title="Source for mkapi.core.docstring.parse_parameter">&lt;/&gt;</a>
+  </div>
+</div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Returns a Item instance that represents a parameter.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
+      <div class="mkapi-section-body"><p>Returns a Item instance that represents a parameter.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">lines</code>
+<span class="mkapi-item-type">(list of str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Splitted parameter docstring lines.</span></li>
 
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">lines</code>
-<span class="mkapi-args-type">(list of str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Splitted parameter docstring lines.</span></li>
-
-<li><code class="mkapi-args-name">style</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Docstring style. <code>google</code> or <code>numpy</code>.</span></li>
+<li><code class="mkapi-item-name">style</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Docstring style. <code>google</code> or <code>numpy</code>.</span></li>
 
 
 </ul></div>
-</div>
-</div>
+    </div>
+  </div>
 
 </div>
 
 <div class="mkapi-node" id="mkapi.core.docstring.parse_parameters">
-<h2 id="mkapicoredocstringparse_parameters" class="mkapi-object mkapi-object-function code">
-<span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">parse_parameters</code><code class="mkapi-object-signature">(doc,</code> <code class="mkapi-object-signature">style)</code><span class="mkapi-args-type"> &#x2192; list of <a href="../mkapi.core.base/#mkapi.core.base.Item">Item</a></span><a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_parameters" title="mkapi.core.docstring.parse_parameters">SOURCE</a>
-</h2>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code">
+    <div class="mkapi-object-kind function">FUNCTION</div>
+    <h2 id="mkapicoredocstringparse_parameters" class="mkapi-object-body function"><code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">parse_parameters</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">doc</code>, <code class="mkapi-object-signature">style</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; list of <a href="../mkapi.core.base/#mkapi.core.base.Item">Item</a></span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_parameters" title="Source for mkapi.core.docstring.parse_parameters">&lt;/&gt;</a>
+  </div>
+</div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Returns a list of Item.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
+      <div class="mkapi-section-body"><p>Returns a list of Item.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">doc</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
 
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">doc</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
-
-<li><code class="mkapi-args-name">style</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<li><code class="mkapi-item-name">style</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
 
 
 </ul></div>
-</div>
-</div>
+    </div>
+  </div>
 
 </div>
 
 <div class="mkapi-node" id="mkapi.core.docstring.parse_returns">
-<h2 id="mkapicoredocstringparse_returns" class="mkapi-object mkapi-object-function code">
-<span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">parse_returns</code><code class="mkapi-object-signature">(doc,</code> <code class="mkapi-object-signature">style)</code><span class="mkapi-args-type"> &#x2192; (str, str)</span><a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_returns" title="mkapi.core.docstring.parse_returns">SOURCE</a>
-</h2>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code">
+    <div class="mkapi-object-kind function">FUNCTION</div>
+    <h2 id="mkapicoredocstringparse_returns" class="mkapi-object-body function"><code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">parse_returns</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">doc</code>, <code class="mkapi-object-signature">style</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; (str, str)</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_returns" title="Source for mkapi.core.docstring.parse_returns">&lt;/&gt;</a>
+  </div>
+</div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Returns a tuple of (type, markdown).</p></div>
-</div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
+      <div class="mkapi-section-body"><p>Returns a tuple of (type, markdown).</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">doc</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
 
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">doc</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
-
-<li><code class="mkapi-args-name">style</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<li><code class="mkapi-item-name">style</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
 
 
 </ul></div>
-</div>
-</div>
+    </div>
+  </div>
 
 </div>
 
 <div class="mkapi-node" id="mkapi.core.docstring.get_section">
-<h2 id="mkapicoredocstringget_section" class="mkapi-object mkapi-object-function code">
-<span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">get_section</code><code class="mkapi-object-signature">(name,</code> <code class="mkapi-object-signature">doc,</code> <code class="mkapi-object-signature">style)</code><span class="mkapi-args-type"> &#x2192; <a href="../mkapi.core.base/#mkapi.core.base.Section">Section</a></span><a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.get_section" title="mkapi.core.docstring.get_section">SOURCE</a>
-</h2>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code">
+    <div class="mkapi-object-kind function">FUNCTION</div>
+    <h2 id="mkapicoredocstringget_section" class="mkapi-object-body function"><code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">get_section</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">doc</code>, <code class="mkapi-object-signature">style</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; <a href="../mkapi.core.base/#mkapi.core.base.Section">Section</a></span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.get_section" title="Source for mkapi.core.docstring.get_section">&lt;/&gt;</a>
+  </div>
+</div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Returns a <a href="../mkapi.core.base/#mkapi.core.base.Section">Section</a> instance.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
+      <div class="mkapi-section-body"><p>Returns a <a href="../mkapi.core.base/#mkapi.core.base.Section">Section</a> instance.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">name</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
 
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">name</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<li><code class="mkapi-item-name">doc</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
 
-<li><code class="mkapi-args-name">doc</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
-
-<li><code class="mkapi-args-name">style</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<li><code class="mkapi-item-name">style</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
 
 
 </ul></div>
-</div>
-</div>
+    </div>
+  </div>
 
 </div>
 
 <div class="mkapi-node" id="mkapi.core.docstring.parse_bases">
-<h2 id="mkapicoredocstringparse_bases" class="mkapi-object mkapi-object-function code">
-<span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">parse_bases</code><code class="mkapi-object-signature">(doc,</code> <code class="mkapi-object-signature">obj)</code><a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_bases" title="mkapi.core.docstring.parse_bases">SOURCE</a>
-</h2>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code">
+    <div class="mkapi-object-kind function">FUNCTION</div>
+    <h2 id="mkapicoredocstringparse_bases" class="mkapi-object-body function"><code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">parse_bases</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">doc</code>, <code class="mkapi-object-signature">obj</code><code class="mkapi-object-parenthesis">)</code></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_bases" title="Source for mkapi.core.docstring.parse_bases">&lt;/&gt;</a>
+  </div>
+</div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Parses base classes to create a Base(s) line.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
+      <div class="mkapi-section-body"><p>Parses base classes to create a Base(s) line.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">doc</code>
+<span class="mkapi-item-type">(<a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
 
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">doc</code>
-<span class="mkapi-args-type">(<a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
-
-<li><code class="mkapi-args-name">obj</code>
-<span class="mkapi-args-type">(any)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<li><code class="mkapi-item-name">obj</code>
+<span class="mkapi-item-type">(any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
 
 
 </ul></div>
-</div>
-</div>
-
-</div>
-
-<div class="mkapi-node" id="mkapi.core.docstring.parse_property">
-<h2 id="mkapicoredocstringparse_property" class="mkapi-object mkapi-object-function code">
-<span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">parse_property</code><code class="mkapi-object-signature">(doc,</code> <code class="mkapi-object-signature">obj)</code><a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_property" title="mkapi.core.docstring.parse_property">SOURCE</a>
-</h2>
-<div class="mkapi-docstring">
-<div class="mkapi-section">
-<div class="mkapi-section-body"><p>Parses property's docstring to inspect type.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">doc</code>
-<span class="mkapi-args-type">(<a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
-
-<li><code class="mkapi-args-name">obj</code>
-<span class="mkapi-args-type">(any)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
-
-
-</ul></div>
-</div>
-</div>
+    </div>
+  </div>
 
 </div>
 
 <div class="mkapi-node" id="mkapi.core.docstring.parse_source">
-<h2 id="mkapicoredocstringparse_source" class="mkapi-object mkapi-object-function code">
-<span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">parse_source</code><code class="mkapi-object-signature">(doc,</code> <code class="mkapi-object-signature">obj)</code><a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_source" title="mkapi.core.docstring.parse_source">SOURCE</a>
-</h2>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code">
+    <div class="mkapi-object-kind function">FUNCTION</div>
+    <h2 id="mkapicoredocstringparse_source" class="mkapi-object-body function"><code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">parse_source</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">doc</code>, <code class="mkapi-object-signature">obj</code><code class="mkapi-object-parenthesis">)</code></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.parse_source" title="Source for mkapi.core.docstring.parse_source">&lt;/&gt;</a>
+  </div>
+</div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Parses parameters' docstring to inspect type and description from source.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
+      <div class="mkapi-section-body"><p>Parses parameters' docstring to inspect type and description from source.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">doc</code>
+<span class="mkapi-item-type">(<a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
 
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">doc</code>
-<span class="mkapi-args-type">(<a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
-
-<li><code class="mkapi-args-name">obj</code>
-<span class="mkapi-args-type">(any)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<li><code class="mkapi-item-name">obj</code>
+<span class="mkapi-item-type">(any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
 
 
 </ul></div>
-</div>
-<div class="mkapi-section mkapi-section-examples">
-<div class="mkapi-section-name mkapi-section-name-examples">
-<span class="mkapi-section-name-body">Examples</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-examples"><pre><code class="python">&gt;&gt;&gt; from mkapi.core.base import Base
+    </div>
+  <div class="mkapi-section examples">
+      <div class="mkapi-section-name examples">
+          <span class="mkapi-section-name-body examples">Examples</span> 
+        </div>
+      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; from mkapi.core.base import Base
 &gt;&gt;&gt; doc = Docstring()
 &gt;&gt;&gt; parse_source(doc, Base)
 &gt;&gt;&gt; section = doc['Parameters']
@@ -526,38 +529,39 @@
 &gt;&gt;&gt; section = doc['Attributes']
 &gt;&gt;&gt; section['html'].to_tuple()
 ('html', 'str', 'HTML output after conversion.')
-</code></pre>
-
-<p>s = get_signature(Base)
-s['Parameters']</p></div>
-</div>
-</div>
+</code></pre></div>
+    </div>
+  </div>
 
 </div>
 
 <div class="mkapi-node" id="mkapi.core.docstring.get_docstring">
-<h2 id="mkapicoredocstringget_docstring" class="mkapi-object mkapi-object-function code">
-<span class="mkapi-object-kind mkapi-object-kind-function">FUNCTION</span>
-<code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">get_docstring</code><code class="mkapi-object-signature">(obj)</code><span class="mkapi-args-type"> &#x2192; <a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a></span><a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.get_docstring" title="mkapi.core.docstring.get_docstring">SOURCE</a>
-</h2>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code">
+    <div class="mkapi-object-kind function">FUNCTION</div>
+    <h2 id="mkapicoredocstringget_docstring" class="mkapi-object-body function"><code class="mkapi-object-prefix"><a href="#mkapi.core.docstring">mkapi.core.docstring</a>.</code><code class="mkapi-object-name">get_docstring</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">obj</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; <a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a></span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.docstring#mkapi.core.docstring.get_docstring" title="Source for mkapi.core.docstring.get_docstring">&lt;/&gt;</a>
+  </div>
+</div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Returns a <a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a> instance.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">obj</code>
-<span class="mkapi-args-type">(any)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+      <div class="mkapi-section-body"><p>Returns a <a href="../mkapi.core.base/#mkapi.core.base.Docstring">Docstring</a> instance.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">obj</code>
+<span class="mkapi-item-type">(any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
 
 
 </ul></div>
-</div>
-</div>
+    </div>
+  </div>
 
 </div></div>
                 <footer>

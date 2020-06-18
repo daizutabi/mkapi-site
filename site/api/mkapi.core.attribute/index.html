@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="daizutabi">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>mkapi.core.attribute &mdash; MkApi</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../../css/mkapi-common.css">
+    <link rel="stylesheet" href="../../css/mkapi-ivory.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/pheasant.css">
+    <link rel="stylesheet" href="../../custom.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> MkApi</a>
+                </div><div class="version">1.0.4</div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">MkApi Documentation</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Examples</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../examples/google_style/">Google Style</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../examples/numpy_style/">NumPy Style</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/module/">Module and Package</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/inherit/">Docstring Inheritance</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/page/">Page Mode and Internal Links</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/library/">Using MkApi within Python</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/custom/">Customization</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Appendix</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/type/">Type Annotation Examples</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/method/">Method and Property Types</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/inherit/">Inheritance and Special Methods</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/order/">Ordering Members in Different Files</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/decorator/">Decorators</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/filter/">Filters and Varialbes</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">API</button>
+<ul class="subnav">
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi/">mkapi</a></li>
+</ul></li>
+    <li class="toctree-l2 current"><button class="section nav-item">mkapi.core</button>
+<ul class="subnav">
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core/">mkapi.core</a></li>
+    <li class="toctree-l3 current"><a class="nav-item current" href="./">mkapi.core.attribute</a>
+<ul class="subnav">
+<li class="toctree-l4"><a class="nav-item toc" href="#mkapicoreattributeget_class_attributes">get_class_attributes</a></li>
+<li class="toctree-l4"><a class="nav-item toc" href="#mkapicoreattributeget_dataclass_attributes">get_dataclass_attributes</a></li>
+<li class="toctree-l4"><a class="nav-item toc" href="#mkapicoreattributeget_module_attributes">get_module_attributes</a></li>
+<li class="toctree-l4"><a class="nav-item toc" href="#mkapicoreattributeget_attributes">get_attributes</a></li>
+</ul></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.base/">mkapi.core.base</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.docstring/">mkapi.core.docstring</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.inherit/">mkapi.core.inherit</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.linker/">mkapi.core.linker</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.module/">mkapi.core.module</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.node/">mkapi.core.node</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.object/">mkapi.core.object</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.page/">mkapi.core.page</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.renderer/">mkapi.core.renderer</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.signature/">mkapi.core.signature</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.structure/">mkapi.core.structure</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.plugins</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.plugins/">mkapi.plugins</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.plugins.mkdocs/">mkapi.plugins.mkdocs</a></li>
+</ul></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
+    </div>
+    <div class="previous"><a href="../mkapi.core/">&laquo; Previous</a></div>
+    <div class="next"><a href="../mkapi.core.base/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> MkApi</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>API &raquo; </li><li>mkapi.core</li>
+</ul>
+</nav>
+                <div id="content">
+<div class="mkapi-node" id="mkapi.core.attribute">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain">
+    <div class="mkapi-object-kind module">MODULE</div>
+    <h1 id="mkapicoreattribute" class="mkapi-object-body module"><span class="mkapi-object-prefix"><a href="../mkapi.core/#mkapi.core">MKAPI.CORE</a>.</span><span class="mkapi-object-name">ATTRIBUTE</span></h1>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.attribute#mkapi.core.attribute" title="Source for mkapi.core.attribute">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>This module provides attributes inspection from source code.</p></div>
+    </div>
+  <div class="mkapi-section functions">
+      <div class="mkapi-section-name functions">
+          <span class="mkapi-section-name-body functions">Functions</span> 
+        </div>
+      <div class="mkapi-section-body functions"><ul class="mkapi-items">
+<li class="function"><code class="mkapi-item-name"><a href="#mkapi.core.attribute.get_attributes">get_attributes</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">obj</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(dict(str: (any, str)))</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Returns a dictionary that maps attribute name to
+a tuple of (type, description).<a class="mkapi-src-link" href="../source/mkapi.core.attribute#mkapi.core.attribute.get_attributes" title="Source for mkapi.core.attribute.get_attributes">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#mkapi.core.attribute.get_class_attributes">get_class_attributes</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">cls</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(dict(str: (any, str)))</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Returns a dictionary that maps attribute name to a tuple of
+(type, description).<a class="mkapi-src-link" href="../source/mkapi.core.attribute#mkapi.core.attribute.get_class_attributes" title="Source for mkapi.core.attribute.get_class_attributes">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#mkapi.core.attribute.get_dataclass_attributes">get_dataclass_attributes</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">cls</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(dict(str: (any, str)))</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Returns a dictionary that maps attribute name to a tuple of
+(type, description).<a class="mkapi-src-link" href="../source/mkapi.core.attribute#mkapi.core.attribute.get_dataclass_attributes" title="Source for mkapi.core.attribute.get_dataclass_attributes">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#mkapi.core.attribute.get_module_attributes">get_module_attributes</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">module</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(dict(str: (any, str)))</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Returns a dictionary that maps attribute name to a tuple of
+(type, description).<a class="mkapi-src-link" href="../source/mkapi.core.attribute#mkapi.core.attribute.get_module_attributes" title="Source for mkapi.core.attribute.get_module_attributes">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="mkapi.core.attribute.get_class_attributes">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code">
+    <div class="mkapi-object-kind function">FUNCTION</div>
+    <h2 id="mkapicoreattributeget_class_attributes" class="mkapi-object-body function"><code class="mkapi-object-prefix"><a href="#mkapi.core.attribute">mkapi.core.attribute</a>.</code><code class="mkapi-object-name">get_class_attributes</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">cls</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; dict(str: (any, str))</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.attribute#mkapi.core.attribute.get_class_attributes" title="Source for mkapi.core.attribute.get_class_attributes">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Returns a dictionary that maps attribute name to a tuple of
+(type, description).</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">cls</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Class object.</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section examples">
+      <div class="mkapi-section-name examples">
+          <span class="mkapi-section-name-body examples">Examples</span> 
+        </div>
+      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; from examples.google_style import ExampleClass
+&gt;&gt;&gt; attrs = get_class_attributes(ExampleClass)
+&gt;&gt;&gt; attrs['a'][0] is str
+True
+&gt;&gt;&gt; attrs['a'][1]
+'The first attribute. Comment *inline* with attribute.'
+&gt;&gt;&gt; attrs['b'][0] == Dict[str, int]
+True
+&gt;&gt;&gt; attrs['c'][0] is None
+True
+</code></pre></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="mkapi.core.attribute.get_dataclass_attributes">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code">
+    <div class="mkapi-object-kind function">FUNCTION</div>
+    <h2 id="mkapicoreattributeget_dataclass_attributes" class="mkapi-object-body function"><code class="mkapi-object-prefix"><a href="#mkapi.core.attribute">mkapi.core.attribute</a>.</code><code class="mkapi-object-name">get_dataclass_attributes</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">cls</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; dict(str: (any, str))</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.attribute#mkapi.core.attribute.get_dataclass_attributes" title="Source for mkapi.core.attribute.get_dataclass_attributes">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Returns a dictionary that maps attribute name to a tuple of
+(type, description).</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">cls</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Dataclass object.</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section examples">
+      <div class="mkapi-section-name examples">
+          <span class="mkapi-section-name-body examples">Examples</span> 
+        </div>
+      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; from mkapi.core.base import Item, Type, Inline
+&gt;&gt;&gt; attrs = get_dataclass_attributes(Item)
+&gt;&gt;&gt; attrs['type'][0] is Type
+True
+&gt;&gt;&gt; attrs['description'][0] is Inline
+True
+</code></pre></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="mkapi.core.attribute.get_module_attributes">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code">
+    <div class="mkapi-object-kind function">FUNCTION</div>
+    <h2 id="mkapicoreattributeget_module_attributes" class="mkapi-object-body function"><code class="mkapi-object-prefix"><a href="#mkapi.core.attribute">mkapi.core.attribute</a>.</code><code class="mkapi-object-name">get_module_attributes</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">module</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; dict(str: (any, str))</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.attribute#mkapi.core.attribute.get_module_attributes" title="Source for mkapi.core.attribute.get_module_attributes">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Returns a dictionary that maps attribute name to a tuple of
+(type, description).</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">module</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Module object.</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section examples">
+      <div class="mkapi-section-name examples">
+          <span class="mkapi-section-name-body examples">Examples</span> 
+        </div>
+      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; from mkapi.core import renderer
+&gt;&gt;&gt; attrs = get_module_attributes(renderer)
+&gt;&gt;&gt; attrs['renderer'][0] is renderer.Renderer
+True
+</code></pre></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="mkapi.core.attribute.get_attributes">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code">
+    <div class="mkapi-object-kind function">FUNCTION</div>
+    <h2 id="mkapicoreattributeget_attributes" class="mkapi-object-body function"><code class="mkapi-object-prefix"><a href="#mkapi.core.attribute">mkapi.core.attribute</a>.</code><code class="mkapi-object-name">get_attributes</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">obj</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; dict(str: (any, str))</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.core.attribute#mkapi.core.attribute.get_attributes" title="Source for mkapi.core.attribute.get_attributes">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Returns a dictionary that maps attribute name to
+a tuple of (type, description).</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">obj</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object.</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>See Alse:
+    <a href="./#mkapi.core.attribute.get_class_attributes">get_class_attributes</a>, <a href="./#mkapi.core.attribute.get_dataclass_attributes">get_dataclass_attributes</a>, <a href="./#mkapi.core.attribute.get_module_attributes">get_module_attributes</a>.</p></div>
+    </div>
+  </div>
+
+</div></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../mkapi.core/" title="mkapi.core"><span>Previous</span></a></div>
+        <div class="next"><a href="../mkapi.core.base/" title="mkapi.core.base"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/mkapi.js"></script>
+    <script src="../../js/pheasant.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

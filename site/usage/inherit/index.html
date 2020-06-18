@@ -84,6 +84,7 @@
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
 <ul class="subnav hide">
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core/">mkapi.core</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.attribute/">mkapi.core.attribute</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.base/">mkapi.core.base</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.docstring/">mkapi.core.docstring</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.core.inherit/">mkapi.core.inherit</a></li>
@@ -199,91 +200,101 @@ class Item(Base):
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](inherit.Item)</code></pre></div></div></div>
 
 <div class="mkapi-node" id="inherit.Item">
-<div class="mkapi-object mkapi-object-dataclass code">
-<div class="mkapi-object-kind mkapi-object-kind-dataclass">DATACLASS</div>
-<div class="mkapi-object-body"><code class="mkapi-object-prefix">inherit.</code><code class="mkapi-object-name">Item</code><code class="mkapi-object-signature">(name,</code> <code class="mkapi-object-signature">type,</code> <code class="mkapi-object-signature">markdown)</code></div>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object dataclass code">
+    <div class="mkapi-object-kind dataclass">DATACLASS</div>
+    <div class="mkapi-object-body dataclass"><code class="mkapi-object-prefix">inherit.</code><code class="mkapi-object-name">Item</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">type</code>, <code class="mkapi-object-signature">markdown</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
 </div>
 <div class="mkapi-docstring">
-<div class="mkapi-section">
-<div class="mkapi-section-body"><p>Item class.</p></div>
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base">inherit.Base</span>
 </div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Item class.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">name</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object name.</span></li>
 
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">name</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
 
-
-<li><code class="mkapi-args-name">markdown</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object markdown.</span></li>
+<li><code class="mkapi-item-name">markdown</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object markdown.</span></li>
 
 
 </ul></div>
-</div>
-<div class="mkapi-section mkapi-section-attributes">
-<div class="mkapi-section-name mkapi-section-name-attributes">
-<span class="mkapi-section-name-body">Attributes</span>
+    </div>
+  <div class="mkapi-section attributes">
+      <div class="mkapi-section-name attributes">
+          <span class="mkapi-section-name-body attributes">Attributes</span> 
+        </div>
+      <div class="mkapi-section-body attributes"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">markdown</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object markdown.</span></li>
 
-</div>
-<div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">markdown</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object markdown.</span></li>
+<li><code class="mkapi-item-name">name</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object name.</span></li>
 
-<li><code class="mkapi-args-name">name</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
-
-
-
-</ul></div>
-</div>
-<div class="mkapi-section mkapi-section-methods">
-<div class="mkapi-section-name mkapi-section-name-methods">
-<span class="mkapi-section-name-body">Methods</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
-<li class="method"><code class="mkapi-args-name">set_name</code><code class="mkapi-object-signature">(name)</code>
-
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Sets name in upper case.</span></li>
 
 
 </ul></div>
-</div>
-</div>
+    </div>
+  <div class="mkapi-section methods">
+      <div class="mkapi-section-name methods">
+          <span class="mkapi-section-name-body methods">Methods</span> 
+        </div>
+      <div class="mkapi-section-body methods"><ul class="mkapi-items">
+<li class="method"><code class="mkapi-item-name"><a href="#inherit.Item.set_name">set_name</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Sets name in upper case.</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
 
   <div class="mkapi-members">
   
     <div class="mkapi-member">
       <div class="mkapi-node" id="inherit.Item.set_name">
-<div class="mkapi-object mkapi-object-method code">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">set_name</code><code class="mkapi-object-signature">(name)</code></div>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">METHOD</div>
+    <div class="mkapi-object-body method"><code class="mkapi-object-name">set_name</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
 </div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Sets name in upper case.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">name</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">A New name.</span></li>
+      <div class="mkapi-section-body"><p>Sets name in upper case.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">name</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">A New name.</span></li>
 
 
 </ul></div>
-</div>
-</div>
+    </div>
+  </div>
 
 </div>
     </div>
@@ -298,106 +309,107 @@ class Item(Base):
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](inherit.Item|strict)</code></pre></div></div></div>
 
 <div class="mkapi-node" id="inherit.Item">
-<div class="mkapi-object mkapi-object-dataclass code">
-<div class="mkapi-object-kind mkapi-object-kind-dataclass">DATACLASS</div>
-<div class="mkapi-object-body"><code class="mkapi-object-prefix">inherit.</code><code class="mkapi-object-name">Item</code><code class="mkapi-object-signature">(name,</code> <code class="mkapi-object-signature">type,</code> <code class="mkapi-object-signature">markdown)</code></div>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object dataclass code">
+    <div class="mkapi-object-kind dataclass">DATACLASS</div>
+    <div class="mkapi-object-body dataclass"><code class="mkapi-object-prefix">inherit.</code><code class="mkapi-object-name">Item</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">type</code>, <code class="mkapi-object-signature">markdown</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
 </div>
 <div class="mkapi-docstring">
-<div class="mkapi-section mkapi-section-bases">
-<div class="mkapi-section-name mkapi-section-name-bases">
-<span class="mkapi-section-name-body">Bases</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-bases">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
 <span class="mkapi-base">inherit.Base</span>
 </div>
-</div>
-<div class="mkapi-section">
-<div class="mkapi-section-body"><p>Item class.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Item class.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">name</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object name.</span></li>
 
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">name</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
+<li><code class="mkapi-item-name">type</code>
+<span class="mkapi-item-type">(<a href="../../api/mkapi.core.base/#mkapi.core.base.Type">Type</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
 
-<li><code class="mkapi-args-name">type</code>
-<span class="mkapi-args-type">(<a href="../../api/mkapi.core.base/#mkapi.core.base.Type">Type</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
-
-<li><code class="mkapi-args-name">markdown</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object markdown.</span></li>
-
-
-</ul></div>
-</div>
-<div class="mkapi-section mkapi-section-attributes">
-<div class="mkapi-section-name mkapi-section-name-attributes">
-<span class="mkapi-section-name-body">Attributes</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">markdown</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object markdown.</span></li>
-
-<li><code class="mkapi-args-name">name</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
-
-<li><code class="mkapi-args-name">type</code>
-<span class="mkapi-args-type">(<a href="../../api/mkapi.core.base/#mkapi.core.base.Type">Type</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc"></span></li>
+<li><code class="mkapi-item-name">markdown</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object markdown.</span></li>
 
 
 </ul></div>
-</div>
-<div class="mkapi-section mkapi-section-methods">
-<div class="mkapi-section-name mkapi-section-name-methods">
-<span class="mkapi-section-name-body">Methods</span>
+    </div>
+  <div class="mkapi-section attributes">
+      <div class="mkapi-section-name attributes">
+          <span class="mkapi-section-name-body attributes">Attributes</span> 
+        </div>
+      <div class="mkapi-section-body attributes"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">markdown</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object markdown.</span></li>
 
-</div>
-<div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
-<li class="method"><code class="mkapi-args-name">set_name</code><code class="mkapi-object-signature">(name)</code>
+<li><code class="mkapi-item-name">name</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object name.</span></li>
 
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Sets name in upper case.</span></li>
+<li><code class="mkapi-item-name">type</code>
+<span class="mkapi-item-type">(<a href="../../api/mkapi.core.base/#mkapi.core.base.Type">Type</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
 
 
 </ul></div>
-</div>
-</div>
+    </div>
+  <div class="mkapi-section methods">
+      <div class="mkapi-section-name methods">
+          <span class="mkapi-section-name-body methods">Methods</span> 
+        </div>
+      <div class="mkapi-section-body methods"><ul class="mkapi-items">
+<li class="method"><code class="mkapi-item-name"><a href="#inherit.Item.set_name">set_name</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Sets name in upper case.</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
 
   <div class="mkapi-members">
   
     <div class="mkapi-member">
       <div class="mkapi-node" id="inherit.Item.set_name">
-<div class="mkapi-object mkapi-object-method code">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">set_name</code><code class="mkapi-object-signature">(name)</code></div>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">METHOD</div>
+    <div class="mkapi-object-body method"><code class="mkapi-object-name">set_name</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
 </div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Sets name in upper case.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">name</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">A New name.</span></li>
+      <div class="mkapi-section-body"><p>Sets name in upper case.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">name</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">A New name.</span></li>
 
 
 </ul></div>
-</div>
-</div>
+    </div>
+  </div>
 
 </div>
     </div>
@@ -458,97 +470,107 @@ class Item(Base):
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](inherit_comment.Item)</code></pre></div></div></div>
 
 <div class="mkapi-node" id="inherit_comment.Item">
-<div class="mkapi-object mkapi-object-dataclass code">
-<div class="mkapi-object-kind mkapi-object-kind-dataclass">DATACLASS</div>
-<div class="mkapi-object-body"><code class="mkapi-object-prefix">inherit_comment.</code><code class="mkapi-object-name">Item</code><code class="mkapi-object-signature">(name,</code> <code class="mkapi-object-signature">type,</code> <code class="mkapi-object-signature">markdown)</code></div>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object dataclass code">
+    <div class="mkapi-object-kind dataclass">DATACLASS</div>
+    <div class="mkapi-object-body dataclass"><code class="mkapi-object-prefix">inherit_comment.</code><code class="mkapi-object-name">Item</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">type</code>, <code class="mkapi-object-signature">markdown</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
 </div>
 <div class="mkapi-docstring">
-<div class="mkapi-section">
-<div class="mkapi-section-body"><p>Item class.</p></div>
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base">inherit_comment.Base</span>
 </div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Item class.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">name</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object name.</span></li>
 
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">name</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
+<li><code class="mkapi-item-name">type</code>
+<span class="mkapi-item-type">(<a href="../../api/mkapi.core.base/#mkapi.core.base.Type">Type</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object type.</span></li>
 
-<li><code class="mkapi-args-name">type</code>
-<span class="mkapi-args-type">(<a href="../../api/mkapi.core.base/#mkapi.core.base.Type">Type</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object type.</span></li>
-
-<li><code class="mkapi-args-name">markdown</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object Markdown.</span></li>
+<li><code class="mkapi-item-name">markdown</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object Markdown.</span></li>
 
 
 </ul></div>
-</div>
-<div class="mkapi-section mkapi-section-attributes">
-<div class="mkapi-section-name mkapi-section-name-attributes">
-<span class="mkapi-section-name-body">Attributes</span>
+    </div>
+  <div class="mkapi-section attributes">
+      <div class="mkapi-section-name attributes">
+          <span class="mkapi-section-name-body attributes">Attributes</span> 
+        </div>
+      <div class="mkapi-section-body attributes"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">markdown</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object Markdown.</span></li>
 
-</div>
-<div class="mkapi-section-body mkapi-section-body-attributes"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">markdown</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object Markdown.</span></li>
+<li><code class="mkapi-item-name">name</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object name.</span></li>
 
-<li><code class="mkapi-args-name">name</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object name.</span></li>
-
-<li><code class="mkapi-args-name">type</code>
-<span class="mkapi-args-type">(<a href="../../api/mkapi.core.base/#mkapi.core.base.Type">Type</a>)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Object type.</span></li>
-
-
-</ul></div>
-</div>
-<div class="mkapi-section mkapi-section-methods">
-<div class="mkapi-section-name mkapi-section-name-methods">
-<span class="mkapi-section-name-body">Methods</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-methods"><ul class="mkapi-args-list">
-<li class="method"><code class="mkapi-args-name">set_name</code><code class="mkapi-object-signature">(name)</code>
-
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">Sets name in upper case.</span></li>
+<li><code class="mkapi-item-name">type</code>
+<span class="mkapi-item-type">(<a href="../../api/mkapi.core.base/#mkapi.core.base.Type">Type</a>)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object type.</span></li>
 
 
 </ul></div>
-</div>
-</div>
+    </div>
+  <div class="mkapi-section methods">
+      <div class="mkapi-section-name methods">
+          <span class="mkapi-section-name-body methods">Methods</span> 
+        </div>
+      <div class="mkapi-section-body methods"><ul class="mkapi-items">
+<li class="method"><code class="mkapi-item-name"><a href="#inherit_comment.Item.set_name">set_name</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Sets name in upper case.</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
 
   <div class="mkapi-members">
   
     <div class="mkapi-member">
       <div class="mkapi-node" id="inherit_comment.Item.set_name">
-<div class="mkapi-object mkapi-object-method code">
-<div class="mkapi-object-kind mkapi-object-kind-method">METHOD</div>
-<div class="mkapi-object-body"><code class="mkapi-object-name">set_name</code><code class="mkapi-object-signature">(name)</code></div>
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">METHOD</div>
+    <div class="mkapi-object-body method"><code class="mkapi-object-name">set_name</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
 </div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-<div class="mkapi-section-body"><p>Sets name in upper case.</p></div>
-</div>
-<div class="mkapi-section mkapi-section-parameters">
-<div class="mkapi-section-name mkapi-section-name-parameters">
-<span class="mkapi-section-name-body">Parameters</span>
-
-</div>
-<div class="mkapi-section-body mkapi-section-body-parameters"><ul class="mkapi-args-list">
-<li><code class="mkapi-args-name">name</code>
-<span class="mkapi-args-type">(str)</span>
-<span class="mkapi-args-dash">&mdash;</span> <span class="mkapi-args-desc">A New name.</span></li>
+      <div class="mkapi-section-body"><p>Sets name in upper case.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">name</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">A New name.</span></li>
 
 
 </ul></div>
-</div>
-</div>
+    </div>
+  </div>
 
 </div>
     </div>

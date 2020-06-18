@@ -78,6 +78,7 @@
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
 <ul class="subnav hide">
     <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core/">mkapi.core</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.attribute/">mkapi.core.attribute</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.base/">mkapi.core.base</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.docstring/">mkapi.core.docstring</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.inherit/">mkapi.core.inherit</a></li>
@@ -119,7 +120,7 @@
                 <div id="content"><div class="mkapi-node">
 <h1 id="" class="mkapi-object mkapi-object-code plain">
 <span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
-<span class="mkapi-object-prefix">MKAPI.CORE.</span><span class="mkapi-object-name">DOCSTRING</span><span class="mkapi-object-signature"></span>
+<span class="mkapi-object-prefix">MKAPI.CORE.</span><span class="mkapi-object-name">DOCSTRING</span>
 <span id="mkapi.core.docstring"></span><a class="mkapi-docs-link" href="../../mkapi.core.docstring">DOCS</a>
 </h1>
 
@@ -325,18 +326,6 @@
     <span class="n">doc</span><span class="o">.</span><span class="n">set_section</span><span class="p">(</span><span class="n">Section</span><span class="p">(</span><span class="s2">&quot;Bases&quot;</span><span class="p">,</span> <span class="n">items</span><span class="o">=</span><span class="n">items</span><span class="p">))</span>
 
 
-<span class="k">def</span> <span class="nf">parse_property</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span><span id="mkapi.core.docstring.parse_property"></span><a class="mkapi-docs-link" title="mkapi.core.docstring.parse_property" href="../../mkapi.core.docstring#mkapi.core.docstring.parse_property">DOCS</a>
-    <span class="sd">&quot;&quot;&quot;Parses property&#39;s docstring to inspect type.&quot;&quot;&quot;</span>
-    <span class="n">doc</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">Type</span><span class="p">(</span><span class="n">get_signature</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">fget</span><span class="p">)</span><span class="o">.</span><span class="n">returns</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">doc</span><span class="o">.</span><span class="n">type</span><span class="p">:</span>
-        <span class="n">section</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="n">markdown</span> <span class="o">=</span> <span class="n">section</span><span class="o">.</span><span class="n">markdown</span>
-        <span class="nb">type</span><span class="p">,</span> <span class="n">markdown</span> <span class="o">=</span> <span class="n">preprocess</span><span class="o">.</span><span class="n">split_type</span><span class="p">(</span><span class="n">markdown</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">type</span><span class="p">:</span>
-            <span class="n">doc</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">Type</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span>
-            <span class="n">section</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="n">markdown</span>
-
-
 <span class="k">def</span> <span class="nf">parse_source</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span><span id="mkapi.core.docstring.parse_source"></span><a class="mkapi-docs-link" title="mkapi.core.docstring.parse_source" href="../../mkapi.core.docstring#mkapi.core.docstring.parse_source">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Parses parameters&#39; docstring to inspect type and description from source.</span>
 
@@ -350,9 +339,6 @@
 <span class="sd">        &gt;&gt;&gt; section = doc[&#39;Attributes&#39;]</span>
 <span class="sd">        &gt;&gt;&gt; section[&#39;html&#39;].to_tuple()</span>
 <span class="sd">        (&#39;html&#39;, &#39;str&#39;, &#39;HTML output after conversion.&#39;)</span>
-
-<span class="sd">        s = get_signature(Base)</span>
-<span class="sd">        s[&#39;Parameters&#39;]</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">signature</span> <span class="o">=</span> <span class="n">get_signature</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
     <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Parameters&quot;</span>
@@ -366,19 +352,16 @@
     <span class="n">section</span> <span class="o">=</span> <span class="n">signature</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">doc</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">section</span><span class="p">:</span>
         <span class="k">return</span>
+    <span class="n">doc</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">section</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">is_dataclass</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="ow">and</span> <span class="s2">&quot;Parameters&quot;</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">[</span><span class="s2">&quot;Parameters&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="n">section</span><span class="p">:</span>
                 <span class="n">doc</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">set_item</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-    <span class="n">doc</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">section</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">postprocess</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
     <span class="n">parse_bases</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
     <span class="n">parse_source</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">property</span><span class="p">):</span>
-        <span class="n">parse_property</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
-
     <span class="k">if</span> <span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
         <span class="k">return</span>
 
@@ -407,6 +390,13 @@
             <span class="n">doc</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">Type</span><span class="p">(</span><span class="n">signature</span><span class="o">.</span><span class="n">yields</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">doc</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">Type</span><span class="p">(</span><span class="n">signature</span><span class="o">.</span><span class="n">returns</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">doc</span><span class="o">.</span><span class="n">type</span> <span class="ow">and</span> <span class="n">doc</span><span class="o">.</span><span class="n">sections</span> <span class="ow">and</span> <span class="n">doc</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="n">section</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">markdown</span> <span class="o">=</span> <span class="n">section</span><span class="o">.</span><span class="n">markdown</span>
+            <span class="nb">type</span><span class="p">,</span> <span class="n">markdown</span> <span class="o">=</span> <span class="n">preprocess</span><span class="o">.</span><span class="n">split_type</span><span class="p">(</span><span class="n">markdown</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">type</span><span class="p">:</span>
+                <span class="n">doc</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">Type</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span>
+                <span class="n">section</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="n">markdown</span>
 
     <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">sections</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">section</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Example&quot;</span><span class="p">,</span> <span class="s2">&quot;Examples&quot;</span><span class="p">]:</span>

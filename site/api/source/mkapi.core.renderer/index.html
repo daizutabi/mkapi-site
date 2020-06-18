@@ -78,6 +78,7 @@
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
 <ul class="subnav hide">
     <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core/">mkapi.core</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.attribute/">mkapi.core.attribute</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.base/">mkapi.core.base</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.docstring/">mkapi.core.docstring</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../../mkapi.core.inherit/">mkapi.core.inherit</a></li>
@@ -119,7 +120,7 @@
                 <div id="content"><div class="mkapi-node">
 <h1 id="" class="mkapi-object mkapi-object-code plain">
 <span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
-<span class="mkapi-object-prefix">MKAPI.CORE.</span><span class="mkapi-object-name">RENDERER</span><span class="mkapi-object-signature"></span>
+<span class="mkapi-object-prefix">MKAPI.CORE.</span><span class="mkapi-object-name">RENDERER</span>
 <span id="mkapi.core.renderer"></span><a class="mkapi-docs-link" href="../../mkapi.core.renderer">DOCS</a>
 </h1>
 
@@ -130,7 +131,7 @@
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
 
 <span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span><span class="p">,</span> <span class="n">Template</span><span class="p">,</span> <span class="n">select_autoescape</span>
 
@@ -200,17 +201,21 @@
         <span class="k">if</span> <span class="n">filters</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">filters</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">context</span> <span class="o">=</span> <span class="n">linker</span><span class="o">.</span><span class="n">resolve_object</span><span class="p">(</span><span class="nb">object</span><span class="o">.</span><span class="n">html</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">context</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;level&quot;</span><span class="p">):</span>
+        <span class="n">level</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;level&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">level</span><span class="p">:</span>
             <span class="k">if</span> <span class="nb">object</span><span class="o">.</span><span class="n">kind</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;module&quot;</span><span class="p">,</span> <span class="s2">&quot;package&quot;</span><span class="p">]:</span>
                 <span class="n">filters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;plain&quot;</span><span class="p">)</span>
             <span class="k">elif</span> <span class="s2">&quot;plain&quot;</span> <span class="ow">in</span> <span class="n">filters</span><span class="p">:</span>
                 <span class="k">del</span> <span class="n">filters</span><span class="p">[</span><span class="n">filters</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;plain&quot;</span><span class="p">)]</span>
-            <span class="n">template</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s2">&quot;object_heading&quot;</span><span class="p">]</span>
+            <span class="n">tag</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;h</span><span class="si">{</span><span class="n">level</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">template</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s2">&quot;object_div&quot;</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="nb">object</span><span class="o">=</span><span class="nb">object</span><span class="p">,</span> <span class="n">filters</span><span class="o">=</span><span class="n">filters</span><span class="p">)</span>
+            <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;div&quot;</span>
+        <span class="n">template</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s2">&quot;object&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="nb">object</span><span class="o">=</span><span class="nb">object</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="n">tag</span><span class="p">,</span> <span class="n">filters</span><span class="o">=</span><span class="n">filters</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">render_object_member</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">signature</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.renderer.Renderer.render_object_member"></span><a class="mkapi-docs-link" title="mkapi.core.renderer.Renderer.render_object_member" href="../../mkapi.core.renderer#mkapi.core.renderer.Renderer.render_object_member">DOCS</a>
+    <span class="k">def</span> <span class="nf">render_object_member</span><span class="p">(</span><span id="mkapi.core.renderer.Renderer.render_object_member"></span><a class="mkapi-docs-link" title="mkapi.core.renderer.Renderer.render_object_member" href="../../mkapi.core.renderer#mkapi.core.renderer.Renderer.render_object_member">DOCS</a>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">signature</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Returns a rendered HTML for Object in toc.</span>
 
 <span class="sd">        Args:</span>
@@ -218,7 +223,7 @@
 <span class="sd">            url: Link to definition.</span>
 <span class="sd">            signature: Signature.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">template</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s2">&quot;object_member&quot;</span><span class="p">]</span>
+        <span class="n">template</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s2">&quot;member&quot;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">signature</span><span class="o">=</span><span class="n">signature</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">render_docstring</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">docstring</span><span class="p">:</span> <span class="n">Docstring</span><span class="p">,</span> <span class="n">filters</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.renderer.Renderer.render_docstring"></span><a class="mkapi-docs-link" title="mkapi.core.renderer.Renderer.render_docstring" href="../../mkapi.core.renderer#mkapi.core.renderer.Renderer.render_docstring">DOCS</a>
@@ -233,7 +238,7 @@
         <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">docstring</span><span class="o">.</span><span class="n">sections</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">section</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
                 <span class="n">valid</span> <span class="o">=</span> <span class="nb">any</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">description</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">section</span><span class="o">.</span><span class="n">items</span><span class="p">)</span>
-                <span class="k">if</span> <span class="n">filters</span> <span class="ow">and</span> <span class="s2">&quot;strict&quot;</span> <span class="ow">in</span> <span class="n">filters</span> <span class="ow">or</span> <span class="n">valid</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">filters</span> <span class="ow">and</span> <span class="s2">&quot;strict&quot;</span> <span class="ow">in</span> <span class="n">filters</span> <span class="ow">or</span> <span class="n">section</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Bases&quot;</span> <span class="ow">or</span> <span class="n">valid</span><span class="p">:</span>
                     <span class="n">section</span><span class="o">.</span><span class="n">html</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">render_section</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="n">filters</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">docstring</span><span class="o">=</span><span class="n">docstring</span><span class="p">)</span>
 
@@ -248,7 +253,7 @@
         <span class="k">if</span> <span class="n">section</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Bases&quot;</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s2">&quot;bases&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">section</span><span class="o">=</span><span class="n">section</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s2">&quot;args&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">section</span><span class="o">=</span><span class="n">section</span><span class="p">,</span> <span class="n">filters</span><span class="o">=</span><span class="n">filters</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">section</span><span class="o">=</span><span class="n">section</span><span class="p">,</span> <span class="n">filters</span><span class="o">=</span><span class="n">filters</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">render_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">,</span> <span class="n">filters</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.renderer.Renderer.render_module"></span><a class="mkapi-docs-link" title="mkapi.core.renderer.Renderer.render_module" href="../../mkapi.core.renderer#mkapi.core.renderer.Renderer.render_module">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Returns a rendered Markdown for Module.</span>

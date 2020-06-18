@@ -1,10 +1,45 @@
-.mkapi-node h1.plain,
-.mkapi-node h2.plain,
-.mkapi-node h3.plain,
-.mkapi-node h4.plain {
+.mkapi-object.plain h1,
+.mkapi-object.plain h2,
+.mkapi-object.plain h3,
+.mkapi-object.plain h4 {
   font-weight: normal;
 }
 
-.mkapi-node ul.mkapi-args-list li::before {
+.mkapi-node ul.mkapi-items li::before {
   vertical-align: middle;
+}
+
+.mkapi-section-name-body {
+  border-bottom: 1px solid #CCC;
+}
+
+.mkapi-section-name-body.note,
+.mkapi-section-name-body.notes,
+.mkapi-section-name-body.warning
+.mkapi-section-name-body.warnings {
+  border-bottom: none;
+}
+
+.mkapi-section-body.example, .mkapi-section-body.examples {
+  margin-top: 0px;
+  background: none;
+  padding: 0px;
+}
+
+.mkapi-section-body.example pre,
+.mkapi-section-body.examples pre {
+  background: #F7F7F7;
+  border: none;
+  border: 1px solid #E0E0E0;
+  border-radius: 5px;
+  padding: 6px;
+  margin: 5px;
+}
+
+.mkapi-section-body.example pre code,
+.mkapi-section-body.examples pre code {
+  background: none;
+  border: none;
+  padding: 0px;
+  font-size: 0.83rem;
 }
