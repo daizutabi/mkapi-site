@@ -1,3 +1,8 @@
+/*
+Reference: https://github.com/daizutabi/mkapi/issues/8
+Thanks to [Ahrak](https://github.com/Ahrak).
+*/
+
 /**************************************************
  Main
 **************************************************/
@@ -46,6 +51,15 @@ div.mkapi-object.code {
   border-radius: 0px;
   margin: 0px;
   padding: 4px 12px 4px 4px;
+  color: #111;
+}
+
+div.mkapi-object.class.code, div.mkapi-object.dataclass.code {
+  border: none;
+  line-height: normal;
+  background: #e7f2fa;
+  color: #2980B9;
+  border-top: solid 3px #6ab0de;
 }
 
 .mkapi-object.plain {
@@ -101,12 +115,24 @@ code.mkapi-object-name {
 
 .mkapi-node code.mkapi-object-parenthesis,
 .mkapi-node code.mkapi-object-signature {
-  font-weight: bold;
-  color: #5577AA;
+  color: #555;
+  font-weight: 700;
   border: none;
   padding: 0px;
   margin: 0px;
   font-size: 0.81rem;
+}
+
+.mkapi-node code.mkapi-object-signature {
+  font-style: italic;
+}
+
+.mkapi-node .mkapi-object-body.class code.mkapi-object-parenthesis,
+.mkapi-node .mkapi-object-body.class code.mkapi-object-signature,
+.mkapi-node .mkapi-object-body.dataclass code.mkapi-object-parenthesis,
+.mkapi-node .mkapi-object-body.dataclass code.mkapi-object-signature {
+  font-weight: 700;
+  color: #2980B9;
 }
 
 /**************************************************
@@ -133,34 +159,6 @@ code.mkapi-object-name {
   letter-spacing: 0.05em;
 }
 
-.mkapi-section-name.note, .mkapi-section-name.notes {
-  color: white;
-  background: #555599;
-}
-
-.mkapi-section-name.note::before,
-.mkapi-section-name.notes::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f303";
-  font-weight: 900;
-  padding-right: 3px;
-  color: white;
-}
-
-.mkapi-section-name.warning, .mkapi-section-name.warnings {
-  color: white;
-  background: #FF6666;
-}
-
-.mkapi-section-name.warning::before,
-.mkapi-section-name.warnings::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f071";
-  font-weight: 900;
-  padding-right: 3px;
-  color: white;
-}
-
 .mkapi-section-body {
   padding: 4px 8px;
 }
@@ -170,37 +168,22 @@ code.mkapi-object-name {
   margin-left: 32px;
 }
 
-.mkapi-section.note, .mkapi-section.notes,
-.mkapi-section.warning, .mkapi-section.warnings {
-  margin: 0px 10px 15px 10px;
-}
-
-.mkapi-section-body.note, .mkapi-section-body.notes {
-  background: #F0F0FF;
-  padding: 8px 12px;
-}
-
-.mkapi-section-body.warning, .mkapi-section-body.warnings {
-  background: #FFEEEE;
-  padding: 8px 12px;
-}
-
-.mkapi-section-body.example, .mkapi-section-body.examples {
+div.mkapi-section-body.example, div.mkapi-section-body.examples {
   background: #EEEEEE;
   padding: 6px 8px;
   margin: 6px 10px 15px 10px;
 }
 
-.mkapi-section-body.example pre,
-.mkapi-section-body.examples pre {
+div.mkapi-section-body.example pre,
+div.mkapi-section-body.examples pre {
   background: none;
   border: none;
   padding: 4px;
   margin: 5px 5px 10px 5px;
 }
 
-.mkapi-section-body.example pre code,
-.mkapi-section-body.examples pre code {
+div.mkapi-section-body.example pre code,
+div.mkapi-section-body.examples pre code {
   background: none;
   border: none;
   padding: 0px;

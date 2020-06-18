@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.4</div>
+                </div><div class="version">1.0.5</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -67,7 +67,7 @@
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/inherit/">Inheritance and Special Methods</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/order/">Ordering Members in Different Files</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/decorator/">Decorators</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/filter/">Filters and Varialbes</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/filter/">Filters and Variables</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -237,10 +237,12 @@
     <span class="n">nodes</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">ast</span><span class="o">.</span><span class="n">AST</span><span class="p">],</span> <span class="n">module</span><span class="p">,</span> <span class="n">is_module</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
     <span class="n">attr_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">linenos</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 
     <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">type</span> <span class="ow">or</span> <span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">lineno</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">attr_dict</span><span class="p">:</span>
             <span class="n">attr_dict</span><span class="p">[(</span><span class="n">attr</span><span class="p">,</span> <span class="n">lineno</span><span class="p">)]</span> <span class="o">=</span> <span class="nb">type</span>
+            <span class="n">linenos</span><span class="p">[</span><span class="n">lineno</span><span class="p">]</span> <span class="o">=</span> <span class="n">linenos</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">lineno</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
 
     <span class="nb">globals</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">getmembers</span><span class="p">(</span><span class="n">module</span><span class="p">))</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
@@ -258,6 +260,7 @@
             <span class="n">attr</span><span class="p">,</span> <span class="n">lineno</span> <span class="o">=</span> <span class="n">parse_attribute_with_lineno</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
             <span class="n">update</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="p">())</span>
     <span class="n">attr_lineno</span> <span class="o">=</span> <span class="p">[(</span><span class="n">attr</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">lineno</span><span class="p">),</span> <span class="nb">type</span> <span class="ow">in</span> <span class="n">attr_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+    <span class="n">attr_lineno</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">attr_lineno</span> <span class="k">if</span> <span class="n">linenos</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
     <span class="n">attr_lineno</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">attr_lineno</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">attr_lineno</span>
 

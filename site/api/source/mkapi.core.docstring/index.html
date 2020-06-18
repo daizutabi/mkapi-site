@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.4</div>
+                </div><div class="version">1.0.5</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -67,7 +67,7 @@
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/inherit/">Inheritance and Special Methods</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/order/">Ordering Members in Different Files</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../../appendix/decorator/">Decorators</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/filter/">Filters and Varialbes</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../appendix/filter/">Filters and Variables</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -398,11 +398,21 @@
                 <span class="n">doc</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">Type</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span>
                 <span class="n">section</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="n">markdown</span>
 
+    <span class="n">sections</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Section</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">sections</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">section</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Example&quot;</span><span class="p">,</span> <span class="s2">&quot;Examples&quot;</span><span class="p">]:</span>
-            <span class="k">continue</span>
-        <span class="k">for</span> <span class="n">base</span> <span class="ow">in</span> <span class="n">section</span><span class="p">:</span>
-            <span class="n">base</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="n">replace_link</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">base</span><span class="o">.</span><span class="n">markdown</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">section</span><span class="o">.</span><span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Example&quot;</span><span class="p">,</span> <span class="s2">&quot;Examples&quot;</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">base</span> <span class="ow">in</span> <span class="n">section</span><span class="p">:</span>
+                <span class="n">base</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="n">replace_link</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">base</span><span class="o">.</span><span class="n">markdown</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">section</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Note&quot;</span><span class="p">,</span> <span class="s2">&quot;Notes&quot;</span><span class="p">,</span> <span class="s2">&quot;Warning&quot;</span><span class="p">,</span> <span class="s2">&quot;Warnings&quot;</span><span class="p">]:</span>
+            <span class="n">markdown</span> <span class="o">=</span> <span class="n">preprocess</span><span class="o">.</span><span class="n">admonition</span><span class="p">(</span><span class="n">section</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">section</span><span class="o">.</span><span class="n">markdown</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">sections</span> <span class="ow">and</span> <span class="n">sections</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="n">sections</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">markdown</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">markdown</span>
+                <span class="k">continue</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">section</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                <span class="n">section</span><span class="o">.</span><span class="n">markdown</span> <span class="o">=</span> <span class="n">markdown</span>
+        <span class="n">sections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">section</span><span class="p">)</span>
+    <span class="n">doc</span><span class="o">.</span><span class="n">sections</span> <span class="o">=</span> <span class="n">sections</span>
 
 
 <span class="k">def</span> <span class="nf">get_docstring</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Docstring</span><span class="p">:</span><span id="mkapi.core.docstring.get_docstring"></span><a class="mkapi-docs-link" title="mkapi.core.docstring.get_docstring" href="../../mkapi.core.docstring#mkapi.core.docstring.get_docstring">DOCS</a>

@@ -13,21 +13,18 @@
   border-bottom: 1px solid #CCC;
 }
 
-.mkapi-section-name-body.note,
-.mkapi-section-name-body.notes,
-.mkapi-section-name-body.warning
-.mkapi-section-name-body.warnings {
+.mkapi-section-name-body.bases {
   border-bottom: none;
 }
 
-.mkapi-section-body.example, .mkapi-section-body.examples {
+div.mkapi-section-body.example, div.mkapi-section-body.examples {
   margin-top: 0px;
   background: none;
   padding: 0px;
 }
 
-.mkapi-section-body.example pre,
-.mkapi-section-body.examples pre {
+div.mkapi-section-body.example pre,
+div.mkapi-section-body.examples pre {
   background: #F7F7F7;
   border: none;
   border: 1px solid #E0E0E0;
@@ -36,8 +33,8 @@
   margin: 5px;
 }
 
-.mkapi-section-body.example pre code,
-.mkapi-section-body.examples pre code {
+div.mkapi-section-body.example pre code,
+div.mkapi-section-body.examples pre code {
   background: none;
   border: none;
   padding: 0px;

@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.4</div>
+                </div><div class="version">1.0.5</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -74,7 +74,7 @@
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/inherit/">Inheritance and Special Methods</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/order/">Ordering Members in Different Files</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/decorator/">Decorators</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../appendix/filter/">Filters and Varialbes</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../appendix/filter/">Filters and Variables</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -136,14 +136,13 @@
 -->
 </style>
 
-<p>Let's start concrete examples. Here, a sample Python file <code>numpy_style.py</code> is stored under the <code>examples</code> directory relative to the <code>mkdocs.yml</code> directory, so we would configure <code>mkdocs.yml</code> like below. In addition, we add two extensions and an extra javascript for demonstration.</p>
+<p>Let's start concrete examples. Here, a sample Python file <code>numpy_style.py</code> is stored under the <code>examples</code> directory relative to the <code>mkdocs.yml</code> directory, so we would configure <code>mkdocs.yml</code> like below. In addition, we add an extension and extra javascript for <a href="https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/">Arithmatex</a>.</p>
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="yml">plugins:
   - search
   - mkapi:
       src_dirs: [examples]
 
 markdown_extensions:
-  - admonition
   - pymdownx.arithmatex
 
 extra_javascript:  # for pymdownx.arithmatex
@@ -244,12 +243,12 @@ docstring style.</p>
 3
 </code></pre></div>
     </div>
-  <div class="mkapi-section note">
-      <div class="mkapi-section-name note">
-          <span class="mkapi-section-name-body note">Note</span> 
-        </div>
-      <div class="mkapi-section-body note"><p>MkApi doesn't check an underline that follows a section heading.
-Just skip one line.</p></div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>MkApi doesn't check an underline that follows a section heading.
+Just skip one line.</p>
+</div></div>
     </div>
   </div>
 

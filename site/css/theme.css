@@ -607,12 +607,12 @@ tbody tr:nth-child(2n+1) td {
 }
 
 .admonition.note {
-  background: #F0F0FF;
+  background: #e7f2fa;
 }
 
 .note p.admonition-title {
   color: white;
-  background: #555599;
+  background: #6ab0de;
   margin: 0px;
   padding: 4px 8px;
 }
