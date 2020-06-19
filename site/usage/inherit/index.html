@@ -169,6 +169,10 @@ class Base:
         &#34;&#34;&#34;
         self.name = name
 
+    def get(self):
+        &#34;&#34;&#34;Returns {class} instace.&#34;&#34;&#34;
+        return self
+
 
 @dataclass
 class Item(Base):
@@ -194,6 +198,7 @@ class Item(Base):
 <li>In the <code>Base</code>, there is no description for <code>type</code>.</li>
 <li>In the <code>Item</code>, parameters inherited from the superclass are not written.</li>
 <li>In the <code>Item.set_name()</code>, Parameters section itself doesn't exist.</li>
+<li>In the <code>Base.set()</code>, <code>{class}</code> variable is used to replace it by class name.</li>
 </ul>
 <h2 id="inheritance-from-superclasses">Inheritance from Superclasses</h2>
 <p>Since the docstring of the superclass <code>Base</code> describes the <code>name</code>, the <code>Item</code> class can inherit its description.</p>
@@ -258,6 +263,10 @@ class Item(Base):
           <span class="mkapi-section-name-body methods">Methods</span> 
         </div>
       <div class="mkapi-section-body methods"><ul class="mkapi-items">
+<li class="method"><code class="mkapi-item-name"><a href="#inherit.Base.get">get</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Returns Item instace.</span></li>
+
 <li class="method"><code class="mkapi-item-name"><a href="#inherit.Item.set_name">set_name</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code>
 
 <span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Sets name in upper case.</span></li>
@@ -268,6 +277,24 @@ class Item(Base):
   </div>
 
   <div class="mkapi-members">
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="inherit.Base.get">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <div class="mkapi-object-body method"><code class="mkapi-object-name">get</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Returns Item instace.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
   
     <div class="mkapi-member">
       <div class="mkapi-node" id="inherit.Item.set_name">
@@ -373,6 +400,10 @@ class Item(Base):
           <span class="mkapi-section-name-body methods">Methods</span> 
         </div>
       <div class="mkapi-section-body methods"><ul class="mkapi-items">
+<li class="method"><code class="mkapi-item-name"><a href="#inherit.Base.get">get</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Returns Item instace.</span></li>
+
 <li class="method"><code class="mkapi-item-name"><a href="#inherit.Item.set_name">set_name</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code>
 
 <span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Sets name in upper case.</span></li>
@@ -383,6 +414,24 @@ class Item(Base):
   </div>
 
   <div class="mkapi-members">
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="inherit.Base.get">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <div class="mkapi-object-body method"><code class="mkapi-object-name">get</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Returns Item instace.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
   
     <div class="mkapi-member">
       <div class="mkapi-node" id="inherit.Item.set_name">
