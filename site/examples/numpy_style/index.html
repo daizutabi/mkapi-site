@@ -197,9 +197,9 @@ extra_javascript:  # for pymdownx.arithmatex
 <p>MkApi generates the API documentation for the <code>add()</code> function.</p>
 <div class="mkapi-node" id="numpy_style.add">
 <div class='mkapi-object-container'>
-  <div class="mkapi-object function code">
-    <div class="mkapi-object-kind function">function</div>
-    <div class="mkapi-object-body function"><code class="mkapi-object-prefix">numpy_style.</code><code class="mkapi-object-name">add</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x</code>, <code class="mkapi-object-signature">y=1</code><code class="mkapi-object-parenthesis">)</code></div>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">numpy_style.</code><code class="mkapi-object-name">add</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x</code>, <code class="mkapi-object-signature">y=1</code><code class="mkapi-object-parenthesis">)</code></div>
   </div>
   
 </div>
@@ -260,7 +260,6 @@ Just skip one line.</p>
 </div>
 <p>In this simple example, you can see some features of MkApi.</p>
 <ul>
-<li>Type inspection of <code>add()</code> (<em>function</em> prefix is added before <code>numpy_style.add</code>).</li>
 <li>Use of type annotation for both Parameters and Returns sections.</li>
 <li>Add <em>optional</em> if parameters have default values.</li>
 <li>Default value replacement by the <code>{default}</code> keyword in the Parameters section.</li>
@@ -299,9 +298,9 @@ Just skip one line.</p>
 <p>creates the documentation for the <code>gen()</code> generator.</p>
 <div class="mkapi-node" id="numpy_style.gen">
 <div class='mkapi-object-container'>
-  <div class="mkapi-object generator code">
-    <div class="mkapi-object-kind generator">generator</div>
-    <div class="mkapi-object-body generator"><code class="mkapi-object-prefix">numpy_style.</code><code class="mkapi-object-name">gen</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">n</code><code class="mkapi-object-parenthesis">)</code></div>
+  <div class="mkapi-object generator code top">
+    <div class="mkapi-object-kind generator top">generator</div>
+    <div class="mkapi-object-body generator top"><code class="mkapi-object-prefix">numpy_style.</code><code class="mkapi-object-name">gen</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">n</code><code class="mkapi-object-parenthesis">)</code></div>
   </div>
   
 </div>
@@ -333,9 +332,9 @@ Just skip one line.</p>
 
 <p>In this simple example, note that:</p>
 <ul>
-<li>A <em>generator</em> prefix instead of a <em>function</em> prefix.</li>
+<li>Type inspection of <code>gen()</code> (<em>generator</em> prefix is added before <code>google_style.gen</code>).</li>
 <li>The parameter <code>n</code> has no type annotation but you can specify it in the Parameters section directly.</li>
-<li>Yields type is not <em>iterator of str</em> but <em>str</em>, because the <code>gen()</code> is a generator.</li>
+<li>Yields type is not "iterator of str" but "str", because the <code>gen()</code> is a generator.</li>
 </ul>
 <h2 id="class">Class</h2>
 <p>The <code>numpy_style</code> module also defines a simple class <code>ExampleClass</code>.</p>
@@ -405,9 +404,9 @@ Just skip one line.</p>
 <p>creates the documentation for the <code>ExampleClass</code> class.</p>
 <div class="mkapi-node" id="numpy_style.ExampleClass">
 <div class='mkapi-object-container'>
-  <div class="mkapi-object class code">
-    <div class="mkapi-object-kind class">class</div>
-    <div class="mkapi-object-body class"><code class="mkapi-object-prefix">numpy_style.</code><code class="mkapi-object-name">ExampleClass</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x</code>, <code class="mkapi-object-signature">y</code><code class="mkapi-object-parenthesis">)</code></div>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <div class="mkapi-object-body class top"><code class="mkapi-object-prefix">numpy_style.</code><code class="mkapi-object-name">ExampleClass</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x</code>, <code class="mkapi-object-signature">y</code><code class="mkapi-object-parenthesis">)</code></div>
   </div>
   
 </div>
@@ -604,9 +603,9 @@ class ExampleDataClass:
 <p>creates the documentation for the <code>ExampleDataClass</code> class.</p>
 <div class="mkapi-node" id="numpy_style.ExampleDataClass">
 <div class='mkapi-object-container'>
-  <div class="mkapi-object dataclass code">
-    <div class="mkapi-object-kind dataclass">dataclass</div>
-    <div class="mkapi-object-body dataclass"><code class="mkapi-object-prefix">numpy_style.</code><code class="mkapi-object-name">ExampleDataClass</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x=0</code><code class="mkapi-object-parenthesis">)</code></div>
+  <div class="mkapi-object dataclass code top">
+    <div class="mkapi-object-kind dataclass top">dataclass</div>
+    <div class="mkapi-object-body dataclass top"><code class="mkapi-object-prefix">numpy_style.</code><code class="mkapi-object-name">ExampleDataClass</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x=0</code><code class="mkapi-object-parenthesis">)</code></div>
   </div>
   
 </div>
@@ -648,7 +647,7 @@ class ExampleDataClass:
 
 <p>In this example, note that:</p>
 <ul>
-<li>A DATACLASS prefix instead of a CLASS prefix.</li>
+<li>A <em>dataclass</em> prefix instead of a <em>class</em> prefix.</li>
 <li>Attributes type inspection as well as parameters if they are data class fields.</li>
 </ul>
 <div class="admonition note">
