@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.5</div>
+                </div><div class="version">1.0.6</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -198,7 +198,7 @@ extra_javascript:  # for pymdownx.arithmatex
 <div class="mkapi-node" id="numpy_style.add">
 <div class='mkapi-object-container'>
   <div class="mkapi-object function code">
-    <div class="mkapi-object-kind function">FUNCTION</div>
+    <div class="mkapi-object-kind function">function</div>
     <div class="mkapi-object-body function"><code class="mkapi-object-prefix">numpy_style.</code><code class="mkapi-object-name">add</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x</code>, <code class="mkapi-object-signature">y=1</code><code class="mkapi-object-parenthesis">)</code></div>
   </div>
   
@@ -260,7 +260,7 @@ Just skip one line.</p>
 </div>
 <p>In this simple example, you can see some features of MkApi.</p>
 <ul>
-<li>Type inspection of <code>add()</code> (FUNCTION prefix is added before <code>numpy_style.add</code>).</li>
+<li>Type inspection of <code>add()</code> (<em>function</em> prefix is added before <code>numpy_style.add</code>).</li>
 <li>Use of type annotation for both Parameters and Returns sections.</li>
 <li>Add <em>optional</em> if parameters have default values.</li>
 <li>Default value replacement by the <code>{default}</code> keyword in the Parameters section.</li>
@@ -300,7 +300,7 @@ Just skip one line.</p>
 <div class="mkapi-node" id="numpy_style.gen">
 <div class='mkapi-object-container'>
   <div class="mkapi-object generator code">
-    <div class="mkapi-object-kind generator">GENERATOR</div>
+    <div class="mkapi-object-kind generator">generator</div>
     <div class="mkapi-object-body generator"><code class="mkapi-object-prefix">numpy_style.</code><code class="mkapi-object-name">gen</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">n</code><code class="mkapi-object-parenthesis">)</code></div>
   </div>
   
@@ -333,7 +333,7 @@ Just skip one line.</p>
 
 <p>In this simple example, note that:</p>
 <ul>
-<li>A GENERATOR prefix instead of a FUNCTION prefix.</li>
+<li>A <em>generator</em> prefix instead of a <em>function</em> prefix.</li>
 <li>The parameter <code>n</code> has no type annotation but you can specify it in the Parameters section directly.</li>
 <li>Yields type is not <em>iterator of str</em> but <em>str</em>, because the <code>gen()</code> is a generator.</li>
 </ul>
@@ -406,7 +406,7 @@ Just skip one line.</p>
 <div class="mkapi-node" id="numpy_style.ExampleClass">
 <div class='mkapi-object-container'>
   <div class="mkapi-object class code">
-    <div class="mkapi-object-kind class">CLASS</div>
+    <div class="mkapi-object-kind class">class</div>
     <div class="mkapi-object-body class"><code class="mkapi-object-prefix">numpy_style.</code><code class="mkapi-object-name">ExampleClass</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x</code>, <code class="mkapi-object-signature">y</code><code class="mkapi-object-parenthesis">)</code></div>
   </div>
   
@@ -493,7 +493,7 @@ Multiple paragraphs are supported.</span></li>
       <div class="mkapi-node" id="numpy_style.ExampleClass.message">
 <div class='mkapi-object-container'>
   <div class="mkapi-object method code">
-    
+    <div class="mkapi-object-kind method">method</div>
     <div class="mkapi-object-body method"><code class="mkapi-object-name">message</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">n</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; list of str</span></div>
   </div>
   
@@ -527,9 +527,8 @@ Multiple paragraphs are supported.</span></li>
 <ul>
 <li>Type annotation using <code>typing</code> package (<code>List</code> and <code>Tuple</code> in this case) is converted into readable style.</li>
 <li>Attributes section is inserted with type and description. These information is collected from the source code.</li>
-<li>Bound methods (<code>message</code> in this case) have a METHOD prefix instead of a FUNCTION prefix.</li>
 <li>If callable objects have neither Returns nor Yields, the type appears on the object signature line like type annotation.</li>
-<li>Properties are moved to the Attributes section with [RO] or [RW] suffix that indicates whether the property is read-only or read-write.</li>
+<li>Properties are moved to the Attributes section with [RO] or [RW] prefix that indicates whether the property is read-only or read-write.</li>
 <li>Methods section is newly created that displays a list of methods defined in this class. Note that it has a hyperlink to the object.</li>
 </ul>
 <div class="admonition note">
@@ -544,7 +543,7 @@ Multiple paragraphs are supported.</span></li>
 <div class="mkapi-node" id="numpy_style.ExampleClass.message">
 <div class='mkapi-object-container'>
   <div class="mkapi-object method code">
-    
+    <div class="mkapi-object-kind method">method</div>
     <div class="mkapi-object-body method"><code class="mkapi-object-name">message</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">n</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; list of str</span></div>
   </div>
   
@@ -606,7 +605,7 @@ class ExampleDataClass:
 <div class="mkapi-node" id="numpy_style.ExampleDataClass">
 <div class='mkapi-object-container'>
   <div class="mkapi-object dataclass code">
-    <div class="mkapi-object-kind dataclass">DATACLASS</div>
+    <div class="mkapi-object-kind dataclass">dataclass</div>
     <div class="mkapi-object-body dataclass"><code class="mkapi-object-prefix">numpy_style.</code><code class="mkapi-object-name">ExampleDataClass</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x=0</code><code class="mkapi-object-parenthesis">)</code></div>
   </div>
   
