@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.7</div>
+                </div><div class="version">1.0.8</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -232,7 +232,7 @@
 <span class="sd">        Args:</span>
 <span class="sd">            docstring: Docstring instance.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">docstring</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">docstring</span><span class="p">:</span>
             <span class="k">return</span> <span class="s2">&quot;&quot;</span>
         <span class="n">template</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s2">&quot;docstring&quot;</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">docstring</span><span class="o">.</span><span class="n">sections</span><span class="p">:</span>
