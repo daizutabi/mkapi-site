@@ -309,10 +309,10 @@
 <span class="title">appendix/abc.py</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">from abc import ABC, abstractmethod
+<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">from abc import ABCMeta, abstractmethod
 
 
-class AbstractMethodTypeExample(ABC):
+class AbstractMethodTypeExample(object, metaclass=ABCMeta):  # or (abc.ABC)
     &#34;&#34;&#34;Abstract class.&#34;&#34;&#34;
 
     def method(self):
@@ -368,15 +368,7 @@ class AbstractMethodTypeExample(ABC):
   
 </div>
 <div class="mkapi-docstring">
-<div class="mkapi-section bases">
-      <div class="mkapi-section-name bases">
-          <span class="mkapi-section-name-body bases">Bases</span> 
-        </div>
-      <div class="mkapi-section-body bases">
-<span class="mkapi-base">abc.ABC</span>
-</div>
-    </div>
-  <div class="mkapi-section">
+<div class="mkapi-section">
       <div class="mkapi-section-body"><p>Abstract class.</p></div>
     </div>
   <div class="mkapi-section attributes">
