@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.8</div>
+                </div><div class="version">1.0.9</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -251,7 +251,7 @@
     <span class="k">def</span> <span class="nf">on_page_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">page</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">nav</span><span class="p">):</span>
         <span class="n">abs_src_path</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">abs_src_path</span>
         <span class="k">if</span> <span class="n">abs_src_path</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">abs_api_paths</span><span class="p">:</span>
-            <span class="n">clear_prefix</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">toc</span><span class="p">)</span>
+            <span class="n">clear_prefix</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">toc</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">context</span>
 
     <span class="k">def</span> <span class="nf">on_serve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">server</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">builder</span><span class="p">):</span>
@@ -262,11 +262,11 @@
         <span class="k">return</span> <span class="n">server</span>
 
 
-<span class="k">def</span> <span class="nf">clear_prefix</span><span class="p">(</span><span class="n">toc</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">clear_prefix</span><span class="p">(</span><span class="n">toc</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">toc_item</span> <span class="ow">in</span> <span class="n">toc</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">toc_item</span><span class="o">.</span><span class="n">level</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">toc_item</span><span class="o">.</span><span class="n">level</span> <span class="o">&gt;=</span> <span class="n">level</span><span class="p">:</span>
             <span class="n">toc_item</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">toc_item</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="n">clear_prefix</span><span class="p">(</span><span class="n">toc_item</span><span class="o">.</span><span class="n">children</span><span class="p">)</span>
+        <span class="n">clear_prefix</span><span class="p">(</span><span class="n">toc_item</span><span class="o">.</span><span class="n">children</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
     <span class="k">return</span>
 
 

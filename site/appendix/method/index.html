@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.8</div>
+                </div><div class="version">1.0.9</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -65,6 +65,8 @@
     <li class="toctree-l2"><a class="nav-item" href="../type/">Type Annotation Examples</a></li>
     <li class="toctree-l2 current"><a class="nav-item current" href="./">Method and Property Types</a>
 <ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#concrete-class">Concrete class</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#abstract-class">Abstract class</a></li>
 </ul></li>
     <li class="toctree-l2"><a class="nav-item" href="../inherit/">Inheritance and Special Methods</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../order/">Ordering Members in Different Files</a></li>
@@ -123,6 +125,7 @@
 </nav>
                 <div id="content">
 <h1 id="method-and-property-types">Method and Property Types</h1>
+<h2 id="concrete-class">Concrete class</h2>
 <style type="text/css">
 <!--
 .mkapi-node {
@@ -167,13 +170,13 @@
 
 </div></div></div>
 
-<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](appendix.method.MethodTypeExample)</code></pre></div></div></div>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](appendix.method.MethodTypeExample|short)</code></pre></div></div></div>
 
 <div class="mkapi-node" id="appendix.method.MethodTypeExample">
 <div class='mkapi-object-container'>
   <div class="mkapi-object class code top">
     <div class="mkapi-object-kind class top">class</div>
-    <div class="mkapi-object-body class top"><code class="mkapi-object-prefix">appendix.method.</code><code class="mkapi-object-name">MethodTypeExample</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></div>
+    <div class="mkapi-object-body class top"><code class="mkapi-object-name">MethodTypeExample</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></div>
   </div>
   
 </div>
@@ -186,11 +189,11 @@
           <span class="mkapi-section-name-body attributes">Attributes</span> 
         </div>
       <div class="mkapi-section-body attributes"><ul class="mkapi-items">
-<li class="readonly_property"><code class="mkapi-item-name">read_only_property</code>
+<li class="readonly-property"><code class="mkapi-item-name">read_only_property</code>
 
 <span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Read only property.</span></li>
 
-<li class="readwrite_property"><code class="mkapi-item-name">read_write_property</code>
+<li class="readwrite-property"><code class="mkapi-item-name">read_write_property</code>
 
 <span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Read write property.</span></li>
 
@@ -291,6 +294,245 @@
 <div class="mkapi-docstring">
 <div class="mkapi-section">
       <div class="mkapi-section-body"><p>Static method.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+  </div>
+
+</div>
+
+<h2 id="abstract-class">Abstract class</h2>
+<div class="pheasant-header"><div class="other"><p class="caption"><span class="prefix">File</span> <span class="number">8</span>
+<span class="title">appendix/abc.py</span></p>
+<div class="content">
+
+<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">from abc import ABC, abstractmethod
+
+
+class AbstractMethodTypeExample(ABC):
+    &#34;&#34;&#34;Abstract class.&#34;&#34;&#34;
+
+    def method(self):
+        &#34;&#34;&#34;Method.&#34;&#34;&#34;
+
+    @classmethod
+    def class_method(cls):
+        &#34;&#34;&#34;Class method.&#34;&#34;&#34;
+
+    @staticmethod
+    def static_method():
+        &#34;&#34;&#34;Static method.&#34;&#34;&#34;
+
+    @abstractmethod
+    def abstract_method(self):
+        &#34;&#34;&#34;Abstract method.&#34;&#34;&#34;
+
+    @classmethod
+    @abstractmethod
+    def abstract_class_method(cls):
+        &#34;&#34;&#34;Abstract class method.&#34;&#34;&#34;
+
+    @staticmethod
+    @abstractmethod
+    def abstract_static_method():
+        &#34;&#34;&#34;Abstract static method.&#34;&#34;&#34;
+
+    @property  # type:ignore
+    @abstractmethod
+    def abstract_read_only_property(self):
+        &#34;&#34;&#34;Abstract read only property.&#34;&#34;&#34;
+
+    @property  # type:ignore
+    @abstractmethod
+    def abstract_read_write_property(self):
+        &#34;&#34;&#34;Abstract read write property.&#34;&#34;&#34;
+
+    @abstract_read_write_property.setter  # type:ignore
+    @abstractmethod
+    def abstract_read_write_property(self, val):
+        pass</code></pre></div></div></div>
+
+</div></div></div>
+
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">![mkapi](appendix.abc.AbstractMethodTypeExample|short)</code></pre></div></div></div>
+
+<div class="mkapi-node" id="appendix.abc.AbstractMethodTypeExample">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object abstract-class code top">
+    <div class="mkapi-object-kind abstract-class top">abstract class</div>
+    <div class="mkapi-object-body abstract-class top"><code class="mkapi-object-name">AbstractMethodTypeExample</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base">abc.ABC</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Abstract class.</p></div>
+    </div>
+  <div class="mkapi-section attributes">
+      <div class="mkapi-section-name attributes">
+          <span class="mkapi-section-name-body attributes">Attributes</span> 
+        </div>
+      <div class="mkapi-section-body attributes"><ul class="mkapi-items">
+<li class="abstract-readonly-property"><code class="mkapi-item-name">abstract_read_only_property</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Abstract read only property.</span></li>
+
+<li class="abstract-readwrite-property"><code class="mkapi-item-name">abstract_read_write_property</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Abstract read write property.</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section methods">
+      <div class="mkapi-section-name methods">
+          <span class="mkapi-section-name-body methods">Methods</span> 
+        </div>
+      <div class="mkapi-section-body methods"><ul class="mkapi-items">
+<li class="abstract-classmethod"><code class="mkapi-item-name"><a href="#appendix.abc.AbstractMethodTypeExample.abstract_class_method">abstract_class_method</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Abstract class method.</span></li>
+
+<li class="abstract-method"><code class="mkapi-item-name"><a href="#appendix.abc.AbstractMethodTypeExample.abstract_method">abstract_method</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Abstract method.</span></li>
+
+<li class="abstract-staticmethod"><code class="mkapi-item-name"><a href="#appendix.abc.AbstractMethodTypeExample.abstract_static_method">abstract_static_method</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Abstract static method.</span></li>
+
+<li class="classmethod"><code class="mkapi-item-name"><a href="#appendix.abc.AbstractMethodTypeExample.class_method">class_method</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Class method.</span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#appendix.abc.AbstractMethodTypeExample.method">method</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Method.</span></li>
+
+<li class="staticmethod"><code class="mkapi-item-name"><a href="#appendix.abc.AbstractMethodTypeExample.static_method">static_method</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Static method.</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+  <div class="mkapi-members">
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="appendix.abc.AbstractMethodTypeExample.method">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <div class="mkapi-object-body method"><code class="mkapi-object-name">method</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Method.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="appendix.abc.AbstractMethodTypeExample.class_method">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object classmethod code">
+    <div class="mkapi-object-kind classmethod">classmethod</div>
+    <div class="mkapi-object-body classmethod"><code class="mkapi-object-name">class_method</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Class method.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="appendix.abc.AbstractMethodTypeExample.static_method">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object staticmethod code">
+    <div class="mkapi-object-kind staticmethod">staticmethod</div>
+    <div class="mkapi-object-body staticmethod"><code class="mkapi-object-name">static_method</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Static method.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="appendix.abc.AbstractMethodTypeExample.abstract_method">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object abstract-method code">
+    <div class="mkapi-object-kind abstract-method">abstract method</div>
+    <div class="mkapi-object-body abstract-method"><code class="mkapi-object-name">abstract_method</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Abstract method.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="appendix.abc.AbstractMethodTypeExample.abstract_class_method">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object abstract-classmethod code">
+    <div class="mkapi-object-kind abstract-classmethod">abstract classmethod</div>
+    <div class="mkapi-object-body abstract-classmethod"><code class="mkapi-object-name">abstract_class_method</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Abstract class method.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="appendix.abc.AbstractMethodTypeExample.abstract_static_method">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object abstract-staticmethod code">
+    <div class="mkapi-object-kind abstract-staticmethod">abstract staticmethod</div>
+    <div class="mkapi-object-body abstract-staticmethod"><code class="mkapi-object-name">abstract_static_method</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Abstract static method.</p></div>
     </div>
   </div>
 
