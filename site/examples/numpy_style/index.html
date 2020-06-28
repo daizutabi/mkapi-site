@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.9</div>
+                </div><div class="version">1.0.10</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -57,6 +57,8 @@
 <li class="toctree-l3"><a class="nav-item toc" href="#class">Class</a></li>
 <li class="toctree-l3"><a class="nav-item toc" href="#method">Method</a></li>
 <li class="toctree-l3"><a class="nav-item toc" href="#data-class">Data Class</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#heading-mode">Heading Mode</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#numpy_styleexampleclass">ExampleClass</a></li>
 </ul></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">Advanced Usage</button>
@@ -64,6 +66,7 @@
     <li class="toctree-l2"><a class="nav-item" href="../../usage/module/">Module and Package</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../usage/inherit/">Docstring Inheritance</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../usage/page/">Page Mode and Internal Links</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/filter/">Filters</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../usage/library/">Using MkApi within Python</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../usage/custom/">Customization</a></li>
 </ul></li>
@@ -74,7 +77,6 @@
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/inherit/">Inheritance and Special Methods</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/order/">Ordering Members in Different Files</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../appendix/decorator/">Decorators</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../appendix/filter/">Filters and Variables</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -657,7 +659,133 @@ class ExampleDataClass:
 <li><a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html#example-google">Example Google Style Python Docstrings</a></li>
 <li><a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html#example-numpy">Example NumPy Style Python Docstrings</a></li>
 </ul>
-</div></div>
+</div>
+<h2 id="heading-mode">Heading Mode</h2>
+<p>The other mode to create documentation is heading. For example,</p>
+<div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="markdown">## ![mkapi](numpy_style.ExampleClass)</code></pre></div></div></div>
+
+<p>create a <code>&lt;h2&gt;</code> tag for the <code>google_style.ExampleClass</code>.</p>
+<div class="mkapi-node" id="numpy_style.ExampleClass">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h2 id="numpy_styleexampleclass" class="mkapi-object-body class top"><code class="mkapi-object-prefix">numpy_style.</code><code class="mkapi-object-name">ExampleClass</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x</code>, <code class="mkapi-object-signature">y</code><code class="mkapi-object-parenthesis">)</code></h2>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>A normal class.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">x</code>
+<span class="mkapi-item-type">(list of int)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The first parameter.</span></li>
+
+<li><code class="mkapi-item-name">y</code>
+<span class="mkapi-item-type">(str, int)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The second parameter.</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section attributes">
+      <div class="mkapi-section-name attributes">
+          <span class="mkapi-section-name-body attributes">Attributes</span> 
+        </div>
+      <div class="mkapi-section-body attributes"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">a</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The first attribute. Comment <em>inline</em> with attribute.</span></li>
+
+<li><code class="mkapi-item-name">b</code>
+<span class="mkapi-item-type">(dict(str: int))</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The second attribute. Comment <em>before</em> attribute.</span></li>
+
+<li><code class="mkapi-item-name">c</code>
+<span class="mkapi-item-type">(int, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The third attribute. Docstring <em>after</em> attribute.<br>
+Multiple paragraphs are supported.</span></li>
+
+
+<li class="readonly-property"><code class="mkapi-item-name">readonly_property</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Read-only property documentation.</span></li>
+
+<li class="readwrite-property"><code class="mkapi-item-name">readwrite_property</code>
+<span class="mkapi-item-type">(list of int)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Read-write property documentation.</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section raises">
+      <div class="mkapi-section-name raises">
+          <span class="mkapi-section-name-body raises">Raises</span> 
+        </div>
+      <div class="mkapi-section-body raises"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">ValueError</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">If the length of <code>x</code> is equal to 0.</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section methods">
+      <div class="mkapi-section-name methods">
+          <span class="mkapi-section-name-body methods">Methods</span> 
+        </div>
+      <div class="mkapi-section-body methods"><ul class="mkapi-items">
+<li class="method"><code class="mkapi-item-name"><a href="#numpy_style.ExampleClass.message">message</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">n</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(list of str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Returns a message list.</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+  <div class="mkapi-members">
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="numpy_style.ExampleClass.message">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h3 id="numpy_styleexampleclassmessage" class="mkapi-object-body method"><code class="mkapi-object-name">message</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">n</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; list of str</span></h3>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Returns a message list.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">n</code>
+<span class="mkapi-item-type">(int)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Repeatation.</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+  </div>
+
+</div>
+
+<p>Note that an ExampleClass item in nav menu is created.</p></div>
                 <footer>
     <div class="footer-buttons">
         <div class="previous"><a href="../google_style/" title="Google Style"><span>Previous</span></a></div>

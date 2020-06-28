@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.9</div>
+                </div><div class="version">1.0.10</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -57,6 +57,7 @@
     <li class="toctree-l2"><a class="nav-item" href="../../usage/module/">Module and Package</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../usage/inherit/">Docstring Inheritance</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../usage/page/">Page Mode and Internal Links</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../usage/filter/">Filters</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../usage/library/">Using MkApi within Python</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../usage/custom/">Customization</a></li>
 </ul></li>
@@ -68,9 +69,8 @@
     <li class="toctree-l2"><a class="nav-item" href="../order/">Ordering Members in Different Files</a></li>
     <li class="toctree-l2 current"><a class="nav-item current" href="./">Decorators</a>
 <ul class="subnav">
-<li class="toctree-l3"><a class="nav-item toc" href="#appendixdecorated">appendix.decorated</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#appendixdecorated">decorated</a></li>
 </ul></li>
-    <li class="toctree-l2"><a class="nav-item" href="../filter/">Filters and Variables</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
@@ -107,7 +107,7 @@
         <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
     </div>
     <div class="previous"><a href="../order/">&laquo; Previous</a></div>
-    <div class="next"><a href="../filter/">Next &raquo;</a></div>
+    <div class="next"><a href="../../api/mkapi/">Next &raquo;</a></div>
 </div>
         </aside>
         <div id="spacer"><button class="arrow"></button></div>
@@ -205,8 +205,8 @@ for func in funcs:
     is_wrapped = hasattr(func, &#39;__wrapped__&#39;)
     print(f&#34;[{func.__name__}]: {sourcefile}, {is_wrapped}&#34;)</code></pre></div>
 <div class="report"><p><span class="count">[1]</span>
-<span class="start">2020-06-28 11:13:54</span> (<span class="time">46.0ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">548ms</span>)</span></p></div></div><div class="cell jupyter stdout"><div class="code">
+<span class="start">2020-06-28 16:18:46</span> (<span class="time">49.0ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">568ms</span>)</span></p></div></div><div class="cell jupyter stdout"><div class="code">
       <pre><code class="nohighlight">[func_with_wraps]: ../../examples\appendix\decorator.py, True
 [_func]: ../../examples\appendix\decorator.py, False</code></pre></div></div></div>
 
@@ -330,7 +330,7 @@ for func in funcs:
                 <footer>
     <div class="footer-buttons">
         <div class="previous"><a href="../order/" title="Ordering Members in Different Files"><span>Previous</span></a></div>
-        <div class="next"><a href="../filter/" title="Filters and Variables"><span>Next</span></a></div>
+        <div class="next"><a href="../../api/mkapi/" title="mkapi"><span>Next</span></a></div>
     </div>
     <div class="footer-note">
         <p>
