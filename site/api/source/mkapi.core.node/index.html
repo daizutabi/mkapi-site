@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.10</div>
+                </div><div class="version">1.0.11</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -309,7 +309,7 @@
     <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
         <span class="n">name</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__name__</span>
     <span class="n">obj</span> <span class="o">=</span> <span class="n">get_origin</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;__func__&quot;</span><span class="p">,</span> <span class="s2">&quot;__self__&quot;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;__func__&quot;</span><span class="p">,</span> <span class="s2">&quot;__self__&quot;</span><span class="p">,</span> <span class="s2">&quot;__base__&quot;</span><span class="p">,</span> <span class="s2">&quot;__bases__&quot;</span><span class="p">]:</span>
         <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
     <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;__&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;__&quot;</span><span class="p">):</span>
@@ -324,11 +324,6 @@
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">sourcefile_index</span><span class="p">,</span> <span class="n">parent_sourcefile</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sourcefiles</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">sourcefile</span> <span class="o">==</span> <span class="n">parent_sourcefile</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">isclass</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
-                <span class="k">try</span><span class="p">:</span>
-                    <span class="n">obj</span><span class="o">.</span><span class="n">mro</span><span class="p">()</span>
-                <span class="k">except</span> <span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">):</span>
-                    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
             <span class="k">return</span> <span class="n">sourcefile_index</span>
     <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
 

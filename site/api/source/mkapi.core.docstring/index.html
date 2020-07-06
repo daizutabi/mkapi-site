@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.10</div>
+                </div><div class="version">1.0.11</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -136,6 +136,7 @@
 <span class="kn">from</span> <span class="nn">mkapi.core</span> <span class="kn">import</span> <span class="n">preprocess</span>
 <span class="kn">from</span> <span class="nn">mkapi.core.base</span> <span class="kn">import</span> <span class="n">Docstring</span><span class="p">,</span> <span class="n">Inline</span><span class="p">,</span> <span class="n">Item</span><span class="p">,</span> <span class="n">Section</span><span class="p">,</span> <span class="n">Type</span>
 <span class="kn">from</span> <span class="nn">mkapi.core.linker</span> <span class="kn">import</span> <span class="n">get_link</span><span class="p">,</span> <span class="n">replace_link</span>
+<span class="kn">from</span> <span class="nn">mkapi.core.object</span> <span class="kn">import</span> <span class="n">get_mro</span>
 <span class="kn">from</span> <span class="nn">mkapi.core.signature</span> <span class="kn">import</span> <span class="n">get_signature</span>
 <span class="kn">from</span> <span class="nn">mkapi.utils</span> <span class="kn">import</span> <span class="n">get_indent</span><span class="p">,</span> <span class="n">join</span>
 
@@ -319,7 +320,7 @@
     <span class="sd">&quot;&quot;&quot;Parses base classes to create a Base(s) line.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">inspect</span><span class="o">.</span><span class="n">isclass</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;mro&quot;</span><span class="p">):</span>
         <span class="k">return</span>
-    <span class="n">objs</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">mro</span><span class="p">()[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">objs</span> <span class="o">=</span> <span class="n">get_mro</span><span class="p">(</span><span class="n">obj</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">objs</span><span class="p">:</span>
         <span class="k">return</span>
     <span class="n">types</span> <span class="o">=</span> <span class="p">[</span><span class="n">get_link</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">include_module</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">objs</span><span class="p">]</span>

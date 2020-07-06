@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.10</div>
+                </div><div class="version">1.0.11</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -310,10 +310,10 @@
 <span class="title">appendix/abc.py</span></p>
 <div class="content">
 
-<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">from abc import ABCMeta, abstractmethod
+<div class="pheasant-fenced-code"><div class="cell embed file"><div class="code"><pre><code class="python">from abc import ABC, abstractmethod
 
 
-class AbstractMethodTypeExample(object, metaclass=ABCMeta):  # or (abc.ABC)
+class AbstractMethodTypeExample(ABC):
     &#34;&#34;&#34;Abstract class.&#34;&#34;&#34;
 
     def method(self):

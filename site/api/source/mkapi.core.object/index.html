@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.10</div>
+                </div><div class="version">1.0.11</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -127,6 +127,7 @@
 
 <div class="mkapi-code">
 <div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;This module provides utility functions that relate to object.&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">abc</span>
 <span class="kn">import</span> <span class="nn">importlib</span>
 <span class="kn">import</span> <span class="nn">inspect</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
@@ -249,6 +250,17 @@
     <span class="k">return</span> <span class="n">sourcefile</span><span class="p">,</span> <span class="n">lineno</span>
 
 
+<span class="c1"># Issue#19 (metaclass). TypeError: descriptor &#39;mro&#39; of &#39;type&#39; object needs an argument.</span>
+<span class="k">def</span> <span class="nf">get_mro</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">objs</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">mro</span><span class="p">()[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># drop [&#39;object&#39;]</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="n">objs</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">mro</span><span class="p">(</span><span class="n">obj</span><span class="p">)[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># drop [&#39;type&#39;, &#39;object&#39;]</span>
+    <span class="k">if</span> <span class="n">objs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">abc</span><span class="o">.</span><span class="n">ABC</span><span class="p">:</span>
+        <span class="n">objs</span> <span class="o">=</span> <span class="n">objs</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">objs</span>
+
+
 <span class="k">def</span> <span class="nf">get_sourcefiles</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span><span id="mkapi.core.object.get_sourcefiles"></span><a class="mkapi-docs-link" title="mkapi.core.object.get_sourcefiles" href="../../mkapi.core.object#mkapi.core.object.get_sourcefiles">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Returns a list of source file.</span>
 
@@ -258,7 +270,7 @@
 <span class="sd">        obj: Object name.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">isclass</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;mro&quot;</span><span class="p">):</span>
-        <span class="n">objs</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">mro</span><span class="p">()[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">objs</span> <span class="o">=</span> <span class="n">get_mro</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">objs</span> <span class="o">=</span> <span class="p">[</span><span class="n">obj</span><span class="p">]</span>
     <span class="n">sourfiles</span> <span class="o">=</span> <span class="p">[]</span>
