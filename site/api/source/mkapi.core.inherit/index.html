@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.11</div>
+                </div><div class="version">1.0.12</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -134,7 +134,7 @@
 <span class="kn">from</span> <span class="nn">mkapi.core.object</span> <span class="kn">import</span> <span class="n">get_mro</span>
 
 
-<span class="k">def</span> <span class="nf">get_section</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Section</span><span class="p">:</span><span id="mkapi.core.inherit.get_section"></span><a class="mkapi-docs-link" title="mkapi.core.inherit.get_section" href="../../mkapi.core.inherit#mkapi.core.inherit.get_section">DOCS</a>
+<span class="k">def</span> <span class="nf">get_section</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Section</span><span class="p">:</span><span id="mkapi.core.inherit.get_section"></span><a class="mkapi-docs-link" title="mkapi.core.inherit.get_section" href="../../mkapi.core.inherit/#mkapi.core.inherit.get_section">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Returns a tuple of (docstring section, signature section).</span>
 
 <span class="sd">    Args:</span>
@@ -162,7 +162,7 @@
             <span class="k">return</span> <span class="n">Section</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">is_complete</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;both&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span><span id="mkapi.core.inherit.is_complete"></span><a class="mkapi-docs-link" title="mkapi.core.inherit.is_complete" href="../../mkapi.core.inherit#mkapi.core.inherit.is_complete">DOCS</a>
+<span class="k">def</span> <span class="nf">is_complete</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;both&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span><span id="mkapi.core.inherit.is_complete"></span><a class="mkapi-docs-link" title="mkapi.core.inherit.is_complete" href="../../mkapi.core.inherit/#mkapi.core.inherit.is_complete">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Returns True if docstring is complete.</span>
 
 <span class="sd">    Args:</span>
@@ -195,7 +195,7 @@
     <span class="k">return</span> <span class="kc">True</span>
 
 
-<span class="k">def</span> <span class="nf">inherit_base</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span> <span class="n">base</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;both&quot;</span><span class="p">):</span><span id="mkapi.core.inherit.inherit_base"></span><a class="mkapi-docs-link" title="mkapi.core.inherit.inherit_base" href="../../mkapi.core.inherit#mkapi.core.inherit.inherit_base">DOCS</a>
+<span class="k">def</span> <span class="nf">inherit_base</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span> <span class="n">base</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;both&quot;</span><span class="p">):</span><span id="mkapi.core.inherit.inherit_base"></span><a class="mkapi-docs-link" title="mkapi.core.inherit.inherit_base" href="../../mkapi.core.inherit/#mkapi.core.inherit.inherit_base">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Inherits Parameters or Attributes section from base class.</span>
 
 <span class="sd">    Args:</span>
@@ -234,7 +234,7 @@
         <span class="n">node</span><span class="o">.</span><span class="n">docstring</span><span class="o">.</span><span class="n">set_section</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">get_bases</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Node</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Node</span><span class="p">]]]:</span><span id="mkapi.core.inherit.get_bases"></span><a class="mkapi-docs-link" title="mkapi.core.inherit.get_bases" href="../../mkapi.core.inherit#mkapi.core.inherit.get_bases">DOCS</a>
+<span class="k">def</span> <span class="nf">get_bases</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Node</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Node</span><span class="p">]]]:</span><span id="mkapi.core.inherit.get_bases"></span><a class="mkapi-docs-link" title="mkapi.core.inherit.get_bases" href="../../mkapi.core.inherit/#mkapi.core.inherit.get_bases">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Yields a tuple of (Node instance, iterator of Node).</span>
 
 <span class="sd">    Args:</span>
@@ -270,7 +270,7 @@
         <span class="k">yield</span> <span class="n">member</span><span class="p">,</span> <span class="n">gen</span><span class="p">()</span>
 
 
-<span class="k">def</span> <span class="nf">inherit</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">):</span><span id="mkapi.core.inherit.inherit"></span><a class="mkapi-docs-link" title="mkapi.core.inherit.inherit" href="../../mkapi.core.inherit#mkapi.core.inherit.inherit">DOCS</a>
+<span class="k">def</span> <span class="nf">inherit</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">):</span><span id="mkapi.core.inherit.inherit"></span><a class="mkapi-docs-link" title="mkapi.core.inherit.inherit" href="../../mkapi.core.inherit/#mkapi.core.inherit.inherit">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Inherits Parameters and Attributes from superclasses.</span>
 
 <span class="sd">    Args:</span>

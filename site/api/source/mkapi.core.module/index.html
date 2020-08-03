@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.11</div>
+                </div><div class="version">1.0.12</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -138,7 +138,7 @@
 
 
 <span class="nd">@dataclass</span><span class="p">(</span><span class="nb">repr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">Module</span><span class="p">(</span><span class="n">Tree</span><span class="p">):</span><span id="mkapi.core.module.Module"></span><a class="mkapi-docs-link" title="mkapi.core.module.Module" href="../../mkapi.core.module#mkapi.core.module.Module">DOCS</a>
+<span class="k">class</span> <span class="nc">Module</span><span class="p">(</span><span class="n">Tree</span><span class="p">):</span><span id="mkapi.core.module.Module"></span><a class="mkapi-docs-link" title="mkapi.core.module.Module" href="../../mkapi.core.module/#mkapi.core.module.Module">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Module class represents a module.</span>
 
 <span class="sd">    Attributes:</span>
@@ -163,19 +163,19 @@
         <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>
             <span class="k">yield from</span> <span class="n">member</span>
 
-    <span class="k">def</span> <span class="nf">get_kind</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.module.Module.get_kind"></span><a class="mkapi-docs-link" title="mkapi.core.module.Module.get_kind" href="../../mkapi.core.module#mkapi.core.module.Module.get_kind">DOCS</a>
+    <span class="k">def</span> <span class="nf">get_kind</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.module.Module.get_kind"></span><a class="mkapi-docs-link" title="mkapi.core.module.Module.get_kind" href="../../mkapi.core.module/#mkapi.core.module.Module.get_kind">DOCS</a>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">sourcefile</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">sourcefile</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;__init__.py&quot;</span><span class="p">):</span>
             <span class="k">return</span> <span class="s2">&quot;package&quot;</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="s2">&quot;module&quot;</span>
 
-    <span class="k">def</span> <span class="nf">get_members</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Module&quot;</span><span class="p">]:</span>  <span class="c1"># type:ignore</span><span id="mkapi.core.module.Module.get_members"></span><a class="mkapi-docs-link" title="mkapi.core.module.Module.get_members" href="../../mkapi.core.module#mkapi.core.module.Module.get_members">DOCS</a>
+    <span class="k">def</span> <span class="nf">get_members</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Module&quot;</span><span class="p">]:</span>  <span class="c1"># type:ignore</span><span id="mkapi.core.module.Module.get_members"></span><a class="mkapi-docs-link" title="mkapi.core.module.Module.get_members" href="../../mkapi.core.module/#mkapi.core.module.Module.get_members">DOCS</a>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;module&quot;</span><span class="p">:</span>
             <span class="k">return</span> <span class="p">[]</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">get_members</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">get_markdown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filters</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>  <span class="c1"># type:ignore</span><span id="mkapi.core.module.Module.get_markdown"></span><a class="mkapi-docs-link" title="mkapi.core.module.Module.get_markdown" href="../../mkapi.core.module#mkapi.core.module.Module.get_markdown">DOCS</a>
+    <span class="k">def</span> <span class="nf">get_markdown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filters</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>  <span class="c1"># type:ignore</span><span id="mkapi.core.module.Module.get_markdown"></span><a class="mkapi-docs-link" title="mkapi.core.module.Module.get_markdown" href="../../mkapi.core.module/#mkapi.core.module.Module.get_markdown">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Returns a Markdown source for docstring of this object.</span>
 
 <span class="sd">        Args:</span>
@@ -214,7 +214,7 @@
 <span class="n">modules</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Module</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 
 
-<span class="k">def</span> <span class="nf">get_module</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span><span id="mkapi.core.module.get_module"></span><a class="mkapi-docs-link" title="mkapi.core.module.get_module" href="../../mkapi.core.module#mkapi.core.module.get_module">DOCS</a>
+<span class="k">def</span> <span class="nf">get_module</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span><span id="mkapi.core.module.get_module"></span><a class="mkapi-docs-link" title="mkapi.core.module.get_module" href="../../mkapi.core.module/#mkapi.core.module.get_module">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Returns a Module instace by name or object.</span>
 
 <span class="sd">    Args:</span>

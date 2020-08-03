@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.11</div>
+                </div><div class="version">1.0.12</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -142,7 +142,7 @@
 
 
 <span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">Object</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span><span id="mkapi.core.structure.Object"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Object" href="../../mkapi.core.structure#mkapi.core.structure.Object">DOCS</a>
+<span class="k">class</span> <span class="nc">Object</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span><span id="mkapi.core.structure.Object"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Object" href="../../mkapi.core.structure/#mkapi.core.structure.Object">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Object class represents an object.</span>
 
 <span class="sd">    Args:</span>
@@ -189,13 +189,13 @@
         <span class="nb">id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">class_name</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="nb">id</span><span class="si">!r}</span><span class="s2">)&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Base</span><span class="p">]:</span><span id="mkapi.core.structure.Object.__iter__"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Object.__iter__" href="../../mkapi.core.structure#mkapi.core.structure.Object.__iter__">DOCS</a>
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Base</span><span class="p">]:</span><span id="mkapi.core.structure.Object.__iter__"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Object.__iter__" href="../../mkapi.core.structure/#mkapi.core.structure.Object.__iter__">DOCS</a>
         <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span>
         <span class="k">yield</span> <span class="bp">self</span>
 
 
 <span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">Tree</span><span class="p">:</span><span id="mkapi.core.structure.Tree"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Tree" href="../../mkapi.core.structure#mkapi.core.structure.Tree">DOCS</a>
+<span class="k">class</span> <span class="nc">Tree</span><span class="p">:</span><span id="mkapi.core.structure.Tree"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Tree" href="../../mkapi.core.structure/#mkapi.core.structure.Tree">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Tree class. This class is the base class of [Node](mkapi.core.node.Node)</span>
 <span class="sd">    and [Module](mkapi.core.module.Module).</span>
 
@@ -242,7 +242,7 @@
         <span class="n">numbers</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">)</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">class_name</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="nb">id</span><span class="si">!r}</span><span class="s2">, num_sections=</span><span class="si">{</span><span class="n">sections</span><span class="si">}</span><span class="s2">, num_members=</span><span class="si">{</span><span class="n">numbers</span><span class="si">}</span><span class="s2">)&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]):</span><span id="mkapi.core.structure.Tree.__getitem__"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Tree.__getitem__" href="../../mkapi.core.structure#mkapi.core.structure.Tree.__getitem__">DOCS</a>
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]):</span><span id="mkapi.core.structure.Tree.__getitem__"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Tree.__getitem__" href="../../mkapi.core.structure/#mkapi.core.structure.Tree.__getitem__">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Returns a member {class} instance.</span>
 
 <span class="sd">        If `index` is str, a member Tree instance whose name is equal to `index`</span>
@@ -275,19 +275,19 @@
                 <span class="k">return</span> <span class="kc">True</span>
         <span class="k">return</span> <span class="kc">False</span>
 
-    <span class="k">def</span> <span class="nf">get_kind</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.structure.Tree.get_kind"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Tree.get_kind" href="../../mkapi.core.structure#mkapi.core.structure.Tree.get_kind">DOCS</a>
+    <span class="k">def</span> <span class="nf">get_kind</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.structure.Tree.get_kind"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Tree.get_kind" href="../../mkapi.core.structure/#mkapi.core.structure.Tree.get_kind">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Returns kind of self.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 
-    <span class="k">def</span> <span class="nf">get_members</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Tree&quot;</span><span class="p">]:</span><span id="mkapi.core.structure.Tree.get_members"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Tree.get_members" href="../../mkapi.core.structure#mkapi.core.structure.Tree.get_members">DOCS</a>
+    <span class="k">def</span> <span class="nf">get_members</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Tree&quot;</span><span class="p">]:</span><span id="mkapi.core.structure.Tree.get_members"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Tree.get_members" href="../../mkapi.core.structure/#mkapi.core.structure.Tree.get_members">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Returns a list of members.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 
-    <span class="k">def</span> <span class="nf">get_markdown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.structure.Tree.get_markdown"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Tree.get_markdown" href="../../mkapi.core.structure#mkapi.core.structure.Tree.get_markdown">DOCS</a>
+    <span class="k">def</span> <span class="nf">get_markdown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="mkapi.core.structure.Tree.get_markdown"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Tree.get_markdown" href="../../mkapi.core.structure/#mkapi.core.structure.Tree.get_markdown">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Returns a Markdown source for docstring of self.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 
-    <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="s2">&quot;Tree&quot;</span><span class="p">]:</span><span id="mkapi.core.structure.Tree.walk"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Tree.walk" href="../../mkapi.core.structure#mkapi.core.structure.Tree.walk">DOCS</a>
+    <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="s2">&quot;Tree&quot;</span><span class="p">]:</span><span id="mkapi.core.structure.Tree.walk"></span><a class="mkapi-docs-link" title="mkapi.core.structure.Tree.walk" href="../../mkapi.core.structure/#mkapi.core.structure.Tree.walk">DOCS</a>
         <span class="sd">&quot;&quot;&quot;Yields all members.&quot;&quot;&quot;</span>
         <span class="k">yield</span> <span class="bp">self</span>
         <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>

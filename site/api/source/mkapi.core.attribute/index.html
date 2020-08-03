@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.11</div>
+                </div><div class="version">1.0.12</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -284,7 +284,7 @@
     <span class="k">return</span> <span class="n">attrs</span>
 
 
-<span class="k">def</span> <span class="nf">get_class_attributes</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]:</span><span id="mkapi.core.attribute.get_class_attributes"></span><a class="mkapi-docs-link" title="mkapi.core.attribute.get_class_attributes" href="../../mkapi.core.attribute#mkapi.core.attribute.get_class_attributes">DOCS</a>
+<span class="k">def</span> <span class="nf">get_class_attributes</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]:</span><span id="mkapi.core.attribute.get_class_attributes"></span><a class="mkapi-docs-link" title="mkapi.core.attribute.get_class_attributes" href="../../mkapi.core.attribute/#mkapi.core.attribute.get_class_attributes">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Returns a dictionary that maps attribute name to a tuple of</span>
 <span class="sd">    (type, description).</span>
 
@@ -314,7 +314,7 @@
     <span class="k">return</span> <span class="n">get_attributes_dict</span><span class="p">(</span><span class="n">attr_lineno</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;self.&quot;</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">get_dataclass_attributes</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]:</span><span id="mkapi.core.attribute.get_dataclass_attributes"></span><a class="mkapi-docs-link" title="mkapi.core.attribute.get_dataclass_attributes" href="../../mkapi.core.attribute#mkapi.core.attribute.get_dataclass_attributes">DOCS</a>
+<span class="k">def</span> <span class="nf">get_dataclass_attributes</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]:</span><span id="mkapi.core.attribute.get_dataclass_attributes"></span><a class="mkapi-docs-link" title="mkapi.core.attribute.get_dataclass_attributes" href="../../mkapi.core.attribute/#mkapi.core.attribute.get_dataclass_attributes">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Returns a dictionary that maps attribute name to a tuple of</span>
 <span class="sd">    (type, description).</span>
 
@@ -358,7 +358,7 @@
     <span class="k">return</span> <span class="n">attrs</span>
 
 
-<span class="k">def</span> <span class="nf">get_module_attributes</span><span class="p">(</span><span class="n">module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]:</span><span id="mkapi.core.attribute.get_module_attributes"></span><a class="mkapi-docs-link" title="mkapi.core.attribute.get_module_attributes" href="../../mkapi.core.attribute#mkapi.core.attribute.get_module_attributes">DOCS</a>
+<span class="k">def</span> <span class="nf">get_module_attributes</span><span class="p">(</span><span class="n">module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]:</span><span id="mkapi.core.attribute.get_module_attributes"></span><a class="mkapi-docs-link" title="mkapi.core.attribute.get_module_attributes" href="../../mkapi.core.attribute/#mkapi.core.attribute.get_module_attributes">DOCS</a>
     <span class="sd">&quot;&quot;&quot;Returns a dictionary that maps attribute name to a tuple of</span>
 <span class="sd">    (type, description).</span>
 
@@ -380,7 +380,7 @@
     <span class="k">return</span> <span class="n">get_attributes_dict</span><span class="p">(</span><span class="n">attr_lineno</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span>
 
 
-<span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span><span id="mkapi.core.attribute.get_attributes"></span><a class="mkapi-docs-link" title="mkapi.core.attribute.get_attributes" href="../../mkapi.core.attribute#mkapi.core.attribute.get_attributes">DOCS</a>
+<span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span><span id="mkapi.core.attribute.get_attributes"></span><a class="mkapi-docs-link" title="mkapi.core.attribute.get_attributes" href="../../mkapi.core.attribute/#mkapi.core.attribute.get_attributes">DOCS</a>
 <span class="k">def</span> <span class="nf">get_attributes</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]:</span>
     <span class="sd">&quot;&quot;&quot;Returns a dictionary that maps attribute name to</span>
 <span class="sd">    a tuple of (type, description).</span>
