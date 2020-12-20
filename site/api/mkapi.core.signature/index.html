@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.13</div>
+                </div><div class="version">1.0.14</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -74,6 +74,7 @@
     <li class="toctree-l2"><button class="section nav-item hide">mkapi</button>
 <ul class="subnav hide">
     <li class="toctree-l3"><a class="nav-item" href="../mkapi/">mkapi</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.utils/">mkapi.utils</a></li>
 </ul></li>
     <li class="toctree-l2 current"><button class="section nav-item">mkapi.core</button>
 <ul class="subnav">
@@ -287,7 +288,7 @@ value is default value.</span></li>
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; from mkapi.core.base import Base
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; from mkapi.core.base import Base
 &gt;&gt;&gt; s = Signature(Base)
 &gt;&gt;&gt; s.parameters['name'].to_tuple()
 ('name', 'str, optional', 'Name of self.')
@@ -343,7 +344,7 @@ value is default value.</span></li>
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; from typing import Callable, Iterator, List
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; from typing import Callable, Iterator, List
 &gt;&gt;&gt; to_string(Iterator[str])
 'iterator of str'
 &gt;&gt;&gt; to_string(Iterator[str], 'yields')
@@ -395,7 +396,7 @@ value is default value.</span></li>
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; from typing import List, Iterable, Iterator
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; from typing import List, Iterable, Iterator
 &gt;&gt;&gt; a_of_b(List[str])
 'list of str'
 &gt;&gt;&gt; a_of_b(List[List[str]])
@@ -444,7 +445,7 @@ value is default value.</span></li>
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; from typing import List, Optional, Tuple, Union
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; from typing import List, Optional, Tuple, Union
 &gt;&gt;&gt; union(Optional[List[str]])
 'list of str, optional'
 &gt;&gt;&gt; union(Union[str, int])
@@ -493,7 +494,7 @@ value is default value.</span></li>
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; from typing import Callable, List, Tuple, Any
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; from typing import Callable, List, Tuple, Any
 &gt;&gt;&gt; from typing import Generator, AsyncGenerator
 &gt;&gt;&gt; to_string_args(Callable[[int, List[str]], Tuple[int, int]])
 'callable(int, list of str: (int, int))'
@@ -547,7 +548,7 @@ value is default value.</span></li>
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; from mkapi.core.base import Docstring
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; from mkapi.core.base import Docstring
 &gt;&gt;&gt; resolve_forward_ref(Docstring, 'Docstring')
 '[Docstring](!mkapi.core.base.Docstring)'
 &gt;&gt;&gt; resolve_forward_ref(Docstring, 'invalid_object_name')

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="daizutabi">
     <link rel="shortcut icon" href="../../img/favicon.ico">
-    <title>mkapi.core.page &mdash; MkApi</title>
+    <title>mkapi.utils &mdash; MkApi</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -71,13 +71,18 @@
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">API</button>
 <ul class="subnav">
-    <li class="toctree-l2"><button class="section nav-item hide">mkapi</button>
-<ul class="subnav hide">
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi/">mkapi</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../mkapi.utils/">mkapi.utils</a></li>
-</ul></li>
-    <li class="toctree-l2 current"><button class="section nav-item">mkapi.core</button>
+    <li class="toctree-l2 current"><button class="section nav-item">mkapi</button>
 <ul class="subnav">
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi/">mkapi</a></li>
+    <li class="toctree-l3 current"><a class="nav-item current" href="./">mkapi.utils</a>
+<ul class="subnav">
+<li class="toctree-l4"><a class="nav-item toc" href="#mkapiutilsget_object">get_object</a></li>
+<li class="toctree-l4"><a class="nav-item toc" href="#mkapiutilssplit_filters">split_filters</a></li>
+<li class="toctree-l4"><a class="nav-item toc" href="#mkapiutilsupdate_filters">update_filters</a></li>
+</ul></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
+<ul class="subnav hide">
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core/">mkapi.core</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.attribute/">mkapi.core.attribute</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.base/">mkapi.core.base</a></li>
@@ -88,10 +93,7 @@
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.module/">mkapi.core.module</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.node/">mkapi.core.node</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.object/">mkapi.core.object</a></li>
-    <li class="toctree-l3 current"><a class="nav-item current" href="./">mkapi.core.page</a>
-<ul class="subnav">
-<li class="toctree-l4"><a class="nav-item toc" href="#mkapicorepagepage">Page</a></li>
-</ul></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.page/">mkapi.core.page</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.renderer/">mkapi.core.renderer</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.signature/">mkapi.core.signature</a></li>
     <li class="toctree-l3"><a class="nav-item" href="../mkapi.core.structure/">mkapi.core.structure</a></li>
@@ -108,8 +110,8 @@
     <div class="link">
         <a href="https://github.com/daizutabi/mkapi/" class="fa fa-github"> GitHub</a>
     </div>
-    <div class="previous"><a href="../mkapi.core.object/">&laquo; Previous</a></div>
-    <div class="next"><a href="../mkapi.core.renderer/">Next &raquo;</a></div>
+    <div class="previous"><a href="../mkapi/">&laquo; Previous</a></div>
+    <div class="next"><a href="../mkapi.core/">Next &raquo;</a></div>
 </div>
         </aside>
         <div id="spacer"><button class="arrow"></button></div>
@@ -121,32 +123,31 @@
             <div id="main">
                 <nav class="breadcrumbs">
 <ul>
-    <li>API &raquo; </li><li>mkapi.core</li>
+    <li>API &raquo; </li><li>mkapi</li>
 </ul>
 </nav>
                 <div id="content">
-<div class="mkapi-node" id="mkapi.core.page">
+<div class="mkapi-node" id="mkapi.utils">
 <div class='mkapi-object-container'>
   <div class="mkapi-object module plain top">
     <div class="mkapi-object-kind module top">MODULE</div>
-    <h1 id="mkapicorepage" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="../mkapi.core/#mkapi.core">MKAPI.CORE</a>.</span><span class="mkapi-object-name">PAGE</span></h1>
+    <h1 id="mkapiutils" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="../mkapi/#mkapi">MKAPI</a>.</span><span class="mkapi-object-name">UTILS</span></h1>
   </div>
   <div class="mkapi-src-link">
-    <a class="mkapi-src-link" href="../source/mkapi.core.page/#mkapi.core.page" title="Source for mkapi.core.page">&lt;/&gt;</a>
+    <a class="mkapi-src-link" href="../source/mkapi.utils/#mkapi.utils" title="Source for mkapi.utils">&lt;/&gt;</a>
   </div>
 </div>
 <div class="mkapi-docstring">
-<div class="mkapi-section">
-      <div class="mkapi-section-body"><p>This module provides a Page class that works with other converter.</p></div>
-    </div>
-  <div class="mkapi-section classes">
-      <div class="mkapi-section-name classes">
-          <span class="mkapi-section-name-body classes">Classes</span> 
+<div class="mkapi-section functions">
+      <div class="mkapi-section-name functions">
+          <span class="mkapi-section-name-body functions">Functions</span> 
         </div>
-      <div class="mkapi-section-body classes"><ul class="mkapi-items">
-<li class="dataclass"><code class="mkapi-item-name"><a href="#mkapi.core.page.Page">Page</a></code>
+      <div class="mkapi-section-body functions"><ul class="mkapi-items">
+<li class="function"><code class="mkapi-item-name"><a href="#mkapi.utils.get_object">get_object</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Reutrns an object specified by <code>name</code>.<a class="mkapi-src-link" href="../source/mkapi.utils/#mkapi.utils.get_object" title="Source for mkapi.utils.get_object">&lt;/&gt;</a></span></li>
 
-<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Page class works with <a href="../mkapi.plugins.mkdocs/#mkapi.plugins.mkdocs.MkapiPlugin">MkapiPlugin</a>.<a class="mkapi-src-link" href="../source/mkapi.core.page/#mkapi.core.page.Page" title="Source for mkapi.core.page.Page">&lt;/&gt;</a></span></li>
+
 
 
 </ul></div>
@@ -155,135 +156,144 @@
 
 </div>
 
-<div class="mkapi-node" id="mkapi.core.page.Page">
+<div class="mkapi-node" id="mkapi.utils.get_object">
 <div class='mkapi-object-container'>
-  <div class="mkapi-object dataclass code top">
-    <div class="mkapi-object-kind dataclass top">dataclass</div>
-    <h2 id="mkapicorepagepage" class="mkapi-object-body dataclass top"><code class="mkapi-object-prefix"><a href="#mkapi.core.page">mkapi.core.page</a>.</code><code class="mkapi-object-name">Page</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">source</code>, <code class="mkapi-object-signature">abs_src_path</code>, <code class="mkapi-object-signature">abs_api_paths=&lt;factory&gt;</code>, <code class="mkapi-object-signature">filters=&lt;factory&gt;</code><code class="mkapi-object-parenthesis">)</code></h2>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h2 id="mkapiutilsget_object" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#mkapi.utils">mkapi.utils</a>.</code><code class="mkapi-object-name">get_object</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; any</span></h2>
   </div>
   <div class="mkapi-src-link">
-    <a class="mkapi-src-link" href="../source/mkapi.core.page/#mkapi.core.page.Page" title="Source for mkapi.core.page.Page">&lt;/&gt;</a>
+    <a class="mkapi-src-link" href="../source/mkapi.utils/#mkapi.utils.get_object" title="Source for mkapi.utils.get_object">&lt;/&gt;</a>
   </div>
 </div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-      <div class="mkapi-section-body"><p>Page class works with <a href="../mkapi.plugins.mkdocs/#mkapi.plugins.mkdocs.MkapiPlugin">MkapiPlugin</a>.</p></div>
+      <div class="mkapi-section-body"><p>Reutrns an object specified by <code>name</code>.</p></div>
     </div>
   <div class="mkapi-section parameters">
       <div class="mkapi-section-name parameters">
           <span class="mkapi-section-name-body parameters">Parameters</span> 
         </div>
       <div class="mkapi-section-body parameters"><ul class="mkapi-items">
-<li><code class="mkapi-item-name">source</code>
+<li><code class="mkapi-item-name">name</code>
 <span class="mkapi-item-type">(str)</span>
-<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Markdown source.</span></li>
-
-<li><code class="mkapi-item-name">abs_src_path</code>
-<span class="mkapi-item-type">(str)</span>
-<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Absolute source path of Markdown.</span></li>
-
-<li><code class="mkapi-item-name">abs_api_paths</code>
-<span class="mkapi-item-type">(list of str, optional)</span>
-<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">A list of API paths.</span></li>
-
-<li><code class="mkapi-item-name">filters</code>
-<span class="mkapi-item-type">(list of str, optional)</span>
-<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Object name.</span></li>
 
 
 </ul></div>
     </div>
-  <div class="mkapi-section attributes">
-      <div class="mkapi-section-name attributes">
-          <span class="mkapi-section-name-body attributes">Attributes</span> 
+  <div class="mkapi-section examples">
+      <div class="mkapi-section-name examples">
+          <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body attributes"><ul class="mkapi-items">
-<li><code class="mkapi-item-name">abs_api_paths</code>
-<span class="mkapi-item-type">(list of str)</span>
-<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">A list of API paths.</span></li>
-
-<li><code class="mkapi-item-name">abs_src_path</code>
-<span class="mkapi-item-type">(str)</span>
-<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Absolute source path of Markdown.</span></li>
-
-<li><code class="mkapi-item-name">filters</code>
-<span class="mkapi-item-type">(list of str)</span>
-<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
-
-<li><code class="mkapi-item-name">headings</code>
-<span class="mkapi-item-type">(list of (int, str))</span>
-<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
-
-<li><code class="mkapi-item-name">markdown</code>
-<span class="mkapi-item-type">(str)</span>
-<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Converted Markdown including API documentation.</span></li>
-
-<li><code class="mkapi-item-name">nodes</code>
-<span class="mkapi-item-type">(list of <a href="../mkapi.core.node/#mkapi.core.node.Node">Node</a> or <a href="../mkapi.core.code/#mkapi.core.code.Code">Code</a>)</span>
-<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">A list of Node instances.</span></li>
-
-<li><code class="mkapi-item-name">source</code>
-<span class="mkapi-item-type">(dataclasses.initvar[str])</span>
-<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Markdown source.</span></li>
-
-
-</ul></div>
-    </div>
-  <div class="mkapi-section methods">
-      <div class="mkapi-section-name methods">
-          <span class="mkapi-section-name-body methods">Methods</span> 
-        </div>
-      <div class="mkapi-section-body methods"><ul class="mkapi-items">
-<li class="method"><code class="mkapi-item-name"><a href="#mkapi.core.page.Page.content">content</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">html</code><code class="mkapi-object-parenthesis">)</code>
-<span class="mkapi-item-type">(str)</span>
-<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Returns updated HTML to <a href="../mkapi.plugins.mkdocs/#mkapi.plugins.mkdocs.MkapiPlugin">MkapiPlugin</a>.<a class="mkapi-src-link" href="../source/mkapi.core.page/#mkapi.core.page.Page.content" title="Source for mkapi.core.page.Page.content">&lt;/&gt;</a></span></li>
-
-
-</ul></div>
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; import inspect
+&gt;&gt;&gt; obj = get_object('mkapi.core')
+&gt;&gt;&gt; inspect.ismodule(obj)
+True
+&gt;&gt;&gt; obj = get_object('mkapi.core.base')
+&gt;&gt;&gt; inspect.ismodule(obj)
+True
+&gt;&gt;&gt; obj = get_object('mkapi.core.node.Node')
+&gt;&gt;&gt; inspect.isclass(obj)
+True
+&gt;&gt;&gt; obj = get_object('mkapi.core.node.Node.get_markdown')
+&gt;&gt;&gt; inspect.isfunction(obj)
+True
+</code></pre></div>
     </div>
   </div>
 
-  <div class="mkapi-members">
-  
-    <div class="mkapi-member">
-      <div class="mkapi-node" id="mkapi.core.page.Page.content">
+</div>
+
+<div class="mkapi-node" id="mkapi.utils.split_filters">
 <div class='mkapi-object-container'>
-  <div class="mkapi-object method code">
-    <div class="mkapi-object-kind method">method</div>
-    <h3 id="mkapicorepagepagecontent" class="mkapi-object-body method"><code class="mkapi-object-name">content</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">html</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; str</span></h3>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h2 id="mkapiutilssplit_filters" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#mkapi.utils">mkapi.utils</a>.</code><code class="mkapi-object-name">split_filters</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code><code class="mkapi-object-parenthesis">)</code></h2>
   </div>
   <div class="mkapi-src-link">
-    <a class="mkapi-src-link" href="../source/mkapi.core.page/#mkapi.core.page.Page.content" title="Source for mkapi.core.page.Page.content">&lt;/&gt;</a>
+    <a class="mkapi-src-link" href="../source/mkapi.utils/#mkapi.utils.split_filters" title="Source for mkapi.utils.split_filters">&lt;/&gt;</a>
   </div>
 </div>
 <div class="mkapi-docstring">
-<div class="mkapi-section">
-      <div class="mkapi-section-body"><p>Returns updated HTML to <a href="../mkapi.plugins.mkdocs/#mkapi.plugins.mkdocs.MkapiPlugin">MkapiPlugin</a>.</p></div>
-    </div>
-  <div class="mkapi-section parameters">
+<div class="mkapi-section parameters">
       <div class="mkapi-section-name parameters">
           <span class="mkapi-section-name-body parameters">Parameters</span> 
         </div>
       <div class="mkapi-section-body parameters"><ul class="mkapi-items">
-<li><code class="mkapi-item-name">html</code>
-<span class="mkapi-item-type">(str)</span>
-<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Input HTML converted by MkDocs.</span></li>
+<li><code class="mkapi-item-name">name</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
 
 
 </ul></div>
     </div>
+  <div class="mkapi-section examples">
+      <div class="mkapi-section-name examples">
+          <span class="mkapi-section-name-body examples">Examples</span> 
+        </div>
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; split_filters(&quot;a.b.c&quot;)
+('a.b.c', [])
+&gt;&gt;&gt; split_filters(&quot;a.b.c|upper|strict&quot;)
+('a.b.c', ['upper', 'strict'])
+&gt;&gt;&gt; split_filters(&quot;|upper|strict&quot;)
+('', ['upper', 'strict'])
+&gt;&gt;&gt; split_filters(&quot;&quot;)
+('', [])
+</code></pre></div>
+    </div>
   </div>
 
 </div>
+
+<div class="mkapi-node" id="mkapi.utils.update_filters">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h2 id="mkapiutilsupdate_filters" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#mkapi.utils">mkapi.utils</a>.</code><code class="mkapi-object-name">update_filters</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">org</code>, <code class="mkapi-object-signature">update</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; list of str</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/mkapi.utils/#mkapi.utils.update_filters" title="Source for mkapi.utils.update_filters">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">org</code>
+<span class="mkapi-item-type">(list of str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
+
+<li><code class="mkapi-item-name">update</code>
+<span class="mkapi-item-type">(list of str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description"></span></li>
+
+
+</ul></div>
     </div>
-  
+  <div class="mkapi-section examples">
+      <div class="mkapi-section-name examples">
+          <span class="mkapi-section-name-body examples">Examples</span> 
+        </div>
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; update_filters(['upper'], ['lower'])
+['lower']
+&gt;&gt;&gt; update_filters(['lower'], ['upper'])
+['upper']
+&gt;&gt;&gt; update_filters(['long'], ['short'])
+['short']
+&gt;&gt;&gt; update_filters(['short'], ['long'])
+['long']
+</code></pre></div>
+    </div>
   </div>
 
 </div></div>
                 <footer>
     <div class="footer-buttons">
-        <div class="previous"><a href="../mkapi.core.object/" title="mkapi.core.object"><span>Previous</span></a></div>
-        <div class="next"><a href="../mkapi.core.renderer/" title="mkapi.core.renderer"><span>Next</span></a></div>
+        <div class="previous"><a href="../mkapi/" title="mkapi"><span>Previous</span></a></div>
+        <div class="next"><a href="../mkapi.core/" title="mkapi.core"><span>Next</span></a></div>
     </div>
     <div class="footer-note">
         <p>

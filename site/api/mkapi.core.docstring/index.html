@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.13</div>
+                </div><div class="version">1.0.14</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -74,6 +74,7 @@
     <li class="toctree-l2"><button class="section nav-item hide">mkapi</button>
 <ul class="subnav hide">
     <li class="toctree-l3"><a class="nav-item" href="../mkapi/">mkapi</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.utils/">mkapi.utils</a></li>
 </ul></li>
     <li class="toctree-l2 current"><button class="section nav-item">mkapi.core</button>
 <ul class="subnav">
@@ -229,7 +230,7 @@
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; section_heading(&quot;Args:&quot;)
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; section_heading(&quot;Args:&quot;)
 ('Args', 'google')
 &gt;&gt;&gt; section_heading(&quot;Raises&quot;)
 ('Raises', 'numpy')
@@ -271,7 +272,7 @@
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; doc = &quot;abc\n\nArgs:\n    x: X\n&quot;
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; doc = &quot;abc\n\nArgs:\n    x: X\n&quot;
 &gt;&gt;&gt; it = split_section(doc)
 &gt;&gt;&gt; next(it)
 ('', 'abc', '')
@@ -521,7 +522,7 @@
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; from mkapi.core.base import Base
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; from mkapi.core.base import Base
 &gt;&gt;&gt; doc = Docstring()
 &gt;&gt;&gt; parse_source(doc, Base)
 &gt;&gt;&gt; section = doc['Parameters']

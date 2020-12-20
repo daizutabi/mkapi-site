@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.13</div>
+                </div><div class="version">1.0.14</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -78,6 +78,7 @@
     <li class="toctree-l2"><button class="section nav-item hide">mkapi</button>
 <ul class="subnav hide">
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi/">mkapi</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.utils/">mkapi.utils</a></li>
 </ul></li>
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
 <ul class="subnav hide">
@@ -148,7 +149,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
-<li>If a package or module has no package- or module-level docstring, MkApi doesn't process it.</li>
+<li>If a package or module has no package- or module-level docstring and its members have no docstring as well, MkApi doesn't process it.</li>
 <li>For upper case heading, use the <code>upper</code> filter. See <a href="../module/#documentation-with-heading">Documentation with Heading</a>.</li>
 </ul>
 </div>
@@ -203,6 +204,7 @@
 <div class="content">
 <div class="pheasant-fenced-code"><div class="cell embed source"><div class="code"><pre><code class="python">from mkapi.core.base import Section
 from mkapi.core.docstring import get_docstring
+
 
 def func():
     &#34;&#34;&#34;Internal link example.
@@ -274,7 +276,7 @@ def func():
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; section_heading(&quot;Args:&quot;)
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; section_heading(&quot;Args:&quot;)
 ('Args', 'google')
 &gt;&gt;&gt; section_heading(&quot;Raises&quot;)
 ('Raises', 'numpy')
@@ -351,31 +353,27 @@ class Docstring:
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
       <div class="mkapi-section-body examples"><p>Empty docstring:</p>
-<pre><code class="python">&gt;&gt;&gt; docstring = Docstring()
+<pre><code class="language-python">&gt;&gt;&gt; docstring = Docstring()
 &gt;&gt;&gt; assert not docstring
 </code></pre>
-
 <p>Docstring with 3 sections:</p>
-<pre><code class="python">&gt;&gt;&gt; default = Section(&quot;&quot;, markdown=&quot;Default&quot;)
+<pre><code class="language-python">&gt;&gt;&gt; default = Section(&quot;&quot;, markdown=&quot;Default&quot;)
 &gt;&gt;&gt; parameters = Section(&quot;Parameters&quot;, items=[Item(&quot;a&quot;), Item(&quot;[b](!a)&quot;)])
 &gt;&gt;&gt; returns = Section(&quot;Returns&quot;, markdown=&quot;Results&quot;)
 &gt;&gt;&gt; docstring = Docstring([default, parameters, returns])
 &gt;&gt;&gt; docstring
 Docstring(num_sections=3)
 </code></pre>
-
 <p><code>Docstring</code> is iterable:</p>
-<pre><code class="python">&gt;&gt;&gt; list(docstring)
+<pre><code class="language-python">&gt;&gt;&gt; list(docstring)
 [Section('', num_items=0), Item('[b](!a)', ''), Section('Returns', num_items=0)]
 </code></pre>
-
 <p>Indexing:</p>
-<pre><code class="python">&gt;&gt;&gt; docstring[&quot;Parameters&quot;].items[0].name
+<pre><code class="language-python">&gt;&gt;&gt; docstring[&quot;Parameters&quot;].items[0].name
 'a'
 </code></pre>
-
 <p>Section ordering:</p>
-<pre><code class="python">&gt;&gt;&gt; docstring = Docstring()
+<pre><code class="language-python">&gt;&gt;&gt; docstring = Docstring()
 &gt;&gt;&gt; _ = docstring['']
 &gt;&gt;&gt; _ = docstring['Todo']
 &gt;&gt;&gt; _ = docstring['Attributes']
@@ -550,7 +548,7 @@ equal to <code>name</code>.</p></div>
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; items = [Item('x', 'int'), Item('y', 'str', 'y')]
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; items = [Item('x', 'int'), Item('y', 'str', 'y')]
 &gt;&gt;&gt; s1 = Section('Attributes', items=items)
 &gt;&gt;&gt; items = [Item('x', 'str', 'X'), Item('z', 'str', 'z')]
 &gt;&gt;&gt; s2 = Section('Attributes', items=items)

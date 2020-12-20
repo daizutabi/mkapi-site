@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.13</div>
+                </div><div class="version">1.0.14</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -74,6 +74,7 @@
     <li class="toctree-l2"><button class="section nav-item hide">mkapi</button>
 <ul class="subnav hide">
     <li class="toctree-l3"><a class="nav-item" href="../mkapi/">mkapi</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.utils/">mkapi.utils</a></li>
 </ul></li>
     <li class="toctree-l2 current"><button class="section nav-item">mkapi.core</button>
 <ul class="subnav">
@@ -239,7 +240,7 @@
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; base = Base('x', 'markdown')
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; base = Base('x', 'markdown')
 &gt;&gt;&gt; base
 Base('x')
 &gt;&gt;&gt; bool(base)
@@ -439,7 +440,7 @@ False
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; inline = Inline()
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; inline = Inline()
 &gt;&gt;&gt; bool(inline)
 False
 &gt;&gt;&gt; inline = Inline('markdown')
@@ -647,7 +648,7 @@ Inline('markdown')
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; a = Type('str')
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; a = Type('str')
 &gt;&gt;&gt; a
 Type('str')
 &gt;&gt;&gt; list(a)
@@ -878,7 +879,7 @@ as a class attribute in HTML.</span></li>
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; item = Item('[x](x)', Type('int'), Inline('A parameter.'))
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; item = Item('[x](x)', Type('int'), Inline('A parameter.'))
 &gt;&gt;&gt; item
 Item('[x](x)', 'int')
 &gt;&gt;&gt; item.name, item.markdown, item.html
@@ -1035,7 +1036,7 @@ True
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; item = Item('[x](x)', 'int', 'A parameter.')
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; item = Item('[x](x)', 'int', 'A parameter.')
 &gt;&gt;&gt; item.to_tuple()
 ('[x](x)', 'int', 'A parameter.')
 </code></pre></div>
@@ -1175,7 +1176,7 @@ description.</span></li>
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; item = Item('x')
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; item = Item('x')
 &gt;&gt;&gt; item2 = Item('x', 'int', 'description')
 &gt;&gt;&gt; item.update(item2)
 &gt;&gt;&gt; item.to_tuple()
@@ -1303,7 +1304,7 @@ description.</span></li>
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; items = [Item('x'), Item('[y](a)'), Item('z')]
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; items = [Item('x'), Item('[y](a)'), Item('z')]
 &gt;&gt;&gt; section = Section('Parameters', items=items)
 &gt;&gt;&gt; section
 Section('Parameters', num_items=3)
@@ -1467,7 +1468,7 @@ Section('Parameters', num_items=3)
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; section = Section(&quot;&quot;, items=[Item('x')])
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; section = Section(&quot;&quot;, items=[Item('x')])
 &gt;&gt;&gt; section['x']
 Item('x', '')
 &gt;&gt;&gt; section['y']
@@ -1580,7 +1581,7 @@ Item('y', '')
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; items = [Item('x', 'int'), Item('y', 'str', 'y')]
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; items = [Item('x', 'int'), Item('y', 'str', 'y')]
 &gt;&gt;&gt; section = Section('Parameters', items=items)
 &gt;&gt;&gt; section.set_item(Item('x', 'float', 'X'))
 &gt;&gt;&gt; section['x'].to_tuple()
@@ -1641,7 +1642,7 @@ Item('y', '')
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; s1 = Section('Parameters', items=[Item('a', 's'), Item('b', 'f')])
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; s1 = Section('Parameters', items=[Item('a', 's'), Item('b', 'f')])
 &gt;&gt;&gt; s2 = Section('Parameters', items=[Item('a', 'i', 'A'), Item('x', 'd')])
 &gt;&gt;&gt; s1.update(s2)
 &gt;&gt;&gt; s1['a'].to_tuple()
@@ -1695,7 +1696,7 @@ Item('y', '')
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; s1 = Section('Parameters', items=[Item('a', 's'), Item('b', 'f')])
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; s1 = Section('Parameters', items=[Item('a', 's'), Item('b', 'f')])
 &gt;&gt;&gt; s2 = Section('Parameters', items=[Item('a', 'i'), Item('c', 'd')])
 &gt;&gt;&gt; s3 = s1.merge(s2)
 &gt;&gt;&gt; s3.items
@@ -1732,7 +1733,7 @@ Item('y', '')
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; s = Section('E', 'markdown', [Item('a', 's'), Item('b', 'i')])
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; s = Section('E', 'markdown', [Item('a', 's'), Item('b', 'i')])
 &gt;&gt;&gt; s.copy()
 Section('E', num_items=2)
 </code></pre></div>
@@ -1797,31 +1798,27 @@ Section('E', num_items=2)
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
       <div class="mkapi-section-body examples"><p>Empty docstring:</p>
-<pre><code class="python">&gt;&gt;&gt; docstring = Docstring()
+<pre><code class="language-python">&gt;&gt;&gt; docstring = Docstring()
 &gt;&gt;&gt; assert not docstring
 </code></pre>
-
 <p>Docstring with 3 sections:</p>
-<pre><code class="python">&gt;&gt;&gt; default = Section(&quot;&quot;, markdown=&quot;Default&quot;)
+<pre><code class="language-python">&gt;&gt;&gt; default = Section(&quot;&quot;, markdown=&quot;Default&quot;)
 &gt;&gt;&gt; parameters = Section(&quot;Parameters&quot;, items=[Item(&quot;a&quot;), Item(&quot;[b](!a)&quot;)])
 &gt;&gt;&gt; returns = Section(&quot;Returns&quot;, markdown=&quot;Results&quot;)
 &gt;&gt;&gt; docstring = Docstring([default, parameters, returns])
 &gt;&gt;&gt; docstring
 Docstring(num_sections=3)
 </code></pre>
-
 <p><code>Docstring</code> is iterable:</p>
-<pre><code class="python">&gt;&gt;&gt; list(docstring)
+<pre><code class="language-python">&gt;&gt;&gt; list(docstring)
 [Section('', num_items=0), Item('[b](!a)', ''), Section('Returns', num_items=0)]
 </code></pre>
-
 <p>Indexing:</p>
-<pre><code class="python">&gt;&gt;&gt; docstring[&quot;Parameters&quot;].items[0].name
+<pre><code class="language-python">&gt;&gt;&gt; docstring[&quot;Parameters&quot;].items[0].name
 'a'
 </code></pre>
-
 <p>Section ordering:</p>
-<pre><code class="python">&gt;&gt;&gt; docstring = Docstring()
+<pre><code class="language-python">&gt;&gt;&gt; docstring = Docstring()
 &gt;&gt;&gt; _ = docstring['']
 &gt;&gt;&gt; _ = docstring['Todo']
 &gt;&gt;&gt; _ = docstring['Attributes']
@@ -2012,7 +2009,7 @@ equal to <code>name</code>.</p></div>
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; items = [Item('x', 'int'), Item('y', 'str', 'y')]
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; items = [Item('x', 'int'), Item('y', 'str', 'y')]
 &gt;&gt;&gt; s1 = Section('Attributes', items=items)
 &gt;&gt;&gt; items = [Item('x', 'str', 'X'), Item('z', 'str', 'z')]
 &gt;&gt;&gt; s2 = Section('Attributes', items=items)

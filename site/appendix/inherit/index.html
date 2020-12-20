@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.13</div>
+                </div><div class="version">1.0.14</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -78,6 +78,7 @@
     <li class="toctree-l2"><button class="section nav-item hide">mkapi</button>
 <ul class="subnav hide">
     <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi/">mkapi</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../api/mkapi.utils/">mkapi.utils</a></li>
 </ul></li>
     <li class="toctree-l2"><button class="section nav-item hide">mkapi.core</button>
 <ul class="subnav hide">
@@ -290,30 +291,30 @@ from appendix.inherit import Base, Sub
 
 Base.func.__doc__, inspect.getdoc(Base.func)</code></pre></div>
 <div class="report"><p><span class="count">[2]</span>
-<span class="start">2020-06-09 15:42:11</span> (<span class="time">5.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">432ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;Function.&#39;, &#39;Function.&#39;)</code></pre></div></div></div></div>
+<span class="start">2020-12-20 10:02:20</span> (<span class="time">15.0ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">1.14s</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(&#39;Function.&#39;, &#39;Function.&#39;)</code></pre></div></div></div></div>
 
 <div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="python">Sub.func.__doc__, inspect.getdoc(Sub.func)</code></pre></div>
 <div class="report"><p><span class="count">[3]</span>
-<span class="start">2020-06-09 15:42:11</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">435ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Function.&#39;)</code></pre></div></div></div></div>
+<span class="start">2020-12-20 10:02:20</span> (<span class="time">13.0ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">1.15s</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Function.&#39;)</code></pre></div></div></div></div>
 
 <p>Because <code>Sub.func()</code> has no docstring, its <code>__doc__</code> attribute is <code>None</code>. On the other hand, the super class <code>Base.func()</code> has docstring, so that you can get the <em>inherited</em> docstring using <code>inspect.getdoc()</code>. Therefore, MkApi uses <code>inspect.getdoc()</code>.</p>
 <p>Now, let's see some special methods:</p>
 <div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="python">Sub.__call__.__doc__, inspect.getdoc(Sub.__call__)</code></pre></div>
 <div class="report"><p><span class="count">[4]</span>
-<span class="start">2020-06-09 15:42:11</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">438ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Call self as a function.&#39;)</code></pre></div></div></div></div>
+<span class="start">2020-12-20 10:02:20</span> (<span class="time">12.0ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">1.16s</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Call self as a function.&#39;)</code></pre></div></div></div></div>
 
 <div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="python">Sub.__repr__.__doc__, inspect.getdoc(Sub.__repr__)</code></pre></div>
 <div class="report"><p><span class="count">[5]</span>
-<span class="start">2020-06-09 15:42:11</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">441ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Return repr(self).&#39;)</code></pre></div></div></div></div>
+<span class="start">2020-12-20 10:02:20</span> (<span class="time">14.7ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">1.18s</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Return repr(self).&#39;)</code></pre></div></div></div></div>
 
 <div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="python">Sub.__repr__.__doc__, inspect.getdoc(Sub.__repr__)</code></pre></div>
 <div class="report"><p><span class="count">[6]</span>
-<span class="start">2020-06-09 15:42:11</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">444ms</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Return repr(self).&#39;)</code></pre></div></div></div></div>
+<span class="start">2020-12-20 10:02:20</span> (<span class="time">13.4ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">1.19s</span>)</span></p></div></div><div class="cell jupyter output"><div class="code"><pre><code class="nohighlight">(None, &#39;Return repr(self).&#39;)</code></pre></div></div></div></div>
 
 <p>These docstrings come from <code>object</code>.</p>
 <div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="python">for name, obj in object.__dict__.items():
@@ -321,8 +322,8 @@ Base.func.__doc__, inspect.getdoc(Base.func)</code></pre></div>
     if doc and &#39;\n&#39; not in doc:
         print(f&#34;{name}: {doc}&#34;)</code></pre></div>
 <div class="report"><p><span class="count">[7]</span>
-<span class="start">2020-06-09 15:42:11</span> (<span class="time">3.00ms</span>)
-<span class="right"><span class="kernel">python3</span> (<span class="total">447ms</span>)</span></p></div></div><div class="cell jupyter stdout"><div class="code">
+<span class="start">2020-12-20 10:02:20</span> (<span class="time">13.0ms</span>)
+<span class="right"><span class="kernel">python3</span> (<span class="total">1.20s</span>)</span></p></div></div><div class="cell jupyter stdout"><div class="code">
       <pre><code class="nohighlight">__repr__: Return repr(self).
 __hash__: Return hash(self).
 __str__: Return str(self).

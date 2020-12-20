@@ -35,7 +35,7 @@
                 <div class="title">
                     <button class="hamburger"></button>
                     <a href="../.." class="site-name"> MkApi</a>
-                </div><div class="version">1.0.13</div>
+                </div><div class="version">1.0.14</div>
                 <div class="search">
                     <div role="search">
     <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -74,6 +74,7 @@
     <li class="toctree-l2"><button class="section nav-item hide">mkapi</button>
 <ul class="subnav hide">
     <li class="toctree-l3"><a class="nav-item" href="../mkapi/">mkapi</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../mkapi.utils/">mkapi.utils</a></li>
 </ul></li>
     <li class="toctree-l2 current"><button class="section nav-item">mkapi.core</button>
 <ul class="subnav">
@@ -204,7 +205,7 @@ a tuple of (type, description).<a class="mkapi-src-link" href="../source/mkapi.c
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; from examples.google_style import ExampleClass
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; from examples.google_style import ExampleClass
 &gt;&gt;&gt; attrs = get_class_attributes(ExampleClass)
 &gt;&gt;&gt; attrs['a'][0] is str
 True
@@ -251,7 +252,7 @@ True
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; from mkapi.core.base import Item, Type, Inline
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; from mkapi.core.base import Item, Type, Inline
 &gt;&gt;&gt; attrs = get_dataclass_attributes(Item)
 &gt;&gt;&gt; attrs['type'][0] is Type
 True
@@ -294,7 +295,7 @@ True
       <div class="mkapi-section-name examples">
           <span class="mkapi-section-name-body examples">Examples</span> 
         </div>
-      <div class="mkapi-section-body examples"><pre><code class="python">&gt;&gt;&gt; from mkapi.core import renderer
+      <div class="mkapi-section-body examples"><pre><code class="language-python">&gt;&gt;&gt; from mkapi.core import renderer
 &gt;&gt;&gt; attrs = get_module_attributes(renderer)
 &gt;&gt;&gt; attrs['renderer'][0] is renderer.Renderer
 True
